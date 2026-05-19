@@ -1,0 +1,51 @@
+{
+  "$comment": "Controlled vocabulary. Each entry: { slug: { de, group } }. Slugs are immutable; rename = new slug + migration PR. Extend liberally; tags are how users find their kind of kiosk.",
+
+  "snacks":            { "de": "Snacks",              "group": "sortiment" },
+  "kuchen":            { "de": "Kuchen",              "group": "sortiment" },
+  "backwaren":         { "de": "Backwaren",           "group": "sortiment" },
+  "eis":               { "de": "Eis",                 "group": "sortiment" },
+  "tabak":             { "de": "Tabak",               "group": "sortiment" },
+  "longpapes":         { "de": "Longpapes",           "group": "sortiment" },
+  "zeitungen":         { "de": "Zeitungen",           "group": "sortiment" },
+  "zeitschriften":     { "de": "Zeitschriften",       "group": "sortiment" },
+  "postkarten":        { "de": "Postkarten",          "group": "sortiment" },
+  "lotto":             { "de": "Lotto",               "group": "sortiment" },
+  "rubbellose":        { "de": "Rubbellose",          "group": "sortiment" },
+  "bier":              { "de": "Bier",                "group": "sortiment" },
+  "craft_bier":        { "de": "Craft-Bier",          "group": "sortiment" },
+  "wein":              { "de": "Wein",                "group": "sortiment" },
+  "sekt":              { "de": "Sekt",                "group": "sortiment" },
+  "schnaps":           { "de": "Schnaps",             "group": "sortiment" },
+  "kaffee":            { "de": "Kaffee",              "group": "sortiment" },
+  "mate":              { "de": "Mate",                "group": "sortiment" },
+  "fritz_kola":        { "de": "fritz-kola",          "group": "sortiment" },
+  "milch":             { "de": "Milch",               "group": "sortiment" },
+  "gemischte_tuete":   { "de": "Gemischte Tüte",      "group": "sortiment" },
+  "applewoi":          { "de": "Äppler",              "group": "sortiment" },
+
+  "innenraum":         { "de": "Innenraum",           "group": "ambiente" },
+  "sitzgelegenheiten": { "de": "Sitzgelegenheiten",   "group": "ambiente" },
+  "stehtisch":         { "de": "Stehtisch",           "group": "ambiente" },
+  "ueberdacht":        { "de": "Überdacht",           "group": "ambiente" },
+  "draussen":          { "de": "Draußen",             "group": "ambiente" },
+  "sonne":             { "de": "Sonnig",              "group": "ambiente" },
+  "musik":             { "de": "Musik",               "group": "ambiente" },
+  "gemuetlich":        { "de": "Gemütlich",           "group": "ambiente" },
+  "flair":             { "de": "Flair",               "group": "ambiente" },
+  "chillout":          { "de": "Chillout",            "group": "ambiente" },
+  "wohnzimmer":        { "de": "Wie ein Wohnzimmer",  "group": "ambiente" },
+  "klassiker":         { "de": "Klassiker",           "group": "ambiente" },
+  "raucherbereich":    { "de": "Raucherbereich",      "group": "ambiente" },
+
+  "wc":                { "de": "WC",                  "group": "ausstattung" },
+  "barrierefrei":      { "de": "Barrierefrei",        "group": "ausstattung" },
+  "automat":           { "de": "Automat",             "group": "ausstattung" },
+  "paketshop":         { "de": "Paketshop",           "group": "ausstattung" },
+
+  "$groups": {
+    "sortiment":   { "de": "Sortiment" },
+    "ambiente":    { "de": "Ambiente" },
+    "ausstattung": { "de": "Ausstattung" }
+  }
+}

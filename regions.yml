@@ -1,0 +1,19 @@
+# Regions covered by the OSM weekly ingest workflow.
+#
+# Each region:
+#   slug:           filesystem-safe identifier, used in data/<de>/<…>/<slug>.geojson
+#   path:           data file path (relative to repo root)
+#   prefix:         per-region ID prefix (e.g. "fr" → tk_fr_001)
+#   iso3166_2:      ISO 3166-2 admin code for Overpass area filter
+#   admin_level:    OSM admin_level for the area filter
+#   bbox:           [w, s, e, n] fallback if the area filter fails
+#
+# Add regions here, open a PR. The workflow will run for them on the next schedule.
+
+regions:
+  - slug: frankfurt
+    path: data/de/hessen/frankfurt.geojson
+    prefix: fr
+    iso3166_2: DE-HE
+    admin_level: 6
+    bbox: [8.47, 50.01, 8.80, 50.23]

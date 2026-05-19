@@ -1,0 +1,22 @@
+{
+  "name": "trinkhallen-data-scripts",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Build + maintenance scripts for the trinkhallen-data dataset.",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "import:hopfenstop": "tsx scripts/_oneoff/import-hopfenstop.ts",
+    "osm:scrape":        "tsx scripts/osm-to-geojson.ts",
+    "validate":          "tsx scripts/validate.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "ajv":         "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "opening_hours": "^3.8.0",
+    "tsx":         "^4.19.2",
+    "typescript":  "^5.7.0",
+    "yaml":        "^2.6.0"
+  }
+}
