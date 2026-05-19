@@ -1,0 +1,85 @@
+name: OSM weekly ingest
+
+on:
+  # Mondays at 04:17 UTC — off-peak for Overpass.
+  schedule:
+    - cron: "17 4 * * 1"
+  workflow_dispatch:
+    inputs:
+      region:
+        description: "Region slug to scrape (empty = all regions in regions.yml)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: osm-scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Run scrape
+        id: scrape
+        run: |
+          set -euo pipefail
+          if [ -n "${{ inputs.region }}" ]; then
+            pnpm tsx scripts/run-osm-scrape.ts "${{ inputs.region }}" > scrape-stats.json
+          else
+            pnpm tsx scripts/run-osm-scrape.ts > scrape-stats.json
+          fi
+          cat scrape-stats.json
+          echo "title=$(jq -r '
+            map("\(.region) +\(.added)/~\(.updated)/-\(.removed)") | join(", ")
+          ' scrape-stats.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Detect changes
+        id: diff
+        run: |
+          if git diff --quiet -- data/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat -- data/ | head -20
+          fi
+
+      - name: Open PR
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "OSM weekly: ${{ steps.scrape.outputs.title }}"
+          title: "OSM weekly: ${{ steps.scrape.outputs.title }}"
+          branch: osm-scrape/automated
+          delete-branch: true
+          body: |
+            Automated OSM ingest run.
+
+            Stats (per region):
+            ```json
+            ${{ steps.scrape.outputs.title }}
+            ```
+
+            Diff summary attached. Review carefully — `osm_removed: true` flags features Overpass no longer sees.
+          labels: |
+            osm
+            automated
+          add-paths: |
+            data/

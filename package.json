@@ -7,8 +7,8 @@
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "import:hopfenstop": "tsx scripts/_oneoff/import-hopfenstop.ts",
-    "osm:scrape":        "tsx scripts/osm-to-geojson.ts",
-    "validate":          "tsx scripts/validate.ts"
+    "osm:scrape":        "tsx scripts/run-osm-scrape.ts",
+    "osm:print":         "tsx scripts/osm-to-geojson.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
