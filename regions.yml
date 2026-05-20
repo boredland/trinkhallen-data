@@ -22,19 +22,31 @@ regions:
     prefix: ru
     iso3166_2: DE-NW
     admin_level: 6
-    bbox: [6.80, 51.15, 7.85, 51.81]
+    bbox: [6.59, 51.23, 7.85, 51.98]
   - slug: koeln
     path: data/de/nordrhein-westfalen/koeln.geojson
     prefix: k
     iso3166_2: DE-NW
     admin_level: 6
-    bbox: [6.55, 50.50, 7.40, 51.15]
+    bbox: [6.69, 50.62, 7.66, 51.09]
   - slug: duesseldorf
     path: data/de/nordrhein-westfalen/duesseldorf.geojson
     prefix: d
     iso3166_2: DE-NW
     admin_level: 6
-    bbox: [6.40, 51.05, 7.20, 51.55]
+    bbox: [6.38, 50.99, 7.17, 51.48]
+  - slug: aachen
+    path: data/de/nordrhein-westfalen/aachen.geojson
+    prefix: ac
+    iso3166_2: DE-NW
+    admin_level: 6
+    bbox: [6.06, 50.73, 6.18, 50.80]
+  - slug: bielefeld
+    path: data/de/nordrhein-westfalen/bielefeld.geojson
+    prefix: bi
+    iso3166_2: DE-NW
+    admin_level: 6
+    bbox: [8.01, 51.70, 8.82, 52.30]
   - slug: berlin
     path: data/de/berlin/berlin.geojson
     prefix: b
@@ -53,12 +65,36 @@ regions:
     iso3166_2: DE-BY
     admin_level: 6
     bbox: [10.87, 47.71, 11.88, 48.38]
+  - slug: nuernberg
+    path: data/de/bayern/nuernberg.geojson
+    prefix: n
+    iso3166_2: DE-BY
+    admin_level: 6
+    bbox: [10.87, 49.42, 11.22, 49.93]
   - slug: stuttgart
     path: data/de/baden-wuerttemberg/stuttgart.geojson
     prefix: s
     iso3166_2: DE-BW
     admin_level: 6
-    bbox: [8.64, 48.60, 9.85, 49.17]
+    bbox: [8.71, 48.60, 9.85, 49.17]
+  - slug: karlsruhe
+    path: data/de/baden-wuerttemberg/karlsruhe.geojson
+    prefix: ka
+    iso3166_2: DE-BW
+    admin_level: 6
+    bbox: [8.22, 48.74, 8.73, 49.15]
+  - slug: mannheim
+    path: data/de/baden-wuerttemberg/mannheim.geojson
+    prefix: ma
+    iso3166_2: DE-BW
+    admin_level: 6
+    bbox: [7.75, 49.26, 9.02, 49.70]
+  - slug: freiburg
+    path: data/de/baden-wuerttemberg/freiburg.geojson
+    prefix: fr-bw
+    iso3166_2: DE-BW
+    admin_level: 6
+    bbox: [7.55, 47.45, 8.56, 48.36]
   - slug: hannover
     path: data/de/niedersachsen/hannover.geojson
     prefix: h
@@ -71,27 +107,39 @@ regions:
     iso3166_2: DE-SN
     admin_level: 6
     bbox: [12.31, 51.29, 12.44, 51.38]
+  - slug: dresden
+    path: data/de/sachsen/dresden.geojson
+    prefix: dd
+    iso3166_2: DE-SN
+    admin_level: 6
+    bbox: [13.68, 51.02, 13.83, 51.09]
   - slug: halle
     path: data/de/sachsen-anhalt/halle.geojson
     prefix: hal
     iso3166_2: DE-ST
     admin_level: 6
     bbox: [11.28, 51.45, 12.00, 51.52]
-  - slug: freiburg
-    path: data/de/baden-wuerttemberg/freiburg.geojson
-    prefix: fr-bw
-    iso3166_2: DE-BW
-    admin_level: 6
-    bbox: [7.55, 47.45, 8.56, 48.36]
-  - slug: mannheim
-    path: data/de/baden-wuerttemberg/mannheim.geojson
-    prefix: ma
-    iso3166_2: DE-BW
-    admin_level: 6
-    bbox: [7.75, 48.98, 9.02, 49.70]
   - slug: bremen
     path: data/de/bremen/bremen.geojson
     prefix: hb
     iso3166_2: DE-HB
     admin_level: 4
     bbox: [8.08, 53.05, 8.86, 53.39]
+  - slug: saarbruecken
+    path: data/de/saarland/saarbruecken.geojson
+    prefix: sb
+    iso3166_2: DE-SL
+    admin_level: 4
+    bbox: [6.95, 49.17, 7.63, 49.26]
+  - slug: kiel
+    path: data/de/schleswig-holstein/kiel.geojson
+    prefix: ki
+    iso3166_2: DE-SH
+    admin_level: 6
+    bbox: [10.10, 54.29, 10.22, 54.42]
+  - slug: rostock
+    path: data/de/mecklenburg-vorpommern/rostock.geojson
+    prefix: ro
+    iso3166_2: DE-MV
+    admin_level: 6
+    bbox: [12.12, 54.07, 12.16, 54.11]

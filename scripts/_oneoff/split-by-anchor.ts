@@ -37,20 +37,28 @@ interface Anchor {
 
 // Anchor list ordered roughly by expected feature count.
 const ANCHORS: Anchor[] = [
-  { slug: "frankfurt",      path: "data/de/hessen/frankfurt.geojson",                  prefix: "fr",  lat: 50.1109, lng: 8.6821,  iso3166_2: "DE-HE", admin_level: 6 },
-  { slug: "ruhr",           path: "data/de/nordrhein-westfalen/ruhr.geojson",          prefix: "ru",  lat: 51.4818, lng: 7.2162,  iso3166_2: "DE-NW", admin_level: 6 },
-  { slug: "koeln",          path: "data/de/nordrhein-westfalen/koeln.geojson",         prefix: "k",   lat: 50.9375, lng: 6.9603,  iso3166_2: "DE-NW", admin_level: 6 },
-  { slug: "duesseldorf",    path: "data/de/nordrhein-westfalen/duesseldorf.geojson",   prefix: "d",   lat: 51.2277, lng: 6.7735,  iso3166_2: "DE-NW", admin_level: 6 },
-  { slug: "berlin",         path: "data/de/berlin/berlin.geojson",                     prefix: "b",   lat: 52.5200, lng: 13.4050, iso3166_2: "DE-BE", admin_level: 4 },
-  { slug: "hamburg",        path: "data/de/hamburg/hamburg.geojson",                   prefix: "hh",  lat: 53.5511, lng: 9.9937,  iso3166_2: "DE-HH", admin_level: 4 },
-  { slug: "muenchen",       path: "data/de/bayern/muenchen.geojson",                   prefix: "m",   lat: 48.1351, lng: 11.5820, iso3166_2: "DE-BY", admin_level: 6 },
-  { slug: "stuttgart",      path: "data/de/baden-wuerttemberg/stuttgart.geojson",      prefix: "s",   lat: 48.7758, lng: 9.1829,  iso3166_2: "DE-BW", admin_level: 6 },
-  { slug: "hannover",       path: "data/de/niedersachsen/hannover.geojson",            prefix: "h",   lat: 52.3759, lng: 9.7320,  iso3166_2: "DE-NI", admin_level: 6 },
-  { slug: "leipzig",        path: "data/de/sachsen/leipzig.geojson",                   prefix: "l",   lat: 51.3397, lng: 12.3731, iso3166_2: "DE-SN", admin_level: 6 },
-  { slug: "halle",          path: "data/de/sachsen-anhalt/halle.geojson",              prefix: "hal", lat: 51.4825, lng: 11.9700, iso3166_2: "DE-ST", admin_level: 6 },
-  { slug: "freiburg",       path: "data/de/baden-wuerttemberg/freiburg.geojson",       prefix: "fr-bw", lat: 47.9990, lng: 7.8421, iso3166_2: "DE-BW", admin_level: 6 },
-  { slug: "mannheim",       path: "data/de/baden-wuerttemberg/mannheim.geojson",       prefix: "ma",  lat: 49.4875, lng: 8.4660,  iso3166_2: "DE-BW", admin_level: 6 },
-  { slug: "bremen",         path: "data/de/bremen/bremen.geojson",                     prefix: "hb",  lat: 53.0793, lng: 8.8017,  iso3166_2: "DE-HB", admin_level: 4 },
+  { slug: "frankfurt",      path: "data/de/hessen/frankfurt.geojson",                          prefix: "fr",   lat: 50.1109, lng: 8.6821,  iso3166_2: "DE-HE", admin_level: 6 },
+  { slug: "ruhr",           path: "data/de/nordrhein-westfalen/ruhr.geojson",                  prefix: "ru",   lat: 51.4818, lng: 7.2162,  iso3166_2: "DE-NW", admin_level: 6 },
+  { slug: "koeln",          path: "data/de/nordrhein-westfalen/koeln.geojson",                 prefix: "k",    lat: 50.9375, lng: 6.9603,  iso3166_2: "DE-NW", admin_level: 6 },
+  { slug: "duesseldorf",    path: "data/de/nordrhein-westfalen/duesseldorf.geojson",           prefix: "d",    lat: 51.2277, lng: 6.7735,  iso3166_2: "DE-NW", admin_level: 6 },
+  { slug: "aachen",         path: "data/de/nordrhein-westfalen/aachen.geojson",                prefix: "ac",   lat: 50.7753, lng: 6.0839,  iso3166_2: "DE-NW", admin_level: 6 },
+  { slug: "bielefeld",      path: "data/de/nordrhein-westfalen/bielefeld.geojson",             prefix: "bi",   lat: 52.0302, lng: 8.5325,  iso3166_2: "DE-NW", admin_level: 6 },
+  { slug: "berlin",         path: "data/de/berlin/berlin.geojson",                             prefix: "b",    lat: 52.5200, lng: 13.4050, iso3166_2: "DE-BE", admin_level: 4 },
+  { slug: "hamburg",        path: "data/de/hamburg/hamburg.geojson",                           prefix: "hh",   lat: 53.5511, lng: 9.9937,  iso3166_2: "DE-HH", admin_level: 4 },
+  { slug: "muenchen",       path: "data/de/bayern/muenchen.geojson",                           prefix: "m",    lat: 48.1351, lng: 11.5820, iso3166_2: "DE-BY", admin_level: 6 },
+  { slug: "nuernberg",      path: "data/de/bayern/nuernberg.geojson",                          prefix: "n",    lat: 49.4521, lng: 11.0767, iso3166_2: "DE-BY", admin_level: 6 },
+  { slug: "stuttgart",      path: "data/de/baden-wuerttemberg/stuttgart.geojson",              prefix: "s",    lat: 48.7758, lng: 9.1829,  iso3166_2: "DE-BW", admin_level: 6 },
+  { slug: "karlsruhe",      path: "data/de/baden-wuerttemberg/karlsruhe.geojson",              prefix: "ka",   lat: 49.0069, lng: 8.4037,  iso3166_2: "DE-BW", admin_level: 6 },
+  { slug: "mannheim",       path: "data/de/baden-wuerttemberg/mannheim.geojson",               prefix: "ma",   lat: 49.4875, lng: 8.4660,  iso3166_2: "DE-BW", admin_level: 6 },
+  { slug: "freiburg",       path: "data/de/baden-wuerttemberg/freiburg.geojson",               prefix: "fr-bw",lat: 47.9990, lng: 7.8421,  iso3166_2: "DE-BW", admin_level: 6 },
+  { slug: "hannover",       path: "data/de/niedersachsen/hannover.geojson",                    prefix: "h",    lat: 52.3759, lng: 9.7320,  iso3166_2: "DE-NI", admin_level: 6 },
+  { slug: "leipzig",        path: "data/de/sachsen/leipzig.geojson",                           prefix: "l",    lat: 51.3397, lng: 12.3731, iso3166_2: "DE-SN", admin_level: 6 },
+  { slug: "dresden",        path: "data/de/sachsen/dresden.geojson",                           prefix: "dd",   lat: 51.0504, lng: 13.7373, iso3166_2: "DE-SN", admin_level: 6 },
+  { slug: "halle",          path: "data/de/sachsen-anhalt/halle.geojson",                      prefix: "hal",  lat: 51.4825, lng: 11.9700, iso3166_2: "DE-ST", admin_level: 6 },
+  { slug: "bremen",         path: "data/de/bremen/bremen.geojson",                             prefix: "hb",   lat: 53.0793, lng: 8.8017,  iso3166_2: "DE-HB", admin_level: 4 },
+  { slug: "saarbruecken",   path: "data/de/saarland/saarbruecken.geojson",                     prefix: "sb",   lat: 49.2401, lng: 6.9969,  iso3166_2: "DE-SL", admin_level: 4 },
+  { slug: "kiel",           path: "data/de/schleswig-holstein/kiel.geojson",                   prefix: "ki",   lat: 54.3233, lng: 10.1228, iso3166_2: "DE-SH", admin_level: 6 },
+  { slug: "rostock",        path: "data/de/mecklenburg-vorpommern/rostock.geojson",            prefix: "ro",   lat: 54.0833, lng: 12.1333, iso3166_2: "DE-MV", admin_level: 6 },
 ];
 
 interface Feature {
@@ -70,7 +78,17 @@ function haversineKm(aLat: number, aLng: number, bLat: number, bLng: number): nu
 }
 
 async function main(): Promise<void> {
+  // Read the seed FIRST so we don't accidentally delete it during the
+  // idempotency cleanup step below.
   const src = JSON.parse(await readFile(SOURCE, "utf8")) as { type: string; features: Feature[] };
+
+  // Idempotency: remove ALL existing anchor target files so the re-run
+  // produces a clean redistribution (handles features that should move
+  // between anchors when new anchors are added).
+  for (const a of ANCHORS) {
+    const p = resolve(REPO_ROOT, a.path);
+    if (existsSync(p)) await rm(p);
+  }
   const buckets = new Map<string, Feature[]>();
   for (const a of ANCHORS) buckets.set(a.slug, []);
   const dropped: Array<{ id: string; reason: string; dist?: number }> = [];
