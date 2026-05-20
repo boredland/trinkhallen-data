@@ -38,6 +38,71 @@ interface Stats {
   updated: number;
   removed: number;
   kept_non_osm: number;
+  /** Genuine new OSM POIs we suppressed because there was a near-duplicate
+   *  existing feature (same area + similar name) that just isn't linked to
+   *  an OSM source yet. Without this, hopfenstop-only features would get
+   *  shadowed by their OSM twins on every scrape run. */
+  suppressed_dup: number;
+}
+
+// Near-duplicate dedup: 30 m radius, Dice ≥ 0.6 on normalised names.
+// Matches the enrichment script's "uncertain-or-better" threshold.
+const DEDUP_RADIUS_M = 30;
+const DEDUP_NAME_SIM = 0.6;
+
+function haversineMeters(aLat: number, aLng: number, bLat: number, bLng: number): number {
+  const R = 6371008.8;
+  const dLat = ((bLat - aLat) * Math.PI) / 180;
+  const dLng = ((bLng - aLng) * Math.PI) / 180;
+  const lat1 = (aLat * Math.PI) / 180;
+  const lat2 = (bLat * Math.PI) / 180;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+function normalise(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
+    .replace(/[^\p{L}\p{N}\s]/gu, " ")
+    .replace(/\b(kiosk|trinkhalle|wasserhaeuschen|spaeti|spaetkauf|laden|shop|store)\b/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function diceCoef(a: string, b: string): number {
+  if (!a || !b) return 0;
+  if (a === b) return 1;
+  const bigrams = (s: string) => {
+    const out: string[] = [];
+    for (let i = 0; i < s.length - 1; i++) out.push(s.slice(i, i + 2));
+    return out;
+  };
+  const ag = bigrams(a);
+  const bg = bigrams(b);
+  if (ag.length === 0 || bg.length === 0) return 0;
+  const aMap = new Map<string, number>();
+  for (const g of ag) aMap.set(g, (aMap.get(g) ?? 0) + 1);
+  let inter = 0;
+  for (const g of bg) {
+    const n = aMap.get(g);
+    if (n && n > 0) { inter++; aMap.set(g, n - 1); }
+  }
+  return (2 * inter) / (ag.length + bg.length);
+}
+
+function looksLikeDuplicateOf(candidate: OsmFeature, existing: Feature[]): boolean {
+  const [cLng, cLat] = candidate.geometry.coordinates;
+  const cName = normalise(candidate.properties.name ?? "");
+  if (!cName) return false;
+  for (const e of existing) {
+    const [eLng, eLat] = e.geometry.coordinates;
+    if (haversineMeters(cLat, cLng, eLat, eLng) > DEDUP_RADIUS_M) continue;
+    const eName = normalise((e.properties["name"] as string) ?? "");
+    if (!eName) continue;
+    if (diceCoef(cName, eName) >= DEDUP_NAME_SIM) return true;
+  }
+  return false;
 }
 
 async function loadExisting(path: string): Promise<Feature[]> {
@@ -73,38 +138,62 @@ async function processRegion(region: Region): Promise<Stats> {
   let updated = 0;
   let removed = 0;
   let keptNonOsm = 0;
+  let suppressedDup = 0;
 
   const merged: Feature[] = [];
 
-  // First pass: keep non-OSM features verbatim, refresh OSM-matched ones, mark removed.
+  // Pass 1: walk existing features, dedup against fresh OSM data by id.
+  //   - OSM-only features get refreshed (or osm_removed) as before.
+  //   - Hybrid features (e.g. hopfenstop+osm after enrichment) keep their
+  //     local content but STILL consume the matching freshById entry so the
+  //     same OSM POI doesn't get re-added as a "new" feature below.
+  //   - Pure non-OSM features are kept verbatim.
   for (const f of existing) {
-    if (!isOsmOnly(f)) {
-      merged.push(f);
-      keptNonOsm++;
+    const osmIds = osmIdsFromSources(f);
+    let consumed = false;
+    for (const id of osmIds) {
+      if (freshById.has(id)) {
+        if (isOsmOnly(f)) {
+          // Pure OSM feature → adopt fresh tags entirely.
+          const fr = freshById.get(id)!;
+          if (typeof f.properties["created"] === "string") {
+            (fr.properties as Record<string, unknown>)["created"] = f.properties["created"];
+          }
+          merged.push(fr);
+          consumed = true;
+        }
+        freshById.delete(id);
+      }
+    }
+    if (consumed) {
+      updated++;
       continue;
     }
-    const osmId = osmIdsFromSources(f)[0];
-    if (osmId && freshById.has(osmId)) {
-      const fresh = freshById.get(osmId)!;
-      // Preserve original `created` if present.
-      if (typeof f.properties["created"] === "string") {
-        (fresh.properties as Record<string, unknown>)["created"] = f.properties["created"];
-      }
-      merged.push(fresh);
-      freshById.delete(osmId);
-      updated++;
-    } else {
-      // Lost from OSM — flag for human review.
+    if (isOsmOnly(f) && osmIds.length > 0) {
+      // Was OSM-sourced but Overpass no longer returns it. Flag for human
+      // review; locals may know it still exists.
       if (!f.properties.osm_removed) {
         f.properties.osm_removed = true;
         removed++;
       }
       merged.push(f);
+    } else {
+      // Hybrid (osm + something else) OR pure non-OSM (hopfenstop / user).
+      merged.push(f);
+      if (osmIds.length === 0) keptNonOsm++;
     }
   }
 
-  // Anything left in freshById is genuinely new.
+  // Pass 2: append genuinely-new OSM POIs, but skip ones that look like
+  // duplicates of existing local features (same area + similar name). That
+  // covers the un-enriched majority: hopfenstop features without an OSM
+  // source attached. The next enrichment run can link them; until then,
+  // we'd rather under-add than create dupes.
   for (const f of freshById.values()) {
+    if (looksLikeDuplicateOf(f, merged)) {
+      suppressedDup++;
+      continue;
+    }
     merged.push(f);
     added++;
   }
@@ -123,7 +212,7 @@ async function processRegion(region: Region): Promise<Stats> {
     "utf8",
   );
 
-  return { region: region.slug, added, updated, removed, kept_non_osm: keptNonOsm };
+  return { region: region.slug, added, updated, removed, kept_non_osm: keptNonOsm, suppressed_dup: suppressedDup };
 }
 
 async function main(): Promise<void> {
@@ -138,7 +227,7 @@ async function main(): Promise<void> {
   for (const region of targets) {
     console.error(`→ ${region.slug}: querying Overpass…`);
     const stats = await processRegion(region);
-    console.error(`  +${stats.added} ~${stats.updated} -${stats.removed} (kept ${stats.kept_non_osm} non-OSM)`);
+    console.error(`  +${stats.added} ~${stats.updated} -${stats.removed} (kept ${stats.kept_non_osm} non-OSM, suppressed ${stats.suppressed_dup} dup)`);
     allStats.push(stats);
   }
   process.stdout.write(JSON.stringify(allStats, null, 2) + "\n");
