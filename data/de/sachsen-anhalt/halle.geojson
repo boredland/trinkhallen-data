@@ -582,17 +582,29 @@
           "district": "Mitte"
         },
         "tags": [
+          "barrierefrei",
+          "draussen",
+          "raucherbereich",
           "schnaps",
+          "sitzgelegenheiten",
           "wein"
         ],
         "sources": [
           {
             "type": "hopfenstop",
             "id": "f7fb4f01-d85f-43f4-b4cd-fe36de176346"
+          },
+          {
+            "type": "osm",
+            "id": "node/4948467821",
+            "version": 0
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19"
+        "updated": "2026-05-20",
+        "hours": {
+          "raw": "Su-Th 10:00-00:00; Fr-Sa 10:00-01:00"
+        }
       }
     },
     {
@@ -750,10 +762,18 @@
           {
             "type": "hopfenstop",
             "id": "d1482741-a201-400a-894b-3ad66565b43d"
+          },
+          {
+            "type": "osm",
+            "id": "node/311197346",
+            "version": 0
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19"
+        "updated": "2026-05-20",
+        "hours": {
+          "raw": "Mo-Su 11:00-23:00"
+        }
       }
     },
     {
