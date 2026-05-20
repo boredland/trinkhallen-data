@@ -47,7 +47,10 @@ function acceptMatch(combined: number, distance: number, nameSim: number): boole
   return false;
 }
 
-const UNCERTAIN_SCORE = 0.45; // combined-score floor for the review CSV
+// Combined-score floor for the review CSV. Sub-threshold candidates aren't
+// "almost-matches" — they're just the tail of a fuzzy-search ranking, with
+// near-zero signal. Raising 0.45 → 0.5 drops ~30 noise rows per run.
+const UNCERTAIN_SCORE = 0.5;
 
 // ── types ───────────────────────────────────────────────────────────────────
 type TriState = "yes" | "no" | "unknown";
