@@ -27,6 +27,8 @@ jobs:
     timeout-minutes: 90  # extra room for the gosom step (per-row gmaps queries)
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: oven-sh/setup-bun@v2
         with:
