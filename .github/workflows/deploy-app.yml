@@ -1,0 +1,42 @@
+name: deploy-app
+
+# trinkhallen-app bakes this repo's GeoJSON into its asset bundle at build
+# time (scripts/import-data.ts). Pushes here therefore need to redeploy the
+# app — the Cloudflare Workers Builds Git integration only watches the app
+# repo. We poke a Cloudflare Deploy Hook to trigger the rebuild.
+#
+# Operator setup (one-off):
+#   1. Cloudflare dash → Workers & Pages → trinkhallen-app → Settings →
+#      Builds → Deploy Hooks → Create. Copy the URL.
+#   2. GitHub → boredland/trinkhallen-data → Settings → Secrets → Actions →
+#      New repository secret `CF_DEPLOY_HOOK_URL`, paste the URL.
+#
+# Triggers on any push to main; the data-only filter under `paths` keeps
+# README / workflow tweaks from rebuilding the app unnecessarily.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "regions.yml"
+      - "schema/**"
+
+permissions:
+  contents: read
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare deploy hook
+        env:
+          CF_DEPLOY_HOOK_URL: ${{ secrets.CF_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$CF_DEPLOY_HOOK_URL" ]; then
+            echo "::error::CF_DEPLOY_HOOK_URL secret is not set — see deploy-app.yml header for setup."
+            exit 1
+          fi
+          status=$(curl -fsS -o /tmp/resp -w "%{http_code}" -X POST "$CF_DEPLOY_HOOK_URL")
+          echo "Deploy hook returned HTTP $status"
+          cat /tmp/resp || true
