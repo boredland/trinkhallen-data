@@ -15,6 +15,9 @@ schema/
 scripts/
   _oneoff/import-hopfenstop.ts       One-shot Frankfurt seed importer (archived)
   osm-to-geojson.ts                  Overpass JSON → our GeoJSON normaliser
+  run-osm-scrape.ts                  Weekly OSM ingest orchestrator (adds new POIs)
+  enrich-from-osm.ts                 Monthly enrichment — fills blanks on
+                                     existing features from matched OSM POIs
 regions.yml                          Region definitions for the OSM workflow
 .github/workflows/
   osm-scrape.yml                     Weekly OSM ingest → opens PRs

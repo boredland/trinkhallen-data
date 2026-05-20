@@ -2,3 +2,9 @@ node_modules/
 .tmp/
 *.log
 .DS_Store
+
+# Don't ignore the enrichment CSVs — they're committed by the workflow PR
+# so reviewers can scan them, then deleted after triage. Keep here as a
+# reminder; remove this section if we change that policy.
+# _enrichment-conflicts.csv
+# _enrichment-uncertain.csv

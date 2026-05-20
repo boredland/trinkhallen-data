@@ -8,6 +8,7 @@
   "scripts": {
     "import:hopfenstop": "tsx scripts/_oneoff/import-hopfenstop.ts",
     "osm:scrape":        "tsx scripts/run-osm-scrape.ts",
+    "osm:enrich":        "tsx scripts/enrich-from-osm.ts",
     "osm:print":         "tsx scripts/osm-to-geojson.ts"
   },
   "devDependencies": {
