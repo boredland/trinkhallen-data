@@ -1540,16 +1540,29 @@
           "city": "Bonn"
         },
         "tags": [
-          "fritz_kola"
+          "fritz_kola",
+          "raucherbereich",
+          "sitzgelegenheiten"
         ],
         "sources": [
           {
             "type": "hopfenstop",
             "id": "07c2efc5-0e71-4d64-9f54-5dbd8758c500"
+          },
+          {
+            "type": "osm",
+            "id": "node/318406083",
+            "version": 0
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19"
+        "updated": "2026-05-20",
+        "hours": {
+          "raw": "Mo-Fr 06:30-24:00, Sa,Su,PH 09:00-24:00"
+        },
+        "payment": {
+          "cards": "yes"
+        }
       }
     },
     {
@@ -4462,16 +4475,22 @@
           "district": "Innenstadt"
         },
         "tags": [
-          "fritz_kola"
+          "fritz_kola",
+          "sitzgelegenheiten"
         ],
         "sources": [
           {
             "type": "hopfenstop",
             "id": "77739cfb-a2e5-4791-80e0-205a2e33b4bc"
+          },
+          {
+            "type": "osm",
+            "id": "node/4378091085",
+            "version": 0
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19"
+        "updated": "2026-05-20"
       }
     },
     {
@@ -6239,16 +6258,25 @@
           "city": "Bonn"
         },
         "tags": [
+          "barrierefrei",
           "fritz_kola"
         ],
         "sources": [
           {
             "type": "hopfenstop",
             "id": "ec024713-472c-460c-a2af-a003f57a8a9f"
+          },
+          {
+            "type": "osm",
+            "id": "way/552889415",
+            "version": 0
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19"
+        "updated": "2026-05-20",
+        "hours": {
+          "raw": "Mo-Fr 07:00-20:00; Sa 08:00-19:00; Su,PH off"
+        }
       }
     },
     {
@@ -6462,10 +6490,18 @@
           {
             "type": "hopfenstop",
             "id": "36ff67f8-5b51-44c3-beea-b014332008eb"
+          },
+          {
+            "type": "osm",
+            "id": "node/10303747009",
+            "version": 0
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19"
+        "updated": "2026-05-20",
+        "hours": {
+          "raw": "Mo-Fr 05:00-01:00; Sa 06:00-01:00; Su 08:00-01:00"
+        }
       }
     },
     {
@@ -7645,18 +7681,30 @@
           "district": "Innenstadt"
         },
         "tags": [
-          "schnaps",
           "musik",
-          "sekt"
+          "schnaps",
+          "sekt",
+          "sitzgelegenheiten"
         ],
         "sources": [
           {
             "type": "hopfenstop",
             "id": "ba1b2867-2437-46bb-8843-dddf9ed62c1d"
+          },
+          {
+            "type": "osm",
+            "id": "node/451670872",
+            "version": 0
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19"
+        "updated": "2026-05-20",
+        "hours": {
+          "raw": "Mo-Su 10:00-24:00"
+        },
+        "payment": {
+          "cards": "yes"
+        }
       }
     },
     {
