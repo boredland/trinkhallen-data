@@ -192,10 +192,18 @@ function tilesFromFeatures(features: Feature[], step = 0.5): [number, number, nu
 
 async function fetchOsmInBbox(b: [number, number, number, number]): Promise<OsmCandidate[]> {
   const [w, s, e, n] = b;
+  // Broaden the tag filter to catch kiosks that OSM mappers categorised
+  // differently. The original shop=kiosk|beverages|convenience missed:
+  //   - shop=alcohol / wine / tobacco / newsagent (common for German Spätis)
+  //   - shop=deli / food
+  //   - amenity=fast_food / cafe / pub / bar (Trinkhalle-as-bar overlap)
+  // Adds tile size by maybe 20-40% but those are exactly the false-negatives
+  // we were getting in the uncertain CSV (location matches, no shop=kiosk
+  // candidate nearby).
   const query = `[out:json][timeout:180];
 (
-  node["shop"~"^(kiosk|beverages|convenience)$"](${s},${w},${n},${e});
-  way["shop"~"^(kiosk|beverages|convenience)$"](${s},${w},${n},${e});
+  nwr["shop"~"^(kiosk|beverages|convenience|alcohol|wine|tobacco|newsagent|deli|food)$"](${s},${w},${n},${e});
+  nwr["amenity"~"^(fast_food|cafe|pub|bar)$"]["name"](${s},${w},${n},${e});
 );
 out center tags;`;
 
