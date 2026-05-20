@@ -77,16 +77,37 @@ out center tags;`;
 
 export async function fetchOsmForRegion(region: Region): Promise<OsmFeature[]> {
   const body = `data=${encodeURIComponent(overpassQuery(region))}`;
-  const resp = await fetch(OVERPASS_ENDPOINT, {
-    method: "POST",
-    headers: {
-      "content-type": "application/x-www-form-urlencoded",
-      "user-agent": USER_AGENT,
-    },
-    body,
-  });
-  if (!resp.ok) {
-    throw new Error(`Overpass ${OVERPASS_ENDPOINT} returned HTTP ${resp.status}: ${await resp.text().catch(() => "")}`);
+
+  // Retry on 5xx + 429 with exponential backoff. Overpass is volunteer-run and
+  // periodically returns 504 under load; a single transient failure used to
+  // crash the whole weekly scrape (see run 26167365806 — aachen 504).
+  let resp: Response | null = null;
+  let lastErr: unknown = null;
+  const backoff = [2_000, 5_000, 12_000, 30_000, 60_000];
+  for (let attempt = 0; attempt < backoff.length; attempt++) {
+    try {
+      resp = await fetch(OVERPASS_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "content-type": "application/x-www-form-urlencoded",
+          "user-agent": USER_AGENT,
+        },
+        body,
+      });
+      if (resp.ok) break;
+      if (resp.status < 500 && resp.status !== 429) {
+        throw new Error(`Overpass ${OVERPASS_ENDPOINT} returned HTTP ${resp.status}: ${await resp.text().catch(() => "")}`);
+      }
+      lastErr = new Error(`HTTP ${resp.status}`);
+    } catch (err) {
+      lastErr = err;
+    }
+    if (attempt < backoff.length - 1) {
+      await new Promise((r) => setTimeout(r, backoff[attempt]!));
+    }
+  }
+  if (!resp || !resp.ok) {
+    throw new Error(`Overpass ${OVERPASS_ENDPOINT} failed after retries: ${(lastErr as Error)?.message ?? "unknown"}`);
   }
   const json = (await resp.json()) as OverpassResponse;
   const today = new Date().toISOString().slice(0, 10);
