@@ -68,8 +68,14 @@ interface FeatureCollection {
 interface GmapsResult {
   title?: string;
   latitude?: number;
+  // gosom mis-spells longitude as "longtitude" in its JSON output; we accept
+  // either so the script keeps working if they ever fix it upstream.
   longitude?: number;
-  // gosom emits more fields; we only need these
+  longtitude?: number;
+}
+
+function resultLng(r: GmapsResult): number | undefined {
+  return typeof r.longitude === "number" ? r.longitude : r.longtitude;
 }
 
 // ── helpers ─────────────────────────────────────────────────────────────────
@@ -216,8 +222,9 @@ async function queryGmapsOnce(name: string, lat: number, lng: number): Promise<G
 
 function confirm(results: GmapsResult[], lat: number, lng: number): boolean {
   for (const r of results) {
-    if (typeof r.latitude !== "number" || typeof r.longitude !== "number") continue;
-    if (haversineMeters(lat, lng, r.latitude, r.longitude) <= GMAPS_CONFIRM_RADIUS_M) {
+    const rLng = resultLng(r);
+    if (typeof r.latitude !== "number" || typeof rLng !== "number") continue;
+    if (haversineMeters(lat, lng, r.latitude, rLng) <= GMAPS_CONFIRM_RADIUS_M) {
       return true;
     }
   }
