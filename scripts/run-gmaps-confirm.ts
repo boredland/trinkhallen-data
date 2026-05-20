@@ -23,7 +23,7 @@
 
 import { execFileSync, spawnSync } from "node:child_process";
 import { existsSync, mkdirSync } from "node:fs";
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, rm, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -174,8 +174,10 @@ async function queryGmapsOnce(name: string, lat: number, lng: number): Promise<G
   const inputPath = join(TMP_DIR, "in.txt");
   const outputPath = join(TMP_DIR, "out.json");
   await writeFile(inputPath, name + "\n", "utf8");
-  // Make sure stale output doesn't fool us if gosom no-ops
-  if (existsSync(outputPath)) await writeFile(outputPath, "", "utf8");
+  // gosom runs in docker, often as root, so out.json ends up root-owned.
+  // Re-opening it for write from the host as the runner user fails with EACCES;
+  // unlink works because it only needs write perm on the parent dir.
+  await rm(outputPath, { force: true });
 
   // Volume-mounted directory must be /work in the container.
   const args = [
