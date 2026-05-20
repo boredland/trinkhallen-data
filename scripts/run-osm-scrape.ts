@@ -17,7 +17,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { existsSync } from "node:fs";
-import { fetchOsmForRegion, loadRegions, type OsmFeature, type Region } from "./osm-to-geojson.ts";
+import { fetchOsmForRegion, loadRegions, ownsFeature, type OsmFeature, type Region } from "./osm-to-geojson.ts";
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), "../..");
 
@@ -43,6 +43,12 @@ interface Stats {
    *  an OSM source yet. Without this, hopfenstop-only features would get
    *  shadowed by their OSM twins on every scrape run. */
   suppressed_dup: number;
+  /** OSM POIs that fell inside this region's bbox but are geographically
+   *  closer to another region (e.g. Düsseldorf's Wittlaer caught by Ruhr's
+   *  bbox). We drop them here so the same OSM node doesn't land in two
+   *  region files. Also counts pre-existing wrong-region copies that this
+   *  pass removes. */
+  cross_region_dropped: number;
 }
 
 // Near-duplicate dedup: 30 m radius, Dice ≥ 0.6 on normalised names.
@@ -123,15 +129,23 @@ function isOsmOnly(f: Feature): boolean {
   return srcs.length > 0 && srcs.every((s) => s.type === "osm");
 }
 
-async function processRegion(region: Region): Promise<Stats> {
+async function processRegion(region: Region, allRegions: Region[]): Promise<Stats> {
   const path = resolve(REPO_ROOT, region.path);
   const existing = await loadExisting(path);
   const fresh = await fetchOsmForRegion(region);
 
+  let crossRegionDropped = 0;
+
   const freshById = new Map<string, OsmFeature>();
   for (const f of fresh) {
     const osmId = f.properties.sources[0]?.id;
-    if (osmId) freshById.set(osmId, f);
+    if (!osmId) continue;
+    const [lng, lat] = f.geometry.coordinates;
+    if (!ownsFeature(region, allRegions, lng, lat)) {
+      crossRegionDropped++;
+      continue;
+    }
+    freshById.set(osmId, f);
   }
 
   let added = 0;
@@ -141,6 +155,10 @@ async function processRegion(region: Region): Promise<Stats> {
   let suppressedDup = 0;
 
   const merged: Feature[] = [];
+  // Tracks OSM source ids already emitted into `merged`, so a second existing
+  // row sharing an OSM id collapses into the first instead of producing a
+  // duplicate (the 22 within-file dupes mostly in frankfurt.geojson).
+  const emittedOsmIds = new Set<string>();
 
   // Pass 1: walk existing features, dedup against fresh OSM data by id.
   //   - OSM-only features get refreshed (or osm_removed) as before.
@@ -150,6 +168,10 @@ async function processRegion(region: Region): Promise<Stats> {
   //   - Pure non-OSM features are kept verbatim.
   for (const f of existing) {
     const osmIds = osmIdsFromSources(f);
+    if (osmIds.some((id) => emittedOsmIds.has(id))) {
+      // Within-file duplicate of an already-emitted feature. Drop it.
+      continue;
+    }
     let consumed = false;
     for (const id of osmIds) {
       if (freshById.has(id)) {
@@ -160,6 +182,7 @@ async function processRegion(region: Region): Promise<Stats> {
             (fr.properties as Record<string, unknown>)["created"] = f.properties["created"];
           }
           merged.push(fr);
+          for (const sid of fr.properties.sources) emittedOsmIds.add(sid.id);
           consumed = true;
         }
         freshById.delete(id);
@@ -170,16 +193,29 @@ async function processRegion(region: Region): Promise<Stats> {
       continue;
     }
     if (isOsmOnly(f) && osmIds.length > 0) {
-      // Was OSM-sourced but Overpass no longer returns it. Flag for human
-      // review; locals may know it still exists.
+      // An OSM-only feature whose id wasn't in this region's fresh result:
+      // either Overpass no longer returns it (kiosk closed / mistagged), or
+      // it's geographically owned by a different region (legacy from before
+      // ownsFeature filtering). The latter is identifiable by checking the
+      // coords against the same ownership rule; if another region owns it,
+      // delete it here — the owning region's scrape run will keep its copy.
+      const [lng, lat] = f.geometry.coordinates;
+      if (!ownsFeature(region, allRegions, lng, lat)) {
+        crossRegionDropped++;
+        continue;
+      }
       if (!f.properties.osm_removed) {
         f.properties.osm_removed = true;
         removed++;
       }
       merged.push(f);
+      for (const id of osmIds) emittedOsmIds.add(id);
     } else {
       // Hybrid (osm + something else) OR pure non-OSM (hopfenstop / user).
+      // Hybrids carry human-edited content; we keep them in place even if
+      // ownership would suggest otherwise (moderator can reassign manually).
       merged.push(f);
+      for (const id of osmIds) emittedOsmIds.add(id);
       if (osmIds.length === 0) keptNonOsm++;
     }
   }
@@ -212,7 +248,15 @@ async function processRegion(region: Region): Promise<Stats> {
     "utf8",
   );
 
-  return { region: region.slug, added, updated, removed, kept_non_osm: keptNonOsm, suppressed_dup: suppressedDup };
+  return {
+    region: region.slug,
+    added,
+    updated,
+    removed,
+    kept_non_osm: keptNonOsm,
+    suppressed_dup: suppressedDup,
+    cross_region_dropped: crossRegionDropped,
+  };
 }
 
 async function main(): Promise<void> {
@@ -226,8 +270,8 @@ async function main(): Promise<void> {
   const allStats: Stats[] = [];
   for (const region of targets) {
     console.error(`→ ${region.slug}: querying Overpass…`);
-    const stats = await processRegion(region);
-    console.error(`  +${stats.added} ~${stats.updated} -${stats.removed} (kept ${stats.kept_non_osm} non-OSM, suppressed ${stats.suppressed_dup} dup)`);
+    const stats = await processRegion(region, regions);
+    console.error(`  +${stats.added} ~${stats.updated} -${stats.removed} (kept ${stats.kept_non_osm} non-OSM, suppressed ${stats.suppressed_dup} dup, cross-region dropped ${stats.cross_region_dropped})`);
     allStats.push(stats);
   }
   process.stdout.write(JSON.stringify(allStats, null, 2) + "\n");
