@@ -432,7 +432,7 @@ async function main(): Promise<void> {
   const wantSlug = wantSlugArg >= 0 ? process.argv[wantSlugArg + 1] : null;
 
   const files = await findGeojsonFiles(REPO_ROOT);
-  const conflicts: string[][] = [];
+  const conflicts: string[][] = []; // retained for future use; not currently written
   const uncertain: string[][] = [];
   const totals = { files: 0, candidates: 0, matched: 0, hours: 0, payment: 0, address: 0, tags: 0 };
 
@@ -472,13 +472,10 @@ async function main(): Promise<void> {
       const best = findBestMatch(f, candidates);
       if (!best) continue;
       if (best.score >= ACCEPT_SCORE) {
-        // Conflict logging — present fields whose OSM value differs.
-        if (f.properties.hours?.raw && best.candidate.tags["opening_hours"] && f.properties.hours.raw !== best.candidate.tags["opening_hours"]) {
-          conflicts.push([
-            slug, f.properties.id, "hours",
-            f.properties.hours.raw, best.candidate.tags["opening_hours"],
-          ]);
-        }
+        // No conflict logging — if we already have a value we trust it
+        // (hopfenstop seed is community-curated; OSM disagreeing isn't
+        // useful signal worth surfacing). The backfill() rules below
+        // never overwrite an existing value anyway.
         const s = backfill(f, best.candidate);
         totals.hours += s.hours ? 1 : 0;
         totals.payment += s.payment;
@@ -508,14 +505,8 @@ async function main(): Promise<void> {
     totals.matched += fileMatched;
   }
 
-  if (conflicts.length > 0) {
-    await writeFile(
-      join(REPO_ROOT, "_enrichment-conflicts.csv"),
-      "region,feature_id,field,ours,osm\n" +
-        conflicts.map((r) => r.map((c) => `"${c.replace(/"/g, '""')}"`).join(",")).join("\n") +
-        "\n",
-    );
-  }
+  // (conflict logging removed — see comment in main loop)
+  void conflicts;
   if (uncertain.length > 0) {
     await writeFile(
       join(REPO_ROOT, "_enrichment-uncertain.csv"),
