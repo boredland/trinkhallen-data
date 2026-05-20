@@ -34,8 +34,20 @@ const USER_AGENT = "trinkhallen-data/0.1 enrich-from-osm (https://github.com/bor
 
 // ── tunables ────────────────────────────────────────────────────────────────
 const MAX_DISTANCE_M = 25; // candidates farther than this aren't considered
-const ACCEPT_SCORE = 0.7;  // combined score required to auto-merge
-const UNCERTAIN_SCORE = 0.45; // below ACCEPT but above this → logged for review
+
+// A match is accepted if ANY of these is true. Single combined-score
+// thresholds were too conservative: identical-named OSM POIs 17 m away
+// were stuck in "uncertain" alongside genuine ambiguities. Two independent
+// signals (strong name OR very-close distance) each justify auto-accept.
+function acceptMatch(combined: number, distance: number, nameSim: number): boolean {
+  if (combined >= 0.65) return true;                          // weighted score
+  if (nameSim >= 0.8  && distance <= MAX_DISTANCE_M) return true; // identical/near-identical names
+  if (distance <= 15  && nameSim >= 0.45) return true;        // close + decent name
+  if (distance <= 3   && nameSim >= 0.25) return true;        // essentially the same building
+  return false;
+}
+
+const UNCERTAIN_SCORE = 0.45; // combined-score floor for the review CSV
 
 // ── types ───────────────────────────────────────────────────────────────────
 type TriState = "yes" | "no" | "unknown";
@@ -471,7 +483,7 @@ async function main(): Promise<void> {
       if (alreadyHasOsmSource(f)) continue;
       const best = findBestMatch(f, candidates);
       if (!best) continue;
-      if (best.score >= ACCEPT_SCORE) {
+      if (acceptMatch(best.score, best.distance, best.nameSim)) {
         // No conflict logging — if we already have a value we trust it
         // (hopfenstop seed is community-curated; OSM disagreeing isn't
         // useful signal worth surfacing). The backfill() rules below
