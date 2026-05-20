@@ -45,6 +45,49 @@ export async function loadRegions(): Promise<Region[]> {
   return doc.regions;
 }
 
+function bboxCenter(r: Region): [number, number] {
+  const [w, s, e, n] = r.bbox;
+  return [(w + e) / 2, (s + n) / 2];
+}
+
+function bboxContains(r: Region, lng: number, lat: number): boolean {
+  const [w, s, e, n] = r.bbox;
+  return lng >= w && lng <= e && lat >= s && lat <= n;
+}
+
+function squaredAnchorDistance(r: Region, lng: number, lat: number): number {
+  const [cLng, cLat] = bboxCenter(r);
+  const dLng = (lng - cLng) * Math.cos((lat * Math.PI) / 180);
+  const dLat = lat - cLat;
+  return dLng * dLng + dLat * dLat;
+}
+
+/**
+ * A point belongs to exactly one region: the one whose bbox center is closest,
+ * among regions whose bbox actually contains the point. If only one region's
+ * bbox contains the point, that's trivially the owner.
+ *
+ * Returns true if `region` is that owner. Falls back to true if no region's
+ * bbox contains the point (shouldn't happen because Overpass returned it
+ * inside this region's bbox, but defensive).
+ */
+export function ownsFeature(
+  region: Region,
+  allRegions: Region[],
+  lng: number,
+  lat: number,
+): boolean {
+  const candidates = allRegions.filter((r) => bboxContains(r, lng, lat));
+  if (candidates.length === 0) return true;
+  let best = candidates[0]!;
+  let bestD = squaredAnchorDistance(best, lng, lat);
+  for (let i = 1; i < candidates.length; i++) {
+    const d = squaredAnchorDistance(candidates[i]!, lng, lat);
+    if (d < bestD) { best = candidates[i]!; bestD = d; }
+  }
+  return best.slug === region.slug;
+}
+
 const OVERPASS_ENDPOINT = process.env["OVERPASS_ENDPOINT"] ?? "https://overpass-api.de/api/interpreter";
 const USER_AGENT = "trinkhallen-data/0.1 (https://github.com/boredland/trinkhallen-data)";
 
