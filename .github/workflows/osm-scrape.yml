@@ -26,25 +26,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          version: 9
+          bun-version: latest
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-          cache: pnpm
-
-      - run: pnpm install --frozen-lockfile
+      - run: bun install --frozen-lockfile
 
       - name: Run scrape
         id: scrape
         run: |
           set -euo pipefail
           if [ -n "${{ inputs.region }}" ]; then
-            pnpm tsx scripts/run-osm-scrape.ts "${{ inputs.region }}" > scrape-stats.json
+            bun scripts/run-osm-scrape.ts "${{ inputs.region }}" > scrape-stats.json
           else
-            pnpm tsx scripts/run-osm-scrape.ts > scrape-stats.json
+            bun scripts/run-osm-scrape.ts > scrape-stats.json
           fi
           cat scrape-stats.json
           echo "title=$(jq -r '
