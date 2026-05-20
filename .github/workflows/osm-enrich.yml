@@ -24,7 +24,7 @@ concurrency:
 jobs:
   enrich:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90  # extra room for the gosom step (per-row gmaps queries)
     steps:
       - uses: actions/checkout@v4
 
@@ -56,6 +56,18 @@ jobs:
             echo 'JSON'
           } >> "$GITHUB_OUTPUT"
 
+      # Free-tier confirmation of uncertain rows via the gosom/google-maps-scraper
+      # docker image. Skipped automatically when the enrich step produced no
+      # uncertain rows. Failures are non-fatal: the script just leaves rows in
+      # the CSV for human review.
+      - name: Confirm uncertain via Google Maps
+        id: gmaps
+        if: hashFiles('_enrichment-uncertain.csv') != ''
+        continue-on-error: true
+        run: |
+          set -eo pipefail
+          pnpm tsx scripts/run-gmaps-confirm.ts | tee gmaps-stats.json
+
       - name: Detect changes
         id: diff
         run: |
@@ -83,10 +95,13 @@ jobs:
             - Combined score = 0.55 × Sørensen-Dice(name bigrams) + 0.45 × distance score
             - Auto-accept ≥ 0.7, uncertain ≥ 0.45 (logged to CSV, not applied)
 
-            **Stats**:
+            **Enrichment stats**:
             ```json
             ${{ steps.enrich.outputs.stats }}
             ```
+
+            **Google Maps confirmation stats** (uncertain → confirmed via gosom):
+            run gmaps step output in `gmaps-stats.json` (committed to branch when present).
 
             **For review**:
             - `_enrichment-uncertain.csv` — sub-threshold candidates (judge per-row)
