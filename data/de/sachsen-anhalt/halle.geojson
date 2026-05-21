@@ -598,12 +598,19 @@
             "type": "osm",
             "id": "node/4948467821",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-20",
+        "updated": "2026-05-21",
         "hours": {
           "raw": "Su-Th 10:00-00:00; Fr-Sa 10:00-01:00"
+        },
+        "payment": {
+          "cash": "yes"
         }
       }
     },
@@ -664,10 +671,19 @@
           {
             "type": "hopfenstop",
             "id": "efffce61-f259-489d-a231-5dc1d070c808"
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19"
+        "updated": "2026-05-21",
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -1015,10 +1031,19 @@
             "type": "osm",
             "id": "node/11357088168",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-20"
+        "updated": "2026-05-21",
+        "payment": {
+          "girocard": "yes",
+          "cards": "no",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -1075,10 +1100,19 @@
             "type": "osm",
             "id": "node/11162692205",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment": {
+          "girocard": "yes",
+          "cards": "no",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -1144,10 +1178,19 @@
             "type": "osm",
             "id": "node/12083822772",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -1171,12 +1214,21 @@
             "type": "osm",
             "id": "node/12320973968",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
         "hours": {
           "raw": "Mo-Th,Sa 10:00-20:00; Fr 10:00-24:00; Su off"
+        },
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
         }
       }
     },
@@ -1290,10 +1342,19 @@
             "type": "osm",
             "id": "node/13005580501",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment": {
+          "girocard": "yes",
+          "cards": "no",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -1338,12 +1399,21 @@
             "type": "osm",
             "id": "node/1714545414",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
         "hours": {
           "raw": "Mo-Fr 12:00-20:00; Sa 08:00-12:00"
+        },
+        "payment": {
+          "girocard": "yes",
+          "cards": "no",
+          "contactless": "yes"
         }
       }
     },
@@ -1369,10 +1439,18 @@
             "type": "osm",
             "id": "node/1808440360",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -1398,13 +1476,22 @@
             "type": "osm",
             "id": "node/1808444118",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -1580,6 +1667,10 @@
             "type": "osm",
             "id": "node/3321353161",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
@@ -1589,7 +1680,10 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cards": "yes"
+        }
       }
     },
     {
@@ -1650,6 +1744,10 @@
             "type": "osm",
             "id": "node/3660731025",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
@@ -1659,7 +1757,11 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -1722,6 +1824,10 @@
             "type": "osm",
             "id": "node/4327477206",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
@@ -1731,7 +1837,12 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -1754,10 +1865,17 @@
             "type": "osm",
             "id": "node/4798455094",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment": {
+          "cash": "yes"
+        }
       }
     },
     {
@@ -1853,6 +1971,10 @@
             "type": "osm",
             "id": "node/656404301",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
@@ -1862,7 +1984,12 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -1951,12 +2078,20 @@
             "type": "osm",
             "id": "node/7380242957",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
         "hours": {
           "raw": "Mo-Fr 08:00-18:00; Sa 09:00-12:00"
+        },
+        "payment": {
+          "cards": "no",
+          "girocard": "yes"
         }
       }
     },
@@ -1978,6 +2113,10 @@
             "type": "osm",
             "id": "node/751747925",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
@@ -1987,7 +2126,12 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -2159,10 +2303,19 @@
             "type": "osm",
             "id": "way/185757234",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -2227,13 +2380,20 @@
             "type": "osm",
             "id": "way/215851874",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cash": "yes"
+        }
       }
     },
     {
@@ -2259,6 +2419,10 @@
             "type": "osm",
             "id": "way/481960564",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
@@ -2268,7 +2432,10 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cash": "yes"
+        }
       }
     },
     {
@@ -2295,6 +2462,10 @@
             "type": "osm",
             "id": "way/71409308",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
@@ -2304,7 +2475,12 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
