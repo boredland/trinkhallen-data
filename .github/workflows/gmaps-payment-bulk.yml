@@ -29,7 +29,7 @@ jobs:
     outputs:
       regions: ${{ steps.list.outputs.regions }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - id: list
         run: |
           set -euo pipefail
@@ -56,7 +56,7 @@ jobs:
       group: gmaps-payment-bulk-${{ matrix.region }}
       cancel-in-progress: false
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -93,7 +93,7 @@ jobs:
 
       - name: Open PR
         if: steps.diff.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: ${{ steps.enrich.outputs.title }}
           title: ${{ steps.enrich.outputs.title }}

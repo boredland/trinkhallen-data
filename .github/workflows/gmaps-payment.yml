@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -83,7 +83,7 @@ jobs:
 
       - name: Open PR
         if: steps.diff.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "Gmaps payment: ${{ steps.enrich.outputs.title }}"
           title: "Gmaps payment: ${{ steps.enrich.outputs.title }}"
