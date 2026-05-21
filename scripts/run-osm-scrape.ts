@@ -8,7 +8,7 @@
  *        - Features whose sources include an OSM entry are matched by id;
  *          updated if still present in Overpass, marked osm_removed=true if not
  *        - New OSM features are appended
- *   3. Write the file (idempotent: sorted by id within the OSM block)
+ *   3. Write the file (idempotent: features sorted by id, non-OSM first)
  *
  * Returns counts via stdout so the GH Action can include them in the PR title.
  */
@@ -234,11 +234,12 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
     added++;
   }
 
-  // Stable order: non-OSM first (preserving input order), then OSM sorted by id.
-  const nonOsm = merged.filter((f) => !isOsmOnly(f));
-  const osm = merged.filter(isOsmOnly).sort((a, b) =>
-    a.properties.id.localeCompare(b.properties.id),
-  );
+  // Stable order: non-OSM block first, then OSM block — both sorted by id so
+  // the only diffs a scrape PR ever shows are real content changes, never
+  // reorder churn from upstream Overpass results or enrichment passes.
+  const byId = (a: Feature, b: Feature) => a.properties.id.localeCompare(b.properties.id);
+  const nonOsm = merged.filter((f) => !isOsmOnly(f)).sort(byId);
+  const osm = merged.filter(isOsmOnly).sort(byId);
   const sorted = [...nonOsm, ...osm];
 
   await mkdir(dirname(path), { recursive: true });
