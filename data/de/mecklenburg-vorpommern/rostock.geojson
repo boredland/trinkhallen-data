@@ -55,13 +55,22 @@
             "type": "osm",
             "id": "node/1092777213",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
         "tags": [
           "draussen"
-        ]
+        ],
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -250,12 +259,21 @@
             "type": "osm",
             "id": "node/601449890",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
         "hours": {
           "raw": "Mo-Fr 09:00-18:00"
+        },
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
         }
       }
     },
@@ -277,6 +295,10 @@
             "type": "osm",
             "id": "node/687636364",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
@@ -286,7 +308,12 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -313,10 +340,19 @@
             "type": "osm",
             "id": "node/724266984",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -337,6 +373,10 @@
             "type": "osm",
             "id": "way/253255556",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
@@ -346,7 +386,11 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        }
       }
     }
   ]
