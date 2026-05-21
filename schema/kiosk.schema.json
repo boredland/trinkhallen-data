@@ -85,7 +85,7 @@
             "required": ["type", "id"],
             "additionalProperties": false,
             "properties": {
-              "type":    { "enum": ["osm", "hopfenstop", "user", "manual"] },
+              "type":    { "enum": ["osm", "hopfenstop", "user", "manual", "gmaps"] },
               "id":      { "type": "string" },
               "version": { "type": "integer", "minimum": 0 }
             }
