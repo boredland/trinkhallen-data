@@ -95,6 +95,10 @@
           "type": "boolean",
           "description": "Set to true by the OSM workflow when an OSM-sourced node has disappeared upstream; humans review before deletion."
         },
+        "kind": {
+          "enum": ["vending_machine"],
+          "description": "Set when OSM tags identify the feature as something more specific than a manned kiosk (currently: pure vending machines via amenity=vending_machine, self_service=only, or automated=yes). Consumers can filter or render differently."
+        },
         "created": { "type": "string", "format": "date" },
         "updated": { "type": "string", "format": "date" }
       }

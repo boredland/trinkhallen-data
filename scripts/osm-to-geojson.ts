@@ -34,6 +34,9 @@ export interface OsmFeature {
     tags?: string[];
     payment?: Record<"cash" | "cards" | "contactless" | "girocard" | "mobile", "yes" | "no" | "unknown">;
     sources: Array<{ type: "osm"; id: string; version: number }>;
+    /** Set when OSM tags identify this as something other than a manned
+     *  kiosk. Consumers can filter or render differently. */
+    kind?: "vending_machine";
     created: string;
     updated: string;
   };
@@ -203,9 +206,30 @@ export async function fetchOsmForRegion(region: Region): Promise<OsmFeature[]> {
     const osmTags = mapTags(tags);
     if (osmTags.length > 0) feature.properties.tags = osmTags;
 
+    const kind = detectKind(tags);
+    if (kind) feature.properties.kind = kind;
+
     out.push(feature);
   }
   return out;
+}
+
+/**
+ * Decide whether an OSM-tagged kiosk is actually something more specific
+ * than a manned Späti. Conservative: only flag when the tags leave no
+ * ambiguity. The downstream consumer (trinkhallen-app) filters these out
+ * of map/list views while keeping the underlying data accessible to third
+ * parties.
+ *
+ * Currently catches automaten (vending machines) — JIMA, Sielaff, etc.
+ * Gas-station-attached shops aren't flagged here because OSM tagging is
+ * inconsistent across regions; the app does that one by operator/name.
+ */
+function detectKind(tags: Record<string, string>): "vending_machine" | undefined {
+  if (tags["amenity"] === "vending_machine") return "vending_machine";
+  if (tags["self_service"] === "only") return "vending_machine";
+  if (tags["automated"] === "yes") return "vending_machine";
+  return undefined;
 }
 
 function validPlz(s: string | undefined): string | undefined {
