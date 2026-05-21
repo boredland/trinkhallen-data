@@ -191,3 +191,128 @@ regions:
     iso3166_2: DE-NI
     admin_level: 6
     bbox: [7.90, 52.15, 8.20, 52.40]
+
+  # ── 17 cities >100k previously uncovered (Wikipedia "Liste der Großstädte
+  # in Deutschland" cross-referenced against existing bboxes). Each fits the
+  # same "one Kreisfreie Stadt per region" pattern as the entries above.
+  # The cross-region dedup in run-osm-scrape.ts handles incidental bbox
+  # overlap with neighbours by nearest-bbox-center.
+
+  - slug: kassel
+    path: data/de/hessen/kassel.geojson
+    prefix: ks
+    iso3166_2: DE-HE
+    admin_level: 6
+    bbox: [9.30, 51.20, 9.65, 51.45]
+
+  - slug: goettingen
+    path: data/de/niedersachsen/goettingen.geojson
+    prefix: go
+    iso3166_2: DE-NI
+    admin_level: 6
+    bbox: [9.80, 51.45, 10.10, 51.65]
+
+  - slug: hildesheim
+    path: data/de/niedersachsen/hildesheim.geojson
+    prefix: hi
+    iso3166_2: DE-NI
+    admin_level: 6
+    bbox: [9.80, 52.05, 10.10, 52.25]
+
+  - slug: salzgitter
+    path: data/de/niedersachsen/salzgitter.geojson
+    prefix: sz
+    iso3166_2: DE-NI
+    admin_level: 6
+    bbox: [10.20, 52.05, 10.50, 52.25]
+
+  - slug: wolfsburg
+    path: data/de/niedersachsen/wolfsburg.geojson
+    prefix: wob
+    iso3166_2: DE-NI
+    admin_level: 6
+    bbox: [10.65, 52.35, 10.95, 52.55]
+
+  - slug: koblenz
+    path: data/de/rheinland-pfalz/koblenz.geojson
+    prefix: ko
+    iso3166_2: DE-RP
+    admin_level: 6
+    bbox: [7.45, 50.25, 7.75, 50.45]
+
+  - slug: trier
+    path: data/de/rheinland-pfalz/trier.geojson
+    prefix: tr
+    iso3166_2: DE-RP
+    admin_level: 6
+    bbox: [6.50, 49.65, 6.80, 49.85]
+
+  - slug: regensburg
+    path: data/de/bayern/regensburg.geojson
+    prefix: rg
+    iso3166_2: DE-BY
+    admin_level: 6
+    bbox: [11.95, 48.90, 12.25, 49.10]
+
+  - slug: ingolstadt
+    path: data/de/bayern/ingolstadt.geojson
+    prefix: in
+    iso3166_2: DE-BY
+    admin_level: 6
+    bbox: [11.30, 48.65, 11.60, 48.85]
+
+  - slug: wuerzburg
+    path: data/de/bayern/wuerzburg.geojson
+    prefix: wu
+    iso3166_2: DE-BY
+    admin_level: 6
+    bbox: [9.80, 49.70, 10.10, 49.90]
+
+  - slug: ulm
+    path: data/de/baden-wuerttemberg/ulm.geojson
+    prefix: ul
+    iso3166_2: DE-BW
+    admin_level: 6
+    bbox: [9.85, 48.30, 10.15, 48.50]
+
+  - slug: reutlingen
+    path: data/de/baden-wuerttemberg/reutlingen.geojson
+    prefix: rt
+    iso3166_2: DE-BW
+    admin_level: 6
+    bbox: [9.05, 48.40, 9.35, 48.58]
+
+  - slug: remscheid
+    path: data/de/nordrhein-westfalen/remscheid.geojson
+    prefix: rs
+    iso3166_2: DE-NW
+    admin_level: 6
+    bbox: [7.05, 51.10, 7.30, 51.27]
+
+  - slug: siegen
+    path: data/de/nordrhein-westfalen/siegen.geojson
+    prefix: si
+    iso3166_2: DE-NW
+    admin_level: 6
+    bbox: [7.90, 50.78, 8.20, 50.97]
+
+  - slug: bremerhaven
+    path: data/de/bremen/bremerhaven.geojson
+    prefix: brv
+    iso3166_2: DE-HB
+    admin_level: 6
+    bbox: [8.45, 53.45, 8.75, 53.65]
+
+  - slug: luebeck
+    path: data/de/schleswig-holstein/luebeck.geojson
+    prefix: lu
+    iso3166_2: DE-SH
+    admin_level: 6
+    bbox: [10.55, 53.78, 10.85, 53.97]
+
+  - slug: cottbus
+    path: data/de/brandenburg/cottbus.geojson
+    prefix: cb
+    iso3166_2: DE-BB
+    admin_level: 6
+    bbox: [14.15, 51.66, 14.50, 51.86]
