@@ -14,13 +14,21 @@ schema/
   tags.json                          Controlled vocabulary (slug ⇄ German label)
 scripts/
   _oneoff/import-hopfenstop.ts       One-shot Frankfurt seed importer (archived)
-  osm-to-geojson.ts                  Overpass JSON → our GeoJSON normaliser
+  osm-to-geojson.ts                  Overpass JSON → our GeoJSON normaliser;
+                                     home of `ownsFeature` cross-region dedup
   run-osm-scrape.ts                  Weekly OSM ingest orchestrator (adds new POIs)
   enrich-from-osm.ts                 Monthly enrichment — fills blanks on
                                      existing features from matched OSM POIs
+  run-gmaps-confirm.ts               Optional gosom/google-maps-scraper pass
+                                     to confirm uncertain enrichment matches
 regions.yml                          Region definitions for the OSM workflow
 .github/workflows/
   osm-scrape.yml                     Weekly OSM ingest → opens PRs
+  osm-enrich.yml                     Monthly enrichment → opens PRs; takes a
+                                     `--since` cutoff so re-runs only touch
+                                     features added/edited in the window
+  deploy-app.yml                     On push to main, POSTs the Cloudflare
+                                     Deploy Hook on trinkhallen.app
 ```
 
 ## Schema
@@ -49,8 +57,30 @@ See `schema/kiosk.schema.json`. Quick reference:
 ## Contributing
 
 - **Add or fix a kiosk**: edit the relevant city's `.geojson`, open a PR.
-- **Add a new city/region**: add an entry to `regions.yml`, run the OSM workflow manually, review the resulting PR.
-- **Tag vocabulary**: changes go through `schema/tags.json`. Don't invent ad-hoc tags — propose them in a PR.
+  Most user-facing edits land via trinkhallen.app's submit/report flow,
+  which opens the PR for you.
+- **Add a new city/region**: add an entry to `regions.yml`, then trigger
+  `osm-scrape` (manual `workflow_dispatch` for that slug, or wait for the
+  weekly cron). The OSM scraper's `ownsFeature` rule auto-dedupes against
+  overlapping neighbours, so a generous bbox is safe — anything closer to
+  another region's anchor will be claimed by that region.
+- **Tag vocabulary**: changes go through `schema/tags.json`. Don't invent
+  ad-hoc tags — propose them in a PR.
+- **Schema**: `schema/kiosk.schema.json` has `additionalProperties: false`.
+  New feature properties require a schema update first or the next scrape
+  PR will fail validation.
+
+## How it deploys downstream
+
+Pushes here that touch `data/**`, `regions.yml`, or `schema/**` trigger
+`.github/workflows/deploy-app.yml`, which POSTs to a Cloudflare Deploy
+Hook URL (stored as the `CF_DEPLOY_HOOK_URL` repo secret). That triggers
+trinkhallen.app's Cloudflare Workers Builds run, which shallow-clones
+this repo during its build step and bakes the fresh GeoJSON into the
+Worker's Assets bundle.
+
+There is no longer a `/api/sync` webhook on the app side — runtime data
+freshness comes from redeploys, not D1 mutations.
 
 ## License
 
