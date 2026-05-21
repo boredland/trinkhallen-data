@@ -12,6 +12,15 @@ on:
         description: "Region slug to enrich (empty = all)"
         required: false
         default: ""
+      since:
+        description: "Only enrich features created/updated since this date (YYYY-MM-DD). Empty = 40 days ago (default), or set 'full' below."
+        required: false
+        default: ""
+      full:
+        description: "Full sweep — ignore the date filter entirely. Slow, use sparingly."
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -40,11 +49,22 @@ jobs:
         id: enrich
         run: |
           set -euo pipefail
+          args=()
           if [ -n "${{ inputs.region }}" ]; then
-            bun scripts/enrich-from-osm.ts --region "${{ inputs.region }}" > enrich-stats.json
-          else
-            bun scripts/enrich-from-osm.ts > enrich-stats.json
+            args+=(--region "${{ inputs.region }}")
           fi
+          # Date filter precedence: --full flag wins; else explicit `since`
+          # input; else default to 40 days ago (catches the last cron's
+          # additions with a safety margin).
+          if [ "${{ inputs.full }}" = "true" ]; then
+            args+=(--full)
+          elif [ -n "${{ inputs.since }}" ]; then
+            args+=(--since "${{ inputs.since }}")
+          else
+            args+=(--since "$(date -d '40 days ago' --iso-8601)")
+          fi
+          echo "Running: bun scripts/enrich-from-osm.ts ${args[*]}"
+          bun scripts/enrich-from-osm.ts "${args[@]}" > enrich-stats.json
           cat enrich-stats.json
           {
             echo "title=$(jq -r '"matched \(.matched), filled \(.hours) hours / \(.payment) pay / \(.address) addr / \(.tags) tags"' enrich-stats.json)"

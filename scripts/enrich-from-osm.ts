@@ -330,6 +330,17 @@ function alreadyHasOsmSource(f: Feature): boolean {
   return (f.properties.sources ?? []).some((s) => s.type === "osm");
 }
 
+function isFreshSince(f: Feature, sinceMs: number): boolean {
+  const c = f.properties.created ? Date.parse(f.properties.created) : NaN;
+  const u = f.properties.updated ? Date.parse(f.properties.updated) : NaN;
+  const latest = Math.max(Number.isFinite(c) ? c : 0, Number.isFinite(u) ? u : 0);
+  // Date-less features (rare — old hopfenstop seed rows) are treated as stale:
+  // incremental runs skip them entirely, but a periodic --full sweep still
+  // re-attempts them in case OSM has gained a match since the last sweep.
+  if (latest === 0) return false;
+  return latest >= sinceMs;
+}
+
 function tri(v: string | undefined): TriState | undefined {
   if (v === undefined) return undefined;
   if (v === "yes" || v === "only") return "yes";
@@ -454,20 +465,50 @@ async function main(): Promise<void> {
   const wantSlugArg = process.argv.indexOf("--region");
   const wantSlug = wantSlugArg >= 0 ? process.argv[wantSlugArg + 1] : null;
 
+  // --since <YYYY-MM-DD> (or empty for a full sweep) restricts the candidate
+  // set to features whose max(created, updated) is on or after that date.
+  // Each monthly run only re-attempts features that are actually fresh,
+  // which collapses Overpass tile counts by an order of magnitude once the
+  // dataset stabilises. --full overrides the env default for ad-hoc runs.
+  const sinceArg = process.argv.indexOf("--since");
+  const sinceRaw =
+    process.argv.includes("--full")
+      ? null
+      : sinceArg >= 0
+        ? (process.argv[sinceArg + 1] ?? null)
+        : process.env["ENRICH_SINCE"] ?? null;
+  const sinceMs = sinceRaw ? Date.parse(sinceRaw) : NaN;
+  if (sinceRaw && Number.isNaN(sinceMs)) {
+    throw new Error(`Invalid --since / ENRICH_SINCE value: ${sinceRaw}`);
+  }
+  if (Number.isFinite(sinceMs)) {
+    console.error(`Filter: only features with created|updated >= ${sinceRaw} (full sweep skipped)`);
+  } else {
+    console.error("Filter: none (full sweep — every unmatched feature)");
+  }
+
   const files = await findGeojsonFiles(REPO_ROOT);
   const conflicts: string[][] = []; // retained for future use; not currently written
   const uncertain: string[][] = [];
-  const totals = { files: 0, candidates: 0, matched: 0, hours: 0, payment: 0, address: 0, tags: 0 };
+  const totals = { files: 0, candidates: 0, matched: 0, hours: 0, payment: 0, address: 0, tags: 0, skipped_stale: 0 };
 
   for (const file of files) {
     const slug = file.split("/").pop()!.replace(/\.geojson$/, "");
     if (wantSlug && slug !== wantSlug) continue;
 
     const collection = JSON.parse(await readFile(file, "utf8")) as FeatureCollection;
-    const unmatched = collection.features.filter((f) => !alreadyHasOsmSource(f));
+    const allUnmatched = collection.features.filter((f) => !alreadyHasOsmSource(f));
+    const unmatched = Number.isFinite(sinceMs)
+      ? allUnmatched.filter((f) => isFreshSince(f, sinceMs))
+      : allUnmatched;
+    const staleSkipped = allUnmatched.length - unmatched.length;
+    totals.skipped_stale += staleSkipped;
     if (unmatched.length === 0) {
-      console.error(`${slug}: 0 unmatched features, skipping`);
+      console.error(`${slug}: 0 unmatched features in window${staleSkipped ? ` (${staleSkipped} stale, skipped)` : ""}, skipping`);
       continue;
+    }
+    if (staleSkipped > 0) {
+      console.error(`${slug}: ${unmatched.length} fresh features, ${staleSkipped} stale skipped`);
     }
 
     // Clip to Germany — the seed data has a handful of outlier features
