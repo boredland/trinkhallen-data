@@ -1,0 +1,175 @@
+name: osm
+run-name: osm · ${{ inputs.mode || (github.event.schedule == '17 4 * * 1' && 'scrape' || 'enrich') }}
+
+# Unified OSM workflow. Two modes:
+#
+#   - scrape  : Overpass query per region. Discovers new kiosks, refreshes
+#               positions, flags `osm_removed: true` on features no longer
+#               seen. Cheap, low-throughput against Overpass.
+#   - enrich  : matches user-submitted features (no OSM source) to OSM
+#               nodes via Overpass + Sørensen-Dice on names. Uncertain
+#               matches get a follow-up gosom confirmation pass.
+#
+# Cron fires both modes on their historical cadences; manual dispatch
+# picks via the `mode` input. Direct-pushes results to main — no PRs.
+
+on:
+  schedule:
+    - cron: "17 4 * * 1"     # weekly scrape — Mondays 04:17 UTC
+    - cron: "37 5 1 * *"     # monthly enrich — 1st of month 05:37 UTC
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "scrape | enrich"
+        required: true
+        default: "scrape"
+        type: choice
+        options:
+          - scrape
+          - enrich
+      region:
+        description: "Region slug (empty = all)"
+        required: false
+        default: ""
+      since:
+        description: "(enrich) only enrich features changed since this date (YYYY-MM-DD). Empty = 40 days ago."
+        required: false
+        default: ""
+      full:
+        description: "(enrich) Full sweep, ignore date filter. Slow."
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: osm-${{ inputs.mode || (github.event.schedule == '17 4 * * 1' && 'scrape' || 'enrich') }}
+  cancel-in-progress: false
+
+jobs:
+  pick:
+    runs-on: ubuntu-latest
+    outputs:
+      mode: ${{ steps.choose.outputs.mode }}
+    steps:
+      - id: choose
+        run: |
+          set -euo pipefail
+          mode="${{ inputs.mode }}"
+          if [ -z "$mode" ]; then
+            # Cron-driven: distinguish by the schedule expression.
+            if [ "${{ github.event.schedule }}" = "17 4 * * 1" ]; then
+              mode=scrape
+            else
+              mode=enrich
+            fi
+          fi
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+          echo "Picked mode: $mode"
+
+  run:
+    needs: pick
+    name: osm · ${{ needs.pick.outputs.mode }}
+    runs-on: ubuntu-latest
+    # Covers enrich's longer-running gosom-confirmation step. Scrape
+    # typically finishes well under 30 min.
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - run: bun install --frozen-lockfile
+
+      - name: Run
+        id: run
+        run: |
+          set -euo pipefail
+          mode="${{ needs.pick.outputs.mode }}"
+          region="${{ inputs.region }}"
+          if [ "$mode" = "scrape" ]; then
+            if [ -n "$region" ]; then
+              bun scripts/run-osm-scrape.ts "$region" > stats.json
+            else
+              bun scripts/run-osm-scrape.ts > stats.json
+            fi
+            title=$(jq -r '
+              map("\(.region) +\(.added)/~\(.updated)/-\(.removed)") | join(", ")
+            ' stats.json)
+          else
+            args=()
+            if [ -n "$region" ]; then
+              args+=(--region "$region")
+            fi
+            if [ "${{ inputs.full }}" = "true" ]; then
+              args+=(--full)
+            elif [ -n "${{ inputs.since }}" ]; then
+              args+=(--since "${{ inputs.since }}")
+            else
+              args+=(--since "$(date -d '40 days ago' --iso-8601)")
+            fi
+            echo "Running: bun scripts/enrich-from-osm.ts ${args[*]}"
+            bun scripts/enrich-from-osm.ts "${args[@]}" > stats.json
+            title=$(jq -r '
+              "matched \(.matched), filled \(.hours) hours / \(.payment) pay / \(.address) addr / \(.tags) tags"
+            ' stats.json)
+          fi
+          cat stats.json
+          echo "title=$title" >> "$GITHUB_OUTPUT"
+
+      - name: Confirm uncertain via Google Maps
+        if: needs.pick.outputs.mode == 'enrich' && hashFiles('_enrichment-uncertain.csv') != ''
+        continue-on-error: true
+        run: |
+          bun scripts/run-gmaps-confirm.ts | tee gmaps-stats.json
+
+      - name: Detect changes
+        id: diff
+        if: always()
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- data/ _enrichment-conflicts.csv _enrichment-uncertain.csv 2>/dev/null; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat -- data/ _enrichment-*.csv | head -30
+          fi
+
+      - name: Commit to main
+        if: always() && steps.diff.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          # CSV artefacts (only present in enrich mode). Don't fail if absent.
+          for f in _enrichment-conflicts.csv _enrichment-uncertain.csv; do
+            [ -f "$f" ] && git add "$f" || true
+          done
+          mode="${{ needs.pick.outputs.mode }}"
+          {
+            echo "OSM ${mode}: ${{ steps.run.outputs.title }}"
+            echo
+            echo '```json'
+            if [ -s stats.json ]; then cat stats.json; fi
+            echo '```'
+          } > /tmp/commit-msg.txt
+          git commit -F /tmp/commit-msg.txt
+          # Concurrent enrich runs and the hourly enrich workflow may race
+          # us — 5-attempt push/rebase loop matches enrich.yml's pattern.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "pushed on attempt $i"
+              exit 0
+            fi
+            echo "push rejected, pulling --rebase (attempt $i)"
+            git pull --rebase --autostash
+          done
+          echo "push failed after 5 attempts"
+          exit 1
