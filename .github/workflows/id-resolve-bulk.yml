@@ -1,25 +1,70 @@
 name: id-resolve (bulk)
 
-# One-shot fan-out for the external-ID backfill. Per-region matrix, each job
-# walks its region's geojson and stamps `{type:"gmaps",id:...}` +
-# `{type:"apple",id:...}` onto every feature that doesn't have them yet.
+# One-shot fan-out for the Apple Maps place-id backfill. Per-region matrix,
+# each job walks its region's geojson and stamps `{type:"apple",id:...}`
+# onto every feature that doesn't have one yet.
 #
-# Mirrors the resilience patterns from gmaps-payment-bulk.yml: --max-runtime-min
-# bound on the script, SIGTERM trap, incremental flush, and `if: always()`
-# follow-up steps so a runner-timeout cancellation still produces a PR with
-# the partial progress.
+# Google place_ids arrive as a side-effect of gmaps-payment-bulk.yml —
+# this workflow no longer touches them. See PR #93 for the convention,
+# and the apple-only refactor that dropped gosom from id-resolve.
 
 on:
   workflow_dispatch:
     inputs:
-      regions:
-        description: "Comma-separated region slugs (empty = all)"
-        required: false
-        default: ""
-      only:
-        description: "Limit to a single slot: gmaps | apple (empty = both)"
-        required: false
-        default: ""
+      region:
+        description: "Region to process (or 'all' for the full fan-out)"
+        required: true
+        default: "all"
+        type: choice
+        options:
+          - all
+          - aachen
+          - augsburg
+          - berlin
+          - bielefeld
+          - bremen
+          - bremerhaven
+          - chemnitz
+          - cottbus
+          - dresden
+          - duesseldorf
+          - erfurt
+          - frankfurt
+          - freiburg
+          - goettingen
+          - halle
+          - hamburg
+          - hannover
+          - hildesheim
+          - ingolstadt
+          - karlsruhe
+          - kassel
+          - kiel
+          - koblenz
+          - koeln
+          - leipzig
+          - luebeck
+          - magdeburg
+          - mainz
+          - mannheim
+          - muenchen
+          - muenster
+          - nuernberg
+          - osnabrueck
+          - potsdam
+          - regensburg
+          - remscheid
+          - reutlingen
+          - rostock
+          - ruhr
+          - saarbruecken
+          - salzgitter
+          - siegen
+          - stuttgart
+          - trier
+          - ulm
+          - wolfsburg
+          - wuerzburg
 
 permissions:
   contents: write
@@ -35,12 +80,12 @@ jobs:
       - id: list
         run: |
           set -euo pipefail
-          if [ -n "${{ inputs.regions }}" ]; then
-            regions=$(echo "${{ inputs.regions }}" | tr ',' '\n' | jq -R . | jq -sc .)
-          else
+          if [ "${{ inputs.region }}" = "all" ]; then
             regions=$(find data/de -name '*.geojson' \
               | sed 's|.*/||;s|\.geojson$||' \
               | sort -u | jq -R . | jq -sc .)
+          else
+            regions=$(jq -nc --arg r "${{ inputs.region }}" '[$r]')
           fi
           echo "regions=$regions" >> "$GITHUB_OUTPUT"
           echo "Will process: $regions"
@@ -72,15 +117,10 @@ jobs:
         id: resolve
         run: |
           set -euo pipefail
-          extra=""
-          if [ -n "${{ inputs.only }}" ]; then
-            extra="--only ${{ inputs.only }}"
-          fi
           bun scripts/run-id-resolve.ts \
             --region "${{ matrix.region }}" \
             --batch 99999 \
             --max-runtime-min 300 \
-            $extra \
             > stats-${{ matrix.region }}.json
           cat stats-${{ matrix.region }}.json
 
@@ -98,8 +138,8 @@ jobs:
           stats_file="stats-${{ matrix.region }}.json"
           if [ -s "$stats_file" ]; then
             suffix=$(jq -r '
-              "+\(.gmaps_resolved // 0) gmaps +\(.apple_resolved // 0) apple " +
-              "(\(.needs_gmaps // 0)/\(.needs_apple // 0) needed)" +
+              "+\(.resolved // 0) apple " +
+              "(\(.queried // 0) queried, \(.no_match // 0) no-match, \(.errored // 0) errored)" +
               (if (.stopped_reason // "") == "max_runtime" or (.stopped_reason // "") == "sigterm"
                then " — partial (\(.stopped_reason))"
                else "" end)
@@ -127,10 +167,10 @@ jobs:
           branch: id-resolve/bulk-${{ matrix.region }}
           delete-branch: true
           body: |
-            External-ID backfill for `${{ matrix.region }}` — stamps Google
-            `place_id` and Apple `place_id` onto every feature that didn't
-            already have them. Downstream enrichment workflows can use these
-            ids to skip the name+coord search step entirely.
+            Apple Maps place-id backfill for `${{ matrix.region }}` — stamps
+            `{type:"apple",id:...}` onto features that didn't already carry
+            one. Source: DuckDuckGo `local.js` (`provider_meta.apple.place_id`).
+            Google place_ids arrive separately via gmaps-payment-bulk.
 
             ```json
             ${{ steps.diff.outputs.stats }}

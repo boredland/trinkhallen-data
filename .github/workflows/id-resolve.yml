@@ -1,18 +1,20 @@
 name: id-resolve
 
-# Daily trickle that resolves missing Google + Apple Maps ids for kiosks
-# without them. Companion to gmaps-payment.yml and the eventual apple
-# enrichment — once a feature has its ids stamped, downstream workflows can
-# use them directly instead of repeating the name+coord search.
+# Daily trickle for Apple Maps place-id resolution. Companion to
+# gmaps-payment.yml — once a feature has both ids, downstream
+# enrichment workflows can address it directly instead of repeating the
+# name+coord search.
 #
-# Throttled to 100 features per run by default. Apple lookups are HTTP-only
-# (~1s/feature including sleep); the gmaps slot uses gosom (~10-15s) so a
-# full run with both slots is ~15-25 min per 100 features.
+# Apple-only since the apple-only refactor (PR after #96): Google
+# place_ids accumulate naturally from run-gmaps-payment.ts's
+# side-effect, so a dedicated gosom pass here is wasted work.
+# ~1 s per feature; a full run with batch=100 is ~2 min wall-clock.
 
 on:
   schedule:
     # 04:47 UTC daily — off-peak, after gmaps-payment (03:23) so any new
-    # gmaps ids from the payment run get a sibling apple lookup the next day.
+    # features that got a gmaps id from the payment run get an Apple lookup
+    # the next morning.
     - cron: "47 4 * * *"
   workflow_dispatch:
     inputs:
@@ -21,13 +23,59 @@ on:
         required: false
         default: ""
       region:
-        description: "Region slug to constrain to (empty = all)"
-        required: false
-        default: ""
-      only:
-        description: "Limit to a single slot: gmaps | apple (empty = both)"
-        required: false
-        default: ""
+        description: "Region to process (or 'all')"
+        required: true
+        default: "all"
+        type: choice
+        options:
+          - all
+          - aachen
+          - augsburg
+          - berlin
+          - bielefeld
+          - bremen
+          - bremerhaven
+          - chemnitz
+          - cottbus
+          - dresden
+          - duesseldorf
+          - erfurt
+          - frankfurt
+          - freiburg
+          - goettingen
+          - halle
+          - hamburg
+          - hannover
+          - hildesheim
+          - ingolstadt
+          - karlsruhe
+          - kassel
+          - kiel
+          - koblenz
+          - koeln
+          - leipzig
+          - luebeck
+          - magdeburg
+          - mainz
+          - mannheim
+          - muenchen
+          - muenster
+          - nuernberg
+          - osnabrueck
+          - potsdam
+          - regensburg
+          - remscheid
+          - reutlingen
+          - rostock
+          - ruhr
+          - saarbruecken
+          - salzgitter
+          - siegen
+          - stuttgart
+          - trier
+          - ulm
+          - wolfsburg
+          - wuerzburg
 
 permissions:
   contents: write
@@ -60,17 +108,14 @@ jobs:
           if [ -n "${{ inputs.batch }}" ]; then
             args+=(--batch "${{ inputs.batch }}")
           fi
-          if [ -n "${{ inputs.region }}" ]; then
+          if [ -n "${{ inputs.region }}" ] && [ "${{ inputs.region }}" != "all" ]; then
             args+=(--region "${{ inputs.region }}")
-          fi
-          if [ -n "${{ inputs.only }}" ]; then
-            args+=(--only "${{ inputs.only }}")
           fi
           echo "Running: bun scripts/run-id-resolve.ts ${args[*]}"
           bun scripts/run-id-resolve.ts "${args[@]}" > id-resolve-stats.json
           cat id-resolve-stats.json
           {
-            echo "title=$(jq -r '"+\(.gmaps_resolved) gmaps +\(.apple_resolved) apple (\(.needs_gmaps)/\(.needs_apple) needed)"' id-resolve-stats.json)"
+            echo "title=$(jq -r '"+\(.resolved) apple (\(.queried) queried, \(.no_match) no-match, \(.errored) errored)"' id-resolve-stats.json)"
             echo 'stats<<JSON'
             cat id-resolve-stats.json
             echo 'JSON'
@@ -95,12 +140,9 @@ jobs:
           branch: id-resolve/automated
           delete-branch: true
           body: |
-            Automated external-ID resolver. Stamps `{type:"gmaps",id:...}`
-            and `{type:"apple",id:...}` onto features that don't yet carry
-            them. No data enrichment — just the ids, so downstream payment /
-            amenity workflows can skip the name+coord search step.
-
-            **Sources**: gosom (Google) + DuckDuckGo `local.js` (Apple).
+            Daily Apple Maps place-id resolver. Stamps `{type:"apple",id:...}`
+            onto features that don't yet carry one. Source: DuckDuckGo
+            `local.js`.
 
             **Stats**:
             ```json

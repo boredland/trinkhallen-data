@@ -1,66 +1,51 @@
 /**
- * External-ID resolver.
+ * Apple Maps place-id resolver.
  *
- * Walks every non-vending feature in data/**.geojson and ensures it carries
- * the canonical Google + Apple Maps identifiers in its `sources[]`. Decoupled
- * from data enrichment (payment, amenities) so the ID-resolution pass can
- * finish quickly and downstream workflows can use the stored ids directly
- * instead of re-searching by name+coords each time.
+ * For every non-vending feature that doesn't yet have an
+ * `{type:"apple", id}` entry in `sources[]`, query DuckDuckGo's
+ * `local.js` endpoint by name + coords and stamp
+ * `provider_meta.apple.place_id` from the closest match.
  *
- * Sources of truth
- *   - Google: gosom/google-maps-scraper, same docker invocation pattern as
- *     run-gmaps-payment.ts. We just throw away the about/payment fields and
- *     keep `place_id` (preferred) or `cid` (fallback).
- *   - Apple: DuckDuckGo's `local.js` endpoint. Returns JSON with
- *     `provider_meta.apple.place_id` for each result. Free, ~500 ms/query,
- *     no Apple Developer account required. We fetch a fresh `vqd` token
- *     from the maps homepage once per script run.
+ * Why DDG and not the Apple Developer Search API: DDG is free, no
+ * account, ~500 ms per query. The MapKit JWT-based Search API would be
+ * faster and more accurate but costs $99/yr.
+ *
+ * Why Apple-only: Google place_ids already arrive as a side effect of
+ * `run-gmaps-payment.ts` (since it stores the matched place_id in
+ * `sources[]`). Running gosom from this script too just duplicates that
+ * work at ~30× the latency.
  *
  * Selection
- *   - Each feature is considered for two independent slots: gmaps + apple.
- *   - Skip a slot if the feature already has a real id for it (a `sources[]`
- *     entry whose id is not a known placeholder like "payment").
- *   - Skip a slot if `gmaps_id_attempted` / `apple_id_attempted` is within
- *     the last ATTEMPTED_TTL_DAYS (same negative-cache pattern as
- *     run-gmaps-payment.ts).
- *   - Filter to features with `name.length >= MIN_NAME_LENGTH`. Single-word
- *     generic names like "Kiosk" can't be disambiguated reliably.
+ *   - Skip features that already have a real `{type:"apple", id}`.
+ *   - Skip features whose `apple_id_attempted` is within the last
+ *     ATTEMPTED_TTL_DAYS (negative cache so DDG misses don't get
+ *     re-queried daily).
+ *   - Require `name.length >= MIN_NAME_LENGTH` — single-word generic
+ *     names ("Kiosk") never disambiguate.
  *
  * Durability
- *   - Flush each modified file after every iteration.
- *   - Trap SIGTERM so a runner-side timeout exits cleanly with partial
- *     progress preserved.
- *   - --max-runtime-min bounds wall-clock so the workflow's wrap-up steps
- *     still run before the job hits its hard ceiling.
+ *   - Each modified file is flushed to disk after every iteration.
+ *   - SIGTERM trap exits cleanly on runner-cancel so partial progress
+ *     reaches a PR.
+ *   - --max-runtime-min bounds wall-clock with headroom under the
+ *     workflow's job-timeout.
  *
  * Usage
  *   bun scripts/run-id-resolve.ts [--batch N] [--region <slug>]
- *                                 [--max-runtime-min N] [--only gmaps|apple]
- *                                 [--dry-run]
+ *                                 [--max-runtime-min N] [--dry-run]
  */
 
-import { execFileSync, spawnSync } from "node:child_process";
-import { existsSync, mkdirSync } from "node:fs";
-import { readFile, rm, writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), "../..");
-const TMP_DIR = join(REPO_ROOT, ".tmp/id-resolve");
-const SCRAPER_IMAGE = "gosom/google-maps-scraper";
-const GMAPS_CONFIRM_RADIUS_M = 50;
-const GMAPS_SEARCH_RADIUS_M = 300;
-const GOSOM_TIMEOUT_S = 60;
 const APPLE_CONFIRM_RADIUS_M = 150;
-const GMAPS_SLEEP_MS = 2000;
 const APPLE_SLEEP_MS = 1000;
 const MIN_NAME_LENGTH = 3;
 const DEFAULT_BATCH = 100;
 const DEFAULT_MAX_RUNTIME_MIN = 300;
 const ATTEMPTED_TTL_DAYS = 30;
-// Placeholder ids historically written by run-gmaps-payment.ts before the
-// real-id change landed. Treat as missing so this resolver upgrades them.
-const PLACEHOLDER_IDS = new Set(["payment", "gmaps"]);
 
 // ── types ──────────────────────────────────────────────────────────────────
 
@@ -79,7 +64,6 @@ interface Feature {
     sources?: Source[];
     updated?: string;
     kind?: string;
-    gmaps_id_attempted?: string;
     apple_id_attempted?: string;
     [k: string]: unknown;
   };
@@ -88,16 +72,6 @@ interface Feature {
 interface FeatureCollection {
   type: "FeatureCollection";
   features: Feature[];
-}
-
-interface GmapsEntry {
-  title?: string;
-  latitude?: number;
-  longitude?: number;
-  longtitude?: number; // gosom typo
-  place_id?: string;
-  cid?: string;
-  data_id?: string;
 }
 
 interface DDGLocalResult {
@@ -113,25 +87,18 @@ interface DDGLocalResponse {
 interface Stats {
   considered: number;
   skipped_recent_attempt: number;
-  needs_gmaps: number;
-  needs_apple: number;
-  gmaps_resolved: number;
-  apple_resolved: number;
-  gmaps_no_match: number;
-  apple_no_match: number;
-  gmaps_errored: number;
-  apple_errored: number;
+  queried: number;
+  resolved: number;
+  no_match: number;
+  errored: number;
   stopped_reason?: "sigterm" | "max_runtime" | "batch_done";
 }
-
-type SlotKind = "gmaps" | "apple";
 
 // ── arg parsing ────────────────────────────────────────────────────────────
 
 function args(): {
   batch: number;
   region: string | null;
-  only: SlotKind | null;
   maxRuntimeMin: number;
   dryRun: boolean;
 } {
@@ -142,13 +109,9 @@ function args(): {
   };
   const batch = parseInt(grab("--batch") ?? "", 10);
   const maxRuntime = parseInt(grab("--max-runtime-min") ?? "", 10);
-  const onlyRaw = grab("--only");
-  const only =
-    onlyRaw === "gmaps" || onlyRaw === "apple" ? (onlyRaw as SlotKind) : null;
   return {
     batch: Number.isFinite(batch) ? batch : DEFAULT_BATCH,
     region: grab("--region"),
-    only,
     maxRuntimeMin: Number.isFinite(maxRuntime) ? maxRuntime : DEFAULT_MAX_RUNTIME_MIN,
     dryRun: a.includes("--dry-run"),
   };
@@ -173,11 +136,6 @@ function daysSince(iso: string | undefined, today: Date): number {
   return (today.getTime() - t) / 86_400_000;
 }
 
-function isDockerAvailable(): boolean {
-  const r = spawnSync("docker", ["version", "--format", "{{.Server.Version}}"], { stdio: "ignore" });
-  return r.status === 0;
-}
-
 async function findGeojsonFiles(): Promise<string[]> {
   const { readdir, stat } = await import("node:fs/promises");
   const out: string[] = [];
@@ -193,84 +151,26 @@ async function findGeojsonFiles(): Promise<string[]> {
   return out;
 }
 
-function hasRealId(sources: Source[] | undefined, slot: SlotKind): boolean {
-  const entry = sources?.find((s) => s.type === slot);
-  return !!entry && !PLACEHOLDER_IDS.has(entry.id);
+function hasAppleId(sources: Source[] | undefined): boolean {
+  return !!sources?.find((s) => s.type === "apple" && s.id);
 }
 
-function upsertSource(feature: Feature, slot: SlotKind, id: string): void {
+function upsertAppleSource(feature: Feature, id: string): void {
   const sources = feature.properties.sources ?? [];
-  const existing = sources.find((s) => s.type === slot);
+  const existing = sources.find((s) => s.type === "apple");
   if (existing) existing.id = id;
-  else sources.push({ type: slot, id });
+  else sources.push({ type: "apple", id });
   feature.properties.sources = sources;
-}
-
-// ── gosom (Google) ─────────────────────────────────────────────────────────
-
-async function queryGmaps(name: string, lat: number, lng: number): Promise<GmapsEntry[]> {
-  mkdirSync(TMP_DIR, { recursive: true });
-  const inputPath = join(TMP_DIR, "in.txt");
-  const outputPath = join(TMP_DIR, "out.json");
-  await writeFile(inputPath, `${name}\n`, "utf8");
-  await rm(outputPath, { force: true });
-
-  const dockerArgs = [
-    "run", "--rm",
-    "-v", `${TMP_DIR}:/work`,
-    "-v", "gmaps-playwright-cache:/opt",
-    SCRAPER_IMAGE,
-    "-input", "/work/in.txt",
-    "-results", "/work/out.json",
-    "-json",
-    "-geo", `${lat},${lng}`,
-    "-radius", String(GMAPS_SEARCH_RADIUS_M),
-    "-zoom", "18",
-    "-depth", "1",
-    "-c", "1",
-    "-exit-on-inactivity", `${GOSOM_TIMEOUT_S}s`,
-  ];
-  execFileSync("docker", dockerArgs, { stdio: ["ignore", "ignore", "pipe"] });
-
-  const buf = await readFile(outputPath, "utf8").catch(() => "");
-  if (!buf.trim()) return [];
-  try {
-    const arr = JSON.parse(buf);
-    if (Array.isArray(arr)) return arr as GmapsEntry[];
-    return [arr as GmapsEntry];
-  } catch {
-    const out: GmapsEntry[] = [];
-    for (const line of buf.split("\n").filter(Boolean)) {
-      try {
-        out.push(JSON.parse(line) as GmapsEntry);
-      } catch {
-        /* skip */
-      }
-    }
-    return out;
-  }
-}
-
-function gmapsLng(r: GmapsEntry): number | undefined {
-  return typeof r.longitude === "number" ? r.longitude : r.longtitude;
-}
-
-function matchGmaps(results: GmapsEntry[], lat: number, lng: number): GmapsEntry | null {
-  for (const r of results) {
-    const rLng = gmapsLng(r);
-    if (typeof r.latitude !== "number" || typeof rLng !== "number") continue;
-    if (haversineMeters(lat, lng, r.latitude, rLng) <= GMAPS_CONFIRM_RADIUS_M) return r;
-  }
-  return null;
 }
 
 // ── DuckDuckGo (Apple Maps) ───────────────────────────────────────────────
 
 let cachedVqd: string | null = null;
 
-/** Fetch DDG's session vqd token from the maps homepage. The token is a
- *  CSRF-style marker the local.js endpoint expects. Cached for the lifetime
- *  of the script — DDG rotates it but the cadence is forgiving. */
+/** DDG's session vqd token. Fetched once from the maps homepage; cached for
+ *  the lifetime of the script. The local.js endpoint accepts the call even
+ *  without vqd in many cases, but supplying one keeps us on the well-trodden
+ *  path of how the actual browser client uses the API. */
 async function getVqd(query: string): Promise<string | null> {
   if (cachedVqd) return cachedVqd;
   const url = `https://duckduckgo.com/?q=${encodeURIComponent(query)}&iar=maps`;
@@ -289,7 +189,7 @@ async function getVqd(query: string): Promise<string | null> {
 }
 
 async function queryApple(name: string, lat: number, lng: number): Promise<DDGLocalResult[]> {
-  const vqd = await getVqd(`${name}`);
+  const vqd = await getVqd(name);
   const url = new URL("https://duckduckgo.com/local.js");
   url.searchParams.set("tg", "maps_places");
   url.searchParams.set("rt", "D");
@@ -304,9 +204,9 @@ async function queryApple(name: string, lat: number, lng: number): Promise<DDGLo
     headers: {
       "user-agent":
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
-      "accept": "application/json, text/plain, */*",
+      accept: "application/json, text/plain, */*",
       "accept-language": "de-DE,de;q=0.9,en;q=0.8",
-      "referer": "https://duckduckgo.com/",
+      referer: "https://duckduckgo.com/",
     },
   });
   if (!resp.ok) throw new Error(`ddg local.js ${resp.status}`);
@@ -335,30 +235,14 @@ function matchApple(
 // ── main ──────────────────────────────────────────────────────────────────
 
 async function main(): Promise<void> {
-  const { batch, region, only, maxRuntimeMin, dryRun } = args();
+  const { batch, region, maxRuntimeMin, dryRun } = args();
   const today = new Date().toISOString().slice(0, 10);
   const todayDate = new Date(today);
   const startedAt = Date.now();
   const maxRuntimeMs = maxRuntimeMin * 60_000;
 
-  const needGmaps = only === null || only === "gmaps";
-  const needApple = only === null || only === "apple";
-
-  if (needGmaps && !isDockerAvailable() && !dryRun) {
-    process.stdout.write(
-      JSON.stringify({ skipped: "docker unavailable for gmaps slot", batch, region }, null, 2) + "\n",
-    );
-    return;
-  }
-
   const files = await findGeojsonFiles();
-  const candidates: Array<{
-    file: string;
-    index: number;
-    feature: Feature;
-    wantGmaps: boolean;
-    wantApple: boolean;
-  }> = [];
+  const candidates: Array<{ file: string; index: number; feature: Feature }> = [];
   let skippedRecentAttempt = 0;
 
   for (const file of files) {
@@ -368,26 +252,12 @@ async function main(): Promise<void> {
       const f = doc.features[i]!;
       if (f.properties.kind === "vending_machine") continue;
       if (!f.properties.name || f.properties.name.length < MIN_NAME_LENGTH) continue;
-
-      const wantGmaps =
-        needGmaps &&
-        !hasRealId(f.properties.sources, "gmaps") &&
-        daysSince(f.properties.gmaps_id_attempted, todayDate) >= ATTEMPTED_TTL_DAYS;
-      const wantApple =
-        needApple &&
-        !hasRealId(f.properties.sources, "apple") &&
-        daysSince(f.properties.apple_id_attempted, todayDate) >= ATTEMPTED_TTL_DAYS;
-
-      if (!wantGmaps && !wantApple) {
-        if (
-          (needGmaps && !hasRealId(f.properties.sources, "gmaps")) ||
-          (needApple && !hasRealId(f.properties.sources, "apple"))
-        ) {
-          skippedRecentAttempt++;
-        }
+      if (hasAppleId(f.properties.sources)) continue;
+      if (daysSince(f.properties.apple_id_attempted, todayDate) < ATTEMPTED_TTL_DAYS) {
+        skippedRecentAttempt++;
         continue;
       }
-      candidates.push({ file, index: i, feature: f, wantGmaps, wantApple });
+      candidates.push({ file, index: i, feature: f });
     }
   }
 
@@ -397,14 +267,10 @@ async function main(): Promise<void> {
   const stats: Stats = {
     considered,
     skipped_recent_attempt: skippedRecentAttempt,
-    needs_gmaps: todo.filter((c) => c.wantGmaps).length,
-    needs_apple: todo.filter((c) => c.wantApple).length,
-    gmaps_resolved: 0,
-    apple_resolved: 0,
-    gmaps_no_match: 0,
-    apple_no_match: 0,
-    gmaps_errored: 0,
-    apple_errored: 0,
+    queried: 0,
+    resolved: 0,
+    no_match: 0,
+    errored: 0,
   };
 
   if (dryRun) {
@@ -416,8 +282,6 @@ async function main(): Promise<void> {
           sample: todo.slice(0, 5).map((c) => ({
             id: c.feature.properties.id,
             name: c.feature.properties.name,
-            wantGmaps: c.wantGmaps,
-            wantApple: c.wantApple,
           })),
         },
         null,
@@ -427,11 +291,9 @@ async function main(): Promise<void> {
     return;
   }
 
-  if (needGmaps) {
-    console.error(`Pulling ${SCRAPER_IMAGE}…`);
-    spawnSync("docker", ["pull", SCRAPER_IMAGE], { stdio: ["ignore", "ignore", "inherit"] });
-  }
-
+  // GH sends SIGTERM ~5 min before the job-timeout SIGKILL. Set the flag
+  // and break out at the next iteration boundary; the dirty files have
+  // already been flushed per-iteration so partial progress survives.
   let stopRequested: Stats["stopped_reason"] | null = null;
   const requestStop = (reason: NonNullable<Stats["stopped_reason"]>): void => {
     if (!stopRequested) {
@@ -471,66 +333,33 @@ async function main(): Promise<void> {
     const c = todo[i]!;
     const name = c.feature.properties.name ?? "";
     const [lng, lat] = c.feature.geometry.coordinates;
-    console.error(
-      `[${i + 1}/${todo.length}] ${c.feature.properties.id} "${name}" | gmaps=${c.wantGmaps} apple=${c.wantApple}`,
-    );
+    console.error(`[${i + 1}/${todo.length}] ${c.feature.properties.id} "${name}" …`);
 
     const doc = await ensureDoc(c.file);
     const feature = doc.features[c.index]!;
 
-    // Apple first — cheaper, less likely to be rate-limited per minute.
-    if (c.wantApple) {
-      try {
-        const results = await queryApple(name, lat, lng);
-        const match = matchApple(results, lat, lng);
-        const placeId = match?.provider_meta?.apple?.place_id;
-        if (placeId) {
-          upsertSource(feature, "apple", placeId);
-          delete feature.properties.apple_id_attempted;
-          stats.apple_resolved++;
-          console.error(`  +apple: ${placeId}`);
-        } else {
-          feature.properties.apple_id_attempted = today;
-          stats.apple_no_match++;
-        }
-      } catch (err) {
-        console.error(`  apple error: ${(err as Error).message}`);
+    stats.queried++;
+    try {
+      const results = await queryApple(name, lat, lng);
+      const match = matchApple(results, lat, lng);
+      const placeId = match?.provider_meta?.apple?.place_id;
+      if (placeId) {
+        upsertAppleSource(feature, placeId);
+        delete feature.properties.apple_id_attempted;
+        stats.resolved++;
+        console.error(`  +apple: ${placeId}`);
+      } else {
         feature.properties.apple_id_attempted = today;
-        stats.apple_errored++;
+        stats.no_match++;
       }
-      dirty.add(c.file);
-      await flushDirty();
-      await new Promise((r) => setTimeout(r, APPLE_SLEEP_MS));
-      if (stopRequested) break;
-      if (Date.now() - startedAt >= maxRuntimeMs) {
-        requestStop("max_runtime");
-        break;
-      }
+    } catch (err) {
+      console.error(`  error: ${(err as Error).message}`);
+      feature.properties.apple_id_attempted = today;
+      stats.errored++;
     }
-
-    if (c.wantGmaps) {
-      try {
-        const results = await queryGmaps(name, lat, lng);
-        const match = matchGmaps(results, lat, lng);
-        const id = match?.place_id || match?.cid;
-        if (id) {
-          upsertSource(feature, "gmaps", id);
-          delete feature.properties.gmaps_id_attempted;
-          stats.gmaps_resolved++;
-          console.error(`  +gmaps: ${id}`);
-        } else {
-          feature.properties.gmaps_id_attempted = today;
-          stats.gmaps_no_match++;
-        }
-      } catch (err) {
-        console.error(`  gmaps error: ${(err as Error).message}`);
-        feature.properties.gmaps_id_attempted = today;
-        stats.gmaps_errored++;
-      }
-      dirty.add(c.file);
-      await flushDirty();
-      await new Promise((r) => setTimeout(r, GMAPS_SLEEP_MS));
-    }
+    dirty.add(c.file);
+    await flushDirty();
+    await new Promise((r) => setTimeout(r, APPLE_SLEEP_MS));
   }
 
   await flushDirty();
