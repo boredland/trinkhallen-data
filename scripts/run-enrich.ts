@@ -1067,9 +1067,12 @@ async function main(): Promise<void> {
       const chunkIdx = Math.floor(off / GOSOM_CHUNK_SIZE) + 1;
       const chunkCount = Math.ceil(googleBatch.length / GOSOM_CHUNK_SIZE);
       console.error(`gosom chunk ${chunkIdx}/${chunkCount} (${chunk.length} features)`);
+      const chunkStart = Date.now();
       let grouped: Map<string, GosomEntry[]>;
       try {
         grouped = await gosomBatch(chunk);
+        const elapsedS = ((Date.now() - chunkStart) / 1000).toFixed(1);
+        console.error(`gosom chunk ${chunkIdx} done in ${elapsedS}s`);
       } catch (err) {
         // Chunk failed wholesale (timeout, gosom error). Don't stamp
         // `google_attempted` — we never got a real answer for these
@@ -1077,9 +1080,10 @@ async function main(): Promise<void> {
         // chunk loop entirely: if gosom timed out / rate-limited once,
         // the remaining chunks face the same conditions and will burn
         // wall-clock for nothing.
+        const elapsedS = ((Date.now() - chunkStart) / 1000).toFixed(1);
         const remaining = googleBatch.length - off;
         console.error(
-          `gosom chunk ${chunkIdx} error: ${(err as Error).message} — aborting google phase; ${remaining} features deferred to next run`,
+          `gosom chunk ${chunkIdx} error after ${elapsedS}s: ${(err as Error).message} — aborting google phase; ${remaining} features deferred to next run`,
         );
         stats.errored += remaining;
         break;
