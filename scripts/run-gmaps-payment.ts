@@ -107,6 +107,12 @@ interface GmapsResult {
   longitude?: number;
   longtitude?: number; // gosom typo
   about?: GmapsAbout[];
+  // External identifiers gosom already returns. We persist the strongest
+  // available one (`place_id` if set, else `cid`) onto the feature's
+  // sources[] so re-enrichment can skip the name+coord search step.
+  place_id?: string;
+  cid?: string;
+  data_id?: string;
 }
 
 interface Stats {
@@ -470,9 +476,19 @@ async function main(): Promise<void> {
       feature.properties.updated = today;
       // Clear any stale attempted stamp now that we have a real answer.
       delete feature.properties.payment_attempted;
+      // Persist the strongest available external id Google returned for the
+      // matched place so future enrichments can address it directly instead
+      // of repeating the name+coord search. Upgrade-in-place handles legacy
+      // rows whose sources entry still carries the "payment" placeholder.
       const sources = feature.properties.sources ?? [];
-      if (!sources.some((s) => s.type === "gmaps")) {
-        sources.push({ type: "gmaps", id: "payment" });
+      const gmapsId = match.place_id || match.cid || null;
+      if (gmapsId) {
+        const existing = sources.find((s) => s.type === "gmaps");
+        if (existing) {
+          existing.id = gmapsId;
+        } else {
+          sources.push({ type: "gmaps", id: gmapsId });
+        }
         feature.properties.sources = sources;
       }
       stats.written++;
