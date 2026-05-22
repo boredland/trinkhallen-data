@@ -536,7 +536,11 @@ function gosomHoursToOsm(open: GosomOpenHoursEntry | undefined): string | null {
  *  gosom/google-maps-scraper -data-folder /gmapsdata` to match. */
 const GOSOM_BASE = process.env["GOSOM_BASE_URL"] ?? "http://localhost:8080";
 const GOSOM_POLL_INTERVAL_MS = 1500;
-const GOSOM_JOB_TIMEOUT_MS = 120_000;
+// gosom's cold-start (first Playwright launch) regularly takes 60–90 s in
+// the sidecar before any query runs. Subsequent queries are ~10–20 s.
+// Cap at 240 s so the cold-start doesn't cascade into spurious timeouts
+// that mark features `google_attempted` and skip them for 30 days.
+const GOSOM_JOB_TIMEOUT_MS = 240_000;
 
 interface GosomJobCreateResponse {
   id: string;
@@ -866,6 +870,8 @@ async function main(): Promise<void> {
       try {
         const apple = await appleQueue.add(() => fetchApplePlace(appleId!));
         let touched = false;
+        let payDelta = 0;
+        let hoursDelta = false;
         if (paymentHasAnyMissing(feature.properties.payment)) {
           const incoming = amenitiesToPayment(apple.amenities);
           const { merged, added } = mergePayment(feature.properties.payment, incoming);
@@ -873,6 +879,7 @@ async function main(): Promise<void> {
             feature.properties.payment = merged;
             feature.properties.updated = today;
             stats.payment_keys_written += added;
+            payDelta = added;
             touched = true;
           }
         }
@@ -882,12 +889,20 @@ async function main(): Promise<void> {
             feature.properties.hours = { raw: osm };
             feature.properties.updated = today;
             stats.hours_written++;
+            hoursDelta = true;
             touched = true;
           }
         }
         if (touched) {
           stats.apple_features_touched++;
           dirty = true;
+          console.error(
+            `[${feature.properties.id}] +apple ${payDelta > 0 ? `payment(${payDelta})` : ""}${
+              payDelta > 0 && hoursDelta ? " " : ""
+            }${hoursDelta ? "hours" : ""}`.trim(),
+          );
+        } else {
+          console.error(`[${feature.properties.id}] apple: no usable data`);
         }
       } catch (err) {
         console.error(`[${feature.properties.id}] apple error: ${(err as Error).message}`);
@@ -907,10 +922,14 @@ async function main(): Promise<void> {
         const match = gosomMatch(results, lat, lng);
         if (match) {
           let touched = false;
+          let stampedId = false;
+          let payDelta = 0;
+          let hoursDelta = false;
           // Stamp the gmaps id while we're here.
           const gid = match.place_id || match.cid;
           if (gid && existingGmapsId(feature.properties.sources) !== gid) {
             upsertSource(feature, "gmaps", gid);
+            stampedId = true;
             touched = true;
           }
           if (paymentHasAnyMissing(feature.properties.payment)) {
@@ -920,6 +939,7 @@ async function main(): Promise<void> {
               feature.properties.payment = merged;
               feature.properties.updated = today;
               stats.payment_keys_written += added;
+              payDelta = added;
               touched = true;
             }
           }
@@ -929,14 +949,23 @@ async function main(): Promise<void> {
               feature.properties.hours = { raw: osm };
               feature.properties.updated = today;
               stats.hours_written++;
+              hoursDelta = true;
               touched = true;
             }
           }
           if (touched) {
             stats.google_features_touched++;
             dirty = true;
+            const parts: string[] = [];
+            if (stampedId) parts.push("id");
+            if (payDelta > 0) parts.push(`payment(${payDelta})`);
+            if (hoursDelta) parts.push("hours");
+            console.error(`[${feature.properties.id}] +google ${parts.join(" ")}`);
+          } else {
+            console.error(`[${feature.properties.id}] google: match, no new data`);
           }
         } else {
+          console.error(`[${feature.properties.id}] google: no match within radius`);
           feature.properties.google_attempted = today;
           stats.no_google_match++;
           dirty = true;
