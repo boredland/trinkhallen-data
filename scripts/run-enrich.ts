@@ -30,16 +30,12 @@
  *                             [--batch N] [--max-runtime-min N] [--dry-run]
  */
 
-import { execFileSync, spawnSync } from "node:child_process";
-import { existsSync, mkdirSync } from "node:fs";
-import { readFile, rm, writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import PQueue from "p-queue";
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), "../..");
-const TMP_DIR = join(REPO_ROOT, ".tmp/enrich");
-const SCRAPER_IMAGE = "gosom/google-maps-scraper";
 const APPLE_CONFIRM_RADIUS_M = 150;
 const GOOGLE_CONFIRM_RADIUS_M = 50;
 const GOOGLE_SEARCH_RADIUS_M = 300;
@@ -270,9 +266,16 @@ async function fetchWithTimeout(url: string, init: RequestInit, ms: number): Pro
   }
 }
 
-function isDockerAvailable(): boolean {
-  const r = spawnSync("docker", ["version", "--format", "{{.Server.Version}}"], { stdio: "ignore" });
-  return r.status === 0;
+/** Probe the gosom sidecar's REST root. Returns false if no service is
+ *  listening or the response shape doesn't match. The Google fallback path
+ *  is disabled for the run when this returns false — Apple-only mode. */
+async function gosomReady(): Promise<boolean> {
+  try {
+    const resp = await fetchWithTimeout(`${GOSOM_BASE}/api/v1/jobs`, {}, 3000);
+    return resp.ok;
+  } catch {
+    return false;
+  }
 }
 
 // ── DuckDuckGo (Apple place_id resolver) ──────────────────────────────────
@@ -526,75 +529,138 @@ function gosomHoursToOsm(open: GosomOpenHoursEntry | undefined): string | null {
   return segments.length > 0 ? segments.join("; ") : null;
 }
 
-// ── gosom (Google Maps scraper) ───────────────────────────────────────────
+// ── gosom (Google Maps scraper, HTTP sidecar) ─────────────────────────────
+
+/** Base URL of the gosom REST API. The workflow runs it as a `services:`
+ *  sidecar on localhost:8080; locally you can `docker run -d -p 8080:8080
+ *  gosom/google-maps-scraper -data-folder /gmapsdata` to match. */
+const GOSOM_BASE = process.env["GOSOM_BASE_URL"] ?? "http://localhost:8080";
+const GOSOM_POLL_INTERVAL_MS = 1500;
+const GOSOM_JOB_TIMEOUT_MS = 120_000;
+
+interface GosomJobCreateResponse {
+  id: string;
+}
+interface GosomJobStatusResponse {
+  ID: string;
+  Status: "pending" | "running" | "ok" | "failed" | string;
+}
+
+async function gosomCreateJob(name: string, lat: number, lng: number): Promise<string> {
+  const body = JSON.stringify({
+    name: `tk-${Date.now()}`,
+    keywords: [name],
+    lang: "de",
+    zoom: 18,
+    depth: 1,
+    max_time: GOSOM_TIMEOUT_S,
+    radius: GOOGLE_SEARCH_RADIUS_M,
+    // gosom's API expects lat/lon as strings (`apiScrapeRequest` Go binding).
+    lat: String(lat),
+    lon: String(lng),
+  });
+  const resp = await fetchWithTimeout(
+    `${GOSOM_BASE}/api/v1/jobs`,
+    { method: "POST", headers: { "content-type": "application/json" }, body },
+    HTTP_FETCH_TIMEOUT_MS,
+  );
+  if (!resp.ok) throw new Error(`gosom create ${resp.status}: ${await resp.text()}`);
+  const json = (await resp.json()) as GosomJobCreateResponse;
+  if (!json.id) throw new Error("gosom create: missing id");
+  return json.id;
+}
+
+async function gosomWaitForJob(id: string): Promise<void> {
+  const deadline = Date.now() + GOSOM_JOB_TIMEOUT_MS;
+  while (Date.now() < deadline) {
+    const resp = await fetchWithTimeout(
+      `${GOSOM_BASE}/api/v1/jobs/${id}`,
+      {},
+      HTTP_FETCH_TIMEOUT_MS,
+    );
+    if (!resp.ok) throw new Error(`gosom status ${resp.status}`);
+    const json = (await resp.json()) as GosomJobStatusResponse;
+    if (json.Status === "ok") return;
+    if (json.Status === "failed") throw new Error("gosom job failed");
+    await new Promise((r) => setTimeout(r, GOSOM_POLL_INTERVAL_MS));
+  }
+  throw new Error(`gosom job ${id} timed out after ${GOSOM_JOB_TIMEOUT_MS}ms`);
+}
+
+async function gosomDownload(id: string): Promise<string> {
+  const resp = await fetchWithTimeout(
+    `${GOSOM_BASE}/api/v1/jobs/${id}/download`,
+    {},
+    HTTP_FETCH_TIMEOUT_MS,
+  );
+  if (!resp.ok) throw new Error(`gosom download ${resp.status}`);
+  return resp.text();
+}
+
+async function gosomDeleteJob(id: string): Promise<void> {
+  // Best-effort housekeeping; don't fail the enrichment if cleanup fails.
+  try {
+    await fetchWithTimeout(
+      `${GOSOM_BASE}/api/v1/jobs/${id}`,
+      { method: "DELETE" },
+      HTTP_FETCH_TIMEOUT_MS,
+    );
+  } catch {
+    /* ignore */
+  }
+}
 
 async function gosomQuery(name: string, lat: number, lng: number): Promise<GosomEntry[]> {
-  mkdirSync(TMP_DIR, { recursive: true });
-  const inputPath = join(TMP_DIR, `in-${Math.random().toString(36).slice(2, 8)}.txt`);
-  const outputPath = join(TMP_DIR, `out-${Math.random().toString(36).slice(2, 8)}.json`);
-  await writeFile(inputPath, `${name}\n`, "utf8");
-  await rm(outputPath, { force: true });
-  const dockerArgs = [
-    "run",
-    "--rm",
-    "-v",
-    `${TMP_DIR}:/work`,
-    "-v",
-    "gmaps-playwright-cache:/opt",
-    SCRAPER_IMAGE,
-    "-input",
-    `/work/${inputPath.split("/").pop()}`,
-    "-results",
-    `/work/${outputPath.split("/").pop()}`,
-    "-json",
-    "-geo",
-    `${lat},${lng}`,
-    "-radius",
-    String(GOOGLE_SEARCH_RADIUS_M),
-    "-zoom",
-    "18",
-    "-depth",
-    "1",
-    "-c",
-    "1",
-    "-exit-on-inactivity",
-    `${GOSOM_TIMEOUT_S}s`,
-  ];
-  // gosom's `-exit-on-inactivity` is supposed to bound the run, but a hung
-  // Playwright process inside the container can pin us. execFileSync blocks
-  // the event loop, so a stall here would also block our SIGTERM / max-
-  // runtime watchdog. Hard cap at 2× the gosom inactivity timeout + 30 s
-  // for docker startup; SIGKILL on overrun.
+  const id = await gosomCreateJob(name, lat, lng);
   try {
-    execFileSync("docker", dockerArgs, {
-      stdio: ["ignore", "ignore", "pipe"],
-      timeout: (GOSOM_TIMEOUT_S * 2 + 30) * 1000,
-      killSignal: "SIGKILL",
-    });
-  } catch (err) {
-    const e = err as { signal?: string; status?: number; message?: string };
-    throw new Error(`gosom ${e.signal ?? e.status ?? "failed"}: ${e.message ?? ""}`.trim());
+    await gosomWaitForJob(id);
+    const csv = await gosomDownload(id);
+    return parseGosomCsv(csv);
+  } finally {
+    await gosomDeleteJob(id);
   }
+}
 
-  const buf = await readFile(outputPath, "utf8").catch(() => "");
-  await rm(inputPath, { force: true });
-  await rm(outputPath, { force: true });
-  if (!buf.trim()) return [];
-  try {
-    const arr = JSON.parse(buf);
-    if (Array.isArray(arr)) return arr as GosomEntry[];
-    return [arr as GosomEntry];
-  } catch {
-    const out: GosomEntry[] = [];
-    for (const line of buf.split("\n").filter(Boolean)) {
+/** Parse the CSV returned by `/api/v1/jobs/{id}/download`. Each row is one
+ *  result; the columns we care about are `about` (JSON-encoded in-cell),
+ *  `place_id`, `cid`, `latitude`, `longitude`. */
+async function parseGosomCsv(csv: string): Promise<GosomEntry[]> {
+  if (!csv.trim()) return [];
+  const { parse } = await import("csv-parse/sync");
+  const rows = parse(csv, {
+    columns: true,
+    skip_empty_lines: true,
+    relax_column_count: true,
+  }) as Record<string, string>[];
+  const out: GosomEntry[] = [];
+  for (const row of rows) {
+    let about: GosomEntry["about"];
+    if (row["about"]) {
       try {
-        out.push(JSON.parse(line) as GosomEntry);
+        about = JSON.parse(row["about"]) as GosomEntry["about"];
       } catch {
-        /* skip */
+        about = undefined;
       }
     }
-    return out;
+    let openHours: GosomOpenHoursEntry | undefined;
+    if (row["open_hours"]) {
+      try {
+        openHours = JSON.parse(row["open_hours"]) as GosomOpenHoursEntry;
+      } catch {
+        openHours = undefined;
+      }
+    }
+    out.push({
+      title: row["title"] || undefined,
+      latitude: row["latitude"] ? parseFloat(row["latitude"]) : undefined,
+      longitude: row["longitude"] ? parseFloat(row["longitude"]) : undefined,
+      about,
+      open_hours: openHours,
+      place_id: row["place_id"] || undefined,
+      cid: row["cid"] || undefined,
+    });
   }
+  return out;
 }
 
 function gosomLng(r: GosomEntry): number | undefined {
@@ -713,12 +779,13 @@ async function main(): Promise<void> {
     return;
   }
 
-  const dockerOk = isDockerAvailable();
-  if (!dockerOk) {
-    console.error("docker unavailable — Google fallback is disabled for this run");
+  const googleAvailable = await gosomReady();
+  if (!googleAvailable) {
+    console.error(
+      `gosom sidecar not reachable at ${GOSOM_BASE} — Google fallback disabled for this run`,
+    );
   } else {
-    console.error(`Pulling ${SCRAPER_IMAGE}…`);
-    spawnSync("docker", ["pull", SCRAPER_IMAGE], { stdio: ["ignore", "ignore", "inherit"] });
+    console.error(`gosom sidecar reachable at ${GOSOM_BASE}`);
   }
 
   // Per-provider rate limits. Pick conservative caps; tweak later if any
@@ -831,7 +898,7 @@ async function main(): Promise<void> {
 
     // Phase 3: Google fallback for anything Apple didn't cover.
     if (
-      dockerOk &&
+      googleAvailable &&
       (paymentHasAnyMissing(feature.properties.payment) || hoursMissing(feature)) &&
       daysSince(feature.properties.google_attempted, todayDate) >= ATTEMPTED_TTL_DAYS
     ) {

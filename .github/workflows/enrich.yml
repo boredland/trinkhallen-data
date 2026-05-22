@@ -130,6 +130,30 @@ jobs:
 
       - run: bun install --frozen-lockfile
 
+      - name: Start gosom sidecar
+        # GH `services:` can't pass args after the image, so we start the
+        # container manually with the `-data-folder` flag that switches
+        # gosom into web-server mode. Persistent across the script's
+        # whole run — every Google fallback is then a POST → poll →
+        # CSV-download instead of a per-call `docker run`.
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/gosom
+          docker run -d --name gosom -p 8080:8080 \
+            -v /tmp/gosom:/gmapsdata \
+            gosom/google-maps-scraper -data-folder /gmapsdata
+          # Wait for readiness — REST root returns [] when no jobs exist.
+          for i in $(seq 1 60); do
+            if curl -sf http://localhost:8080/api/v1/jobs > /dev/null; then
+              echo "gosom ready after ${i}s"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "gosom never became ready"
+          docker logs gosom || true
+          exit 1
+
       - name: Enrich
         id: enrich
         run: |
