@@ -695,22 +695,39 @@ async function gosomBatch(batch: BatchCandidate[]): Promise<Map<string, GosomEnt
     GOSOM_COLD_START_BUDGET_S + GOSOM_PER_KEYWORD_BUDGET_S * batch.length,
   );
   const id = await gosomCreateBatchJob(batch);
+  let csv: string | null = null;
   try {
     await gosomWaitForJob(id, maxTimeS);
-    const csv = await gosomDownload(id);
-    const rows = await parseGosomCsv(csv);
-    const grouped = new Map<string, GosomEntry[]>();
-    for (const r of rows) {
-      const key = r.input_id ?? "";
-      if (!key) continue;
-      const arr = grouped.get(key);
-      if (arr) arr.push(r);
-      else grouped.set(key, [r]);
+    csv = await gosomDownload(id);
+  } catch (err) {
+    // Poll timeout (or status fetch failure). gosom's own mateCtx bounds
+    // the scrape at max_time, so by the time we get here the CSV file
+    // may well exist with whatever rows the scrape managed to write
+    // before its context was cancelled. Best-effort download before we
+    // give up — losing partial data is worse than the extra HTTP call.
+    try {
+      csv = await gosomDownload(id);
+      console.error(
+        `gosom poll-timeout; salvaged ${csv.length} bytes of CSV from job ${id}`,
+      );
+    } catch {
+      // No salvageable data; rethrow original timeout for the chunk
+      // error handler to count as `errored`.
+      throw err;
     }
-    return grouped;
   } finally {
     await gosomDeleteJob(id);
   }
+  const rows = await parseGosomCsv(csv);
+  const grouped = new Map<string, GosomEntry[]>();
+  for (const r of rows) {
+    const key = r.input_id ?? "";
+    if (!key) continue;
+    const arr = grouped.get(key);
+    if (arr) arr.push(r);
+    else grouped.set(key, [r]);
+  }
+  return grouped;
 }
 
 /** Parse the CSV returned by `/api/v1/jobs/{id}/download`. Each row is one
