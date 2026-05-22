@@ -1094,7 +1094,6 @@ async function main(): Promise<void> {
         }
         if (touched) {
           stats.google_features_touched++;
-          dirty = true;
           const parts: string[] = [];
           if (stampedId) parts.push("id");
           if (payDelta > 0) parts.push(`payment(${payDelta})`);
@@ -1103,6 +1102,14 @@ async function main(): Promise<void> {
         } else {
           console.error(`[${c.featureId}] google: match, no new data`);
         }
+        // Stamp google_attempted on EVERY successful gosom response —
+        // whether match-with-data, match-without-data, or no match. The
+        // semantic is "we did query Google about this feature within the
+        // last 30 days; revisit then". Without this, features Google
+        // matches but has nothing new for keep cycling through every
+        // run forever (Apple already filled the payment block).
+        feature.properties.google_attempted = today;
+        dirty = true;
       }
       await flush();
     }
