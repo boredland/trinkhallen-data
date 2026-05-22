@@ -22,9 +22,21 @@
  *     argue with OSM).
  *   - Skip features whose `name` is shorter than MIN_NAME_LENGTH (gosom
  *     can't usefully disambiguate "Kiosk" or "Späti").
+ *   - Skip features whose `payment_attempted` was within the last
+ *     ATTEMPTED_TTL_DAYS — we already queried gosom and either got no
+ *     match or no payment block; re-querying every day is wasted budget.
  *   - Random sample of N each run (seeded by date so the same run on
  *     the same day produces the same set, which makes failures easier
  *     to retry).
+ *
+ * Durability
+ *   - Each modified file is flushed to disk after every iteration that
+ *     touched it (typically one file per region job). On SIGTERM (GH
+ *     sends it ~5min before the job timeout SIGKILL) the loop exits
+ *     cleanly so the workflow's diff + PR steps still run on partial
+ *     progress instead of losing hours of work.
+ *   - --max-runtime-min bounds wall-clock independently of the job
+ *     timeout, leaving headroom for the PR step on big regions.
  *
  * ToS posture
  *   See run-gmaps-confirm.ts header. This script adds another low-volume
@@ -33,7 +45,8 @@
  *   accepted by the operator.
  *
  * Usage
- *   bun scripts/run-gmaps-payment.ts [--batch N] [--region <slug>] [--dry-run]
+ *   bun scripts/run-gmaps-payment.ts [--batch N] [--region <slug>]
+ *                                    [--max-runtime-min N] [--dry-run]
  */
 
 import { execFileSync, spawnSync } from "node:child_process";
@@ -51,6 +64,8 @@ const GOSOM_TIMEOUT_S = 60;
 const SLEEP_MS = 2000;
 const MIN_NAME_LENGTH = 3;
 const DEFAULT_BATCH = 100;
+const DEFAULT_MAX_RUNTIME_MIN = 320;
+const ATTEMPTED_TTL_DAYS = 30;
 
 // ── types ──────────────────────────────────────────────────────────────────
 
@@ -63,6 +78,7 @@ interface Feature {
     id: string;
     name?: string;
     payment?: Partial<Record<"cash" | "cards" | "contactless" | "girocard" | "mobile", TriState>>;
+    payment_attempted?: string; // ISO date — we queried gosom but didn't write
     sources?: Array<{ type: string; id: string; version?: number }>;
     updated?: string;
     kind?: string;
@@ -95,26 +111,46 @@ interface GmapsResult {
 
 interface Stats {
   considered: number;
+  skipped_recent_attempt: number;
   queried: number;
   matched: number;
   written: number;
   no_match: number;
   errored: number;
+  stopped_reason?: "sigterm" | "max_runtime" | "batch_done";
 }
 
 // ── helpers ────────────────────────────────────────────────────────────────
 
-function args(): { batch: number; region: string | null; dryRun: boolean } {
+function args(): {
+  batch: number;
+  region: string | null;
+  maxRuntimeMin: number;
+  dryRun: boolean;
+} {
   const a = process.argv.slice(2);
   const batchIx = a.indexOf("--batch");
   const regionIx = a.indexOf("--region");
+  const maxRuntimeIx = a.indexOf("--max-runtime-min");
   const batch = batchIx >= 0 ? parseInt(a[batchIx + 1] ?? "", 10) : NaN;
   const envBatch = parseInt(process.env["GMAPS_PAYMENT_BATCH"] ?? "", 10);
+  const maxRuntime =
+    maxRuntimeIx >= 0
+      ? parseInt(a[maxRuntimeIx + 1] ?? "", 10)
+      : parseInt(process.env["GMAPS_PAYMENT_MAX_RUNTIME_MIN"] ?? "", 10);
   return {
     batch: Number.isFinite(batch) ? batch : Number.isFinite(envBatch) ? envBatch : DEFAULT_BATCH,
     region: regionIx >= 0 ? (a[regionIx + 1] ?? null) : null,
+    maxRuntimeMin: Number.isFinite(maxRuntime) ? maxRuntime : DEFAULT_MAX_RUNTIME_MIN,
     dryRun: a.includes("--dry-run"),
   };
+}
+
+function daysSince(iso: string | undefined, today: Date): number {
+  if (!iso) return Number.POSITIVE_INFINITY;
+  const t = Date.parse(iso);
+  if (!Number.isFinite(t)) return Number.POSITIVE_INFINITY;
+  return (today.getTime() - t) / 86_400_000;
 }
 
 function resultLng(r: GmapsResult): number | undefined {
@@ -271,9 +307,12 @@ function parsePaymentFromAbout(
 // ── main loop ──────────────────────────────────────────────────────────────
 
 async function main(): Promise<void> {
-  const { batch, region, dryRun } = args();
+  const { batch, region, maxRuntimeMin, dryRun } = args();
   const today = new Date().toISOString().slice(0, 10);
+  const todayDate = new Date(today);
   const seed = Number(today.split("-").join("")); // 20260521 → numeric seed
+  const startedAt = Date.now();
+  const maxRuntimeMs = maxRuntimeMin * 60_000;
 
   if (!isDockerAvailable() && !dryRun) {
     process.stdout.write(
@@ -284,6 +323,7 @@ async function main(): Promise<void> {
 
   const files = await findGeojsonFiles();
   const candidates: Array<{ file: string; index: number; feature: Feature }> = [];
+  let skippedRecentAttempt = 0;
 
   for (const file of files) {
     if (region && !file.endsWith(`/${region}.geojson`)) continue;
@@ -293,6 +333,10 @@ async function main(): Promise<void> {
       if (f.properties.payment) continue;
       if (f.properties.kind === "vending_machine") continue;
       if (!f.properties.name || f.properties.name.length < MIN_NAME_LENGTH) continue;
+      if (daysSince(f.properties.payment_attempted, todayDate) < ATTEMPTED_TTL_DAYS) {
+        skippedRecentAttempt++;
+        continue;
+      }
       candidates.push({ file, index: i, feature: f });
     }
   }
@@ -303,6 +347,7 @@ async function main(): Promise<void> {
 
   const stats: Stats = {
     considered,
+    skipped_recent_attempt: skippedRecentAttempt,
     queried: 0,
     matched: 0,
     written: 0,
@@ -324,8 +369,24 @@ async function main(): Promise<void> {
   console.error(`Pulling ${SCRAPER_IMAGE}…`);
   spawnSync("docker", ["pull", SCRAPER_IMAGE], { stdio: ["ignore", "ignore", "inherit"] });
 
-  // Group writes by file so we touch each file once at the end.
+  // GH sends SIGTERM ~5 min before the job timeout SIGKILL. Flip the flag so
+  // the loop exits at the next iteration boundary, the dirty files get
+  // flushed, and the workflow's diff + create-pull-request steps still run.
+  let stopRequested: Stats["stopped_reason"] | null = null;
+  const requestStop = (reason: NonNullable<Stats["stopped_reason"]>): void => {
+    if (!stopRequested) {
+      stopRequested = reason;
+      console.error(`stop requested: ${reason}`);
+    }
+  };
+  process.on("SIGTERM", () => requestStop("sigterm"));
+  process.on("SIGINT", () => requestStop("sigterm"));
+
+  // Group writes by file; flush dirty files after every iteration so a
+  // timeout / SIGTERM leaves the disk in a consistent state with whatever
+  // progress was made.
   const fileDocs = new Map<string, FeatureCollection>();
+  const dirty = new Set<string>();
   async function ensureDoc(file: string): Promise<FeatureCollection> {
     let doc = fileDocs.get(file);
     if (!doc) {
@@ -334,8 +395,33 @@ async function main(): Promise<void> {
     }
     return doc;
   }
+  async function flushDirty(): Promise<void> {
+    for (const file of dirty) {
+      const doc = fileDocs.get(file);
+      if (!doc) continue;
+      await writeFile(file, JSON.stringify(doc, null, 2) + "\n", "utf8");
+    }
+    dirty.clear();
+  }
+
+  // Stamp payment_attempted on a feature we queried but didn't write payment
+  // for — so daily re-runs skip it for ATTEMPTED_TTL_DAYS instead of grinding
+  // through the same long tail of duds every time.
+  async function stampAttempted(file: string, index: number): Promise<void> {
+    const doc = await ensureDoc(file);
+    const f = doc.features[index];
+    if (!f) return;
+    f.properties.payment_attempted = today;
+    dirty.add(file);
+  }
 
   for (let i = 0; i < todo.length; i++) {
+    if (stopRequested) break;
+    if (Date.now() - startedAt >= maxRuntimeMs) {
+      requestStop("max_runtime");
+      break;
+    }
+
     const c = todo[i]!;
     const name = c.feature.properties.name ?? "";
     const [lng, lat] = c.feature.geometry.coordinates;
@@ -348,6 +434,8 @@ async function main(): Promise<void> {
     } catch (err) {
       console.error(`  error: ${(err as Error).message}`);
       stats.errored++;
+      await stampAttempted(c.file, c.index);
+      await flushDirty();
       await new Promise((r) => setTimeout(r, SLEEP_MS));
       continue;
     }
@@ -359,6 +447,8 @@ async function main(): Promise<void> {
     });
     if (!match) {
       stats.no_match++;
+      await stampAttempted(c.file, c.index);
+      await flushDirty();
       await new Promise((r) => setTimeout(r, SLEEP_MS));
       continue;
     }
@@ -367,6 +457,8 @@ async function main(): Promise<void> {
     const payment = parsePaymentFromAbout(match.about);
     if (!payment) {
       console.error("  matched but no payment options surfaced");
+      await stampAttempted(c.file, c.index);
+      await flushDirty();
       await new Promise((r) => setTimeout(r, SLEEP_MS));
       continue;
     }
@@ -376,12 +468,15 @@ async function main(): Promise<void> {
     if (feature && !feature.properties.payment) {
       feature.properties.payment = payment;
       feature.properties.updated = today;
+      // Clear any stale attempted stamp now that we have a real answer.
+      delete feature.properties.payment_attempted;
       const sources = feature.properties.sources ?? [];
       if (!sources.some((s) => s.type === "gmaps")) {
         sources.push({ type: "gmaps", id: "payment" });
         feature.properties.sources = sources;
       }
       stats.written++;
+      dirty.add(c.file);
       console.error(
         `  +payment: ${Object.entries(payment)
           .map(([k, v]) => `${k}=${v}`)
@@ -389,13 +484,12 @@ async function main(): Promise<void> {
       );
     }
 
+    await flushDirty();
     await new Promise((r) => setTimeout(r, SLEEP_MS));
   }
 
-  for (const [file, doc] of fileDocs.entries()) {
-    await writeFile(file, JSON.stringify(doc, null, 2) + "\n", "utf8");
-  }
-
+  await flushDirty();
+  stats.stopped_reason = stopRequested ?? "batch_done";
   process.stdout.write(JSON.stringify(stats, null, 2) + "\n");
 }
 

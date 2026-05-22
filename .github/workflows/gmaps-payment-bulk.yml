@@ -10,6 +10,13 @@ name: gmaps payment enrichment (bulk)
 # Frankfurt is the slowest at ~4h; everything else finishes in under
 # 3h. Total wall-clock depends on free-tier concurrency (typically
 # 20 parallel jobs).
+#
+# The script bounds its own wall-clock with --max-runtime-min (set
+# below ~320 min) and traps SIGTERM, so big regions exit cleanly with
+# partial progress instead of getting SIGKILLed at the job timeout and
+# losing every queried feature. Features that the script queried but
+# didn't return useful payment data get a `payment_attempted` stamp;
+# subsequent runs skip them for 30 days, so each re-dispatch converges.
 
 on:
   workflow_dispatch:
@@ -73,6 +80,7 @@ jobs:
           bun scripts/run-gmaps-payment.ts \
             --region "${{ matrix.region }}" \
             --batch 99999 \
+            --max-runtime-min 320 \
             > stats-${{ matrix.region }}.json
           cat stats-${{ matrix.region }}.json
           {
