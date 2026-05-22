@@ -539,19 +539,25 @@ function gosomHoursToOsm(open: GosomOpenHoursEntry | undefined): string | null {
  *  gosom/google-maps-scraper -data-folder /gmapsdata -c 4` to match. */
 const GOSOM_BASE = process.env["GOSOM_BASE_URL"] ?? "http://localhost:8080";
 const GOSOM_POLL_INTERVAL_MS = 2000;
-// Batched gosom jobs amortize the Playwright cold-start across all of a
-// chunk's keywords (one ScrapeMateApp = one browser handles the lot via
-// page reuse). Per-chunk job timeout sized for a worst-case ~6 s/keyword
-// inside a single warm browser plus a generous ~120 s cold-start budget.
-const GOSOM_CHUNK_SIZE = 40;
+// Batched gosom jobs amortize the Playwright cold-start across a chunk's
+// keywords. Empirically the bottleneck isn't gosom but Google itself —
+// after ~30 burst queries from a single IP, responses slow dramatically
+// (rate-limit / CAPTCHA back-pressure), which makes large chunks stall.
+// Sized small enough to stay under that threshold per chunk.
+const GOSOM_CHUNK_SIZE = 15;
 // Buffer added to the bounding-circle radius for each chunk so kiosks
 // near the edge still resolve. Apple's confirm radius is 150m; google's
 // search needs a bit more slack.
 const GOSOM_CHUNK_RADIUS_BUFFER_M = 500;
 const GOSOM_CHUNK_MIN_RADIUS_M = 1000;
-const GOSOM_PER_KEYWORD_BUDGET_S = 12;
+// Generous because individual queries can stall on Google's throttle.
+// max_time = COLD_START + PER_KEYWORD × len, capped by gosom's own
+// `-exit-on-inactivity 3min`.
+const GOSOM_PER_KEYWORD_BUDGET_S = 25;
 const GOSOM_COLD_START_BUDGET_S = 150;
-const GOSOM_JOB_POLL_TIMEOUT_BUFFER_S = 60;
+// Poll a bit longer than the job's own bound so gosom has time to
+// finalise + write CSV before we give up.
+const GOSOM_JOB_POLL_TIMEOUT_BUFFER_S = 120;
 
 interface GosomJobCreateResponse {
   id: string;

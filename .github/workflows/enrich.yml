@@ -129,9 +129,12 @@ jobs:
     services:
       gosom:
         image: gosom/google-maps-scraper
-        # `-c 4` = in-job concurrency: each batched job's single browser
-        # session processes 4 keywords concurrently via page reuse.
-        command: -data-folder /gmapsdata -c 4
+        # `-c 2` = in-job concurrency. We kept this low: Google rate-
+        # limits aggressively when 4 parallel pages are scraping at
+        # once from one IP — chunks stall mid-job. 2 pages share the
+        # one warm browser and stay under the throttle threshold for
+        # longer.
+        command: -data-folder /gmapsdata -c 2
         ports:
           - 8080:8080
         options: >-
