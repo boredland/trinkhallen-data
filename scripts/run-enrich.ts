@@ -128,6 +128,9 @@ interface GosomOpenHoursEntry {
   [day: string]: string[]; // gosom shape, often empty
 }
 interface GosomEntry {
+  /** Custom id we encoded as `<query>#!#<id>` in the request keyword,
+   *  surfaced back here so we can match rows to the feature that asked. */
+  input_id?: string;
   title?: string;
   latitude?: number;
   longitude?: number;
@@ -533,14 +536,22 @@ function gosomHoursToOsm(open: GosomOpenHoursEntry | undefined): string | null {
 
 /** Base URL of the gosom REST API. The workflow runs it as a `services:`
  *  sidecar on localhost:8080; locally you can `docker run -d -p 8080:8080
- *  gosom/google-maps-scraper -data-folder /gmapsdata` to match. */
+ *  gosom/google-maps-scraper -data-folder /gmapsdata -c 4` to match. */
 const GOSOM_BASE = process.env["GOSOM_BASE_URL"] ?? "http://localhost:8080";
-const GOSOM_POLL_INTERVAL_MS = 1500;
-// gosom's cold-start (first Playwright launch) regularly takes 60–90 s in
-// the sidecar before any query runs. Subsequent queries are ~10–20 s.
-// Cap at 240 s so the cold-start doesn't cascade into spurious timeouts
-// that mark features `google_attempted` and skip them for 30 days.
-const GOSOM_JOB_TIMEOUT_MS = 240_000;
+const GOSOM_POLL_INTERVAL_MS = 2000;
+// Batched gosom jobs amortize the Playwright cold-start across all of a
+// chunk's keywords (one ScrapeMateApp = one browser handles the lot via
+// page reuse). Per-chunk job timeout sized for a worst-case ~6 s/keyword
+// inside a single warm browser plus a generous ~120 s cold-start budget.
+const GOSOM_CHUNK_SIZE = 40;
+// Buffer added to the bounding-circle radius for each chunk so kiosks
+// near the edge still resolve. Apple's confirm radius is 150m; google's
+// search needs a bit more slack.
+const GOSOM_CHUNK_RADIUS_BUFFER_M = 500;
+const GOSOM_CHUNK_MIN_RADIUS_M = 1000;
+const GOSOM_PER_KEYWORD_BUDGET_S = 12;
+const GOSOM_COLD_START_BUDGET_S = 150;
+const GOSOM_JOB_POLL_TIMEOUT_BUFFER_S = 60;
 
 interface GosomJobCreateResponse {
   id: string;
@@ -550,16 +561,34 @@ interface GosomJobStatusResponse {
   Status: "pending" | "running" | "ok" | "failed" | string;
 }
 
-async function gosomCreateJob(name: string, lat: number, lng: number): Promise<string> {
+interface BatchCandidate {
+  featureId: string;
+  name: string;
+  lat: number;
+  lng: number;
+}
+
+/** Submit a batch of candidates as a single gosom job. Each keyword carries
+ *  the feature id via gosom's `#!#<id>` syntax (runner/jobs.go:parseQueryLine),
+ *  which surfaces back as the result row's `input_id` for deterministic
+ *  match-up. One ScrapeMateApp / one browser handles the whole batch; with
+ *  `-c N` set on the container, N keywords run concurrently inside that
+ *  browser via page reuse. */
+async function gosomCreateBatchJob(batch: BatchCandidate[]): Promise<string> {
+  if (batch.length === 0) throw new Error("gosomCreateBatchJob: empty batch");
+  const { lat, lng, radius } = boundingCircle(batch);
+  const maxTime = Math.max(
+    180,
+    GOSOM_COLD_START_BUDGET_S + GOSOM_PER_KEYWORD_BUDGET_S * batch.length,
+  );
   const body = JSON.stringify({
-    name: `tk-${Date.now()}`,
-    keywords: [name],
+    name: `tk-${Date.now()}-${batch.length}`,
+    keywords: batch.map((c) => `${c.name}#!#${c.featureId}`),
     lang: "de",
     zoom: 18,
     depth: 1,
-    max_time: GOSOM_TIMEOUT_S,
-    radius: GOOGLE_SEARCH_RADIUS_M,
-    // gosom's API expects lat/lon as strings (`apiScrapeRequest` Go binding).
+    max_time: maxTime,
+    radius,
     lat: String(lat),
     lon: String(lng),
   });
@@ -574,8 +603,31 @@ async function gosomCreateJob(name: string, lat: number, lng: number): Promise<s
   return json.id;
 }
 
-async function gosomWaitForJob(id: string): Promise<void> {
-  const deadline = Date.now() + GOSOM_JOB_TIMEOUT_MS;
+function boundingCircle(batch: BatchCandidate[]): { lat: number; lng: number; radius: number } {
+  // Centroid (lat/lng average — fine for the city-scale neighbourhoods we
+  // operate in; great-circle distortion is negligible).
+  let sLat = 0;
+  let sLng = 0;
+  for (const c of batch) {
+    sLat += c.lat;
+    sLng += c.lng;
+  }
+  const lat = sLat / batch.length;
+  const lng = sLng / batch.length;
+  let maxM = 0;
+  for (const c of batch) {
+    const d = haversineMeters(lat, lng, c.lat, c.lng);
+    if (d > maxM) maxM = d;
+  }
+  const radius = Math.max(
+    GOSOM_CHUNK_MIN_RADIUS_M,
+    Math.round(maxM + GOSOM_CHUNK_RADIUS_BUFFER_M),
+  );
+  return { lat, lng, radius };
+}
+
+async function gosomWaitForJob(id: string, maxTimeS: number): Promise<void> {
+  const deadline = Date.now() + (maxTimeS + GOSOM_JOB_POLL_TIMEOUT_BUFFER_S) * 1000;
   while (Date.now() < deadline) {
     const resp = await fetchWithTimeout(
       `${GOSOM_BASE}/api/v1/jobs/${id}`,
@@ -588,7 +640,7 @@ async function gosomWaitForJob(id: string): Promise<void> {
     if (json.Status === "failed") throw new Error("gosom job failed");
     await new Promise((r) => setTimeout(r, GOSOM_POLL_INTERVAL_MS));
   }
-  throw new Error(`gosom job ${id} timed out after ${GOSOM_JOB_TIMEOUT_MS}ms`);
+  throw new Error(`gosom job ${id} timed out after ${maxTimeS}s`);
 }
 
 async function gosomDownload(id: string): Promise<string> {
@@ -614,12 +666,27 @@ async function gosomDeleteJob(id: string): Promise<void> {
   }
 }
 
-async function gosomQuery(name: string, lat: number, lng: number): Promise<GosomEntry[]> {
-  const id = await gosomCreateJob(name, lat, lng);
+/** Run a batched gosom job + return the resulting entries grouped by
+ *  the feature_id that we encoded with `#!#`. */
+async function gosomBatch(batch: BatchCandidate[]): Promise<Map<string, GosomEntry[]>> {
+  const maxTimeS = Math.max(
+    180,
+    GOSOM_COLD_START_BUDGET_S + GOSOM_PER_KEYWORD_BUDGET_S * batch.length,
+  );
+  const id = await gosomCreateBatchJob(batch);
   try {
-    await gosomWaitForJob(id);
+    await gosomWaitForJob(id, maxTimeS);
     const csv = await gosomDownload(id);
-    return parseGosomCsv(csv);
+    const rows = await parseGosomCsv(csv);
+    const grouped = new Map<string, GosomEntry[]>();
+    for (const r of rows) {
+      const key = r.input_id ?? "";
+      if (!key) continue;
+      const arr = grouped.get(key);
+      if (arr) arr.push(r);
+      else grouped.set(key, [r]);
+    }
+    return grouped;
   } finally {
     await gosomDeleteJob(id);
   }
@@ -655,6 +722,7 @@ async function parseGosomCsv(csv: string): Promise<GosomEntry[]> {
       }
     }
     out.push({
+      input_id: row["input_id"] || undefined,
       title: row["title"] || undefined,
       latitude: row["latitude"] ? parseFloat(row["latitude"]) : undefined,
       longitude: row["longitude"] ? parseFloat(row["longitude"]) : undefined,
@@ -796,9 +864,12 @@ async function main(): Promise<void> {
   // upstream complains. The intervalCap pattern caps requests-per-second.
   const ddgQueue = new PQueue({ concurrency: 3, interval: 1000, intervalCap: 3 });
   const appleQueue = new PQueue({ concurrency: 4, interval: 1000, intervalCap: 4 });
-  // gosom is heavy (docker + Playwright); keep it serial.
-  const googleQueue = new PQueue({ concurrency: 1, interval: 1500, intervalCap: 1 });
   const workerQueue = new PQueue({ concurrency: WORKER_CONCURRENCY });
+  // Features that the Apple pass couldn't fully cover. Collected during
+  // the per-feature loop and processed in chunks below — one gosom job
+  // per chunk so the browser cold-start is paid once per chunk, not
+  // per feature.
+  const googleBatch: BatchCandidate[] = [];
 
   let stopRequested: Stats["stopped_reason"] | null = null;
   const requestStop = (reason: NonNullable<Stats["stopped_reason"]>): void => {
@@ -809,7 +880,6 @@ async function main(): Promise<void> {
       workerQueue.clear();
       ddgQueue.clear();
       appleQueue.clear();
-      googleQueue.clear();
     }
   };
   process.on("SIGTERM", () => requestStop("sigterm"));
@@ -911,71 +981,21 @@ async function main(): Promise<void> {
     }
     if (stopRequested) return;
 
-    // Phase 3: Google fallback for anything Apple didn't cover.
+    // Note this feature for the batched Google pass below if Apple didn't
+    // fully cover it. We defer the actual gosom calls so the script can
+    // submit chunks of keywords as single jobs — one Playwright cold-start
+    // amortised across the whole chunk.
     if (
       googleAvailable &&
       (paymentHasAnyMissing(feature.properties.payment) || hoursMissing(feature)) &&
       daysSince(feature.properties.google_attempted, todayDate) >= ATTEMPTED_TTL_DAYS
     ) {
-      try {
-        const results = await googleQueue.add(() => gosomQuery(name, lat, lng));
-        const match = gosomMatch(results, lat, lng);
-        if (match) {
-          let touched = false;
-          let stampedId = false;
-          let payDelta = 0;
-          let hoursDelta = false;
-          // Stamp the gmaps id while we're here.
-          const gid = match.place_id || match.cid;
-          if (gid && existingGmapsId(feature.properties.sources) !== gid) {
-            upsertSource(feature, "gmaps", gid);
-            stampedId = true;
-            touched = true;
-          }
-          if (paymentHasAnyMissing(feature.properties.payment)) {
-            const incoming = gosomToPayment(match);
-            const { merged, added } = mergePayment(feature.properties.payment, incoming);
-            if (added > 0) {
-              feature.properties.payment = merged;
-              feature.properties.updated = today;
-              stats.payment_keys_written += added;
-              payDelta = added;
-              touched = true;
-            }
-          }
-          if (hoursMissing(feature)) {
-            const osm = gosomHoursToOsm(match.open_hours);
-            if (osm) {
-              feature.properties.hours = { raw: osm };
-              feature.properties.updated = today;
-              stats.hours_written++;
-              hoursDelta = true;
-              touched = true;
-            }
-          }
-          if (touched) {
-            stats.google_features_touched++;
-            dirty = true;
-            const parts: string[] = [];
-            if (stampedId) parts.push("id");
-            if (payDelta > 0) parts.push(`payment(${payDelta})`);
-            if (hoursDelta) parts.push("hours");
-            console.error(`[${feature.properties.id}] +google ${parts.join(" ")}`);
-          } else {
-            console.error(`[${feature.properties.id}] google: match, no new data`);
-          }
-        } else {
-          console.error(`[${feature.properties.id}] google: no match within radius`);
-          feature.properties.google_attempted = today;
-          stats.no_google_match++;
-          dirty = true;
-        }
-      } catch (err) {
-        console.error(`[${feature.properties.id}] gosom error: ${(err as Error).message}`);
-        feature.properties.google_attempted = today;
-        stats.errored++;
-        dirty = true;
-      }
+      googleBatch.push({
+        featureId: feature.properties.id,
+        name,
+        lat,
+        lng,
+      });
     }
 
     // Periodic flush so progress survives a SIGTERM at any point.
@@ -985,6 +1005,108 @@ async function main(): Promise<void> {
   for (const c of todo) workerQueue.add(() => processOne(c));
   await workerQueue.onIdle();
   await flush();
+
+  // Batched Google fallback: process the deferred candidates in chunks
+  // so one ScrapeMateApp / browser handles each chunk's keywords with
+  // page reuse instead of paying a fresh cold-start per feature.
+  if (googleAvailable && googleBatch.length > 0 && !stopRequested) {
+    console.error(
+      `gosom batch: ${googleBatch.length} features in ${Math.ceil(googleBatch.length / GOSOM_CHUNK_SIZE)} chunk(s)`,
+    );
+    // Stable index lookup for in-place feature updates by id.
+    const indexById = new Map<string, number>();
+    for (let i = 0; i < doc.features.length; i++) {
+      const id = doc.features[i]?.properties.id;
+      if (id) indexById.set(id, i);
+    }
+    for (let off = 0; off < googleBatch.length; off += GOSOM_CHUNK_SIZE) {
+      if (stopRequested) break;
+      if (Date.now() - startedAt >= maxRuntimeMs) {
+        requestStop("max_runtime");
+        break;
+      }
+      const chunk = googleBatch.slice(off, off + GOSOM_CHUNK_SIZE);
+      const chunkIdx = Math.floor(off / GOSOM_CHUNK_SIZE) + 1;
+      const chunkCount = Math.ceil(googleBatch.length / GOSOM_CHUNK_SIZE);
+      console.error(`gosom chunk ${chunkIdx}/${chunkCount} (${chunk.length} features)`);
+      let grouped: Map<string, GosomEntry[]>;
+      try {
+        grouped = await gosomBatch(chunk);
+      } catch (err) {
+        console.error(`gosom chunk ${chunkIdx} error: ${(err as Error).message}`);
+        for (const c of chunk) {
+          const idx = indexById.get(c.featureId);
+          if (idx === undefined) continue;
+          const f = doc.features[idx];
+          if (!f) continue;
+          f.properties.google_attempted = today;
+          stats.errored++;
+        }
+        dirty = true;
+        await flush();
+        continue;
+      }
+      for (const c of chunk) {
+        const idx = indexById.get(c.featureId);
+        if (idx === undefined) continue;
+        const feature = doc.features[idx];
+        if (!feature) continue;
+        const candidates = grouped.get(c.featureId) ?? [];
+        const match = gosomMatch(candidates, c.lat, c.lng);
+        if (!match) {
+          feature.properties.google_attempted = today;
+          stats.no_google_match++;
+          dirty = true;
+          console.error(`[${c.featureId}] google: no match within radius`);
+          continue;
+        }
+        let touched = false;
+        let stampedId = false;
+        let payDelta = 0;
+        let hoursDelta = false;
+        const gid = match.place_id || match.cid;
+        if (gid && existingGmapsId(feature.properties.sources) !== gid) {
+          upsertSource(feature, "gmaps", gid);
+          stampedId = true;
+          touched = true;
+        }
+        if (paymentHasAnyMissing(feature.properties.payment)) {
+          const incoming = gosomToPayment(match);
+          const { merged, added } = mergePayment(feature.properties.payment, incoming);
+          if (added > 0) {
+            feature.properties.payment = merged;
+            feature.properties.updated = today;
+            stats.payment_keys_written += added;
+            payDelta = added;
+            touched = true;
+          }
+        }
+        if (hoursMissing(feature)) {
+          const osm = gosomHoursToOsm(match.open_hours);
+          if (osm) {
+            feature.properties.hours = { raw: osm };
+            feature.properties.updated = today;
+            stats.hours_written++;
+            hoursDelta = true;
+            touched = true;
+          }
+        }
+        if (touched) {
+          stats.google_features_touched++;
+          dirty = true;
+          const parts: string[] = [];
+          if (stampedId) parts.push("id");
+          if (payDelta > 0) parts.push(`payment(${payDelta})`);
+          if (hoursDelta) parts.push("hours");
+          console.error(`[${c.featureId}] +google ${parts.join(" ")}`);
+        } else {
+          console.error(`[${c.featureId}] google: match, no new data`);
+        }
+      }
+      await flush();
+    }
+  }
+
   clearInterval(watchdog);
 
   stats.stopped_reason = stopRequested ?? "batch_done";
