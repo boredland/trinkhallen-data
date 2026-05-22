@@ -4626,10 +4626,17 @@
             "type": "osm",
             "id": "way/279101537",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-20"
+        "updated": "2026-05-22",
+        "payment": {
+          "cash": "yes"
+        }
       }
     },
     {
@@ -12643,12 +12650,21 @@
             "type": "osm",
             "id": "node/13026676803",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "hours": {
           "raw": "Mo-Su 09:00-22:30"
+        },
+        "payment": {
+          "girocard": "yes",
+          "cards": "no",
+          "contactless": "yes"
         }
       }
     },
@@ -47870,12 +47886,21 @@
             "type": "osm",
             "id": "way/72860179",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "hours": {
           "raw": "Mo - Fr 08:30-20:00; Sa 08:00-18:00"
+        },
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
         }
       }
     },

@@ -8225,16 +8225,25 @@
             "type": "osm",
             "id": "node/2504843955",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "hours": {
           "raw": "Mo-Fr 06:00-19:00"
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -11876,16 +11885,25 @@
             "type": "osm",
             "id": "node/366569232",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "hours": {
           "raw": "Mo-Su 06:00-22:00"
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -18582,10 +18600,17 @@
             "type": "osm",
             "id": "node/9418688671",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-22",
+        "payment": {
+          "cards": "yes"
+        }
       }
     },
     {
@@ -20810,16 +20835,23 @@
             "type": "osm",
             "id": "way/333317253",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "hours": {
           "raw": "Mo,Tu,Th 08:00-13:00,15:00-18:00; We,Sa 08:00-12:30; Fr 08:00-18:00"
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "contactless": "yes"
+        }
       }
     },
     {

@@ -5328,10 +5328,17 @@
           {
             "type": "hopfenstop",
             "id": "7df031ba-d8e8-4784-acb6-e32ccfcd281e"
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19"
+        "updated": "2026-05-22",
+        "payment": {
+          "cash": "yes"
+        }
       }
     },
     {
@@ -21460,10 +21467,19 @@
             "type": "osm",
             "id": "node/2833747449",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-20"
+        "updated": "2026-05-22",
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -30759,12 +30775,21 @@
             "type": "osm",
             "id": "node/10687151078",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "hours": {
           "raw": "Mo-Sa 08:00-20:00"
+        },
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
         }
       }
     },
@@ -50706,12 +50731,21 @@
             "type": "osm",
             "id": "node/9280067336",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "hours": {
           "raw": "Mo-Fr 08:00-18:00, Sa 08:00-13:00"
+        },
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes",
+          "contactless": "yes"
         }
       }
     },
@@ -55131,12 +55165,21 @@
             "type": "osm",
             "id": "way/260519102",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "hours": {
           "raw": "Mo-Sa 08:00-22:00"
+        },
+        "payment": {
+          "girocard": "yes",
+          "cards": "yes",
+          "contactless": "yes"
         }
       }
     },
