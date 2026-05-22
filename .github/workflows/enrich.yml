@@ -81,18 +81,42 @@ permissions:
   contents: write
   pull-requests: write
 
-concurrency:
-  group: enrich
-  cancel-in-progress: false
-
 jobs:
-  enrich:
+  # Split out so the enrich job's `concurrency.group` can reference the
+  # resolved region via `needs.pick.outputs.region`. Workflow-level
+  # `concurrency:` would be evaluated before any step runs, so it can't
+  # see the cron's random pick. Job-level concurrency on `enrich`
+  # depending on `pick`'s output gives us per-region serialisation: two
+  # runs targeting the same region queue up; runs for different regions
+  # proceed in parallel.
+  pick:
     runs-on: ubuntu-latest
-    # 60-min ceiling. The script self-bounds at 55 min via
-    # --max-runtime-min so the diff + PR follow-ups have headroom.
-    # 55 min job + 45 min script = 10 min budget for in-flight drain +
-    # diff + Open PR, well under the hard ceiling.
+    outputs:
+      region: ${{ steps.choose.outputs.region }}
+    steps:
+      - uses: actions/checkout@v6
+      - id: choose
+        run: |
+          set -euo pipefail
+          choice="${{ inputs.region }}"
+          if [ -z "$choice" ] || [ "$choice" = "random" ]; then
+            choice=$(find data/de -name '*.geojson' \
+              | sed 's|.*/||;s|\.geojson$||' \
+              | sort -u | shuf -n 1)
+          fi
+          echo "region=$choice" >> "$GITHUB_OUTPUT"
+          echo "Picked: $choice"
+
+  enrich:
+    needs: pick
+    runs-on: ubuntu-latest
+    # 55-min ceiling. The script self-bounds at 45 min via
+    # --max-runtime-min so the diff + PR follow-ups have 10 min of
+    # headroom for in-flight drain + the wrap-up steps.
     timeout-minutes: 55
+    concurrency:
+      group: enrich-${{ needs.pick.outputs.region }}
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v6
         with:
@@ -104,25 +128,12 @@ jobs:
 
       - run: bun install --frozen-lockfile
 
-      - name: Pick region
-        id: pick
-        run: |
-          set -euo pipefail
-          choice="${{ inputs.region }}"
-          if [ -z "$choice" ] || [ "$choice" = "random" ]; then
-            choice=$(find data/de -name '*.geojson' \
-              | sed 's|.*/||;s|\.geojson$||' \
-              | sort -u | shuf -n 1)
-          fi
-          echo "region=$choice" >> "$GITHUB_OUTPUT"
-          echo "Enriching: $choice"
-
       - name: Enrich
         id: enrich
         run: |
           set -euo pipefail
           bun scripts/run-enrich.ts \
-            --region "${{ steps.pick.outputs.region }}" \
+            --region "${{ needs.pick.outputs.region }}" \
             --max-runtime-min 45 \
             > stats.json
           cat stats.json
@@ -150,7 +161,7 @@ jobs:
           else
             suffix="(partial — stats file missing)"
           fi
-          echo "title=Enrich (${{ steps.pick.outputs.region }}): $suffix" >> "$GITHUB_OUTPUT"
+          echo "title=Enrich (${{ needs.pick.outputs.region }}): $suffix" >> "$GITHUB_OUTPUT"
           {
             echo 'stats<<JSON'
             if [ -s stats.json ]; then cat stats.json; else echo '{ "note": "stats missing" }'; fi
@@ -163,10 +174,10 @@ jobs:
         with:
           commit-message: ${{ steps.diff.outputs.title }}
           title: ${{ steps.diff.outputs.title }}
-          branch: enrich/${{ steps.pick.outputs.region }}
+          branch: enrich/${{ needs.pick.outputs.region }}
           delete-branch: true
           body: |
-            Daily payment + hours enrichment for `${{ steps.pick.outputs.region }}`.
+            Daily payment + hours enrichment for `${{ needs.pick.outputs.region }}`.
             Apple-first (DDG → maps.apple.com SSR), Google fallback (gosom).
             Conservative merge — existing values are never overwritten.
 
