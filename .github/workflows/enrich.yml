@@ -1,4 +1,5 @@
 name: enrich
+run-name: enrich · ${{ inputs.region || 'random' }}
 
 # Per-feature payment + hours enrichment for one region. Apple-first
 # (DuckDuckGo place_id → maps.apple.com SSR → amenityV2 + businessHours),
@@ -109,6 +110,7 @@ jobs:
 
   enrich:
     needs: pick
+    name: enrich · ${{ needs.pick.outputs.region }}
     runs-on: ubuntu-latest
     # 55-min ceiling. The script self-bounds at 45 min via
     # --max-runtime-min so the diff + PR follow-ups have 10 min of
