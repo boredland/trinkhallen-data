@@ -200,16 +200,23 @@ function daysSince(iso: string | undefined, today: Date): number {
   return (today.getTime() - t) / 86_400_000;
 }
 
-// Keys we actively chase via Apple + Google. `cash` is omitted on purpose:
-// it's the default assumption for every kiosk in Germany, so a missing
-// `cash` slot isn't worth a gosom call to confirm what we already
-// implicitly know. If a future scrape returns explicit `cash=yes/no`
-// we'll still write it (`mergePayment` honours any returned key), we
-// just don't enqueue the feature for re-querying solely on its absence.
-const PAYMENT_CHASE_KEYS: readonly PaymentKey[] = ["cards", "contactless", "girocard", "mobile"];
-
+/**
+ * "Have we learned enough about this kiosk's payment story?"
+ *
+ * The user-facing question is essentially "can I pay without cash?", and
+ * any one of `cards` / `contactless` / `mobile` answers it (no matter the
+ * value — `no` is just as useful as `yes`). If we know any of those, we
+ * don't chase the others.
+ *
+ * Cash is excluded entirely: it's the implicit German default. Girocard
+ * is the German-specific debit signal — useful when it's the only thing,
+ * but not worth a scrape once any of cards/contactless/mobile is settled.
+ * If a future scrape happens to return additional keys, mergePayment
+ * still honours them — we just don't proactively re-enqueue on absence.
+ */
 function paymentHasAnyMissing(p: Payment | undefined): boolean {
-  return !p || PAYMENT_CHASE_KEYS.some((k) => p[k] === undefined);
+  if (!p) return true;
+  return p.cards === undefined && p.contactless === undefined && p.mobile === undefined;
 }
 
 function hoursMissing(feature: Feature): boolean {
