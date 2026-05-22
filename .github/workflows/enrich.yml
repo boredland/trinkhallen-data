@@ -1,0 +1,176 @@
+name: enrich
+
+# Per-feature payment + hours enrichment for one region. Apple-first
+# (DuckDuckGo place_id → maps.apple.com SSR → amenityV2 + businessHours),
+# then gosom (Google Maps) fills anything Apple didn't cover. Both
+# merges are conservative — nothing existing gets overwritten.
+#
+# The script throttles each upstream with its own p-queue. Six features
+# are processed concurrently; SIGTERM and --max-runtime-min both stop
+# new work and flush in-flight progress so the PR step always sees
+# whatever landed.
+#
+# Daily cron picks a random region. The job times out at 60 minutes and
+# `if: always()` on the follow-up steps means a partial run still opens
+# a PR.
+
+on:
+  schedule:
+    # 03:23 UTC — off-peak.
+    - cron: "23 3 * * *"
+  workflow_dispatch:
+    inputs:
+      region:
+        description: "Region to enrich (or 'random' for the cron's roll)"
+        required: true
+        default: "random"
+        type: choice
+        options:
+          - random
+          - aachen
+          - augsburg
+          - berlin
+          - bielefeld
+          - bremen
+          - bremerhaven
+          - chemnitz
+          - cottbus
+          - dresden
+          - duesseldorf
+          - erfurt
+          - frankfurt
+          - freiburg
+          - goettingen
+          - halle
+          - hamburg
+          - hannover
+          - hildesheim
+          - ingolstadt
+          - karlsruhe
+          - kassel
+          - kiel
+          - koblenz
+          - koeln
+          - leipzig
+          - luebeck
+          - magdeburg
+          - mainz
+          - mannheim
+          - muenchen
+          - muenster
+          - nuernberg
+          - osnabrueck
+          - potsdam
+          - regensburg
+          - remscheid
+          - reutlingen
+          - rostock
+          - ruhr
+          - saarbruecken
+          - salzgitter
+          - siegen
+          - stuttgart
+          - trier
+          - ulm
+          - wolfsburg
+          - wuerzburg
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: enrich
+  cancel-in-progress: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    # 60-min ceiling. The script self-bounds at 55 min via
+    # --max-runtime-min so the diff + PR follow-ups have headroom.
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - run: bun install --frozen-lockfile
+
+      - name: Pick region
+        id: pick
+        run: |
+          set -euo pipefail
+          choice="${{ inputs.region }}"
+          if [ -z "$choice" ] || [ "$choice" = "random" ]; then
+            choice=$(find data/de -name '*.geojson' \
+              | sed 's|.*/||;s|\.geojson$||' \
+              | sort -u | shuf -n 1)
+          fi
+          echo "region=$choice" >> "$GITHUB_OUTPUT"
+          echo "Enriching: $choice"
+
+      - name: Enrich
+        id: enrich
+        run: |
+          set -euo pipefail
+          bun scripts/run-enrich.ts \
+            --region "${{ steps.pick.outputs.region }}" \
+            --max-runtime-min 55 \
+            > stats.json
+          cat stats.json
+
+      - name: Detect changes
+        id: diff
+        if: always()
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- data/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat -- data/ | head -30
+          fi
+
+          if [ -s stats.json ]; then
+            suffix=$(jq -r '
+              "+\(.payment_keys_written // 0) payment keys, +\(.hours_written // 0) hours, +\(.ids_resolved // 0) place-ids " +
+              "(apple=\(.apple_features_touched // 0) google=\(.google_features_touched // 0))" +
+              (if (.stopped_reason // "") == "max_runtime" or (.stopped_reason // "") == "sigterm"
+               then " — partial (\(.stopped_reason))"
+               else "" end)
+            ' stats.json)
+          else
+            suffix="(partial — stats file missing)"
+          fi
+          echo "title=Enrich (${{ steps.pick.outputs.region }}): $suffix" >> "$GITHUB_OUTPUT"
+          {
+            echo 'stats<<JSON'
+            if [ -s stats.json ]; then cat stats.json; else echo '{ "note": "stats missing" }'; fi
+            echo 'JSON'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Open PR
+        if: always() && steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          commit-message: ${{ steps.diff.outputs.title }}
+          title: ${{ steps.diff.outputs.title }}
+          branch: enrich/${{ steps.pick.outputs.region }}
+          delete-branch: true
+          body: |
+            Daily payment + hours enrichment for `${{ steps.pick.outputs.region }}`.
+            Apple-first (DDG → maps.apple.com SSR), Google fallback (gosom).
+            Conservative merge — existing values are never overwritten.
+
+            ```json
+            ${{ steps.diff.outputs.stats }}
+            ```
+          labels: |
+            enrich
+            automated
+          add-paths: |
+            data/
