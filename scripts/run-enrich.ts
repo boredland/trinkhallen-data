@@ -1039,17 +1039,12 @@ async function main(): Promise<void> {
       try {
         grouped = await gosomBatch(chunk);
       } catch (err) {
+        // Chunk failed wholesale (timeout, gosom error). Don't stamp
+        // `google_attempted` — we never got a real answer for these
+        // features, so a future run should retry them. We just count
+        // the error and move on to the next chunk.
         console.error(`gosom chunk ${chunkIdx} error: ${(err as Error).message}`);
-        for (const c of chunk) {
-          const idx = indexById.get(c.featureId);
-          if (idx === undefined) continue;
-          const f = doc.features[idx];
-          if (!f) continue;
-          f.properties.google_attempted = today;
-          stats.errored++;
-        }
-        dirty = true;
-        await flush();
+        stats.errored += chunk.length;
         continue;
       }
       for (const c of chunk) {
