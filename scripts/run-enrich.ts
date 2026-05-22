@@ -560,7 +560,21 @@ async function gosomQuery(name: string, lat: number, lng: number): Promise<Gosom
     "-exit-on-inactivity",
     `${GOSOM_TIMEOUT_S}s`,
   ];
-  execFileSync("docker", dockerArgs, { stdio: ["ignore", "ignore", "pipe"] });
+  // gosom's `-exit-on-inactivity` is supposed to bound the run, but a hung
+  // Playwright process inside the container can pin us. execFileSync blocks
+  // the event loop, so a stall here would also block our SIGTERM / max-
+  // runtime watchdog. Hard cap at 2× the gosom inactivity timeout + 30 s
+  // for docker startup; SIGKILL on overrun.
+  try {
+    execFileSync("docker", dockerArgs, {
+      stdio: ["ignore", "ignore", "pipe"],
+      timeout: (GOSOM_TIMEOUT_S * 2 + 30) * 1000,
+      killSignal: "SIGKILL",
+    });
+  } catch (err) {
+    const e = err as { signal?: string; status?: number; message?: string };
+    throw new Error(`gosom ${e.signal ?? e.status ?? "failed"}: ${e.message ?? ""}`.trim());
+  }
 
   const buf = await readFile(outputPath, "utf8").catch(() => "");
   await rm(inputPath, { force: true });

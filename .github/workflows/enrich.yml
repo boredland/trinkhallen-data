@@ -16,8 +16,10 @@ name: enrich
 
 on:
   schedule:
-    # 03:23 UTC — off-peak.
-    - cron: "23 3 * * *"
+    # Hourly at :17 — off-the-minute to avoid GH's top-of-hour
+    # thundering herd. The 55-min job timeout + 45-min script budget
+    # leave a comfortable gap before the next tick's run.
+    - cron: "17 * * * *"
   workflow_dispatch:
     inputs:
       region:
@@ -88,7 +90,9 @@ jobs:
     runs-on: ubuntu-latest
     # 60-min ceiling. The script self-bounds at 55 min via
     # --max-runtime-min so the diff + PR follow-ups have headroom.
-    timeout-minutes: 60
+    # 55 min job + 45 min script = 10 min budget for in-flight drain +
+    # diff + Open PR, well under the hard ceiling.
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v6
         with:
@@ -119,7 +123,7 @@ jobs:
           set -euo pipefail
           bun scripts/run-enrich.ts \
             --region "${{ steps.pick.outputs.region }}" \
-            --max-runtime-min 55 \
+            --max-runtime-min 45 \
             > stats.json
           cat stats.json
 
