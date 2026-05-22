@@ -111,7 +111,8 @@
         "updated": "2026-05-21",
         "hours": {
           "raw": "Mo-Fr 09:00-21:00; Sa 09:00-13:00,15:00-21:00; Su 08:00-11:00,15:00-21:00"
-        }
+        },
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -138,7 +139,8 @@
         "updated": "2026-05-21",
         "hours": {
           "raw": "Mo-Su,PH 00:00-24:00"
-        }
+        },
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -239,7 +241,8 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -416,7 +419,8 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -482,7 +486,8 @@
         "updated": "2026-05-21",
         "hours": {
           "raw": "Mo-Fr 07:00-18:00; Sa 08:00-12:00"
-        }
+        },
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -669,7 +674,8 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -981,7 +987,8 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -1034,12 +1041,20 @@
             "type": "osm",
             "id": "node/313516598",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "hours": {
           "raw": "Mo-Su 07:00-18:00"
+        },
+        "payment": {
+          "girocard": "yes",
+          "cards": "yes"
         }
       }
     },
@@ -1225,7 +1240,8 @@
         "updated": "2026-05-21",
         "hours": {
           "raw": "Mo-Sa 07:00-20:00"
-        }
+        },
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -1260,7 +1276,8 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -1331,7 +1348,8 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -1366,7 +1384,8 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -1466,7 +1485,8 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -1534,7 +1554,8 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -1605,7 +1626,8 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -1745,7 +1767,8 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -1853,7 +1876,8 @@
         "updated": "2026-05-21",
         "hours": {
           "raw": "Mo-Fr 08:00-18:30; Sa 09:00-16:00"
-        }
+        },
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -1874,10 +1898,19 @@
             "type": "osm",
             "id": "node/6824065230",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-22",
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -1978,7 +2011,8 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -2044,7 +2078,8 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -2075,7 +2110,8 @@
         "tags": [
           "barrierefrei",
           "sitzgelegenheiten"
-        ]
+        ],
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -2376,7 +2412,8 @@
         "updated": "2026-05-21",
         "hours": {
           "raw": "Mo.-Fr. 08:00-18:30, Sa. 10:00-12:00"
-        }
+        },
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -2449,7 +2486,8 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -2505,16 +2543,23 @@
             "type": "osm",
             "id": "node/9796877190",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "hours": {
           "raw": "Mo-Su 12:00-24:00"
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment": {
+          "cards": "yes"
+        }
       }
     },
     {
@@ -2604,7 +2649,8 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -2633,7 +2679,8 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21"
+        "updated": "2026-05-21",
+        "payment_attempted": "2026-05-22"
       }
     },
     {
@@ -2697,7 +2744,8 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "payment_attempted": "2026-05-22"
       }
     },
     {
