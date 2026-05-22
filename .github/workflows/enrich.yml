@@ -194,24 +194,32 @@ jobs:
             echo 'JSON'
           } >> "$GITHUB_OUTPUT"
 
-      - name: Open PR
+      - name: Commit to main
         if: always() && steps.diff.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v8
-        with:
-          commit-message: ${{ steps.diff.outputs.title }}
-          title: ${{ steps.diff.outputs.title }}
-          branch: enrich/${{ needs.pick.outputs.region }}
-          delete-branch: true
-          body: |
-            Daily payment + hours enrichment for `${{ needs.pick.outputs.region }}`.
-            Apple-first (DDG → maps.apple.com SSR), Google fallback (gosom).
-            Conservative merge — existing values are never overwritten.
-
-            ```json
-            ${{ steps.diff.outputs.stats }}
-            ```
-          labels: |
-            enrich
-            automated
-          add-paths: |
-            data/
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          # Multi-line commit message — title line + stats JSON block.
+          {
+            echo "${{ steps.diff.outputs.title }}"
+            echo
+            echo '```json'
+            if [ -s stats.json ]; then cat stats.json; fi
+            echo '```'
+          } > /tmp/commit-msg.txt
+          git commit -F /tmp/commit-msg.txt
+          # Concurrent enrich runs for different regions touch different
+          # files, but main may have moved (other workflows, manual edits).
+          # Rebase + retry a few times before giving up.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "pushed on attempt $i"
+              exit 0
+            fi
+            echo "push rejected, pulling --rebase (attempt $i)"
+            git pull --rebase --autostash
+          done
+          echo "push failed after 5 attempts"
+          exit 1
