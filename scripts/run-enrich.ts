@@ -1073,11 +1073,16 @@ async function main(): Promise<void> {
       } catch (err) {
         // Chunk failed wholesale (timeout, gosom error). Don't stamp
         // `google_attempted` — we never got a real answer for these
-        // features, so a future run should retry them. We just count
-        // the error and move on to the next chunk.
-        console.error(`gosom chunk ${chunkIdx} error: ${(err as Error).message}`);
-        stats.errored += chunk.length;
-        continue;
+        // features, so the next run picks them up. Bail out of the
+        // chunk loop entirely: if gosom timed out / rate-limited once,
+        // the remaining chunks face the same conditions and will burn
+        // wall-clock for nothing.
+        const remaining = googleBatch.length - off;
+        console.error(
+          `gosom chunk ${chunkIdx} error: ${(err as Error).message} — aborting google phase; ${remaining} features deferred to next run`,
+        );
+        stats.errored += remaining;
+        break;
       }
       for (const c of chunk) {
         const idx = indexById.get(c.featureId);
