@@ -200,8 +200,16 @@ function daysSince(iso: string | undefined, today: Date): number {
   return (today.getTime() - t) / 86_400_000;
 }
 
+// Keys we actively chase via Apple + Google. `cash` is omitted on purpose:
+// it's the default assumption for every kiosk in Germany, so a missing
+// `cash` slot isn't worth a gosom call to confirm what we already
+// implicitly know. If a future scrape returns explicit `cash=yes/no`
+// we'll still write it (`mergePayment` honours any returned key), we
+// just don't enqueue the feature for re-querying solely on its absence.
+const PAYMENT_CHASE_KEYS: readonly PaymentKey[] = ["cards", "contactless", "girocard", "mobile"];
+
 function paymentHasAnyMissing(p: Payment | undefined): boolean {
-  return !p || PAYMENT_KEYS.some((k) => p[k] === undefined);
+  return !p || PAYMENT_CHASE_KEYS.some((k) => p[k] === undefined);
 }
 
 function hoursMissing(feature: Feature): boolean {
