@@ -13,7 +13,14 @@
  *       the other (≥3 chars) OR same street + number), OR
  *     - haversine ≤ 8m (regardless of name) — at that distance it's the
  *       same kiosk that just got renamed (operator change), since
- *       Spätis don't sit 8m apart in practice.
+ *       Spätis don't sit 8m apart in practice, OR
+ *     - haversine ≤ 60m AND names normalise to the exact same string
+ *       (Hopfenstop volunteers occasionally pinned the same kiosk twice
+ *       with ~30-60m of GPS drift; identical names override distance).
+ *
+ *   Plus a second pass that pairs hopfenstop-only ↔ hopfenstop-only on
+ *   the same exact-name ≤ 60m rule, to catch within-Hopfenstop dupes
+ *   that don't have an OSM counterpart at all.
  *   Merge: keep the OSM feature (preserves the upstream node/id reference),
  *   conservatively fill blanks from Hopfenstop (payment "unknown" → known,
  *   missing hours/address/tags/description), union sources[], pick the more
@@ -231,22 +238,28 @@ function processFile(file: string): PerFileResult {
   const hopsOnly = doc.features.filter(
     (f) => hasSrc(f, "hopfenstop") && !hasSrc(f, "osm"),
   );
-  const osmOnly = doc.features.filter(
-    (f) => !hasSrc(f, "hopfenstop") && hasSrc(f, "osm"),
-  );
+  // OSM-bearing features are merge targets even when they already carry a
+  // hopfenstop source from a prior dedup pass. Excluding them would leave
+  // orphan hopfenstop twins stuck just outside the 30m gate.
+  const osmCandidates = doc.features.filter((f) => hasSrc(f, "osm"));
 
   const allPairs: Pair[] = [];
   for (const h of hopsOnly) {
     const hNorm = norm(h.properties.name);
-    for (const o of osmOnly) {
+    for (const o of osmCandidates) {
       const m = dist(h, o);
-      if (m > 30) continue;
+      // Exact-name matches get a wider distance window (60m) than the
+      // general 30m gate — same-named kiosks within a block are almost
+      // always the same kiosk pinned with GPS drift.
       const oNorm = norm(o.properties.name);
+      const exact = hNorm.length >= 4 && hNorm === oNorm;
+      if (m > 30 && !(exact && m <= 60)) continue;
       const sim = dice(hNorm, oNorm);
       const sub = isSubstring(hNorm, oNorm);
       const addr = sameAddress(h, o);
       let reason = "";
-      if (sim >= 0.55) reason = `dice=${sim.toFixed(2)}`;
+      if (exact && m > 30) reason = `exact-name=${m.toFixed(1)}m`;
+      else if (sim >= 0.55) reason = `dice=${sim.toFixed(2)}`;
       else if (sub) reason = `substring`;
       else if (addr) reason = `address`;
       else if (m <= 8) reason = `close-coord=${m.toFixed(1)}m`;
@@ -254,6 +267,42 @@ function processFile(file: string): PerFileResult {
       else if (sim >= 0.3) {
         allPairs.push({ hops: h, osm: o, meters: m, sim, reason: `B:dice=${sim.toFixed(2)}` });
       }
+    }
+  }
+
+  // Second pass: hopfenstop-only ↔ hopfenstop-only. Exact-name + ≤ 60m only —
+  // anything looser within Hopfenstop's own data would risk merging real
+  // neighbours, since there's no OSM cross-check on this side.
+  for (let i = 0; i < hopsOnly.length; i++) {
+    const a = hopsOnly[i]!;
+    const aNorm = norm(a.properties.name);
+    if (aNorm.length < 4) continue;
+    for (let j = i + 1; j < hopsOnly.length; j++) {
+      const b = hopsOnly[j]!;
+      if (aNorm !== norm(b.properties.name)) continue;
+      const m = dist(a, b);
+      if (m > 60) continue;
+      // Pick the feature with more populated properties as the survivor;
+      // its id becomes the kept one and the other gets deleted.
+      const score = (f: Feature) => {
+        const p = f.properties;
+        return (
+          (p.payment ? Object.keys(p.payment).length : 0) +
+          (p.hours?.raw ? 1 : 0) +
+          (p.address?.["street"] ? 1 : 0) +
+          (p.address?.["number"] ? 1 : 0) +
+          (p.description ? 1 : 0) +
+          (p.tags?.length ?? 0)
+        );
+      };
+      const [survivor, dupe] = score(a) >= score(b) ? [a, b] : [b, a];
+      allPairs.push({
+        hops: dupe,
+        osm: survivor, // misnomer here, but the merge keeps `osm` and deletes `hops`
+        meters: m,
+        sim: 1,
+        reason: `hops-twin=${m.toFixed(1)}m`,
+      });
     }
   }
 
@@ -312,7 +361,7 @@ function processFile(file: string): PerFileResult {
   return {
     file,
     hops_only_before: hopsOnly.length,
-    osm_only_before: osmOnly.length,
+    osm_only_before: osmCandidates.length,
     tier_a_merged: tierA.length,
     tier_b_review: tierB.length,
     features_before: featuresBefore,

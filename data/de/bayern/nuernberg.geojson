@@ -185,50 +185,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          11.0013183,
-          49.4688994
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1133",
-        "name": "Kiosk 762",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Hornschuchpromenade",
-          "number": "20",
-          "postalcode": "90762",
-          "city": "Fürth"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "ede7b44c-e7c8-45cc-893f-d68432a35a2c"
-          },
-          {
-            "type": "apple",
-            "id": "13687982001001343182"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJORqkrMRVn0cRDw9k0aupRUU"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-23",
-        "hours": {
-          "raw": "Su 16:00-18:00; Mo-Fr 07:00-20:00; Sa 08:00-20:00"
-        },
-        "google_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           10.9847823,
           49.4724324
         ]
@@ -2592,7 +2548,12 @@
       "properties": {
         "id": "tk_n_osm_n1895834196",
         "name": "Kiosk 762",
-        "address": {},
+        "address": {
+          "street": "Hornschuchpromenade",
+          "number": "20",
+          "postalcode": "90762",
+          "city": "Fürth"
+        },
         "sources": [
           {
             "type": "osm",
@@ -2606,17 +2567,23 @@
           {
             "type": "gmaps",
             "id": "ChIJORqkrMRVn0cRDw9k0aupRUU"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "ede7b44c-e7c8-45cc-893f-d68432a35a2c"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-05-23",
         "tags": [
-          "barrierefrei"
+          "barrierefrei",
+          "fritz_kola"
         ],
         "hours": {
           "raw": "Su 16:00-18:00; Mo-Fr 07:00-20:00; Sa 08:00-20:00"
         },
-        "google_attempted": "2026-05-23"
+        "google_attempted": "2026-05-23",
+        "description": "Kiosk "
       }
     },
     {

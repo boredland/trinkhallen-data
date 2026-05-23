@@ -246,52 +246,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.8432955,
-          53.072182
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1532",
-        "name": "Kiosk am Hulsberg",
-        "description": "Kiosk mit türkischen Lebensmitteln, vielen Getränken und GLS Shop ",
-        "address": {
-          "street": "Am Hulsberg",
-          "number": "9",
-          "postalcode": "28205",
-          "city": "Bremen",
-          "district": "Östliche Vorstadt"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "4e109eb8-563b-4d91-83fc-82570fc2a0b1"
-          },
-          {
-            "type": "apple",
-            "id": "11195429993515315442"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJL7GFclwnsUcRcolP2H3LPXU"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-22",
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes",
-          "mobile": "yes"
-        },
-        "hours": {
-          "raw": "Su 09:00-24:00,00:00-01:00; Mo-Th 09:00-24:00; Fr-Sa 09:00-24:00,00:00-02:00"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           8.843347099999999,
           53.0719659
         ]
@@ -366,65 +320,18 @@
           {
             "type": "gmaps",
             "id": "ChIJL7GFclwnsUcRcolP2H3LPXU"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "4e109eb8-563b-4d91-83fc-82570fc2a0b1"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-22",
+        "updated": "2026-05-23",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "mobile": "yes"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          8.217576,
-          53.1364008
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1580",
-        "name": "KIOSK am Damm",
-        "description": "Kleiner Fensterverkauf-Kiosk mit überdachtem Vorbau und den wichtigsten Dingen des täglichen Bedarfs. Recht große Bierauswahl, auch kastenweise verkauft. Gemischte Tüten leider nur vorabgepackt.",
-        "address": {
-          "street": "Damm",
-          "number": "1",
-          "postalcode": "26135",
-          "city": "Oldenburg",
-          "district": "Gerichtsviertel"
-        },
-        "hours": {
-          "raw": "Mo-Fr 06:00-22:00; Sa-Su 09:00-22:00"
-        },
-        "tags": [
-          "gemischte_tuete",
-          "paketshop",
-          "zeitschriften",
-          "ueberdacht"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "3f97267f-ad05-47e6-9bd0-1dfa36fa11d5"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJe9AE8g7ftkcRYV6uEp3uvrM"
-          },
-          {
-            "type": "apple",
-            "id": "17167323417882314277"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-21",
-        "payment": {
-          "cards": "yes",
-          "girocard": "yes"
         }
       }
     },
@@ -10285,7 +10192,10 @@
         "name": "Kiosk am Damm",
         "address": {
           "street": "Damm",
-          "number": "1a"
+          "number": "1a",
+          "postalcode": "26135",
+          "city": "Oldenburg",
+          "district": "Gerichtsviertel"
         },
         "sources": [
           {
@@ -10300,17 +10210,32 @@
           {
             "type": "apple",
             "id": "17167323417882314277"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "3f97267f-ad05-47e6-9bd0-1dfa36fa11d5"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJe9AE8g7ftkcRYV6uEp3uvrM"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-22",
+        "updated": "2026-05-23",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
         },
         "hours": {
           "raw": "Su 10:00-22:00; Mo-Th 07:00-22:00; Fr 07:00-23:00; Sa 10:00-23:00"
-        }
+        },
+        "description": "Kleiner Fensterverkauf-Kiosk mit überdachtem Vorbau und den wichtigsten Dingen des täglichen Bedarfs. Recht große Bierauswahl, auch kastenweise verkauft. Gemischte Tüten leider nur vorabgepackt.",
+        "tags": [
+          "gemischte_tuete",
+          "paketshop",
+          "ueberdacht",
+          "zeitschriften"
+        ]
       }
     },
     {

@@ -1708,44 +1708,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.9481934,
-          53.5775289
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0552",
-        "name": "Pinky Markt",
-        "description": "Tabakwaren, Zeitschriften und Getränke",
-        "address": {
-          "street": "Osterstraße",
-          "number": "150",
-          "postalcode": "20255",
-          "city": "Hamburg",
-          "district": "Bezirk Eimsbüttel"
-        },
-        "hours": {
-          "raw": "Mo-Su 08:30-00:00"
-        },
-        "tags": [
-          "zeitschriften"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "c27f1a57-4d84-4ada-a357-109d79091762"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           9.87534,
           53.47217
         ]
@@ -2487,62 +2449,6 @@
         "updated": "2026-05-19",
         "apple_id_attempted": "2026-05-22",
         "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.9646419,
-          53.5623442
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0741",
-        "name": "Kiosk Bartelstraße",
-        "description": "Kiosk mit großer Süßwaren Auswahl. Hat einen Geldautomaten - einfach Praktisch!",
-        "address": {
-          "street": "Bartelsstraße",
-          "number": "22",
-          "postalcode": "20357",
-          "city": "Hamburg",
-          "district": "Altona"
-        },
-        "tags": [
-          "gemischte_tuete",
-          "eis",
-          "lotto",
-          "sekt",
-          "snacks",
-          "sitzgelegenheiten",
-          "wein",
-          "schnaps"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "3881c225-c560-4bd7-a760-bbcae6d4fec4"
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          },
-          {
-            "type": "apple",
-            "id": "17820419794531250402"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-22",
-        "payment": {
-          "girocard": "yes",
-          "cards": "no",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Su 00:00-24:00"
-        }
       }
     },
     {
@@ -3648,54 +3554,23 @@
           {
             "type": "gmaps",
             "id": "payment"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-21",
-        "payment": {
-          "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "apple_id_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.9560183,
-          53.5502295
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1500",
-        "name": "My blue",
-        "description": "Kiosk mit Lotto",
-        "address": {
-          "street": "Holstenstraße",
-          "number": "1",
-          "postalcode": "22767",
-          "city": "Hamburg",
-          "district": "Altona"
-        },
-        "hours": {
-          "raw": "Mo-Th 08:00-22:00; Fr-Sa 08:00-00:00"
-        },
-        "tags": [
-          "lotto"
-        ],
-        "sources": [
+          },
           {
             "type": "hopfenstop",
             "id": "dd0e578c-0bed-4399-ab54-2a7d23852031"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19",
+        "updated": "2026-05-23",
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
+        },
         "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
+        "tags": [
+          "lotto"
+        ]
       }
     },
     {
@@ -8702,7 +8577,7 @@
       },
       "properties": {
         "id": "tk_hh_osm_n13827684731",
-        "name": "Kiosk26",
+        "name": "Kiosk Bartelstraße",
         "address": {
           "street": "Schanzenstraße",
           "number": "26",
@@ -8723,6 +8598,14 @@
           {
             "type": "hopfenstop",
             "id": "5fb0f0f3-58ee-452e-8f09-9d4b89c87ba9"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "3881c225-c560-4bd7-a760-bbcae6d4fec4"
+          },
+          {
+            "type": "apple",
+            "id": "17820419794531250402"
           }
         ],
         "created": "2026-05-20",
@@ -8738,9 +8621,13 @@
           "raw": "Mo-Sa 09:00-19:00"
         },
         "tags": [
+          "eis",
+          "gemischte_tuete",
           "lotto",
           "mate",
           "paketshop",
+          "schnaps",
+          "sekt",
           "sitzgelegenheiten",
           "snacks",
           "ueberdacht",
@@ -13219,7 +13106,13 @@
       "properties": {
         "id": "tk_hh_osm_n3672023982",
         "name": "Pinky-Markt",
-        "address": {},
+        "address": {
+          "street": "Osterstraße",
+          "number": "150",
+          "postalcode": "20255",
+          "city": "Hamburg",
+          "district": "Bezirk Eimsbüttel"
+        },
         "sources": [
           {
             "type": "osm",
@@ -13229,21 +13122,27 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "c27f1a57-4d84-4ada-a357-109d79091762"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Fr 07:00-24:00; Sa,Su 08:00-24:00"
         },
         "tags": [
-          "barrierefrei"
+          "barrierefrei",
+          "zeitschriften"
         ],
         "payment": {
           "cards": "yes",
           "girocard": "yes"
         },
-        "apple_id_attempted": "2026-05-22"
+        "apple_id_attempted": "2026-05-22",
+        "description": "Tabakwaren, Zeitschriften und Getränke"
       }
     },
     {

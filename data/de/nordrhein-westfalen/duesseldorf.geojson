@@ -383,38 +383,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.82292,
-          51.18235
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0704",
-        "name": "Trinkhalle & Stehcafé New York",
-        "description": "Direkt an der Hauptstraße gelegener mittelgroßer Kiosk mit allgemein guter Auswahl und langen Öffnungszeiten für einen Stadtteil etwas außerhalb.",
-        "address": {
-          "street": "Kölner Landstraße",
-          "number": "297",
-          "postalcode": "40589",
-          "city": "Düsseldorf",
-          "district": "Stadtbezirk 9"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "bc801712-4f71-43bb-a168-a60693ece172"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           6.8229072,
           51.18393
         ]
@@ -4007,48 +3975,6 @@
         "updated": "2026-05-19",
         "apple_id_attempted": "2026-05-22",
         "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.776976800000001,
-          51.21101849999999
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_2017",
-        "name": "Orchidee Kiosk",
-        "description": "Große Nussauswahl! ",
-        "address": {
-          "street": "Friedrichstraße",
-          "number": "120",
-          "postalcode": "40217",
-          "city": "Düsseldorf",
-          "district": "Stadtbezirk 3"
-        },
-        "hours": {
-          "raw": "Mo-Su 10:00-22:00"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "55533e9c-f713-4902-9558-0fdc6c8a57c3"
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-21",
-        "payment": {
-          "cards": "yes",
-          "girocard": "yes"
-        },
-        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -11069,18 +10995,30 @@
       "properties": {
         "id": "tk_d_osm_n1357489890",
         "name": "Trinkhalle & Stehcafe New York",
-        "address": {},
+        "address": {
+          "street": "Kölner Landstraße",
+          "number": "297",
+          "postalcode": "40589",
+          "city": "Düsseldorf",
+          "district": "Stadtbezirk 9"
+        },
         "sources": [
           {
             "type": "osm",
             "id": "node/1357489890",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "bc801712-4f71-43bb-a168-a60693ece172"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
+        "google_attempted": "2026-05-22",
+        "description": "Direkt an der Hauptstraße gelegener mittelgroßer Kiosk mit allgemein guter Auswahl und langen Öffnungszeiten für einen Stadtteil etwas außerhalb.",
+        "tags": []
       }
     },
     {
@@ -24122,7 +24060,13 @@
       "properties": {
         "id": "tk_d_osm_n4733994195",
         "name": "Orchidee Kiosk",
-        "address": {},
+        "address": {
+          "street": "Friedrichstraße",
+          "number": "120",
+          "postalcode": "40217",
+          "city": "Düsseldorf",
+          "district": "Stadtbezirk 3"
+        },
         "sources": [
           {
             "type": "osm",
@@ -24132,10 +24076,14 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "55533e9c-f713-4902-9558-0fdc6c8a57c3"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Fr 08:00-20:00; Sa,Su 09:00-20:00"
         },
@@ -24143,7 +24091,9 @@
           "cards": "yes",
           "girocard": "yes"
         },
-        "apple_id_attempted": "2026-05-22"
+        "apple_id_attempted": "2026-05-22",
+        "description": "Große Nussauswahl! ",
+        "tags": []
       }
     },
     {

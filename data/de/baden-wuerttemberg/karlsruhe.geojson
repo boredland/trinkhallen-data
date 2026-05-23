@@ -1000,52 +1000,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.393559999999999,
-          48.9969044
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1834",
-        "name": "Kiosk am Kolpingplatz",
-        "description": "Bewahrenswert",
-        "address": {
-          "street": "Karlstraße",
-          "number": "128A",
-          "postalcode": "76137",
-          "city": "Karlsruhe",
-          "district": "Südweststadt"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "a505d7f2-89a4-4126-bcf8-1e7fbcb241bc"
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          },
-          {
-            "type": "apple",
-            "id": "9507395722406699683"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-22",
-        "payment": {
-          "girocard": "yes",
-          "cards": "no",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Su 00:00-03:00; Mo-Fr 10:00-24:00; Sa 00:00-03:00,10:00-24:00"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           8.3601733,
           49.0105143
         ]
@@ -7642,7 +7596,13 @@
       "properties": {
         "id": "tk_ka_osm_w90076689",
         "name": "Kiosk am Kolpingplatz",
-        "address": {},
+        "address": {
+          "street": "Karlstraße",
+          "number": "128A",
+          "postalcode": "76137",
+          "city": "Karlsruhe",
+          "district": "Südweststadt"
+        },
         "sources": [
           {
             "type": "osm",
@@ -7652,23 +7612,32 @@
           {
             "type": "apple",
             "id": "9507395722406699683"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "a505d7f2-89a4-4126-bcf8-1e7fbcb241bc"
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Th 08:00-24:00; Fr 08:00-24:00; Sa 00:00-03:00, 10:00-24:00"
         },
         "payment": {
           "cash": "unknown",
           "cards": "yes",
-          "contactless": "unknown",
-          "girocard": "unknown",
+          "contactless": "yes",
+          "girocard": "yes",
           "mobile": "unknown"
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "description": "Bewahrenswert"
       }
     },
     {

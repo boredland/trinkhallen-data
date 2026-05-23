@@ -546,48 +546,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.0135134,
-          51.4517667
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0643",
-        "name": "HBB Store",
-        "description": "Am Hbf, zu teuer aber (fast) immer auf",
-        "address": {
-          "street": "Am Hauptbahnhof",
-          "number": "5",
-          "postalcode": "45127",
-          "city": "Essen",
-          "district": "Stadtbezirke I"
-        },
-        "hours": {
-          "raw": "Mo-Fr 06:00-00:00; Sa-Su 00:00-00:00"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "d8e5a728-11a4-43c5-a374-e10af2503ddf"
-          },
-          {
-            "type": "apple",
-            "id": "658821091068482155"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-23",
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes",
-          "mobile": "yes"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           7.441490399999998,
           51.5116197
         ]
@@ -821,43 +779,7 @@
           {
             "type": "gmaps",
             "id": "ChIJpZrMmavXuEcROq3dIP6Viaw"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-23",
-        "apple_id_attempted": "2026-05-23",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "google_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.1362747,
-          51.2587226
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0690",
-        "name": "Eck Kiosk",
-        "description": "über 70 verschiedene Biersorten, Tabak, Süßigkeiten, leckere alkoholfreie Getränke (Fritz, diverse Fassbrausen)",
-        "address": {
-          "street": "Marienstraße",
-          "number": "53",
-          "postalcode": "42105",
-          "city": "Wuppertal",
-          "district": "Elberfeld"
-        },
-        "hours": {
-          "raw": "Mo-Su 10:00-23:00"
-        },
-        "sources": [
+          },
           {
             "type": "hopfenstop",
             "id": "25d696b4-4c77-4ce5-a653-5ef26fd12719"
@@ -871,10 +793,12 @@
         "updated": "2026-05-23",
         "apple_id_attempted": "2026-05-23",
         "payment": {
-          "cards": "yes",
+          "cards": "no",
+          "contactless": "yes",
           "girocard": "yes"
         },
-        "google_attempted": "2026-05-23"
+        "google_attempted": "2026-05-23",
+        "tags": []
       }
     },
     {
@@ -1221,53 +1145,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.013110999999999,
-          51.459079
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0747",
-        "name": "Kiosk 17",
-        "description": "Kiosk mit guter Bierauswahl in der Fußgängerzone. Vor der Tür gibt's gute Sotzmöglichleiten. Gibt auch Kaffee und ein Geldautomat vor der Tür.",
-        "address": {
-          "street": "Viehofer Straße",
-          "number": "1",
-          "postalcode": "45127",
-          "city": "Essen",
-          "district": "Stadtbezirke I"
-        },
-        "hours": {
-          "raw": "Mo-Su 09:00-22:00"
-        },
-        "tags": [
-          "kaffee"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "b80982e9-4eb6-4e3e-800b-a92e3b80b19f"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJJ1mDbpXDuEcRkvVPW0hkDoY"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-23",
-        "apple_id_attempted": "2026-05-23",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "google_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           7.0137028,
           51.4597589
         ]
@@ -1468,15 +1345,32 @@
             "type": "osm",
             "id": "node/2415051651",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "b80982e9-4eb6-4e3e-800b-a92e3b80b19f"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJJ1mDbpXDuEcRkvVPW0hkDoY"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-20",
+        "updated": "2026-05-23",
         "tags": [
-          "barrierefrei"
+          "barrierefrei",
+          "kaffee"
         ],
         "apple_id_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23"
+        "google_attempted": "2026-05-23",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Mo-Su 09:00-22:00"
+        }
       }
     },
     {
@@ -1902,7 +1796,7 @@
       },
       "properties": {
         "id": "tk_fr_0840",
-        "name": "Krayer Kiosk ",
+        "name": "Krayer Kiosk",
         "description": "Kiosk",
         "address": {
           "street": "Krayer Straße",
@@ -1923,10 +1817,14 @@
             "type": "osm",
             "id": "node/2416611907",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "3dc0f3ef-9841-4596-9c22-142c686bbbf3"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-20",
+        "updated": "2026-05-23",
         "apple_id_attempted": "2026-05-23"
       }
     },
@@ -2127,7 +2025,7 @@
       },
       "properties": {
         "id": "tk_fr_0846",
-        "name": "Bredeneyer Kiosk ",
+        "name": "Bredeneyer Kiosk",
         "description": "Kiosk ",
         "address": {
           "street": "Bredeneyer Straße",
@@ -2151,61 +2049,16 @@
           {
             "type": "apple",
             "id": "1636697939444231957"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "168eef40-bdf5-4656-b06a-c391a1617a7f"
           }
         ],
         "created": "2026-05-19",
         "updated": "2026-05-23",
         "hours": {
           "raw": "Su 08:00-13:00; Mo-Fr 06:00-18:30; Sa 07:00-13:30"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.0074461,
-          51.448274
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0963",
-        "name": "Anu Kiosk ",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Bismarckstraße",
-          "number": "13",
-          "postalcode": "45128",
-          "city": "Essen",
-          "district": "Stadtbezirke I"
-        },
-        "hours": {
-          "raw": "Mo-Fr 06:00-23:59; Sa-Su 10:00-23:59"
-        },
-        "tags": [
-          "eis",
-          "snacks",
-          "rubbellose",
-          "sitzgelegenheiten",
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "5d88cdcd-4c12-4f03-85ea-2c5407aaf1cd"
-          },
-          {
-            "type": "apple",
-            "id": "5014141978728438531"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-23",
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes",
-          "mobile": "yes"
         }
       }
     },
@@ -3080,40 +2933,6 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-20",
-        "apple_id_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.4979692,
-          51.5142342
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1122",
-        "name": "Alpha Store",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Kaiserstraße",
-          "number": "203",
-          "postalcode": "44143",
-          "city": "Dortmund",
-          "district": "Innenstadt-Ost"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "53247763-ef93-4b31-91d2-f0ca59eee328"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
         "apple_id_attempted": "2026-05-23"
       }
     },
@@ -4268,40 +4087,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.0806236,
-          51.4658172
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1390",
-        "name": "Kiosk Ciplak",
-        "description": "Kiosk",
-        "address": {
-          "street": "Krayer Straße",
-          "number": "226",
-          "postalcode": "45307",
-          "city": "Essen",
-          "district": "Stadtbezirke VII"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "3dc0f3ef-9841-4596-9c22-142c686bbbf3"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           7.0818749,
           51.468844
         ]
@@ -4928,40 +4713,6 @@
           {
             "type": "hopfenstop",
             "id": "41b9edf5-34fe-4929-8d59-a1bba85546b9"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.99374,
-          51.41005999999999
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1413",
-        "name": "Kiosk Heuer",
-        "description": "Kiosk",
-        "address": {
-          "street": "Bredeneyer Straße",
-          "number": "168",
-          "postalcode": "45133",
-          "city": "Essen",
-          "district": "Stadtbezirke IX"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "168eef40-bdf5-4656-b06a-c391a1617a7f"
           }
         ],
         "created": "2026-05-19",
@@ -5655,37 +5406,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.221128999999999,
-          51.48201100000001
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1868",
-        "name": "City Kiosk",
-        "description": "TRINKHALLE",
-        "address": {
-          "street": "Bleichstraße",
-          "number": "1",
-          "postalcode": "44787",
-          "city": "Bochum",
-          "district": "Bochum Mitte"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "15ae563a-74e1-41ca-a085-13796b71b110"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           7.221129400000001,
           51.4806488
         ]
@@ -5705,37 +5425,6 @@
           {
             "type": "hopfenstop",
             "id": "061fd6f0-f914-4241-9d2a-0d7eb2e545e4"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.228294000000001,
-          51.476094
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1871",
-        "name": "Bistro",
-        "description": "Trinkhalle\n",
-        "address": {
-          "street": "Düppelstraße",
-          "number": "35",
-          "postalcode": "44789",
-          "city": "Bochum",
-          "district": "Bochum Mitte"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "f13cba7e-1ad4-4baf-9af3-dbc593079e05"
           }
         ],
         "created": "2026-05-19",
@@ -5806,37 +5495,6 @@
           {
             "type": "hopfenstop",
             "id": "6c88db1f-4977-4d66-a01a-43fca9f2941f"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.2160541,
-          51.4788423
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1884",
-        "name": "Togo",
-        "description": "Kiosk ",
-        "address": {
-          "street": "B226",
-          "number": "28",
-          "postalcode": "44787",
-          "city": "Bochum",
-          "district": "Bochum Mitte"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "1df9f8d2-2e5f-42da-b7b8-e1fd7f1d59cf"
           }
         ],
         "created": "2026-05-19",
@@ -6141,7 +5799,7 @@
       },
       "properties": {
         "id": "tk_fr_2010",
-        "name": "24 h Kiosk ",
+        "name": "24 h Kiosk",
         "description": "Kiosk ist 24 h essen&trinken offen in körne ",
         "address": {
           "street": "Kaiserstraße",
@@ -6161,11 +5819,18 @@
           {
             "type": "osm",
             "id": "way/126214186"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "53247763-ef93-4b31-91d2-f0ca59eee328"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-20",
-        "apple_id_attempted": "2026-05-23"
+        "updated": "2026-05-23",
+        "apple_id_attempted": "2026-05-23",
+        "tags": [
+          "fritz_kola"
+        ]
       }
     },
     {
@@ -8184,6 +7849,10 @@
           {
             "type": "hopfenstop",
             "id": "22fc0119-c59a-4dde-adbf-b226f3986f88"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "f13cba7e-1ad4-4baf-9af3-dbc593079e05"
           }
         ],
         "created": "2026-05-20",
@@ -20830,21 +20499,28 @@
           "street": "Untere Marktstraße",
           "number": "1",
           "postalcode": "44787",
-          "city": "Bochum"
+          "city": "Bochum",
+          "district": "Bochum Mitte"
         },
         "sources": [
           {
             "type": "osm",
             "id": "node/270140618",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "15ae563a-74e1-41ca-a085-13796b71b110"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Th 08:30-22:00; Fr,Sa 08:30-23:00; Su,PH 10:00-22:00"
         },
-        "apple_id_attempted": "2026-05-23"
+        "apple_id_attempted": "2026-05-23",
+        "description": "TRINKHALLE",
+        "tags": []
       }
     },
     {
@@ -28266,7 +27942,13 @@
       "properties": {
         "id": "tk_ru_osm_n4396095858",
         "name": "HBB Store",
-        "address": {},
+        "address": {
+          "street": "Am Hauptbahnhof",
+          "number": "5",
+          "postalcode": "45127",
+          "city": "Essen",
+          "district": "Stadtbezirke I"
+        },
         "sources": [
           {
             "type": "osm",
@@ -28276,23 +27958,28 @@
           {
             "type": "apple",
             "id": "658821091068482155"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "d8e5a728-11a4-43c5-a374-e10af2503ddf"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Fr 05:00-21:00; Sa 07:00-21:00; Su,PH 08:00-21:00"
         },
         "payment": {
           "cash": "unknown",
           "cards": "yes",
-          "contactless": "unknown",
+          "contactless": "yes",
           "girocard": "unknown",
-          "mobile": "unknown"
+          "mobile": "yes"
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "description": "Am Hbf, zu teuer aber (fast) immer auf"
       }
     },
     {
@@ -28336,7 +28023,8 @@
           "street": "Bismarckstraße",
           "number": "15a",
           "postalcode": "45128",
-          "city": "Essen"
+          "city": "Essen",
+          "district": "Stadtbezirke I"
         },
         "sources": [
           {
@@ -28347,6 +28035,10 @@
           {
             "type": "apple",
             "id": "5014141978728438531"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "5d88cdcd-4c12-4f03-85ea-2c5407aaf1cd"
           }
         ],
         "created": "2026-05-20",
@@ -28358,7 +28050,15 @@
         },
         "hours": {
           "raw": "Mo-Fr,Su 09:00-22:00; Sa 10:00-22:00"
-        }
+        },
+        "description": "Kiosk ",
+        "tags": [
+          "eis",
+          "fritz_kola",
+          "rubbellose",
+          "sitzgelegenheiten",
+          "snacks"
+        ]
       }
     },
     {
@@ -37095,6 +36795,10 @@
           {
             "type": "hopfenstop",
             "id": "3a4782a0-910c-41e8-90e1-551319c4f298"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "1df9f8d2-2e5f-42da-b7b8-e1fd7f1d59cf"
           }
         ],
         "created": "2026-05-20",

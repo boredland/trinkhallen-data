@@ -497,55 +497,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.43681,
-          52.49529
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0655",
-        "name": "Multi-Kulti-Shop",
-        "description": "Späti Kiosk",
-        "address": {
-          "street": "Liegnitzer Straße",
-          "number": "42",
-          "postalcode": "10999",
-          "city": "Berlin",
-          "district": "Bezirk Friedrichshain-Kreuzberg"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "2c690e6f-a335-4804-81a5-4698ea8e3469"
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          },
-          {
-            "type": "apple",
-            "id": "17617023375883208873"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-22",
-        "payment": {
-          "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Su 10:00-24:00"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           13.0388964,
           52.3950094
         ]
@@ -14724,10 +14675,14 @@
           {
             "type": "apple",
             "id": "17617023375883208873"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "2c690e6f-a335-4804-81a5-4698ea8e3469"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Su-Th 10:00-24:00, Fr,Sa 10:00-24:00+, Mo-Th 07:30-24:00, Fr 07:30-01:30, Sa 08:00-24:00"
         },
@@ -14735,7 +14690,11 @@
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "description": "Späti Kiosk",
+        "tags": [
+          "fritz_kola"
+        ]
       }
     },
     {

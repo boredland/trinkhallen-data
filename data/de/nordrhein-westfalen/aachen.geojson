@@ -119,48 +119,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.0925255,
-          50.7633108
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1047",
-        "name": "Kiosk am Kurpark",
-        "description": "Kiosk",
-        "address": {
-          "street": "Burtscheider Markt",
-          "number": "9",
-          "postalcode": "52066",
-          "city": "Aachen"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "4c7cdf27-23c3-492c-9d70-dfd0c7558b5a"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJofhhbwObwEcRUnw_sgRuyBA"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-21",
-        "payment": {
-          "cards": "yes",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "apple_id_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           6.0815249,
           50.7690024
         ]
@@ -693,12 +651,17 @@
           {
             "type": "gmaps",
             "id": "ChIJofhhbwObwEcRUnw_sgRuyBA"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "4c7cdf27-23c3-492c-9d70-dfd0c7558b5a"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "tags": [
-          "barrierefrei"
+          "barrierefrei",
+          "fritz_kola"
         ],
         "payment": {
           "cards": "yes",
@@ -706,7 +669,8 @@
           "contactless": "yes"
         },
         "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
+        "google_attempted": "2026-05-22",
+        "description": "Kiosk"
       }
     },
     {

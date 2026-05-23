@@ -49,39 +49,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          11.9813264,
-          51.4784651
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0622",
-        "name": "teleshop Handy A&V",
-        "description": "gutes Bier ",
-        "address": {
-          "street": "Franckestraße",
-          "number": "11",
-          "postalcode": "06110",
-          "city": "Halle (Saale)",
-          "district": "Mitte"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "7fd6437a-e2fb-430d-b2cd-5d0536d8e5c7"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "payment_attempted": "2026-05-22",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           11.98168,
           51.47878
         ]
@@ -2483,7 +2450,13 @@
       "properties": {
         "id": "tk_hal_osm_n7972778887",
         "name": "Teleshop Handy A&V",
-        "address": {},
+        "address": {
+          "street": "Franckestraße",
+          "number": "11",
+          "postalcode": "06110",
+          "city": "Halle (Saale)",
+          "district": "Mitte"
+        },
         "sources": [
           {
             "type": "osm",
@@ -2493,10 +2466,14 @@
           {
             "type": "gmaps",
             "id": "ChIJ9YMji0NjpkcRzSbQTnWXmBI"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "7fd6437a-e2fb-430d-b2cd-5d0536d8e5c7"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Fr 06:30-22:00; Sa 08:00-20:00; Su,PH 14:00-20:00"
         },
@@ -2505,7 +2482,8 @@
         ],
         "payment_attempted": "2026-05-22",
         "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
+        "google_attempted": "2026-05-22",
+        "description": "gutes Bier "
       }
     },
     {

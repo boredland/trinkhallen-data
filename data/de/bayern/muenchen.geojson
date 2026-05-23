@@ -383,54 +383,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          11.5866311,
-          48.1621914
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0587",
-        "name": "Kiosk im Deubl Glass Cube",
-        "description": "24h geöffnet, direkt an der Münchner Freiheit",
-        "address": {
-          "street": "Münchner Freiheit",
-          "number": "7",
-          "postalcode": "80802",
-          "city": "München",
-          "district": "Schwabing-Freimann"
-        },
-        "hours": {
-          "raw": "Mo-Su 00:00-23:59"
-        },
-        "tags": [
-          "zeitschriften",
-          "snacks",
-          "kaffee",
-          "sitzgelegenheiten"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "7c9202ea-507d-4f02-9a53-0cfc203b1aec"
-          },
-          {
-            "type": "apple",
-            "id": "4053790761344650925"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-22",
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes",
-          "mobile": "yes"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           11.555699,
           48.137133
         ]
@@ -23160,7 +23112,13 @@
       "properties": {
         "id": "tk_m_osm_w327057004",
         "name": "Kiosk im Deubl Glass Cube",
-        "address": {},
+        "address": {
+          "street": "Münchner Freiheit",
+          "number": "7",
+          "postalcode": "80802",
+          "city": "München",
+          "district": "Schwabing-Freimann"
+        },
         "sources": [
           {
             "type": "osm",
@@ -23170,21 +23128,30 @@
           {
             "type": "apple",
             "id": "4053790761344650925"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "7c9202ea-507d-4f02-9a53-0cfc203b1aec"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-22",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Su 04:00-03:00"
         },
         "tags": [
-          "barrierefrei"
+          "barrierefrei",
+          "kaffee",
+          "sitzgelegenheiten",
+          "snacks",
+          "zeitschriften"
         ],
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "mobile": "yes"
-        }
+        },
+        "description": "24h geöffnet, direkt an der Münchner Freiheit"
       }
     },
     {

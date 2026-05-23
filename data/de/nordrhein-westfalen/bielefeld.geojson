@@ -439,49 +439,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.5322924,
-          52.02814499999999
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1075",
-        "name": "Kiosk am Bahnhof ",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Bahnhofstraße",
-          "number": "48",
-          "postalcode": "33602",
-          "city": "Bielefeld",
-          "district": "Mitte"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "68ab0db4-4b10-40ab-aa4e-f87ddc4f44f7"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJOeoQhBM9ukcRmA9RQaNRoaY"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-22",
-        "payment": {
-          "cards": "yes",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "apple_id_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           8.539899199999999,
           52.0230387
         ]
@@ -980,46 +937,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.529517,
-          52.0252151
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1709",
-        "name": "Habibi Kiosk",
-        "description": "Großer Kiosk mit Innenraum und Sitzgelegenheiten",
-        "address": {
-          "street": "Karl-Eilers-Straße",
-          "number": "18",
-          "postalcode": "33602",
-          "city": "Bielefeld",
-          "district": "Mitte"
-        },
-        "hours": {
-          "raw": "Mo-Th 09:00-22:00; Fr-Sa 09:00-00:00; Su 10:00-22:00"
-        },
-        "tags": [
-          "innenraum",
-          "sitzgelegenheiten"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "1f3125be-7bb8-4bb6-b885-15e3c841a8c9"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "payment_attempted": "2026-05-22",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           8.5394778,
           52.0269875
         ]
@@ -1462,6 +1379,7 @@
         },
         "tags": [
           "barrierefrei",
+          "fritz_kola",
           "sitzgelegenheiten",
           "snacks"
         ],
@@ -1478,10 +1396,18 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "68ab0db4-4b10-40ab-aa4e-f87ddc4f44f7"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJOeoQhBM9ukcRmA9RQaNRoaY"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "payment": {
           "cards": "yes",
           "girocard": "yes",
@@ -6804,25 +6730,33 @@
           "street": "Mercatorstraße",
           "number": "13-15",
           "postalcode": "33602",
-          "city": "Bielefeld"
+          "city": "Bielefeld",
+          "district": "Mitte"
         },
         "sources": [
           {
             "type": "osm",
             "id": "node/284968146",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "1f3125be-7bb8-4bb6-b885-15e3c841a8c9"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Th 09:00-22:00; Fr,Sa 09:00-24:00; Su 10:00-22:00"
         },
         "tags": [
-          "barrierefrei"
+          "barrierefrei",
+          "innenraum",
+          "sitzgelegenheiten"
         ],
         "payment_attempted": "2026-05-22",
-        "apple_id_attempted": "2026-05-22"
+        "apple_id_attempted": "2026-05-22",
+        "description": "Großer Kiosk mit Innenraum und Sitzgelegenheiten"
       }
     },
     {
