@@ -116,7 +116,8 @@
         "created": "2026-05-20",
         "updated": "2026-05-21",
         "payment_attempted": "2026-05-22",
-        "gmaps_id_attempted": "2026-05-22"
+        "gmaps_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -154,11 +155,14 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes",
           "contactless": "yes"
+        },
+        "hours": {
+          "raw": "Mo,We,Fr 09:00-12:00,14:30-18:00; Tu,Th,Sa 09:00-12:00"
         }
       }
     },
@@ -273,11 +277,14 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "payment": {
           "girocard": "yes",
           "cards": "no",
           "contactless": "yes"
+        },
+        "hours": {
+          "raw": "Mo-Sa 09:00-19:00"
         }
       }
     },
@@ -474,7 +481,8 @@
           "cards": "yes",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -518,7 +526,8 @@
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -548,14 +557,21 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "apple",
+            "id": "8925056812495245944"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "payment": {
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
+        },
+        "hours": {
+          "raw": "Su 10:00-22:00; Mo-Th 09:00-22:00; Fr-Sa 09:00-23:00"
         }
       }
     },
@@ -583,11 +599,17 @@
             "type": "osm",
             "id": "node/12410424499",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJqSj--P-VnkcRyuPyJLyt6kQ"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -612,6 +634,10 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "apple",
+            "id": "1359212687588725288"
           }
         ],
         "created": "2026-05-20",
@@ -663,7 +689,8 @@
           "girocard": "yes",
           "cards": "no",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -707,7 +734,8 @@
           "girocard": "yes",
           "cards": "no",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -731,7 +759,7 @@
           },
           {
             "type": "gmaps",
-            "id": "payment"
+            "id": "ChIJUW3uHT69nkcRp2kMtZRricI"
           }
         ],
         "created": "2026-05-20",
@@ -740,7 +768,9 @@
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -781,7 +811,8 @@
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -807,6 +838,10 @@
             "type": "osm",
             "id": "node/13416044904",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJESGjTMqinkcRTS9ZiGUDj88"
           }
         ],
         "created": "2026-05-20",
@@ -814,7 +849,9 @@
         "hours": {
           "raw": "Mo-Sa 08:00-20:00"
         },
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -844,6 +881,10 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "apple",
+            "id": "3553380687238591779"
           }
         ],
         "created": "2026-05-20",
@@ -899,7 +940,8 @@
           "girocard": "yes",
           "cards": "no",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -932,7 +974,9 @@
         "hours": {
           "raw": "Mo-Fr 06:00-13:00,15:00-18:00, Sa 07:00-13:00"
         },
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -971,7 +1015,8 @@
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1010,7 +1055,8 @@
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1040,6 +1086,10 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "apple",
+            "id": "5362648906370151349"
           }
         ],
         "created": "2026-05-20",
@@ -1075,11 +1125,16 @@
             "type": "osm",
             "id": "node/315746386",
             "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "9334044278265882202"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -1109,13 +1164,18 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "apple",
+            "id": "11995238011440802620"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
         "payment": {
           "cash": "yes"
-        }
+        },
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -1140,10 +1200,14 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "apple",
+            "id": "16740304538413160756"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "tags": [
           "barrierefrei"
         ],
@@ -1151,6 +1215,9 @@
           "girocard": "yes",
           "cards": "yes",
           "contactless": "yes"
+        },
+        "hours": {
+          "raw": "Mo-Sa 08:00-19:00"
         }
       }
     },
@@ -1181,7 +1248,9 @@
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -1212,7 +1281,9 @@
         "tags": [
           "barrierefrei"
         ],
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -1243,7 +1314,9 @@
         "tags": [
           "barrierefrei"
         ],
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -1284,7 +1357,8 @@
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1323,7 +1397,8 @@
           "cards": "yes",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1362,7 +1437,8 @@
         },
         "payment": {
           "cards": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1383,11 +1459,17 @@
             "type": "osm",
             "id": "node/485057732",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJCz5011K9nkcRJhuICkTne-E"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -1416,7 +1498,7 @@
           },
           {
             "type": "gmaps",
-            "id": "payment"
+            "id": "ChIJCSHXUMyinkcRlp-mRjQ-q0s"
           }
         ],
         "created": "2026-05-20",
@@ -1424,7 +1506,9 @@
         "payment": {
           "girocard": "yes",
           "cards": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -1459,7 +1543,9 @@
         "tags": [
           "barrierefrei"
         ],
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -1492,7 +1578,9 @@
           "cards": "yes",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -1523,14 +1611,21 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "apple",
+            "id": "17289412303188745898"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes",
           "contactless": "yes"
+        },
+        "hours": {
+          "raw": "Mo,We-Fr 15:00-19:00; Sa 09:00-14:00"
         }
       }
     },
@@ -1575,7 +1670,8 @@
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1604,7 +1700,7 @@
           },
           {
             "type": "gmaps",
-            "id": "payment"
+            "id": "ChIJEzttZ2S9nkcRdo2yj-X0wwo"
           }
         ],
         "created": "2026-05-20",
@@ -1612,7 +1708,9 @@
         "payment": {
           "cards": "yes",
           "girocard": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -1645,7 +1743,8 @@
         "hours": {
           "raw": "Mo-Fr 06:00-18:00; Sa 09:00-16:00; Su,PH off"
         },
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1682,7 +1781,8 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1722,7 +1822,8 @@
           "girocard": "yes",
           "cards": "no",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1764,7 +1865,8 @@
         ],
         "payment": {
           "cards": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1800,7 +1902,8 @@
           "girocard": "yes",
           "cards": "no",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1830,7 +1933,8 @@
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1864,7 +1968,8 @@
           "contactless": "unknown",
           "girocard": "yes",
           "mobile": "unknown"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1885,11 +1990,23 @@
             "type": "osm",
             "id": "node/8284072734",
             "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "1253620746080729158"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
-        "payment_attempted": "2026-05-22"
+        "updated": "2026-05-22",
+        "payment_attempted": "2026-05-22",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "mobile": "yes"
+        },
+        "hours": {
+          "raw": "Mo-Sa 08:30-19:00"
+        }
       }
     },
     {
@@ -1910,17 +2027,26 @@
             "type": "osm",
             "id": "node/841769838",
             "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "17075905425248947190"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-22",
         "hours": {
           "raw": "Tu-Fr 14:00-22:00; Mo off; Su 11:00-20:00"
         },
         "tags": [
           "barrierefrei"
         ],
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "mobile": "yes"
+        }
       }
     },
     {
@@ -1961,7 +2087,8 @@
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -1993,7 +2120,8 @@
         "hours": {
           "raw": "Mo-Fr 08:00-18:00, Sa 08:00-13:00"
         },
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2024,7 +2152,8 @@
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2058,7 +2187,8 @@
         "hours": {
           "raw": "Tu-Fr 08:00-13:00,14:00-18:00; Mo,Sa 08:00-14:00"
         },
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2099,7 +2229,8 @@
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2140,7 +2271,8 @@
           "girocard": "yes",
           "cards": "no",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2173,7 +2305,8 @@
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2204,7 +2337,8 @@
           "contactless": "unknown",
           "girocard": "no",
           "mobile": "unknown"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2229,7 +2363,8 @@
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2268,7 +2403,8 @@
         ],
         "payment": {
           "cash": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2312,7 +2448,8 @@
           "girocard": "yes",
           "cards": "no",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2345,7 +2482,8 @@
         "hours": {
           "raw": "Mo-Fr 08:30-12:00,13:30-17:00, Sa 08:30-12:00"
         },
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2384,7 +2522,8 @@
         },
         "payment": {
           "cash": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2409,7 +2548,8 @@
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2442,7 +2582,8 @@
         "tags": [
           "barrierefrei"
         ],
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2473,7 +2614,8 @@
         ],
         "created": "2026-05-20",
         "updated": "2026-05-21",
-        "payment_attempted": "2026-05-22"
+        "payment_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2514,7 +2656,8 @@
           "girocard": "yes",
           "cards": "no",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2558,7 +2701,8 @@
           "girocard": "yes",
           "cards": "no",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2599,7 +2743,8 @@
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2620,6 +2765,10 @@
             "type": "osm",
             "id": "way/77611491",
             "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "9375058011497499277"
           }
         ],
         "created": "2026-05-20",
@@ -2668,7 +2817,8 @@
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2697,6 +2847,10 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "apple",
+            "id": "10481443700310913997"
           }
         ],
         "created": "2026-05-20",
@@ -2749,7 +2903,8 @@
         "payment": {
           "girocard": "yes",
           "cards": "yes"
-        }
+        },
+        "apple_id_attempted": "2026-05-22"
       }
     }
   ]
