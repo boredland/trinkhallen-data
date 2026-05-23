@@ -40,6 +40,16 @@ on:
         required: false
         type: boolean
         default: false
+      photon_only:
+        description: "(enrich) Skip the Overpass match pass; only fill addresses via Photon reverse-geocoder."
+        required: false
+        type: boolean
+        default: false
+      max_photon:
+        description: "(enrich) Cap Photon requests per run. Each takes ~1.1s; the workflow's 90min timeout puts a hard ceiling near 4500."
+        required: false
+        default: "500"
+        type: string
 
 permissions:
   contents: write
@@ -114,10 +124,16 @@ jobs:
             else
               args+=(--since "$(date -d '40 days ago' --iso-8601)")
             fi
+            if [ "${{ inputs.photon_only }}" = "true" ]; then
+              args+=(--photon-only)
+            fi
+            if [ -n "${{ inputs.max_photon }}" ]; then
+              args+=(--max-photon "${{ inputs.max_photon }}")
+            fi
             echo "Running: bun scripts/enrich-from-osm.ts ${args[*]}"
             bun scripts/enrich-from-osm.ts "${args[@]}" > stats.json
             title=$(jq -r '
-              "matched \(.matched), filled \(.hours) hours / \(.payment) pay / \(.address) addr / \(.tags) tags"
+              "matched \(.matched), filled \(.hours) hours / \(.payment) pay / \(.address) addr / \(.tags) tags + \(.photon_filled_street // 0)+\(.photon_filled_number // 0) photon street+num"
             ' stats.json)
           fi
           cat stats.json
