@@ -82,6 +82,7 @@ interface Feature {
     updated?: string;
     kind?: string;
     apple_id_attempted?: string;
+    apple_attempted?: string;
     google_attempted?: string;
     [k: string]: unknown;
   };
@@ -974,7 +975,15 @@ async function main(): Promise<void> {
     if (stopRequested) return;
 
     // Phase 2: Apple place page → extract payment + hours.
-    if (appleId && (paymentHasAnyMissing(feature.properties.payment) || hoursMissing(feature))) {
+    // Skip when the page was fetched recently and yielded nothing useful —
+    // re-fetching maps.apple.com for a kiosk Apple doesn't have data on
+    // is just burning the queue. The stamp is set on every *successful*
+    // page fetch (see below) so we'll naturally retry after the TTL.
+    if (
+      appleId &&
+      (paymentHasAnyMissing(feature.properties.payment) || hoursMissing(feature)) &&
+      daysSince(feature.properties.apple_attempted, todayDate) >= ATTEMPTED_TTL_DAYS
+    ) {
       try {
         const apple = await appleQueue.add(() => fetchApplePlace(appleId!));
         let touched = false;
@@ -1001,9 +1010,14 @@ async function main(): Promise<void> {
             touched = true;
           }
         }
+        // Stamp regardless of whether we got new data — the page was
+        // reachable; if it yielded nothing this time it'll yield nothing
+        // tomorrow either. Don't stamp on error (catch block) so a
+        // transient network blip retries on the next run.
+        feature.properties.apple_attempted = today;
+        dirty = true;
         if (touched) {
           stats.apple_features_touched++;
-          dirty = true;
           console.error(
             `[${feature.properties.id}] +apple ${payDelta > 0 ? `payment(${payDelta})` : ""}${
               payDelta > 0 && hoursDelta ? " " : ""
