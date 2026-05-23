@@ -77,6 +77,16 @@ on:
           - ulm
           - wolfsburg
           - wuerzburg
+      max_runtime_min:
+        description: "Script's --max-runtime-min budget. Job timeout is this + 10 min headroom."
+        required: false
+        default: "45"
+        type: string
+      batch:
+        description: "Cap the number of features queried this run. Empty = no cap."
+        required: false
+        default: ""
+        type: string
 
 permissions:
   contents: write
@@ -112,10 +122,11 @@ jobs:
     needs: pick
     name: enrich · ${{ needs.pick.outputs.region }}
     runs-on: ubuntu-latest
-    # 55-min ceiling. The script self-bounds at 45 min via
-    # --max-runtime-min so the diff + PR follow-ups have 10 min of
-    # headroom for in-flight drain + the wrap-up steps.
-    timeout-minutes: 55
+    # Script self-bounds at `inputs.max_runtime_min`; we add 10 min of
+    # headroom for in-flight drain + the wrap-up steps. Cron triggers
+    # use the input's default ("45") since workflow_dispatch defaults
+    # are applied for scheduled runs too.
+    timeout-minutes: ${{ fromJSON(inputs.max_runtime_min || '45') + 10 }}
     concurrency:
       group: enrich-${{ needs.pick.outputs.region }}
       cancel-in-progress: false
@@ -158,10 +169,15 @@ jobs:
         id: enrich
         run: |
           set -euo pipefail
-          bun scripts/run-enrich.ts \
-            --region "${{ needs.pick.outputs.region }}" \
-            --max-runtime-min 45 \
-            > stats.json
+          args=(
+            --region "${{ needs.pick.outputs.region }}"
+            --max-runtime-min "${{ inputs.max_runtime_min || '45' }}"
+          )
+          if [ -n "${{ inputs.batch }}" ]; then
+            args+=(--batch "${{ inputs.batch }}")
+          fi
+          echo "Running: bun scripts/run-enrich.ts ${args[*]}"
+          bun scripts/run-enrich.ts "${args[@]}" > stats.json
           cat stats.json
 
       - name: Detect changes
