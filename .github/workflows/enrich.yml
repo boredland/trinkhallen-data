@@ -104,6 +104,10 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       region: ${{ steps.choose.outputs.region }}
+      # Job timeout = script budget + 10 min headroom for in-flight drain
+      # + wrap-up steps. Computed in bash because GH expressions don't
+      # support arithmetic.
+      timeout_min: ${{ steps.choose.outputs.timeout_min }}
     steps:
       - uses: actions/checkout@v6
       - id: choose
@@ -118,15 +122,17 @@ jobs:
           echo "region=$choice" >> "$GITHUB_OUTPUT"
           echo "Picked: $choice"
 
+          max_runtime_min="${{ inputs.max_runtime_min }}"
+          : "${max_runtime_min:=45}"
+          timeout_min=$((max_runtime_min + 10))
+          echo "timeout_min=$timeout_min" >> "$GITHUB_OUTPUT"
+          echo "Job timeout: ${timeout_min}m (script budget ${max_runtime_min}m + 10m headroom)"
+
   enrich:
     needs: pick
     name: enrich · ${{ needs.pick.outputs.region }}
     runs-on: ubuntu-latest
-    # Script self-bounds at `inputs.max_runtime_min`; we add 10 min of
-    # headroom for in-flight drain + the wrap-up steps. Cron triggers
-    # use the input's default ("45") since workflow_dispatch defaults
-    # are applied for scheduled runs too.
-    timeout-minutes: ${{ fromJSON(inputs.max_runtime_min || '45') + 10 }}
+    timeout-minutes: ${{ fromJSON(needs.pick.outputs.timeout_min) }}
     concurrency:
       group: enrich-${{ needs.pick.outputs.region }}
       cancel-in-progress: false
