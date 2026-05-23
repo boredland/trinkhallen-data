@@ -35,6 +35,14 @@ const USER_AGENT = "trinkhallen-data/0.1 enrich-from-osm (https://github.com/bor
 // ── tunables ────────────────────────────────────────────────────────────────
 const MAX_DISTANCE_M = 25; // candidates farther than this aren't considered
 
+// Photon reverse-geocoder fallback. Many OSM kiosks come in with no addr:*
+// tags at all, so the OSM-tag backfill above can't help them. After the
+// match pass we walk any remaining feature with a missing address and
+// ask Photon (https://photon.komoot.io/, OSM-backed, free, ~1 req/s).
+const PHOTON_BASE = "https://photon.komoot.io";
+const PHOTON_DELAY_MS = 1100; // ~1 req/s, mild buffer
+const PHOTON_MAX_HIT_DISTANCE_M = 50;
+
 // A match is accepted if ANY of these is true. Single combined-score
 // thresholds were too conservative: identical-named OSM POIs 17 m away
 // were stuck in "uncertain" alongside genuine ambiguities. Two independent
@@ -444,6 +452,170 @@ function backfill(f: Feature, c: OsmCandidate): BackfillStats {
   return stats;
 }
 
+// ── photon reverse-geocode address fallback ─────────────────────────────────
+
+interface PhotonProps {
+  street?: string;
+  housenumber?: string;
+  postcode?: string;
+  city?: string;
+  district?: string;
+  country?: string;
+}
+interface PhotonResp {
+  features: Array<{
+    geometry: { coordinates: [number, number] };
+    properties: PhotonProps;
+  }>;
+}
+
+function needsAddress(f: Feature): boolean {
+  const a = f.properties.address ?? {};
+  return !a["street"] || !a["number"];
+}
+
+/** Haversine distance in metres. Local copy so we don't depend on any of the
+ *  OSM-matcher distance helpers (which are scoped narrower). */
+function distMeters(aLat: number, aLng: number, bLat: number, bLng: number): number {
+  const R = 6371008.8;
+  const r = (d: number) => (d * Math.PI) / 180;
+  const dLat = r(bLat - aLat);
+  const dLng = r(bLng - aLng);
+  const x =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(r(aLat)) * Math.cos(r(bLat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(x));
+}
+
+async function photonReverse(lat: number, lng: number): Promise<PhotonProps | null> {
+  const resp = await fetch(
+    `${PHOTON_BASE}/reverse?lat=${lat}&lon=${lng}&lang=de&radius=0.05&limit=5`,
+    { headers: { "user-agent": USER_AGENT } },
+  );
+  if (!resp.ok) return null;
+  const data = (await resp.json()) as PhotonResp;
+  if (!data.features?.length) return null;
+  // Rank: street + number > number-only > street-only, then by distance.
+  // Photon localises country names on lang=de, so accept both spellings.
+  const okCountry = (c?: string) => !c || c === "Germany" || c === "Deutschland";
+  let best: { props: PhotonProps; meters: number; score: number } | null = null;
+  for (const hit of data.features) {
+    const p = hit.properties;
+    if (!okCountry(p.country)) continue;
+    if (!p.street && !p.housenumber) continue;
+    const [hLng, hLat] = hit.geometry.coordinates;
+    const m = distMeters(lat, lng, hLat, hLng);
+    if (m > PHOTON_MAX_HIT_DISTANCE_M) continue;
+    const score = (p.street ? 2 : 0) + (p.housenumber ? 1 : 0);
+    if (
+      !best ||
+      score > best.score ||
+      (score === best.score && m < best.meters)
+    ) {
+      best = { props: p, meters: m, score };
+    }
+  }
+  return best ? best.props : null;
+}
+
+interface PhotonStats {
+  considered: number;
+  queried: number;
+  matched: number;
+  filled_street: number;
+  filled_number: number;
+  filled_postalcode: number;
+  filled_city: number;
+  filled_district: number;
+  no_match: number;
+  errored: number;
+  capped: boolean;
+}
+
+async function photonFillFile(
+  file: string,
+  features: Feature[],
+  budget: { remaining: number },
+): Promise<{ touched: number; stats: PhotonStats }> {
+  const stats: PhotonStats = {
+    considered: 0,
+    queried: 0,
+    matched: 0,
+    filled_street: 0,
+    filled_number: 0,
+    filled_postalcode: 0,
+    filled_city: 0,
+    filled_district: 0,
+    no_match: 0,
+    errored: 0,
+    capped: false,
+  };
+  const candidates = features.filter(needsAddress);
+  if (candidates.length === 0) return { touched: 0, stats };
+
+  const today = new Date().toISOString().slice(0, 10);
+  let touched = 0;
+  for (const f of candidates) {
+    if (budget.remaining <= 0) {
+      stats.capped = true;
+      break;
+    }
+    stats.considered++;
+    const [lng, lat] = f.geometry.coordinates;
+    let hit: PhotonProps | null = null;
+    try {
+      hit = await photonReverse(lat, lng);
+      stats.queried++;
+      budget.remaining--;
+    } catch (err) {
+      console.error(`  [${f.properties.id}] photon error: ${(err as Error).message}`);
+      stats.errored++;
+      continue;
+    } finally {
+      await new Promise((r) => setTimeout(r, PHOTON_DELAY_MS));
+    }
+    if (!hit) {
+      stats.no_match++;
+      continue;
+    }
+    stats.matched++;
+
+    const a = f.properties.address ?? {};
+    let changed = false;
+    if (!a["street"] && hit.street) {
+      a["street"] = hit.street;
+      stats.filled_street++;
+      changed = true;
+    }
+    if (!a["number"] && hit.housenumber) {
+      a["number"] = hit.housenumber;
+      stats.filled_number++;
+      changed = true;
+    }
+    if (!a["postalcode"] && hit.postcode) {
+      a["postalcode"] = hit.postcode;
+      stats.filled_postalcode++;
+      changed = true;
+    }
+    if (!a["city"] && hit.city) {
+      a["city"] = hit.city;
+      stats.filled_city++;
+      changed = true;
+    }
+    if (!a["district"] && hit.district) {
+      a["district"] = hit.district;
+      stats.filled_district++;
+      changed = true;
+    }
+    if (changed) {
+      f.properties.address = a;
+      f.properties.updated = today;
+      touched++;
+    }
+  }
+  return { touched, stats };
+}
+
 // ── walk + main ─────────────────────────────────────────────────────────────
 
 async function findGeojsonFiles(root: string): Promise<string[]> {
@@ -464,6 +636,15 @@ async function findGeojsonFiles(root: string): Promise<string[]> {
 async function main(): Promise<void> {
   const wantSlugArg = process.argv.indexOf("--region");
   const wantSlug = wantSlugArg >= 0 ? process.argv[wantSlugArg + 1] : null;
+
+  // --photon-only skips the Overpass match pass and runs only the Photon
+  //   address backfill — used for the one-time backlog sweep.
+  // --max-photon N caps Photon requests per run (default 500, since each
+  //   one takes ~1.1s and the workflow has a hard timeout).
+  const photonOnly = process.argv.includes("--photon-only");
+  const maxPhotonArg = process.argv.indexOf("--max-photon");
+  const maxPhoton =
+    maxPhotonArg >= 0 ? Number.parseInt(process.argv[maxPhotonArg + 1] ?? "", 10) || 500 : 500;
 
   // --since <YYYY-MM-DD> (or empty for a full sweep) restricts the candidate
   // set to features whose max(created, updated) is on or after that date.
@@ -490,11 +671,68 @@ async function main(): Promise<void> {
   const files = await findGeojsonFiles(REPO_ROOT);
   const conflicts: string[][] = []; // retained for future use; not currently written
   const uncertain: string[][] = [];
-  const totals = { files: 0, candidates: 0, matched: 0, hours: 0, payment: 0, address: 0, tags: 0, skipped_stale: 0 };
+  const totals = {
+    files: 0,
+    candidates: 0,
+    matched: 0,
+    hours: 0,
+    payment: 0,
+    address: 0,
+    tags: 0,
+    skipped_stale: 0,
+    photon_considered: 0,
+    photon_matched: 0,
+    photon_no_match: 0,
+    photon_filled_street: 0,
+    photon_filled_number: 0,
+    photon_filled_postalcode: 0,
+    photon_filled_city: 0,
+    photon_filled_district: 0,
+    photon_errored: 0,
+    photon_capped: false,
+  };
+  const photonBudget = { remaining: maxPhoton };
 
   for (const file of files) {
     const slug = file.split("/").pop()!.replace(/\.geojson$/, "");
     if (wantSlug && slug !== wantSlug) continue;
+    if (photonOnly) {
+      // Photon-only mode: skip the Overpass match pass entirely; walk
+      // every feature in the file with a missing address part.
+      const collection = JSON.parse(await readFile(file, "utf8")) as FeatureCollection;
+      const candidates = collection.features.filter(needsAddress);
+      if (candidates.length === 0) {
+        continue;
+      }
+      const inWindow = Number.isFinite(sinceMs)
+        ? candidates.filter((f) => isFreshSince(f, sinceMs))
+        : candidates;
+      if (inWindow.length === 0) {
+        continue;
+      }
+      console.error(`${slug}: photon-only over ${inWindow.length} features (${candidates.length - inWindow.length} stale skipped)`);
+      const { touched, stats } = await photonFillFile(file, inWindow, photonBudget);
+      totals.photon_considered += stats.considered;
+      totals.photon_matched += stats.matched;
+      totals.photon_no_match += stats.no_match;
+      totals.photon_filled_street += stats.filled_street;
+      totals.photon_filled_number += stats.filled_number;
+      totals.photon_filled_postalcode += stats.filled_postalcode;
+      totals.photon_filled_city += stats.filled_city;
+      totals.photon_filled_district += stats.filled_district;
+      totals.photon_errored += stats.errored;
+      if (stats.capped) totals.photon_capped = true;
+      console.error(`  photon: matched ${stats.matched}/${stats.considered}, touched ${touched}`);
+      if (touched > 0) {
+        await writeFile(file, `${JSON.stringify(collection, null, 2)}\n`, "utf8");
+      }
+      totals.files++;
+      if (photonBudget.remaining <= 0) {
+        console.error(`Photon budget exhausted (${maxPhoton} requests); stopping early.`);
+        break;
+      }
+      continue;
+    }
 
     const collection = JSON.parse(await readFile(file, "utf8")) as FeatureCollection;
     const allUnmatched = collection.features.filter((f) => !alreadyHasOsmSource(f));
@@ -562,11 +800,43 @@ async function main(): Promise<void> {
     }
     console.error(`  matched ${fileMatched} features, added ${fileFieldsAdded} fields`);
 
+    // Photon fallback: walk any feature still missing street or number
+    // after the OSM match pass (covers the case where neither our seed nor
+    // the matched OSM POI carried `addr:*` tags).
+    if (photonBudget.remaining > 0) {
+      const { touched: photonTouched, stats: ps } = await photonFillFile(
+        file,
+        inGermany,
+        photonBudget,
+      );
+      totals.photon_considered += ps.considered;
+      totals.photon_matched += ps.matched;
+      totals.photon_no_match += ps.no_match;
+      totals.photon_filled_street += ps.filled_street;
+      totals.photon_filled_number += ps.filled_number;
+      totals.photon_filled_postalcode += ps.filled_postalcode;
+      totals.photon_filled_city += ps.filled_city;
+      totals.photon_filled_district += ps.filled_district;
+      totals.photon_errored += ps.errored;
+      if (ps.capped) totals.photon_capped = true;
+      if (ps.considered > 0) {
+        console.error(`  photon: matched ${ps.matched}/${ps.considered}, touched ${photonTouched}`);
+      }
+      if (photonTouched > 0 && fileMatched === 0) {
+        // The OSM-match branch's "if fileMatched > 0" write below skips us;
+        // do our own write so the photon-only fills don't get lost.
+        await writeFile(file, `${JSON.stringify(collection, null, 2)}\n`, "utf8");
+      }
+    }
+
     if (fileMatched > 0) {
       await writeFile(file, JSON.stringify(collection, null, 2) + "\n", "utf8");
     }
     totals.files++;
     totals.matched += fileMatched;
+    if (photonBudget.remaining <= 0) {
+      console.error(`Photon budget exhausted (${maxPhoton} requests); finishing without further Photon calls.`);
+    }
   }
 
   // (conflict logging removed — see comment in main loop)
