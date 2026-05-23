@@ -969,43 +969,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.6064635,
-          49.4707824
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1915",
-        "name": "Schneckenhäusel Ladenburg",
-        "description": "Kiosk",
-        "address": {
-          "street": "Dr.-Carl-Benz-Platz",
-          "number": "2",
-          "postalcode": "68526",
-          "city": "Ladenburg"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "eb97aee4-2c73-402a-afea-25474df54cba"
-          },
-          {
-            "type": "apple",
-            "id": "10287622862643999160"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-23",
-        "hours": {
-          "raw": "Su 07:30-12:00; Mo-Fr 05:00-18:00; Sa 06:00-14:00"
-        },
-        "google_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           8.4846998,
           49.4767677
         ]
@@ -13503,7 +13466,7 @@
       },
       "properties": {
         "id": "tk_ma_osm_w217127619",
-        "name": "Schneckenhäusl",
+        "name": "Schneckenhäusel Ladenburg",
         "address": {
           "street": "Neckartorplatz",
           "number": "1",
@@ -13515,14 +13478,26 @@
             "type": "osm",
             "id": "way/217127619",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "eb97aee4-2c73-402a-afea-25474df54cba"
+          },
+          {
+            "type": "apple",
+            "id": "10287622862643999160"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "tags": [
           "barrierefrei"
         ],
-        "apple_id_attempted": "2026-05-23"
+        "apple_id_attempted": "2026-05-23",
+        "description": "Kiosk",
+        "hours": {
+          "raw": "Su 07:30-12:00; Mo-Fr 05:00-18:00; Sa 06:00-14:00"
+        }
       }
     },
     {

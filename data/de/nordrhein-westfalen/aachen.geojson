@@ -119,41 +119,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.0815249,
-          50.7690024
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1048",
-        "name": "Kiosk",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Krakaustraße",
-          "number": "31",
-          "postalcode": "52064",
-          "city": "Aachen"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "9b64aba6-3b05-4b97-add4-4250483ec97b"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "payment_attempted": "2026-05-22",
-        "apple_id_attempted": "2026-05-22",
-        "gmaps_id_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           6.080864999999999,
           50.7792646
         ]
@@ -194,42 +159,6 @@
         },
         "payment_attempted": "2026-05-22",
         "apple_id_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.164774299999999,
-          50.7490076
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1050",
-        "name": "Kiosk am Marktplatz ",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Marktplatz",
-          "number": "1",
-          "postalcode": "52078",
-          "city": "Aachen",
-          "district": "Brand"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "2a93affd-9ce0-4db9-89b5-c9129f786d11"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "payment_attempted": "2026-05-22",
-        "apple_id_attempted": "2026-05-22",
-        "gmaps_id_attempted": "2026-05-22"
       }
     },
     {
@@ -2621,7 +2550,12 @@
       "properties": {
         "id": "tk_ac_osm_n592624776",
         "name": "Feda's Kiosk",
-        "address": {},
+        "address": {
+          "street": "Krakaustraße",
+          "number": "31",
+          "postalcode": "52064",
+          "city": "Aachen"
+        },
         "sources": [
           {
             "type": "osm",
@@ -2635,17 +2569,25 @@
           {
             "type": "apple",
             "id": "5426710789623269601"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "9b64aba6-3b05-4b97-add4-4250483ec97b"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Sa 10:00-22:00"
         },
         "payment": {
           "cards": "yes",
           "girocard": "yes"
-        }
+        },
+        "description": "Kiosk ",
+        "tags": [
+          "fritz_kola"
+        ]
       }
     },
     {
@@ -2691,8 +2633,14 @@
       },
       "properties": {
         "id": "tk_ac_osm_n7076873406",
-        "name": "Kiosk am Markt",
-        "address": {},
+        "name": "Kiosk am Marktplatz",
+        "address": {
+          "street": "Marktplatz",
+          "number": "1",
+          "postalcode": "52078",
+          "city": "Aachen",
+          "district": "Brand"
+        },
         "sources": [
           {
             "type": "osm",
@@ -2706,10 +2654,14 @@
           {
             "type": "apple",
             "id": "11040619895380056756"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "2a93affd-9ce0-4db9-89b5-c9129f786d11"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Fr 09:00-24:00; Sa,Su 10:00-24:00"
         },
@@ -2717,7 +2669,11 @@
           "girocard": "yes",
           "cards": "no",
           "contactless": "yes"
-        }
+        },
+        "description": "Kiosk ",
+        "tags": [
+          "fritz_kola"
+        ]
       }
     },
     {

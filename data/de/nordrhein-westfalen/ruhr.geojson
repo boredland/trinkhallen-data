@@ -1457,40 +1457,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.015673199999999,
-          51.43917279999999
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0776",
-        "name": "Kaufhalle Thomas",
-        "description": "Getränke, Süßigkeiten und Zeitschriften",
-        "address": {
-          "street": "Corneliastraße",
-          "number": "15",
-          "postalcode": "45130",
-          "city": "Essen",
-          "district": "Stadtbezirke II"
-        },
-        "tags": [
-          "zeitschriften"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "126df22b-81cb-498b-9ed4-f098cdb82458"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           7.0135615,
           51.4397668
         ]
@@ -18051,23 +18017,32 @@
       },
       "properties": {
         "id": "tk_ru_osm_n2207076651",
-        "name": "Kaufhalle",
+        "name": "Kaufhalle Thomas",
         "address": {
           "street": "Vöcklinghauser Straße",
           "number": "15",
           "postalcode": "45130",
-          "city": "Essen"
+          "city": "Essen",
+          "district": "Stadtbezirke II"
         },
         "sources": [
           {
             "type": "osm",
             "id": "node/2207076651",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "126df22b-81cb-498b-9ed4-f098cdb82458"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
-        "apple_id_attempted": "2026-05-23"
+        "updated": "2026-05-23",
+        "apple_id_attempted": "2026-05-23",
+        "description": "Getränke, Süßigkeiten und Zeitschriften",
+        "tags": [
+          "zeitschriften"
+        ]
       }
     },
     {

@@ -248,18 +248,24 @@ function processFile(file: string): PerFileResult {
     const hNorm = norm(h.properties.name);
     for (const o of osmCandidates) {
       const m = dist(h, o);
-      // Exact-name matches get a wider distance window (60m) than the
-      // general 30m gate — same-named kiosks within a block are almost
-      // always the same kiosk pinned with GPS drift.
+      // Distance gating depends on the strength of the name signal:
+      //   - exact-name OR strong dice (≥ 0.65): widen to 60m, since
+      //     Hopfenstop volunteers' GPS pins drift up to ~50m and a
+      //     strong-name same-name match within a block is almost always
+      //     the same kiosk.
+      //   - softer signals (substring / address / weak dice / close-
+      //     coord): keep the conservative 30m gate.
       const oNorm = norm(o.properties.name);
       const exact = hNorm.length >= 4 && hNorm === oNorm;
-      if (m > 30 && !(exact && m <= 60)) continue;
       const sim = dice(hNorm, oNorm);
+      const strongName = exact || sim >= 0.65;
+      const distOk = strongName ? m <= 60 : m <= 30;
+      if (!distOk) continue;
       const sub = isSubstring(hNorm, oNorm);
       const addr = sameAddress(h, o);
       let reason = "";
-      if (exact && m > 30) reason = `exact-name=${m.toFixed(1)}m`;
-      else if (sim >= 0.55) reason = `dice=${sim.toFixed(2)}`;
+      if (exact) reason = `exact-name=${m.toFixed(1)}m`;
+      else if (sim >= 0.55) reason = `dice=${sim.toFixed(2)}@${m.toFixed(1)}m`;
       else if (sub) reason = `substring`;
       else if (addr) reason = `address`;
       else if (m <= 8) reason = `close-coord=${m.toFixed(1)}m`;

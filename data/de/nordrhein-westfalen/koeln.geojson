@@ -1466,49 +1466,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.1019578,
-          50.737177
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0795",
-        "name": "Kiosk am Bertha ",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Bertha-von-Suttner-Platz",
-          "number": "2-4",
-          "postalcode": "53111",
-          "city": "Bonn"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "69e1ead1-2490-4221-b887-9bf7685b3a07"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJHWhzU3XhvkcRjQUEt3RJAX4"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-22",
-        "apple_id_attempted": "2026-05-22",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           7.1578141,
           50.6858824
         ]
@@ -6357,40 +6314,6 @@
           "contactless": "yes",
           "mobile": "yes"
         }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.03339,
-          51.06583
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1476",
-        "name": "Kiosk Kiosk ",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Lützenkirchener Straße",
-          "number": "236",
-          "postalcode": "51381",
-          "city": "Leverkusen",
-          "district": "Quettingen"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "9be81408-90e1-4c1e-921b-ab203b627844"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22"
       }
     },
     {
@@ -14151,23 +14074,33 @@
           {
             "type": "apple",
             "id": "2125368383899283662"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "69e1ead1-2490-4221-b887-9bf7685b3a07"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJHWhzU3XhvkcRjQUEt3RJAX4"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-22",
+        "updated": "2026-05-23",
         "payment": {
           "cash": "unknown",
           "cards": "yes",
-          "contactless": "unknown",
-          "girocard": "unknown",
+          "contactless": "yes",
+          "girocard": "yes",
           "mobile": "unknown"
         },
         "tags": [
-          "barrierefrei"
+          "barrierefrei",
+          "fritz_kola"
         ],
         "hours": {
           "raw": "Mo-Th 06:30-22:30; Fr 06:30-24:00; Sa-Su 00:00-03:00; Sa 09:00-24:00; Su 10:00-23:00"
-        }
+        },
+        "description": "Kiosk "
       }
     },
     {
@@ -29708,6 +29641,10 @@
           {
             "type": "hopfenstop",
             "id": "de54f5d9-9106-4f4b-80a6-102e21daf9af"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "9be81408-90e1-4c1e-921b-ab203b627844"
           }
         ],
         "created": "2026-05-20",
