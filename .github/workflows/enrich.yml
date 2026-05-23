@@ -211,15 +211,27 @@ jobs:
           } > /tmp/commit-msg.txt
           git commit -F /tmp/commit-msg.txt
           # Concurrent enrich runs for different regions touch different
-          # files, but main may have moved (other workflows, manual edits).
-          # Rebase + retry a few times before giving up.
+          # files, but two runs that land on the *same* region's geojson
+          # (e.g. when many were dispatched at once) hit a real content
+          # conflict. `-X theirs` during rebase favours the commit being
+          # replayed — our just-enriched data — over upstream. Any keys
+          # the other run also filled will simply be re-detected next
+          # time the region cycles (enrichment is idempotent).
           for i in 1 2 3 4 5; do
             if git push; then
               echo "pushed on attempt $i"
               exit 0
             fi
-            echo "push rejected, pulling --rebase (attempt $i)"
-            git pull --rebase --autostash
+            echo "push rejected, pulling --rebase -X theirs (attempt $i)"
+            if ! git pull --rebase -X theirs --autostash; then
+              # `-X theirs` resolves text conflicts but a tree-level
+              # conflict (rename/delete) still halts. Abort and bail
+              # rather than leaving the repo mid-rebase for the next
+              # iteration to trip over.
+              git rebase --abort || true
+              echo "rebase aborted on attempt $i"
+              exit 1
+            fi
           done
           echo "push failed after 5 attempts"
           exit 1

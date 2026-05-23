@@ -163,13 +163,20 @@ jobs:
           git commit -F /tmp/commit-msg.txt
           # Concurrent enrich runs and the hourly enrich workflow may race
           # us — 5-attempt push/rebase loop matches enrich.yml's pattern.
+          # `-X theirs` keeps the commit being replayed (our just-scraped
+          # data) when text conflicts arise; the OSM next sweep would
+          # recover anything the other side touched.
           for i in 1 2 3 4 5; do
             if git push; then
               echo "pushed on attempt $i"
               exit 0
             fi
-            echo "push rejected, pulling --rebase (attempt $i)"
-            git pull --rebase --autostash
+            echo "push rejected, pulling --rebase -X theirs (attempt $i)"
+            if ! git pull --rebase -X theirs --autostash; then
+              git rebase --abort || true
+              echo "rebase aborted on attempt $i"
+              exit 1
+            fi
           done
           echo "push failed after 5 attempts"
           exit 1
