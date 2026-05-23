@@ -199,55 +199,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.4233835,
-          49.01090850000001
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1154",
-        "name": "Kiosk am Karl Wilhelm Platz ",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Karl-Wilhelm-Platz",
-          "number": "1",
-          "postalcode": "76131",
-          "city": "Karlsruhe",
-          "district": "Oststadt"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "9fb17dd2-a570-4ee4-8fef-78854b3e0e81"
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          },
-          {
-            "type": "apple",
-            "id": "13451076054045610312"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-22",
-        "payment": {
-          "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Su 00:00-24:00"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           8.4123656,
           49.007574
         ]
@@ -388,41 +339,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.4116015,
-          49.0086805
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1159",
-        "name": "Kiosk Strickle",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Waldhornstraße",
-          "number": "31",
-          "postalcode": "76131",
-          "city": "Karlsruhe",
-          "district": "Innenstadt-Ost"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "341f2190-30d6-421a-92fa-1a4b6ff9f041"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           8.351905799999999,
           49.0096471
         ]
@@ -486,40 +402,6 @@
           {
             "type": "hopfenstop",
             "id": "0643dec6-29a0-448c-8a70-b967b6fe711d"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          8.7004457,
-          48.8922988
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1229",
-        "name": "Tabak & Presse",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Bahnhofstraße",
-          "number": "14",
-          "postalcode": "75172",
-          "city": "Pforzheim"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "3cdbc5f0-bf4c-4b2b-9da9-947ce02d28c3"
           }
         ],
         "created": "2026-05-19",
@@ -2130,8 +2012,13 @@
       },
       "properties": {
         "id": "tk_ka_osm_n12864036014",
-        "name": "Kiosk 14",
-        "address": {},
+        "name": "Tabak & Presse",
+        "address": {
+          "street": "Bahnhofstraße",
+          "number": "14",
+          "postalcode": "75172",
+          "city": "Pforzheim"
+        },
         "sources": [
           {
             "type": "osm",
@@ -2141,10 +2028,14 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "3cdbc5f0-bf4c-4b2b-9da9-947ce02d28c3"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Th 07:00-20:00; Fr 07:00-21:00; Sa 09:00-21:00"
         },
@@ -2153,7 +2044,11 @@
           "girocard": "yes",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22"
+        "apple_id_attempted": "2026-05-22",
+        "description": "Kiosk ",
+        "tags": [
+          "fritz_kola"
+        ]
       }
     },
     {
@@ -5047,23 +4942,35 @@
       "properties": {
         "id": "tk_ka_osm_n531496127",
         "name": "Café Emilio",
-        "address": {},
+        "address": {
+          "street": "Waldhornstraße",
+          "number": "31",
+          "postalcode": "76131",
+          "city": "Karlsruhe",
+          "district": "Innenstadt-Ost"
+        },
         "sources": [
           {
             "type": "osm",
             "id": "node/531496127",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "341f2190-30d6-421a-92fa-1a4b6ff9f041"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Fr 09:00-18:30; Sa 09:00-16:30"
         },
         "tags": [
-          "barrierefrei"
+          "barrierefrei",
+          "fritz_kola"
         ],
-        "apple_id_attempted": "2026-05-22"
+        "apple_id_attempted": "2026-05-22",
+        "description": "Kiosk "
       }
     },
     {
@@ -7775,8 +7682,14 @@
       },
       "properties": {
         "id": "tk_ka_osm_w90426027",
-        "name": "Oststadt Kiosk",
-        "address": {},
+        "name": "Kiosk am Karl Wilhelm Platz",
+        "address": {
+          "street": "Karl-Wilhelm-Platz",
+          "number": "1",
+          "postalcode": "76131",
+          "city": "Karlsruhe",
+          "district": "Oststadt"
+        },
         "sources": [
           {
             "type": "osm",
@@ -7790,21 +7703,31 @@
           {
             "type": "apple",
             "id": "15407615745236403672"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "9fb17dd2-a570-4ee4-8fef-78854b3e0e81"
+          },
+          {
+            "type": "apple",
+            "id": "13451076054045610312"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Th 07:00-00:00; Fr 07:00-03:00; Sa 10:00-00:00; Su,PH off"
         },
         "tags": [
-          "barrierefrei"
+          "barrierefrei",
+          "fritz_kola"
         ],
         "payment": {
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
-        }
+        },
+        "description": "Kiosk "
       }
     },
     {

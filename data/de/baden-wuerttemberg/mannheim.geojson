@@ -80,50 +80,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.47153,
-          49.50001
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0463",
-        "name": "Kiosk am Eck",
-        "description": "Mittlere Auswahl an Pils und Export Bieren. Außerdem große Auswahl an Snacks und Konserven. Im Sommer auch Grillkohle.",
-        "address": {
-          "street": "Waldhofstraße",
-          "number": "38C",
-          "postalcode": "68169",
-          "city": "Mannheim",
-          "district": "Neckarstadt"
-        },
-        "tags": [
-          "snacks"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "59d7b0ec-5d75-4984-88b6-51a3adfc8a70"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJnZ4iSSzMl0cRG81FEcnOje8"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-23",
-        "apple_id_attempted": "2026-05-23",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "google_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           8.481531,
           49.5251486
         ]
@@ -501,41 +457,6 @@
           {
             "type": "hopfenstop",
             "id": "7d709a24-24bc-4c8e-a439-bb6fe7825483"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          8.6855093,
-          49.4077878
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1143",
-        "name": "Kiosk am Bismarckplatz",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Bergheimer Straße",
-          "number": "75",
-          "postalcode": "69115",
-          "city": "Heidelberg",
-          "district": "Bergheim-Ost"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "be888508-e13f-4b90-a938-54ea1fe0f51b"
           }
         ],
         "created": "2026-05-19",
@@ -9133,21 +9054,35 @@
       },
       "properties": {
         "id": "tk_ma_osm_n4245937805",
-        "name": "Mexs Café & Kiosk",
-        "address": {},
+        "name": "Kiosk am Bismarckplatz",
+        "address": {
+          "street": "Bergheimer Straße",
+          "number": "75",
+          "postalcode": "69115",
+          "city": "Heidelberg",
+          "district": "Bergheim-Ost"
+        },
         "sources": [
           {
             "type": "osm",
             "id": "node/4245937805",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "be888508-e13f-4b90-a938-54ea1fe0f51b"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Fr 07:00-19:00; Sa 07:30-16:00"
         },
-        "apple_id_attempted": "2026-05-23"
+        "apple_id_attempted": "2026-05-23",
+        "description": "Kiosk ",
+        "tags": [
+          "fritz_kola"
+        ]
       }
     },
     {
@@ -10490,20 +10425,43 @@
       "properties": {
         "id": "tk_ma_osm_n664160717",
         "name": "Ecke Ost-West",
-        "address": {},
+        "address": {
+          "street": "Waldhofstraße",
+          "number": "38C",
+          "postalcode": "68169",
+          "city": "Mannheim",
+          "district": "Neckarstadt"
+        },
         "sources": [
           {
             "type": "osm",
             "id": "node/664160717",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "59d7b0ec-5d75-4984-88b6-51a3adfc8a70"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJnZ4iSSzMl0cRG81FEcnOje8"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Th 05:30-23:30, Fr,Sa 05:30-01:00, Su 14:00-20:00"
         },
-        "apple_id_attempted": "2026-05-23"
+        "apple_id_attempted": "2026-05-23",
+        "description": "Mittlere Auswahl an Pils und Export Bieren. Außerdem große Auswahl an Snacks und Konserven. Im Sommer auch Grillkohle.",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "tags": [
+          "snacks"
+        ]
       }
     },
     {

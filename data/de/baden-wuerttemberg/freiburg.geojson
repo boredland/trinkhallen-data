@@ -1561,40 +1561,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.592746999999998,
-          47.5824467
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1849",
-        "name": "Kiosk Bork",
-        "description": "In Kleinhüningen Nähe Grenze",
-        "address": {
-          "street": "Dorfstrasse",
-          "number": "14",
-          "city": "Basel"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "782f7991-2a05-44af-8082-3b49d10eadd4"
-          },
-          {
-            "type": "apple",
-            "id": "4942710547869736001"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "payment_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           7.573886099999999,
           47.5657684
         ]
@@ -3822,7 +3788,11 @@
       "properties": {
         "id": "tk_fr-bw_osm_n13585119934",
         "name": "Take & Go",
-        "address": {},
+        "address": {
+          "street": "Dorfstrasse",
+          "number": "14",
+          "city": "Basel"
+        },
         "sources": [
           {
             "type": "osm",
@@ -3832,17 +3802,27 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "782f7991-2a05-44af-8082-3b49d10eadd4"
+          },
+          {
+            "type": "apple",
+            "id": "4942710547869736001"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Sa 09:00-20:00; Su 09:00-18:00"
         },
         "payment": {
           "cards": "no"
         },
-        "apple_id_attempted": "2026-05-22"
+        "apple_id_attempted": "2026-05-22",
+        "description": "In Kleinhüningen Nähe Grenze",
+        "tags": []
       }
     },
     {

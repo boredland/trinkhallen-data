@@ -790,45 +790,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4577987,
-          52.5130929
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1013",
-        "name": "Eco‘s Kiosk",
-        "description": "Getränke, Snacks, Zigaretten",
-        "address": {
-          "street": "Niederbarnimstraße",
-          "number": "14",
-          "postalcode": "10247",
-          "city": "Berlin",
-          "district": "Bezirk Friedrichshain-Kreuzberg"
-        },
-        "tags": [
-          "snacks"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "e486f7c7-05dd-4877-8ba9-b16d71f25418"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJ2Xr3el5OqEcR_TBwNcifCfQ"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           13.4602978,
           52.5149538
         ]
@@ -8292,17 +8253,35 @@
       "properties": {
         "id": "tk_b_osm_n1390638257",
         "name": "Drink Hase",
-        "address": {},
+        "address": {
+          "street": "Niederbarnimstraße",
+          "number": "14",
+          "postalcode": "10247",
+          "city": "Berlin",
+          "district": "Bezirk Friedrichshain-Kreuzberg"
+        },
         "sources": [
           {
             "type": "osm",
             "id": "node/1390638257",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "e486f7c7-05dd-4877-8ba9-b16d71f25418"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ2Xr3el5OqEcR_TBwNcifCfQ"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
-        "apple_id_attempted": "2026-05-22"
+        "updated": "2026-05-23",
+        "apple_id_attempted": "2026-05-22",
+        "description": "Getränke, Snacks, Zigaretten",
+        "tags": [
+          "snacks"
+        ]
       }
     },
     {

@@ -9,9 +9,11 @@
  *
  * Strategy (per file). Tier A — auto-merge:
  *   Pair a hopfenstop-only feature with an osm-only neighbour when:
- *     - haversine ≤ 30m, AND
- *     - (dice(name) ≥ 0.55  OR  one name is substring of the other (≥3 chars)
- *        OR  same street + number)
+ *     - haversine ≤ 30m AND (dice(name) ≥ 0.55 OR one name is substring of
+ *       the other (≥3 chars) OR same street + number), OR
+ *     - haversine ≤ 8m (regardless of name) — at that distance it's the
+ *       same kiosk that just got renamed (operator change), since
+ *       Spätis don't sit 8m apart in practice.
  *   Merge: keep the OSM feature (preserves the upstream node/id reference),
  *   conservatively fill blanks from Hopfenstop (payment "unknown" → known,
  *   missing hours/address/tags/description), union sources[], pick the more
@@ -247,6 +249,7 @@ function processFile(file: string): PerFileResult {
       if (sim >= 0.55) reason = `dice=${sim.toFixed(2)}`;
       else if (sub) reason = `substring`;
       else if (addr) reason = `address`;
+      else if (m <= 8) reason = `close-coord=${m.toFixed(1)}m`;
       if (reason) allPairs.push({ hops: h, osm: o, meters: m, sim, reason });
       else if (sim >= 0.3) {
         allPairs.push({ hops: h, osm: o, meters: m, sim, reason: `B:dice=${sim.toFixed(2)}` });
