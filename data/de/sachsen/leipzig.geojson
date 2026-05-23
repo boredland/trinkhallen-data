@@ -593,60 +593,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.3741322,
-          51.3339224
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0709",
-        "name": "Kiosk 1",
-        "description": "Zentraler Kiosk mit großer Bierauswahl",
-        "address": {
-          "street": "Peterssteinweg",
-          "number": "1",
-          "postalcode": "04107",
-          "city": "Leipzig",
-          "district": "Mitte"
-        },
-        "hours": {
-          "raw": "Mo-Sa 07:30-23:00"
-        },
-        "tags": [
-          "kaffee",
-          "mate",
-          "schnaps",
-          "sekt",
-          "snacks",
-          "zeitschriften"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "03a9035e-8582-44dd-95f6-7cc13a9fc33c"
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          },
-          {
-            "type": "apple",
-            "id": "13925854022782075014"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-21",
-        "payment": {
-          "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           12.3731666,
           51.3177981
         ]
@@ -714,39 +660,6 @@
           {
             "type": "gmaps",
             "id": "ChIJjdaxz8b5pkcReL7NKbjd6Ck"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "payment_attempted": "2026-05-22",
-        "apple_id_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.3274699,
-          51.33805
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0712",
-        "name": "Spätverkauf",
-        "description": "Kiosk von außen mit Graffiti besprayt von innen sehr große Bierauswahl!",
-        "address": {
-          "street": "Georg-Schwarz-Straße",
-          "number": "6",
-          "postalcode": "04177",
-          "city": "Leipzig",
-          "district": "Alt-West"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "855f9365-1cec-4eec-ab40-b0756140a454"
           }
         ],
         "created": "2026-05-19",
@@ -1660,7 +1573,13 @@
       "properties": {
         "id": "tk_l_osm_n1666646925",
         "name": "Kiosk1",
-        "address": {},
+        "address": {
+          "street": "Peterssteinweg",
+          "number": "1",
+          "postalcode": "04107",
+          "city": "Leipzig",
+          "district": "Mitte"
+        },
         "sources": [
           {
             "type": "osm",
@@ -1670,22 +1589,37 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "03a9035e-8582-44dd-95f6-7cc13a9fc33c"
+          },
+          {
+            "type": "apple",
+            "id": "13925854022782075014"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Th 08:00-02:00, Fr 08:00-04:00, Sa 10:00-04:00, Su 10:00-02:00"
         },
         "tags": [
-          "barrierefrei"
+          "barrierefrei",
+          "kaffee",
+          "mate",
+          "schnaps",
+          "sekt",
+          "snacks",
+          "zeitschriften"
         ],
         "payment": {
           "cards": "no",
           "girocard": "yes",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-23"
+        "apple_id_attempted": "2026-05-23",
+        "description": "Zentraler Kiosk mit großer Bierauswahl"
       }
     },
     {
@@ -1947,7 +1881,8 @@
           "street": "Georg-Schwarz-Straße",
           "number": "6",
           "postalcode": "04177",
-          "city": "Leipzig"
+          "city": "Leipzig",
+          "district": "Alt-West"
         },
         "sources": [
           {
@@ -1958,10 +1893,14 @@
           {
             "type": "apple",
             "id": "93776197693957401"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "855f9365-1cec-4eec-ab40-b0756140a454"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Th-Su 16:00-24:00"
         },
@@ -1971,7 +1910,9 @@
           "contactless": "unknown",
           "girocard": "yes",
           "mobile": "yes"
-        }
+        },
+        "description": "Kiosk von außen mit Graffiti besprayt von innen sehr große Bierauswahl!",
+        "tags": []
       }
     },
     {

@@ -119,42 +119,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.0998851,
-          50.7799315
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1046",
-        "name": "Kiosk Bilgen",
-        "description": "Kiosk",
-        "address": {
-          "street": "Jülicher Straße",
-          "number": "79",
-          "postalcode": "52070",
-          "city": "Aachen",
-          "district": "Mitte"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "53921b60-cfaf-40ae-a5cd-5e63b87e87ca"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "payment_attempted": "2026-05-22",
-        "apple_id_attempted": "2026-05-22",
-        "gmaps_id_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           6.0925255,
           50.7633108
         ]
@@ -315,49 +279,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.081032899999999,
-          50.776514
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1051",
-        "name": "Kiosk ",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Kockerellstraße",
-          "number": "21",
-          "postalcode": "52062",
-          "city": "Aachen",
-          "district": "Mitte"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "1660449b-c431-4a01-b246-93e58359594b"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJwR3-hHuZwEcRA7D94zvpVoA"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-22",
-        "payment": {
-          "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "apple_id_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           6.0911385,
           50.7676559
         ]
@@ -501,45 +422,6 @@
         "updated": "2026-05-19",
         "payment_attempted": "2026-05-22",
         "apple_id_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.0756465,
-          50.7748004
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1944",
-        "name": "Kiosk B13",
-        "description": "Mit großem Sortiment und Innenraum",
-        "address": {
-          "street": "Karlsgraben",
-          "number": "57",
-          "postalcode": "52064",
-          "city": "Aachen",
-          "district": "Aachen-Mitte"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "096aeef8-962f-43ce-8a69-1cb82f517bd1"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJ1YPE_A-ZwEcREYXBt0jm4L0"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-21",
-        "payment": {
-          "cards": "no"
-        },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -1734,7 +1616,13 @@
       "properties": {
         "id": "tk_ac_osm_n1977052733",
         "name": "Kiosk Nr. 1",
-        "address": {},
+        "address": {
+          "street": "Kockerellstraße",
+          "number": "21",
+          "postalcode": "52062",
+          "city": "Aachen",
+          "district": "Mitte"
+        },
         "sources": [
           {
             "type": "osm",
@@ -1744,19 +1632,30 @@
           {
             "type": "gmaps",
             "id": "ChIJwR3-hHuZwEcRA7D94zvpVoA"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "1660449b-c431-4a01-b246-93e58359594b"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Fr 10:00-19:00; Sa 10:00-18:00"
         },
         "tags": [
-          "barrierefrei"
+          "barrierefrei",
+          "fritz_kola"
         ],
         "payment_attempted": "2026-05-22",
         "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
+        "google_attempted": "2026-05-22",
+        "description": "Kiosk ",
+        "payment": {
+          "cards": "no",
+          "girocard": "yes",
+          "contactless": "yes"
+        }
       }
     },
     {
@@ -3127,7 +3026,8 @@
           "street": "Jülicher Straße",
           "number": "79",
           "postalcode": "52070",
-          "city": "Aachen"
+          "city": "Aachen",
+          "district": "Mitte"
         },
         "sources": [
           {
@@ -3138,10 +3038,14 @@
           {
             "type": "apple",
             "id": "10084355406935390332"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "53921b60-cfaf-40ae-a5cd-5e63b87e87ca"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Fr 09:00-23:00; Sa 09:00-22:00; Su off"
         },
@@ -3151,7 +3055,11 @@
           "contactless": "unknown",
           "girocard": "unknown",
           "mobile": "unknown"
-        }
+        },
+        "description": "Kiosk",
+        "tags": [
+          "fritz_kola"
+        ]
       }
     },
     {
@@ -3841,7 +3749,13 @@
       "properties": {
         "id": "tk_ac_osm_n991759664",
         "name": "Kiosk ECE",
-        "address": {},
+        "address": {
+          "street": "Karlsgraben",
+          "number": "57",
+          "postalcode": "52064",
+          "city": "Aachen",
+          "district": "Aachen-Mitte"
+        },
         "sources": [
           {
             "type": "osm",
@@ -3851,10 +3765,18 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "096aeef8-962f-43ce-8a69-1cb82f517bd1"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ1YPE_A-ZwEcREYXBt0jm4L0"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Sa 11:00-24:00; Su,PH 14:00-21:00"
         },
@@ -3863,7 +3785,9 @@
           "cards": "no",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22"
+        "apple_id_attempted": "2026-05-22",
+        "description": "Mit großem Sortiment und Innenraum",
+        "tags": []
       }
     },
     {

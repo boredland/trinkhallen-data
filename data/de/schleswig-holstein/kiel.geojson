@@ -274,50 +274,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          10.1177075,
-          54.3149515
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1852",
-        "name": "Spätkauf",
-        "description": "Kiosk",
-        "address": {
-          "street": "Saarbrückenstraße",
-          "number": "2",
-          "postalcode": "24114",
-          "city": "Kiel",
-          "district": "Schreventeich - Hasseldieksdamm de Schreventeich"
-        },
-        "hours": {
-          "raw": "Mo-Th 07:00-23:00; Fr 07:00-01:00; Sa 08:00-01:00; Su 10:00-22:00"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "9f055f23-86f5-4fbb-bbea-3489dcc1a203"
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-21",
-        "payment": {
-          "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           10.1451974,
           54.3083836
         ]
@@ -736,27 +692,43 @@
       "properties": {
         "id": "tk_ki_osm_n1268543469",
         "name": "Spätkauf",
-        "address": {},
+        "address": {
+          "street": "Saarbrückenstraße",
+          "number": "2",
+          "postalcode": "24114",
+          "city": "Kiel",
+          "district": "Schreventeich - Hasseldieksdamm de Schreventeich"
+        },
         "sources": [
           {
             "type": "osm",
             "id": "node/1268543469",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "9f055f23-86f5-4fbb-bbea-3489dcc1a203"
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Th 07:00-23:00, Fr,Sa 08:00-01:00, Su 10:00-22:00"
         },
         "payment": {
           "cash": "unknown",
           "cards": "no",
-          "contactless": "unknown",
-          "girocard": "unknown",
+          "contactless": "yes",
+          "girocard": "yes",
           "mobile": "unknown"
         },
-        "apple_id_attempted": "2026-05-22"
+        "apple_id_attempted": "2026-05-22",
+        "description": "Kiosk",
+        "tags": []
       }
     },
     {

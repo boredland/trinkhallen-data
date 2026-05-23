@@ -548,51 +548,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.1720922,
-          48.79977239999999
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1263",
-        "name": "Kiosk am Kochenhof",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Am Kochenhof",
-          "number": "12",
-          "postalcode": "70192",
-          "city": "Stuttgart",
-          "district": "Nord"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "f95d33ce-827f-476e-94a5-097dd1cfccd7"
-          },
-          {
-            "type": "apple",
-            "id": "10910741266751176295"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-23",
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes",
-          "mobile": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Sa 08:00-20:00"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           9.1854,
           48.7745
         ]
@@ -1387,85 +1342,6 @@
           "contactless": "yes",
           "mobile": "yes"
         }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.1547348,
-          48.7731468
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_2159",
-        "name": "Laden",
-        "description": "Kiezkiosk",
-        "address": {
-          "street": "Bismarckstraße",
-          "number": "38",
-          "postalcode": "70197",
-          "city": "Stuttgart",
-          "district": "Stuttgart-West"
-        },
-        "hours": {
-          "raw": "Mo-Sa 09:00-18:00"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "87a81f23-6df5-4714-a1b6-55f5c7f7d273"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.1635235,
-          48.7637288
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_2160",
-        "name": "Kidane Kiosk",
-        "description": "Nur das absolut Nötigste",
-        "address": {
-          "street": "Böblinger Straße",
-          "number": "36",
-          "postalcode": "70178",
-          "city": "Stuttgart",
-          "district": "Süd"
-        },
-        "hours": {
-          "raw": "Mo-Sa 08:00-18:00"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "a6b0cc21-c364-4995-a459-173e5706224f"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJux1CPVrbmUcRPSgKssQmRRY"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-23",
-        "apple_id_attempted": "2026-05-23",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "google_attempted": "2026-05-23"
       }
     },
     {
@@ -3047,7 +2923,13 @@
       "properties": {
         "id": "tk_s_osm_n11961336733",
         "name": "Ghebresslasie Kidane Kiosk",
-        "address": {},
+        "address": {
+          "street": "Böblinger Straße",
+          "number": "36",
+          "postalcode": "70178",
+          "city": "Stuttgart",
+          "district": "Süd"
+        },
         "sources": [
           {
             "type": "osm",
@@ -3057,6 +2939,14 @@
           {
             "type": "apple",
             "id": "6663751279965184169"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "a6b0cc21-c364-4995-a459-173e5706224f"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJux1CPVrbmUcRPSgKssQmRRY"
           }
         ],
         "created": "2026-05-20",
@@ -3067,8 +2957,11 @@
         "payment": {
           "cards": "yes",
           "contactless": "yes",
-          "mobile": "yes"
-        }
+          "mobile": "yes",
+          "girocard": "yes"
+        },
+        "description": "Nur das absolut Nötigste",
+        "tags": []
       }
     },
     {
@@ -14770,24 +14663,42 @@
         "name": "Zigaretten Presse Toto Lotto Post",
         "address": {
           "street": "Am Kochenhof",
-          "number": "12"
+          "number": "12",
+          "postalcode": "70192",
+          "city": "Stuttgart",
+          "district": "Nord"
         },
         "sources": [
           {
             "type": "osm",
             "id": "node/7279013200",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "f95d33ce-827f-476e-94a5-097dd1cfccd7"
+          },
+          {
+            "type": "apple",
+            "id": "10910741266751176295"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Sa 08:00-20:00"
         },
         "tags": [
-          "barrierefrei"
+          "barrierefrei",
+          "fritz_kola"
         ],
-        "apple_id_attempted": "2026-05-23"
+        "apple_id_attempted": "2026-05-23",
+        "description": "Kiosk ",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "mobile": "yes"
+        }
       }
     },
     {
@@ -15839,7 +15750,8 @@
           "street": "Rötestraße",
           "number": "58",
           "postalcode": "70197",
-          "city": "Stuttgart"
+          "city": "Stuttgart",
+          "district": "Stuttgart-West"
         },
         "sources": [
           {
@@ -15850,10 +15762,14 @@
           {
             "type": "apple",
             "id": "10337863527458405086"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "87a81f23-6df5-4714-a1b6-55f5c7f7d273"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Fr 08:30-13:00,15:00-20:00; Sa 08:30-16:00"
         },
@@ -15863,7 +15779,9 @@
           "contactless": "unknown",
           "girocard": "unknown",
           "mobile": "unknown"
-        }
+        },
+        "description": "Kiezkiosk",
+        "tags": []
       }
     },
     {

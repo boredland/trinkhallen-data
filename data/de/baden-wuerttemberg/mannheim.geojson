@@ -738,41 +738,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.470632199999999,
-          49.49778329999999
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1177",
-        "name": "Kiosk ",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Mittelstraße",
-          "number": "19",
-          "postalcode": "68169",
-          "city": "Mannheim",
-          "district": "Neckarstadt-West"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "b4a5b3df-207b-4dcf-9aaa-525ac2f4a3ae"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           8.471770099999999,
           49.50002
         ]
@@ -2279,7 +2244,13 @@
       "properties": {
         "id": "tk_ma_osm_n11868305690",
         "name": "Star Kiosk",
-        "address": {},
+        "address": {
+          "street": "Mittelstraße",
+          "number": "19",
+          "postalcode": "68169",
+          "city": "Mannheim",
+          "district": "Neckarstadt-West"
+        },
         "sources": [
           {
             "type": "osm",
@@ -2289,6 +2260,10 @@
           {
             "type": "gmaps",
             "id": "ChIJa9AXH3fNl0cRS-2SrMOsIio"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "b4a5b3df-207b-4dcf-9aaa-525ac2f4a3ae"
           }
         ],
         "created": "2026-05-20",
@@ -2299,7 +2274,11 @@
           "contactless": "yes",
           "girocard": "yes"
         },
-        "google_attempted": "2026-05-23"
+        "google_attempted": "2026-05-23",
+        "description": "Kiosk ",
+        "tags": [
+          "fritz_kola"
+        ]
       }
     },
     {

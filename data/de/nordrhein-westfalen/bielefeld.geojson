@@ -482,77 +482,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.5135452,
-          51.9876583
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1076",
-        "name": "Mr Kiosk ",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Hauptstraße",
-          "number": "49",
-          "postalcode": "33647",
-          "city": "Bielefeld",
-          "district": "Brackwede"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "b21284ce-7ae6-4846-a4e5-4402820cf33a"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "payment_attempted": "2026-05-22",
-        "apple_id_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          8.506667199999999,
-          51.9937863
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1077",
-        "name": "Kiosk",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Hauptstraße",
-          "number": "139",
-          "postalcode": "33647",
-          "city": "Bielefeld",
-          "district": "Brackwede"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "ee7ecc20-99ed-4727-bd38-5e237aa3d99c"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "payment_attempted": "2026-05-22",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           8.539899199999999,
           52.0230387
         ]
@@ -853,50 +782,6 @@
           "cards": "yes"
         },
         "apple_id_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          8.539520099999999,
-          52.0247621
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1085",
-        "name": "Drugstore",
-        "description": "Kiosk ",
-        "address": {
-          "street": "August-Bebel-Straße",
-          "number": "84",
-          "postalcode": "33602",
-          "city": "Bielefeld",
-          "district": "Mitte"
-        },
-        "hours": {
-          "raw": "Mo-Th 09:00-00:00; Fr-Sa 09:00-00:30; Su 11:00-23:30"
-        },
-        "tags": [
-          "fritz_kola",
-          "eis",
-          "snacks",
-          "schnaps",
-          "wein",
-          "kaffee"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "7741cc9c-c90c-493d-9e2f-7700703392d8"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "payment_attempted": "2026-05-22",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -6956,7 +6841,8 @@
           "street": "August-Bebel-Straße",
           "number": "84",
           "postalcode": "33602",
-          "city": "Bielefeld"
+          "city": "Bielefeld",
+          "district": "Mitte"
         },
         "sources": [
           {
@@ -6967,10 +6853,14 @@
           {
             "type": "apple",
             "id": "6661396254847546307"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "7741cc9c-c90c-493d-9e2f-7700703392d8"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-22",
+        "updated": "2026-05-23",
         "payment_attempted": "2026-05-22",
         "payment": {
           "cards": "yes",
@@ -6979,7 +6869,16 @@
         },
         "hours": {
           "raw": "Su 00:00-03:00,11:30-24:00; Mo-Fr 11:00-24:00; Sa 00:00-03:00,11:00-24:00"
-        }
+        },
+        "description": "Kiosk ",
+        "tags": [
+          "eis",
+          "fritz_kola",
+          "kaffee",
+          "schnaps",
+          "snacks",
+          "wein"
+        ]
       }
     },
     {
@@ -10834,7 +10733,8 @@
           "street": "Hauptstraße",
           "number": "139",
           "postalcode": "33647",
-          "city": "Bielefeld"
+          "city": "Bielefeld",
+          "district": "Brackwede"
         },
         "sources": [
           {
@@ -10845,10 +10745,14 @@
           {
             "type": "apple",
             "id": "6210037722197381244"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "ee7ecc20-99ed-4727-bd38-5e237aa3d99c"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-22",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Fr 07:00-22:00; Sa,Su,PH 10:00-22:00"
         },
@@ -10857,7 +10761,11 @@
           "cards": "yes",
           "contactless": "yes",
           "mobile": "yes"
-        }
+        },
+        "description": "Kiosk ",
+        "tags": [
+          "fritz_kola"
+        ]
       }
     },
     {
@@ -11317,7 +11225,8 @@
           "street": "Hauptstraße",
           "number": "49",
           "postalcode": "33647",
-          "city": "Bielefeld"
+          "city": "Bielefeld",
+          "district": "Brackwede"
         },
         "sources": [
           {
@@ -11328,10 +11237,14 @@
           {
             "type": "apple",
             "id": "7347511115739493661"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "b21284ce-7ae6-4846-a4e5-4402820cf33a"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-22",
+        "updated": "2026-05-23",
         "payment_attempted": "2026-05-22",
         "payment": {
           "cards": "yes",
@@ -11340,7 +11253,11 @@
         },
         "hours": {
           "raw": "Sa-Su 10:00-23:30; Mo-Fr 08:00-23:30"
-        }
+        },
+        "description": "Kiosk ",
+        "tags": [
+          "fritz_kola"
+        ]
       }
     },
     {

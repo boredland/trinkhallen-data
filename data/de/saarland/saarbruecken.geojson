@@ -214,45 +214,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.9963104,
-          49.2365268
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_1665",
-        "name": "Hotspot",
-        "description": "Bistro + Kiosk + Lieferservice",
-        "address": {
-          "street": "Dudweilerstraße",
-          "number": "26",
-          "postalcode": "66111",
-          "city": "Saarbrücken",
-          "district": "Mitte"
-        },
-        "hours": {
-          "raw": "Sa 22:00-22:00"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "e188769a-4aac-4594-910b-0af333951e85"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJawB9xKe2lUcRPGKxCO5YYvY"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           7.0300513,
           49.1981277
         ]
@@ -926,17 +887,26 @@
           "street": "Dudweilerstraße",
           "number": "26",
           "postalcode": "66111",
-          "city": "Saarbrücken"
+          "city": "Saarbrücken",
+          "district": "Mitte"
         },
         "sources": [
           {
             "type": "osm",
             "id": "node/1408202549",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "e188769a-4aac-4594-910b-0af333951e85"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJawB9xKe2lUcRPGKxCO5YYvY"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Fr 06:00-20:00; Sa 07:00-15:00; Su,PH closed"
         },
@@ -944,7 +914,8 @@
           "barrierefrei"
         ],
         "apple_id_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23"
+        "google_attempted": "2026-05-23",
+        "description": "Bistro + Kiosk + Lieferservice"
       }
     },
     {

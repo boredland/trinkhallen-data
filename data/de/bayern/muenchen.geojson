@@ -263,48 +263,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          11.5670487,
-          48.1342514
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0524",
-        "name": "Fachpresse Kiosk",
-        "description": "kiosk",
-        "address": {
-          "street": "Sendlinger-Tor-Platz",
-          "number": "12",
-          "postalcode": "80336",
-          "city": "München",
-          "district": "Altstadt-Lehel"
-        },
-        "hours": {
-          "raw": "Mo-Sa 07:00-19:00"
-        },
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "b8b2b1bb-1d14-4b9a-91dd-42a4663e5794"
-          },
-          {
-            "type": "apple",
-            "id": "12130931844937784886"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-22",
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes",
-          "mobile": "yes"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           11.5480891,
           48.1006856
         ]
@@ -22721,7 +22679,8 @@
           "street": "Sendlinger-Tor-Platz",
           "number": "12",
           "postalcode": "80336",
-          "city": "München"
+          "city": "München",
+          "district": "Altstadt-Lehel"
         },
         "sources": [
           {
@@ -22732,10 +22691,18 @@
           {
             "type": "apple",
             "id": "8161706479848579696"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "b8b2b1bb-1d14-4b9a-91dd-42a4663e5794"
+          },
+          {
+            "type": "apple",
+            "id": "12130931844937784886"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-22",
+        "updated": "2026-05-23",
         "tags": [
           "barrierefrei"
         ],
@@ -22746,7 +22713,8 @@
         },
         "hours": {
           "raw": "Mo-Fr 07:00-19:30; Sa 08:00-19:00"
-        }
+        },
+        "description": "kiosk"
       }
     },
     {

@@ -588,90 +588,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3487635,
-          52.52454059999999
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0955",
-        "name": "Späti",
-        "description": "Getränke aller Art",
-        "address": {
-          "street": "Alt-Moabit",
-          "number": "106",
-          "postalcode": "10559",
-          "city": "Berlin",
-          "district": "Mitte"
-        },
-        "hours": {
-          "raw": "Mo-Su 09:00-23:00"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "d0509157-72be-4b83-9de2-f686bc0b7431"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.2939923,
-          52.4450453
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0961",
-        "name": "Presse Lotto Toto",
-        "description": "Kiosk ",
-        "address": {
-          "street": "Drakestraße",
-          "number": "39",
-          "postalcode": "12205",
-          "city": "Berlin",
-          "district": "Bezirk Steglitz-Zehlendorf"
-        },
-        "hours": {
-          "raw": "Mo-Sa 09:00-19:00"
-        },
-        "tags": [
-          "fritz_kola"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "8804c224-750d-4adb-97c1-9cdcac7f4bc0"
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-21",
-        "payment": {
-          "girocard": "yes",
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "apple_id_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           13.36078,
           52.42907
         ]
@@ -16419,7 +16335,7 @@
       },
       "properties": {
         "id": "tk_b_osm_n4707490127",
-        "name": "Lotto Shop",
+        "name": "Presse Lotto Toto",
         "address": {
           "street": "Drakestraße",
           "number": "39",
@@ -16436,10 +16352,14 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "8804c224-750d-4adb-97c1-9cdcac7f4bc0"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "hours": {
           "raw": "Mo-Fr 08:00-19:00; Sa 08:00-16:00; PH off"
         },
@@ -16448,7 +16368,11 @@
           "cards": "yes",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22"
+        "apple_id_attempted": "2026-05-22",
+        "description": "Kiosk ",
+        "tags": [
+          "fritz_kola"
+        ]
       }
     },
     {
@@ -19038,16 +18962,27 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "hopfenstop",
+            "id": "d0509157-72be-4b83-9de2-f686bc0b7431"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-23",
         "payment": {
           "girocard": "yes",
           "cards": "no",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22"
+        "apple_id_attempted": "2026-05-22",
+        "description": "Getränke aller Art",
+        "hours": {
+          "raw": "Mo-Su 09:00-23:00"
+        },
+        "tags": [
+          "fritz_kola"
+        ]
       }
     },
     {
