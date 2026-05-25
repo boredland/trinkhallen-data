@@ -185,6 +185,28 @@ function applyOsmRefresh(local: Feature, fresh: OsmFeature): OsmFeature {
   ]);
   if (tagsSet.size > 0) fp["tags"] = [...tagsSet].sort();
 
+  // Sources: union local's non-OSM sources (hopfenstop, apple, gmaps) into
+  // the fresh feature, keyed on type+id so a stale local OSM version
+  // doesn't shadow the fresh one. Fresh has only the osm entry — for
+  // OSM-only features that's a no-op; for hybrids this is what carries
+  // hopfenstop/apple/gmaps across the refresh.
+  type SourceEntry = { type: string; id: string; version?: number };
+  const localSources = (lp["sources"] as SourceEntry[] | undefined) ?? [];
+  const freshSources = (fp["sources"] as SourceEntry[] | undefined) ?? [];
+  const seen = new Set(freshSources.map((s) => `${s.type}::${s.id ?? ""}`));
+  for (const s of localSources) {
+    const key = `${s.type}::${s.id ?? ""}`;
+    if (!seen.has(key)) {
+      freshSources.push(s);
+      seen.add(key);
+    }
+  }
+  fp["sources"] = freshSources;
+
+  // osm_removed shouldn't survive — Overpass returned the feature this
+  // run, so it's back.
+  delete (fp as Record<string, unknown>)["osm_removed"];
+
   return fresh;
 }
 
@@ -238,10 +260,15 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
   const emittedOsmIds = new Set<string>();
 
   // Pass 1: walk existing features, dedup against fresh OSM data by id.
-  //   - OSM-only features get refreshed (or osm_removed) as before.
-  //   - Hybrid features (e.g. hopfenstop+osm after enrichment) keep their
-  //     local content but STILL consume the matching freshById entry so the
-  //     same OSM POI doesn't get re-added as a "new" feature below.
+  //   - Anything with a matching fresh OSM id (osm-only or hybrid) goes
+  //     through applyOsmRefresh — fresh wins for OSM-derived fields where
+  //     sources_by_field allows, local Apple/Google/user data survives,
+  //     and local non-osm sources (hopfenstop / apple / gmaps) get unioned
+  //     onto the result.
+  //   - OSM-only features whose id Overpass didn't return get marked
+  //     osm_removed (or dropped on cross-region ownership).
+  //   - Hybrid features whose id Overpass didn't return are kept verbatim:
+  //     their other sources are still valid even if the OSM node is gone.
   //   - Pure non-OSM features are kept verbatim.
   for (const f of existing) {
     const osmIds = osmIdsFromSources(f);
@@ -252,17 +279,12 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
     let consumed = false;
     for (const id of osmIds) {
       if (freshById.has(id)) {
-        if (isOsmOnly(f)) {
-          // Pure OSM feature → rank-aware refresh: fresh OSM wins for
-          // OSM-derived fields, but Apple/Google-enriched fields and
-          // Photon-backfilled addresses survive (see applyOsmRefresh).
-          const fr = applyOsmRefresh(f, freshById.get(id)!) as unknown as Feature;
-          merged.push(fr);
-          for (const sid of (fr.properties.sources ?? []) as Array<{ id: string }>) {
-            emittedOsmIds.add(sid.id);
-          }
-          consumed = true;
+        const fr = applyOsmRefresh(f, freshById.get(id)!) as unknown as Feature;
+        merged.push(fr);
+        for (const sid of (fr.properties.sources ?? []) as Array<{ id: string }>) {
+          if (sid.id) emittedOsmIds.add(sid.id);
         }
+        consumed = true;
         freshById.delete(id);
       }
     }
@@ -270,31 +292,32 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
       updated++;
       continue;
     }
-    if (isOsmOnly(f) && osmIds.length > 0) {
-      // An OSM-only feature whose id wasn't in this region's fresh result:
-      // either Overpass no longer returns it (kiosk closed / mistagged), or
-      // it's geographically owned by a different region (legacy from before
-      // ownsFeature filtering). The latter is identifiable by checking the
-      // coords against the same ownership rule; if another region owns it,
-      // delete it here — the owning region's scrape run will keep its copy.
-      const [lng, lat] = f.geometry.coordinates;
-      if (!ownsFeature(region, allRegions, lng, lat)) {
-        crossRegionDropped++;
-        continue;
+    if (osmIds.length > 0) {
+      if (isOsmOnly(f)) {
+        // OSM-only feature whose id wasn't in this region's fresh result:
+        // either Overpass no longer returns it (kiosk closed / mistagged),
+        // or it's geographically owned by a different region (legacy from
+        // before ownsFeature filtering). The latter is identifiable by
+        // checking the coords against the same ownership rule; if another
+        // region owns it, delete it here — the owning region's scrape run
+        // will keep its copy.
+        const [lng, lat] = f.geometry.coordinates;
+        if (!ownsFeature(region, allRegions, lng, lat)) {
+          crossRegionDropped++;
+          continue;
+        }
+        if (!f.properties.osm_removed) {
+          f.properties.osm_removed = true;
+          removed++;
+        }
       }
-      if (!f.properties.osm_removed) {
-        f.properties.osm_removed = true;
-        removed++;
-      }
+      // Hybrid (osm + something else) or osm_removed: keep in place.
       merged.push(f);
       for (const id of osmIds) emittedOsmIds.add(id);
     } else {
-      // Hybrid (osm + something else) OR pure non-OSM (hopfenstop / user).
-      // Hybrids carry human-edited content; we keep them in place even if
-      // ownership would suggest otherwise (moderator can reassign manually).
+      // Pure non-OSM feature (hopfenstop / user).
       merged.push(f);
-      for (const id of osmIds) emittedOsmIds.add(id);
-      if (osmIds.length === 0) keptNonOsm++;
+      keptNonOsm++;
     }
   }
 
