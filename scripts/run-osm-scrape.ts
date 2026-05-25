@@ -18,6 +18,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { existsSync } from "node:fs";
 import { fetchOsmForRegion, loadRegions, ownsFeature, type OsmFeature, type Region } from "./osm-to-geojson.ts";
+import { rankOf } from "./lib/sources.ts";
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), "../..");
 
@@ -111,6 +112,82 @@ function looksLikeDuplicateOf(candidate: OsmFeature, existing: Feature[]): boole
   return false;
 }
 
+/**
+ * Apply a fresh OSM feature on top of an existing OSM-only local feature.
+ * Fresh wins for OSM-derived fields *unless* the local field has a higher
+ * source rank in `sources_by_field` (e.g. an Apple-confirmed time or a
+ * Google-confirmed payment block). Fields fresh doesn't populate (e.g.
+ * upstream OSM has no addr:* tags but Photon backfilled an address) are
+ * preserved from local unconditionally — losing data that the next OSM
+ * refresh can't bring back is never the right call.
+ *
+ * Source-of-origin gets stamped per field so the next refresh has the
+ * provenance it needs to decide all over again.
+ */
+function applyOsmRefresh(local: Feature, fresh: OsmFeature): OsmFeature {
+  const lp = local.properties as Record<string, unknown>;
+  const fp = fresh.properties as Record<string, unknown>;
+
+  if (typeof lp["created"] === "string") fp["created"] = lp["created"];
+  for (const k of ["apple_id_attempted", "apple_attempted", "google_attempted"]) {
+    if (lp[k] !== undefined) fp[k] = lp[k];
+  }
+
+  const localSbf = (lp["sources_by_field"] as Record<string, string> | undefined) ?? {};
+  const freshSbf =
+    (fp["sources_by_field"] as Record<string, string> | undefined) ??
+    ((fp["sources_by_field"] = {}) as Record<string, string>);
+
+  const restoreAtomic = (path: string): void => {
+    const lv = lp[path];
+    if (lv === undefined) return;
+    if (fp[path] === undefined) {
+      // Fresh has no value for this path — keep local regardless of rank.
+      fp[path] = lv;
+      if (localSbf[path]) freshSbf[path] = localSbf[path];
+      return;
+    }
+    if (rankOf(localSbf[path]) > rankOf(freshSbf[path])) {
+      fp[path] = lv;
+      freshSbf[path] = localSbf[path]!;
+    }
+  };
+
+  restoreAtomic("name");
+  restoreAtomic("description");
+  restoreAtomic("hours");
+
+  const restoreGroup = (group: "address" | "payment", keys: readonly string[]): void => {
+    const fg = (fp[group] as Record<string, string> | undefined) ?? {};
+    const lg = (lp[group] as Record<string, string> | undefined) ?? {};
+    for (const k of keys) {
+      const path = `${group}.${k}`;
+      const lv = lg[k];
+      if (lv === undefined || lv === "") continue;
+      if (fg[k] === undefined || fg[k] === "") {
+        fg[k] = lv;
+        if (localSbf[path]) freshSbf[path] = localSbf[path];
+      } else if (rankOf(localSbf[path]) > rankOf(freshSbf[path])) {
+        fg[k] = lv;
+        freshSbf[path] = localSbf[path]!;
+      }
+    }
+    fp[group] = fg;
+  };
+  restoreGroup("address", ["street", "number", "postalcode", "city", "district"]);
+  restoreGroup("payment", ["cash", "cards", "contactless", "girocard", "mobile"]);
+
+  // Tags: union, no precedence — different sources legitimately contribute
+  // different tags about the same place.
+  const tagsSet = new Set<string>([
+    ...((lp["tags"] as string[] | undefined) ?? []),
+    ...((fp["tags"] as string[] | undefined) ?? []),
+  ]);
+  if (tagsSet.size > 0) fp["tags"] = [...tagsSet].sort();
+
+  return fresh;
+}
+
 async function loadExisting(path: string): Promise<Feature[]> {
   if (!existsSync(path)) return [];
   const txt = await readFile(path, "utf8");
@@ -176,28 +253,14 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
     for (const id of osmIds) {
       if (freshById.has(id)) {
         if (isOsmOnly(f)) {
-          // Pure OSM feature → fresh OSM data wins for OSM-derived fields
-          // (name, coords, version, hours, payment, tags, kind), but we
-          // preserve local-only data the scrape never sees: the original
-          // creation date, enrichment attempt stamps that gate retries,
-          // and address sub-fields Photon backfilled where upstream OSM
-          // has no addr:* tag. Without this preservation, every weekly
-          // scrape wipes the per-feature work enrich-from-osm.ts does.
-          const fr = freshById.get(id)!;
-          const lp = f.properties as Record<string, unknown>;
-          const fp = fr.properties as Record<string, unknown>;
-          if (typeof lp["created"] === "string") fp["created"] = lp["created"];
-          for (const k of ["apple_id_attempted", "apple_attempted", "google_attempted"]) {
-            if (lp[k] !== undefined) fp[k] = lp[k];
-          }
-          const freshAddr = (fp["address"] as Record<string, string> | undefined) ?? {};
-          const localAddr = (lp["address"] as Record<string, string> | undefined) ?? {};
-          for (const k of ["street", "number", "postalcode", "city", "district"]) {
-            if (!freshAddr[k] && localAddr[k]) freshAddr[k] = localAddr[k];
-          }
-          fp["address"] = freshAddr;
+          // Pure OSM feature → rank-aware refresh: fresh OSM wins for
+          // OSM-derived fields, but Apple/Google-enriched fields and
+          // Photon-backfilled addresses survive (see applyOsmRefresh).
+          const fr = applyOsmRefresh(f, freshById.get(id)!) as unknown as Feature;
           merged.push(fr);
-          for (const sid of fr.properties.sources) emittedOsmIds.add(sid.id);
+          for (const sid of (fr.properties.sources ?? []) as Array<{ id: string }>) {
+            emittedOsmIds.add(sid.id);
+          }
           consumed = true;
         }
         freshById.delete(id);

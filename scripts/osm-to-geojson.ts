@@ -10,6 +10,7 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import YAML from "yaml";
+import { stampAll } from "./lib/sources.ts";
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), "../..");
 
@@ -39,6 +40,7 @@ export interface OsmFeature {
     kind?: "vending_machine";
     created: string;
     updated: string;
+    sources_by_field?: Record<string, string>;
   };
 }
 
@@ -208,6 +210,18 @@ export async function fetchOsmForRegion(region: Region): Promise<OsmFeature[]> {
 
     const kind = detectKind(tags);
     if (kind) feature.properties.kind = kind;
+
+    // Stamp provenance for every field this scrape actually populated.
+    // Downstream writers consult `sources_by_field` to decide whether
+    // their higher-rank data may overwrite ours.
+    const paths: string[] = ["name"];
+    const addr = feature.properties.address as Record<string, string>;
+    for (const k of Object.keys(addr)) paths.push(`address.${k}`);
+    if (feature.properties.hours) paths.push("hours");
+    if (feature.properties.payment) {
+      for (const k of Object.keys(feature.properties.payment)) paths.push(`payment.${k}`);
+    }
+    stampAll(feature.properties, paths, "osm");
 
     out.push(feature);
   }
