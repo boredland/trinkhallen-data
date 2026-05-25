@@ -14987,46 +14987,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.7009125,
-          50.1239703
-        ]
-      },
-      "properties": {
-        "id": "tk_fr_0785",
-        "name": "Trinkahalle, Getränke, Zeitschriften",
-        "description": "Kleiner Kiosk durch's Fenster",
-        "address": {
-          "street": "Höhenstraße",
-          "number": "28",
-          "postalcode": "60385",
-          "city": "Frankfurt am Main",
-          "district": "Innenstadt"
-        },
-        "tags": [
-          "gemischte_tuete",
-          "applewoi",
-          "gemuetlich",
-          "ueberdacht",
-          "sonne",
-          "sitzgelegenheiten",
-          "innenraum"
-        ],
-        "sources": [
-          {
-            "type": "hopfenstop",
-            "id": "35617998-3f79-4ee0-9c16-e54c040f591e"
-          }
-        ],
-        "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           8.8365797,
           50.1420311
         ]
@@ -53870,12 +53830,32 @@
       "properties": {
         "id": "tk_fr_osm_n6408736589",
         "name": "Kiosk 28",
-        "address": {},
+        "description": "Kleiner Kiosk durch's Fenster",
+        "address": {
+          "street": "Höhenstraße",
+          "number": "28",
+          "postalcode": "60385",
+          "city": "Frankfurt am Main",
+          "district": "Bornheim"
+        },
+        "tags": [
+          "applewoi",
+          "gemischte_tuete",
+          "gemuetlich",
+          "innenraum",
+          "sitzgelegenheiten",
+          "sonne",
+          "ueberdacht"
+        ],
         "sources": [
           {
             "type": "osm",
             "id": "node/6408736589",
             "version": 0
+          },
+          {
+            "type": "hopfenstop",
+            "id": "35617998-3f79-4ee0-9c16-e54c040f591e"
           }
         ],
         "created": "2026-05-20",
