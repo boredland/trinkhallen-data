@@ -144,7 +144,6 @@ interface GosomEntry {
 
 interface Stats {
   considered: number;
-  skipped_recent_attempt: number;
   needs_id: number;
   needs_payment: number;
   needs_hours: number;
@@ -832,7 +831,6 @@ async function main(): Promise<void> {
 
   const doc = JSON.parse(await readFile(file, "utf8")) as FeatureCollection;
   const candidates: Array<{ index: number; feature: Feature }> = [];
-  let skippedRecentAttempt = 0;
   for (let i = 0; i < doc.features.length; i++) {
     const f = doc.features[i]!;
     if (f.properties.kind === "vending_machine") continue;
@@ -841,10 +839,6 @@ async function main(): Promise<void> {
     const needsPayment = paymentHasAnyMissing(f.properties.payment);
     const needsHrs = hoursMissing(f);
     if (!needsId && !needsPayment && !needsHrs) continue;
-    if (needsId && daysSince(f.properties.apple_id_attempted, todayDate) < ATTEMPTED_TTL_DAYS) {
-      skippedRecentAttempt++;
-      continue;
-    }
     candidates.push({ index: i, feature: f });
   }
 
@@ -853,7 +847,6 @@ async function main(): Promise<void> {
 
   const stats: Stats = {
     considered,
-    skipped_recent_attempt: skippedRecentAttempt,
     needs_id: todo.filter((c) => existingAppleId(c.feature.properties.sources) === null).length,
     needs_payment: todo.filter((c) => paymentHasAnyMissing(c.feature.properties.payment)).length,
     needs_hours: todo.filter((c) => hoursMissing(c.feature)).length,
@@ -949,8 +942,14 @@ async function main(): Promise<void> {
     const [lng, lat] = feature.geometry.coordinates;
 
     // Phase 1: Apple place_id via DDG (if not stored yet).
+    // Skip the DDG round-trip when we've already tried recently and got
+    // nothing — but DON'T skip the whole feature: Phase 3 (Google) can
+    // still fill payment/hours even when Apple has no match for us.
     let appleId = existingAppleId(feature.properties.sources);
-    if (!appleId) {
+    if (
+      !appleId &&
+      daysSince(feature.properties.apple_id_attempted, todayDate) >= ATTEMPTED_TTL_DAYS
+    ) {
       try {
         const id = await ddgQueue.add(() => ddgResolveAppleId(name, lat, lng));
         if (id) {
