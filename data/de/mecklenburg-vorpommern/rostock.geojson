@@ -253,13 +253,18 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-05-25",
         "payment": {
           "cards": "yes",
           "girocard": "yes",
-          "contactless": "yes"
+          "contactless": "yes",
+          "mobile": "yes"
         },
-        "google_attempted": "2026-05-23"
+        "google_attempted": "2026-05-23",
+        "sources_by_field": {
+          "payment.mobile": "apple"
+        },
+        "apple_attempted": "2026-05-25"
       }
     },
     {
@@ -330,7 +335,9 @@
         "updated": "2026-05-25",
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "apple_id_attempted": "2026-05-25",
+        "google_attempted": "2026-05-25"
       }
     },
     {
@@ -363,7 +370,9 @@
         "updated": "2026-05-25",
         "hours": {
           "raw": "Mo-Th 05:30-21:00; Fr 05:30-22:00; Sa,Su 07:00-22:00"
-        }
+        },
+        "apple_id_attempted": "2026-05-25",
+        "google_attempted": "2026-05-25"
       }
     },
     {
@@ -400,7 +409,8 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "apple_id_attempted": "2026-05-25"
       }
     },
     {
@@ -427,13 +437,25 @@
             "type": "osm",
             "id": "node/601440261",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJFwmANBhXrEcRWxt86FpgXMs"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-05-25",
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "apple_id_attempted": "2026-05-25",
+        "hours": {
+          "raw": "Tu 09:00-22:00; Th 09:00-22:00; Fr 09:00-22:00; We 09:00-22:00; Mo 09:00-22:00; Sa 09:00-22:00; Su 10:00-22:00"
+        },
+        "sources_by_field": {
+          "hours": "google"
+        },
+        "google_attempted": "2026-05-25"
       }
     }
   ]
