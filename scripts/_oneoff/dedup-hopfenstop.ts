@@ -37,6 +37,7 @@
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { execSync } from "node:child_process";
+import { stamp } from "../lib/sources.ts";
 
 interface Source {
   type: string;
@@ -65,6 +66,7 @@ interface Feature {
     tags?: string[];
     payment?: Payment;
     sources?: Source[];
+    sources_by_field?: Record<string, string>;
     created?: string;
     updated?: string;
     [k: string]: unknown;
@@ -166,10 +168,15 @@ const today = new Date().toISOString().slice(0, 10);
 
 function mergeFeature(osmF: Feature, hopsF: Feature): void {
   const newName = pickName(osmF.properties.name, hopsF.properties.name);
-  if (newName !== osmF.properties.name) osmF.properties.name = newName;
+  if (newName !== osmF.properties.name) {
+    osmF.properties.name = newName;
+    // pickName returned the hopfenstop name (longer/richer); stamp accordingly.
+    if (newName === hopsF.properties.name) stamp(osmF.properties, "name", "hopfenstop");
+  }
 
   if (!osmF.properties.description && hopsF.properties.description) {
     osmF.properties.description = hopsF.properties.description;
+    stamp(osmF.properties, "description", "hopfenstop");
   }
 
   if (hopsF.properties.payment) {
@@ -179,6 +186,7 @@ function mergeFeature(osmF: Feature, hopsF: Feature): void {
     for (const [k, v] of Object.entries(hopsF.properties.payment)) {
       if (v && v !== "unknown" && (!cur[k] || cur[k] === "unknown")) {
         next[k] = v;
+        stamp(osmF.properties, `payment.${k}`, "hopfenstop");
         touched = true;
       }
     }
@@ -187,12 +195,16 @@ function mergeFeature(osmF: Feature, hopsF: Feature): void {
 
   if (!osmF.properties.hours?.raw && hopsF.properties.hours?.raw) {
     osmF.properties.hours = { raw: hopsF.properties.hours.raw };
+    stamp(osmF.properties, "hours", "hopfenstop");
   }
 
   const a = osmF.properties.address ?? {};
   const b = hopsF.properties.address ?? {};
   for (const [k, v] of Object.entries(b)) {
-    if (!a[k] && v) a[k] = v;
+    if (!a[k] && v) {
+      a[k] = v;
+      stamp(osmF.properties, `address.${k}`, "hopfenstop");
+    }
   }
   osmF.properties.address = a;
 
