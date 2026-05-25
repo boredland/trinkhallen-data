@@ -34,6 +34,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import PQueue from "p-queue";
+import { canWrite, rankOf, stamp, type SourceName } from "./lib/sources.ts";
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), "../..");
 const APPLE_CONFIRM_RADIUS_M = 150;
@@ -79,6 +80,7 @@ interface Feature {
     payment?: Payment;
     hours?: { raw: string };
     sources?: Source[];
+    sources_by_field?: Record<string, string>;
     updated?: string;
     kind?: string;
     apple_id_attempted?: string;
@@ -243,19 +245,44 @@ function upsertSource(feature: Feature, type: "apple" | "gmaps", id: string): vo
   feature.properties.sources = sources;
 }
 
+/**
+ * Merge per-key payment from a new source, honouring per-field precedence.
+ *
+ * Fill blanks ("undefined" / "unknown") whenever the incoming value is
+ * concrete. Overwrite a settled value only when the incoming source has
+ * equal-or-higher rank than whatever last stamped that key — so Google
+ * can refresh stale OSM data but a future OSM rescrape can't undo
+ * Google's confirmation.
+ *
+ * Returns `sbfUpdates` so the caller can apply the new provenance stamps
+ * onto the feature's `sources_by_field`.
+ */
 function mergePayment(
   current: Payment | undefined,
   next: Payment,
-): { merged: Payment; added: number } {
+  sbf: Record<string, string> | undefined,
+  newSource: SourceName,
+): { merged: Payment; added: number; sbfUpdates: Record<string, string> } {
   const merged: Payment = { ...(current ?? {}) };
+  const sbfUpdates: Record<string, string> = {};
   let added = 0;
   for (const k of PAYMENT_KEYS) {
-    if (merged[k] === undefined && next[k] !== undefined) {
-      merged[k] = next[k];
+    const v = next[k];
+    if (v === undefined || v === "unknown") continue;
+    const path = `payment.${k}`;
+    const cur = merged[k];
+    const effectivelyMissing = cur === undefined || cur === "unknown";
+    if (effectivelyMissing) {
+      merged[k] = v;
+      sbfUpdates[path] = newSource;
+      added++;
+    } else if (cur !== v && rankOf(newSource) >= rankOf(sbf?.[path])) {
+      merged[k] = v;
+      sbfUpdates[path] = newSource;
       added++;
     }
   }
-  return { merged, added };
+  return { merged, added, sbfUpdates };
 }
 
 async function findGeojsonFile(region: string): Promise<string | null> {
@@ -1003,9 +1030,14 @@ async function main(): Promise<void> {
         let touched = false;
         let payDelta = 0;
         let hoursDelta = false;
-        if (paymentHasAnyMissing(feature.properties.payment)) {
+        {
           const incoming = amenitiesToPayment(apple.amenities);
-          const { merged, added } = mergePayment(feature.properties.payment, incoming);
+          const { merged, added, sbfUpdates } = mergePayment(
+            feature.properties.payment,
+            incoming,
+            feature.properties.sources_by_field,
+            "apple",
+          );
           if (added > 0) {
             feature.properties.payment = merged;
             feature.properties.updated = today;
@@ -1013,15 +1045,27 @@ async function main(): Promise<void> {
             payDelta = added;
             touched = true;
           }
+          if (Object.keys(sbfUpdates).length > 0) {
+            const sbf =
+              feature.properties.sources_by_field ??
+              (feature.properties.sources_by_field = {});
+            Object.assign(sbf, sbfUpdates);
+            dirty = true;
+          }
         }
-        if (hoursMissing(feature)) {
+        if (canWrite(feature.properties.sources_by_field, "hours", "apple")) {
           const osm = appleHoursToOsm(apple.weeklyHours);
-          if (osm) {
+          if (osm && feature.properties.hours?.raw !== osm) {
             feature.properties.hours = { raw: osm };
             feature.properties.updated = today;
             stats.hours_written++;
             hoursDelta = true;
             touched = true;
+            stamp(feature.properties, "hours", "apple");
+          } else if (osm) {
+            // Same value — refresh the stamp to record that Apple still
+            // confirms the current hours.
+            stamp(feature.properties, "hours", "apple");
           }
         }
         // Stamp regardless of whether we got new data — the page was
@@ -1140,9 +1184,14 @@ async function main(): Promise<void> {
           stampedId = true;
           touched = true;
         }
-        if (paymentHasAnyMissing(feature.properties.payment)) {
+        {
           const incoming = gosomToPayment(match);
-          const { merged, added } = mergePayment(feature.properties.payment, incoming);
+          const { merged, added, sbfUpdates } = mergePayment(
+            feature.properties.payment,
+            incoming,
+            feature.properties.sources_by_field,
+            "google",
+          );
           if (added > 0) {
             feature.properties.payment = merged;
             feature.properties.updated = today;
@@ -1150,15 +1199,25 @@ async function main(): Promise<void> {
             payDelta = added;
             touched = true;
           }
+          if (Object.keys(sbfUpdates).length > 0) {
+            const sbf =
+              feature.properties.sources_by_field ??
+              (feature.properties.sources_by_field = {});
+            Object.assign(sbf, sbfUpdates);
+            dirty = true;
+          }
         }
-        if (hoursMissing(feature)) {
+        if (canWrite(feature.properties.sources_by_field, "hours", "google")) {
           const osm = gosomHoursToOsm(match.open_hours);
-          if (osm) {
+          if (osm && feature.properties.hours?.raw !== osm) {
             feature.properties.hours = { raw: osm };
             feature.properties.updated = today;
             stats.hours_written++;
             hoursDelta = true;
             touched = true;
+            stamp(feature.properties, "hours", "google");
+          } else if (osm) {
+            stamp(feature.properties, "hours", "google");
           }
         }
         if (touched) {
