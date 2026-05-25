@@ -1320,7 +1320,11 @@
         "hours": {
           "raw": "Mo-Fr 07:30-12:00,16:00-18:00; Sa 07:30-12:00"
         },
-        "google_attempted": "2026-05-22"
+        "google_attempted": "2026-05-22",
+        "sources_by_field": {
+          "hours": "apple"
+        },
+        "apple_attempted": "2026-05-25"
       }
     },
     {
@@ -1528,7 +1532,9 @@
         "updated": "2026-05-25",
         "hours": {
           "raw": "Mo-Th 09:00-22:00; Fr 09:00-24:00; Sa 10:00-24:00; PH,Su 10:00-22:00"
-        }
+        },
+        "apple_id_attempted": "2026-05-25",
+        "google_attempted": "2026-05-25"
       }
     },
     {
@@ -1557,7 +1563,9 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-25"
+        "updated": "2026-05-25",
+        "apple_id_attempted": "2026-05-25",
+        "google_attempted": "2026-05-25"
       }
     },
     {
@@ -1587,7 +1595,9 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "apple_id_attempted": "2026-05-25",
+        "google_attempted": "2026-05-25"
       }
     },
     {
@@ -1614,7 +1624,9 @@
         "updated": "2026-05-25",
         "hours": {
           "raw": "Mo-Sa 08:00-13:00,15:00-20:30; Su 08:00-13:00,16:00-20:00"
-        }
+        },
+        "apple_id_attempted": "2026-05-25",
+        "google_attempted": "2026-05-25"
       }
     },
     {
@@ -1651,7 +1663,8 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "apple_id_attempted": "2026-05-25"
       }
     },
     {
@@ -1683,7 +1696,9 @@
         "updated": "2026-05-25",
         "hours": {
           "raw": "Mo-Su 08:00-21:00"
-        }
+        },
+        "apple_id_attempted": "2026-05-25",
+        "google_attempted": "2026-05-25"
       }
     },
     {
@@ -1715,7 +1730,9 @@
         "updated": "2026-05-25",
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "apple_id_attempted": "2026-05-25",
+        "google_attempted": "2026-05-25"
       }
     },
     {
@@ -1741,13 +1758,28 @@
             "type": "osm",
             "id": "node/7888039477",
             "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "18214535649793023692"
           }
         ],
         "created": "2026-05-21",
         "updated": "2026-05-25",
         "hours": {
           "raw": "Mo-Sa 06:00-23:59; Su 09:00-23:00"
-        }
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "mobile": "yes"
+        },
+        "sources_by_field": {
+          "payment.cards": "apple",
+          "payment.contactless": "apple",
+          "payment.mobile": "apple"
+        },
+        "apple_attempted": "2026-05-25"
       }
     },
     {
@@ -1771,7 +1803,9 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-25"
+        "updated": "2026-05-25",
+        "apple_id_attempted": "2026-05-25",
+        "google_attempted": "2026-05-25"
       }
     },
     {
@@ -1813,7 +1847,8 @@
         },
         "tags": [
           "barrierefrei"
-        ]
+        ],
+        "apple_id_attempted": "2026-05-25"
       }
     }
   ]
