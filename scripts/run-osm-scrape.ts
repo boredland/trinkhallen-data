@@ -176,11 +176,26 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
     for (const id of osmIds) {
       if (freshById.has(id)) {
         if (isOsmOnly(f)) {
-          // Pure OSM feature → adopt fresh tags entirely.
+          // Pure OSM feature → fresh OSM data wins for OSM-derived fields
+          // (name, coords, version, hours, payment, tags, kind), but we
+          // preserve local-only data the scrape never sees: the original
+          // creation date, enrichment attempt stamps that gate retries,
+          // and address sub-fields Photon backfilled where upstream OSM
+          // has no addr:* tag. Without this preservation, every weekly
+          // scrape wipes the per-feature work enrich-from-osm.ts does.
           const fr = freshById.get(id)!;
-          if (typeof f.properties["created"] === "string") {
-            (fr.properties as Record<string, unknown>)["created"] = f.properties["created"];
+          const lp = f.properties as Record<string, unknown>;
+          const fp = fr.properties as Record<string, unknown>;
+          if (typeof lp["created"] === "string") fp["created"] = lp["created"];
+          for (const k of ["apple_id_attempted", "apple_attempted", "google_attempted"]) {
+            if (lp[k] !== undefined) fp[k] = lp[k];
           }
+          const freshAddr = (fp["address"] as Record<string, string> | undefined) ?? {};
+          const localAddr = (lp["address"] as Record<string, string> | undefined) ?? {};
+          for (const k of ["street", "number", "postalcode", "city", "district"]) {
+            if (!freshAddr[k] && localAddr[k]) freshAddr[k] = localAddr[k];
+          }
+          fp["address"] = freshAddr;
           merged.push(fr);
           for (const sid of fr.properties.sources) emittedOsmIds.add(sid.id);
           consumed = true;
