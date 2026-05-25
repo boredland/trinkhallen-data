@@ -27,6 +27,7 @@ import { readFile, writeFile, readdir, stat } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { canWrite, stamp, type SourceName } from "./lib/sources.ts";
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), "../..");
 const OVERPASS = process.env["OVERPASS_ENDPOINT"] ?? "https://overpass-api.de/api/interpreter";
@@ -75,6 +76,7 @@ interface Feature {
     tags?: string[];
     payment?: Partial<Record<"cash" | "cards" | "contactless" | "girocard" | "mobile", TriState>>;
     sources?: Array<{ type: string; id: string; version?: number }>;
+    sources_by_field?: Record<string, string>;
     created?: string;
     updated?: string;
     [k: string]: unknown;
@@ -366,60 +368,76 @@ interface BackfillStats {
 function backfill(f: Feature, c: OsmCandidate): BackfillStats {
   const stats: BackfillStats = { hours: false, payment: 0, address: 0, tags: 0 };
   const t = c.tags;
+  const SRC: SourceName = "osm";
+  const sbf = f.properties.sources_by_field;
 
-  // hours — only fill when ours is blank; never overwrite.
-  if (!f.properties.hours?.raw && t["opening_hours"]) {
-    f.properties.hours = { raw: t["opening_hours"] };
-    stats.hours = true;
+  // hours — fill or refresh if osm rank ≥ current source (so a hopfenstop
+  // hours string can be replaced, but an apple/google one can't).
+  if (t["opening_hours"] && canWrite(sbf, "hours", SRC)) {
+    if (f.properties.hours?.raw !== t["opening_hours"]) {
+      f.properties.hours = { raw: t["opening_hours"] };
+      stats.hours = true;
+    }
+    stamp(f.properties, "hours", SRC);
   }
 
-  // payment — backfill any unset / unknown key
+  // payment — backfill blanks unconditionally, overwrite settled values
+  // only when osm rank ≥ the per-key stamp.
   const pay = f.properties.payment ?? {};
-  const setIfBlank = (key: "cash" | "cards" | "contactless" | "girocard" | "mobile", value: TriState | undefined) => {
-    if (value === undefined) return;
+  const setKey = (key: "cash" | "cards" | "contactless" | "girocard" | "mobile", value: TriState | undefined) => {
+    if (value === undefined || value === "unknown") return;
+    const path = `payment.${key}`;
     const current = pay[key];
-    if (current === undefined || current === "unknown") {
-      if (current !== value) {
-        pay[key] = value;
-        stats.payment++;
-      }
+    const effectivelyMissing = current === undefined || current === "unknown";
+    if (effectivelyMissing) {
+      pay[key] = value;
+      stamp(f.properties, path, SRC);
+      stats.payment++;
+    } else if (current !== value && canWrite(f.properties.sources_by_field, path, SRC)) {
+      pay[key] = value;
+      stamp(f.properties, path, SRC);
+      stats.payment++;
     }
   };
-  setIfBlank("cash", tri(t["payment:cash"]));
+  setKey("cash", tri(t["payment:cash"]));
   const credit = tri(t["payment:credit_cards"]);
   const debit = tri(t["payment:debit_cards"]);
-  if (credit === "yes" || debit === "yes") setIfBlank("cards", "yes");
-  else if (credit === "no" && debit === "no") setIfBlank("cards", "no");
-  setIfBlank("contactless", tri(t["payment:contactless"]));
-  setIfBlank("girocard", tri(t["payment:girocard"] ?? t["payment:ec_cards"]));
+  if (credit === "yes" || debit === "yes") setKey("cards", "yes");
+  else if (credit === "no" && debit === "no") setKey("cards", "no");
+  setKey("contactless", tri(t["payment:contactless"]));
+  setKey("girocard", tri(t["payment:girocard"] ?? t["payment:ec_cards"]));
   const apple = tri(t["payment:apple_pay"]);
   const google = tri(t["payment:google_pay"]);
-  if (apple === "yes" || google === "yes") setIfBlank("mobile", "yes");
-  else if (apple === "no" && google === "no") setIfBlank("mobile", "no");
+  if (apple === "yes" || google === "yes") setKey("mobile", "yes");
+  else if (apple === "no" && google === "no") setKey("mobile", "no");
   if (Object.keys(pay).length > 0) f.properties.payment = pay;
 
-  // address — only fill blanks
+  // address — same shape, per-key.
   const addr = f.properties.address ?? {};
-  const setAddrIfBlank = (ours: "street" | "number" | "postalcode" | "city" | "district", osmKey: string) => {
-    if (!addr[ours] && t[osmKey]) {
-      addr[ours] = t[osmKey];
+  const setAddr = (
+    ours: "street" | "number" | "postalcode" | "city" | "district",
+    value: string | undefined,
+  ) => {
+    if (!value) return;
+    const path = `address.${ours}`;
+    const current = addr[ours];
+    if (!current) {
+      addr[ours] = value;
+      stamp(f.properties, path, SRC);
+      stats.address++;
+    } else if (current !== value && canWrite(f.properties.sources_by_field, path, SRC)) {
+      addr[ours] = value;
+      stamp(f.properties, path, SRC);
       stats.address++;
     }
   };
-  setAddrIfBlank("street", "addr:street");
-  setAddrIfBlank("number", "addr:housenumber");
-  if (!addr["postalcode"] && t["addr:postcode"] && /^\d{5}$/.test(t["addr:postcode"])) {
-    addr["postalcode"] = t["addr:postcode"];
-    stats.address++;
+  setAddr("street", t["addr:street"]);
+  setAddr("number", t["addr:housenumber"]);
+  if (t["addr:postcode"] && /^\d{5}$/.test(t["addr:postcode"])) {
+    setAddr("postalcode", t["addr:postcode"]);
   }
-  setAddrIfBlank("city", "addr:city");
-  if (!addr["district"]) {
-    const district = t["addr:suburb"] ?? t["addr:neighbourhood"];
-    if (district) {
-      addr["district"] = district;
-      stats.address++;
-    }
-  }
+  setAddr("city", t["addr:city"]);
+  setAddr("district", t["addr:suburb"] ?? t["addr:neighbourhood"]);
   f.properties.address = addr;
 
   // tags — inferred from OSM amenity-style tags
@@ -582,31 +600,19 @@ async function photonFillFile(
 
     const a = f.properties.address ?? {};
     let changed = false;
-    if (!a["street"] && hit.street) {
-      a["street"] = hit.street;
-      stats.filled_street++;
+    const fill = (key: string, value: string | undefined, stat: () => void): void => {
+      if (!value) return;
+      if (a[key]) return;
+      a[key] = value;
+      stamp(f.properties, `address.${key}`, "photon");
+      stat();
       changed = true;
-    }
-    if (!a["number"] && hit.housenumber) {
-      a["number"] = hit.housenumber;
-      stats.filled_number++;
-      changed = true;
-    }
-    if (!a["postalcode"] && hit.postcode) {
-      a["postalcode"] = hit.postcode;
-      stats.filled_postalcode++;
-      changed = true;
-    }
-    if (!a["city"] && hit.city) {
-      a["city"] = hit.city;
-      stats.filled_city++;
-      changed = true;
-    }
-    if (!a["district"] && hit.district) {
-      a["district"] = hit.district;
-      stats.filled_district++;
-      changed = true;
-    }
+    };
+    fill("street", hit.street, () => stats.filled_street++);
+    fill("number", hit.housenumber, () => stats.filled_number++);
+    fill("postalcode", hit.postcode, () => stats.filled_postalcode++);
+    fill("city", hit.city, () => stats.filled_city++);
+    fill("district", hit.district, () => stats.filled_district++);
     if (changed) {
       f.properties.address = a;
       f.properties.updated = today;
