@@ -100,7 +100,17 @@
           "description": "Set when OSM tags identify the feature as something more specific than a manned kiosk (currently: pure vending machines via amenity=vending_machine, self_service=only, or automated=yes). Consumers can filter or render differently."
         },
         "created": { "type": "string", "format": "date" },
-        "updated": { "type": "string", "format": "date" }
+        "updated": { "type": "string", "format": "date" },
+        "apple_id_attempted":  { "type": "string", "format": "date" },
+        "apple_attempted":     { "type": "string", "format": "date" },
+        "google_attempted":    { "type": "string", "format": "date" },
+        "sources_by_field": {
+          "type": "object",
+          "description": "Map from dotted field path (e.g. 'hours', 'address.street', 'payment.cash') to the source that last set that value. Used by writers to enforce a precedence hierarchy: hopfenstop < osm/photon < apple < google < user.",
+          "additionalProperties": {
+            "enum": ["hopfenstop", "osm", "photon", "apple", "google", "user"]
+          }
+        }
       }
     }
   },
