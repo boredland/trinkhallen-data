@@ -530,6 +530,16 @@ const GOSOM_DAY_TO_OSM: Record<string, string> = {
   Friday: "Fr",
   Saturday: "Sa",
   Sunday: "Su",
+  // gosom returns localised day-of-week keys based on the scraper's `lang`
+  // parameter (see gosom/gmaps/entry.go:getHours). We ask for lang=de, so
+  // German keys are what we actually get back in practice.
+  Montag: "Mo",
+  Dienstag: "Tu",
+  Mittwoch: "We",
+  Donnerstag: "Th",
+  Freitag: "Fr",
+  Samstag: "Sa",
+  Sonntag: "Su",
 };
 
 function gosomHoursToOsm(open: GosomOpenHoursEntry | undefined): string | null {
@@ -542,7 +552,12 @@ function gosomHoursToOsm(open: GosomOpenHoursEntry | undefined): string | null {
     // Only emit if ranges already look like "HH:MM-HH:MM".
     const clean = ranges.filter((r) => /^\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}$/.test(r));
     if (clean.length === 0) continue;
-    segments.push(`${osmDay} ${clean.map((r) => r.replace(/\s|–/g, "")).join(",")}`);
+    // Drop whitespace; turn en-dash (Google's separator in DE locale) into
+    // the ASCII hyphen OSM opening_hours expects. Replacing en-dash with ""
+    // here used to collapse "07:00–00:00" into "07:0000:00".
+    segments.push(
+      `${osmDay} ${clean.map((r) => r.replace(/\s+/g, "").replace(/–/g, "-")).join(",")}`,
+    );
   }
   return segments.length > 0 ? segments.join("; ") : null;
 }
