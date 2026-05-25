@@ -11,6 +11,7 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import YAML from "yaml";
 import { stampAll } from "./lib/sources.ts";
+import { cleanOpeningHours } from "./lib/opening-hours.ts";
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), "../..");
 
@@ -190,8 +191,9 @@ export async function fetchOsmForRegion(region: Region): Promise<OsmFeature[]> {
       },
     };
 
-    if (tags["opening_hours"]) {
-      feature.properties.hours = { raw: tags["opening_hours"] };
+    const oh = cleanOpeningHours(tags["opening_hours"]);
+    if (oh) {
+      feature.properties.hours = { raw: oh };
     }
 
     const payment = mapPayment(tags);

@@ -28,6 +28,7 @@ import { existsSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { canWrite, stamp, type SourceName } from "./lib/sources.ts";
+import { cleanOpeningHours } from "./lib/opening-hours.ts";
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), "../..");
 const OVERPASS = process.env["OVERPASS_ENDPOINT"] ?? "https://overpass-api.de/api/interpreter";
@@ -373,9 +374,12 @@ function backfill(f: Feature, c: OsmCandidate): BackfillStats {
 
   // hours — fill or refresh if osm rank ≥ current source (so a hopfenstop
   // hours string can be replaced, but an apple/google one can't).
-  if (t["opening_hours"] && canWrite(sbf, "hours", SRC)) {
-    if (f.properties.hours?.raw !== t["opening_hours"]) {
-      f.properties.hours = { raw: t["opening_hours"] };
+  // cleanOpeningHours drops degenerate strings like `Mo-Su 00:00-00:00`
+  // that some OSM mappers use as a 24/7-or-closed proxy.
+  const oh = cleanOpeningHours(t["opening_hours"]);
+  if (oh && canWrite(sbf, "hours", SRC)) {
+    if (f.properties.hours?.raw !== oh) {
+      f.properties.hours = { raw: oh };
       stats.hours = true;
     }
     stamp(f.properties, "hours", SRC);
