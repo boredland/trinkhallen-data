@@ -54,16 +54,10 @@ const SAFARI_UA =
 // ── types ──────────────────────────────────────────────────────────────────
 
 type TriState = "yes" | "no" | "unknown";
-type PaymentKey = "cash" | "cards" | "contactless" | "girocard" | "mobile";
+type PaymentKey = "cash" | "cards" | "contactless" | "girocard";
 type Payment = Partial<Record<PaymentKey, TriState>>;
 
-const PAYMENT_KEYS: readonly PaymentKey[] = [
-  "cash",
-  "cards",
-  "contactless",
-  "girocard",
-  "mobile",
-] as const;
+const PAYMENT_KEYS: readonly PaymentKey[] = ["cash", "cards", "contactless", "girocard"] as const;
 
 interface Source {
   type: string;
@@ -206,19 +200,19 @@ function daysSince(iso: string | undefined, today: Date): number {
  * "Have we learned enough about this kiosk's payment story?"
  *
  * The user-facing question is essentially "can I pay without cash?", and
- * any one of `cards` / `contactless` / `mobile` answers it (no matter the
+ * any one of `cards` / `contactless` answers it (no matter the
  * value — `no` is just as useful as `yes`). If we know any of those, we
  * don't chase the others.
  *
  * Cash is excluded entirely: it's the implicit German default. Girocard
  * is the German-specific debit signal — useful when it's the only thing,
- * but not worth a scrape once any of cards/contactless/mobile is settled.
+ * but not worth a scrape once any of cards/contactless is settled.
  * If a future scrape happens to return additional keys, mergePayment
  * still honours them — we just don't proactively re-enqueue on absence.
  */
 function paymentHasAnyMissing(p: Payment | undefined): boolean {
   if (!p) return true;
-  return p.cards === undefined && p.contactless === undefined && p.mobile === undefined;
+  return p.cards === undefined && p.contactless === undefined;
 }
 
 function hoursMissing(feature: Feature): boolean {
@@ -477,7 +471,8 @@ function amenitiesToPayment(amenities: ApplePlaceAmenity[]): Payment {
     const present = a.amenityPresent === true ? "yes" : a.amenityPresent === false ? "no" : null;
     if (!present) continue;
     if (a.amenityId === "crossbusiness.payments.applepay") {
-      out.mobile = present;
+      // Apple Pay implies a contactless card terminal — fold into those
+      // rather than the removed mobile key.
       if (present === "yes") {
         out.contactless = out.contactless ?? "yes";
         out.cards = out.cards ?? "yes";
@@ -843,7 +838,8 @@ function gosomToPayment(entry: GosomEntry): Payment {
     } else if (/kontaktlos|contactless|nfc/.test(label)) {
       out.contactless = state;
     } else if (/google\s?pay|apple\s?pay|mobile|samsung\s?pay/.test(label)) {
-      out.mobile = state;
+      // Mobile-wallet pay implies a contactless terminal — fold into contactless.
+      if (state === "yes") out.contactless = "yes";
     } else if (/bargeld|cash/.test(label)) {
       out.cash = state;
     }

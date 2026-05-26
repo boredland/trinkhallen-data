@@ -75,7 +75,7 @@ interface Feature {
     address: Record<string, string | undefined>;
     hours?: { raw: string };
     tags?: string[];
-    payment?: Partial<Record<"cash" | "cards" | "contactless" | "girocard" | "mobile", TriState>>;
+    payment?: Partial<Record<"cash" | "cards" | "contactless" | "girocard", TriState>>;
     sources?: Array<{ type: string; id: string; version?: number }>;
     sources_by_field?: Record<string, string>;
     created?: string;
@@ -388,7 +388,7 @@ function backfill(f: Feature, c: OsmCandidate): BackfillStats {
   // payment — backfill blanks unconditionally, overwrite settled values
   // only when osm rank ≥ the per-key stamp.
   const pay = f.properties.payment ?? {};
-  const setKey = (key: "cash" | "cards" | "contactless" | "girocard" | "mobile", value: TriState | undefined) => {
+  const setKey = (key: "cash" | "cards" | "contactless" | "girocard", value: TriState | undefined) => {
     if (value === undefined || value === "unknown") return;
     const path = `payment.${key}`;
     const current = pay[key];
@@ -410,10 +410,11 @@ function backfill(f: Feature, c: OsmCandidate): BackfillStats {
   else if (credit === "no" && debit === "no") setKey("cards", "no");
   setKey("contactless", tri(t["payment:contactless"]));
   setKey("girocard", tri(t["payment:girocard"] ?? t["payment:ec_cards"]));
+  // Apple/Google Pay implies a contactless terminal — fold into contactless
+  // rather than the removed mobile key.
   const apple = tri(t["payment:apple_pay"]);
   const google = tri(t["payment:google_pay"]);
-  if (apple === "yes" || google === "yes") setKey("mobile", "yes");
-  else if (apple === "no" && google === "no") setKey("mobile", "no");
+  if (apple === "yes" || google === "yes") setKey("contactless", "yes");
   if (Object.keys(pay).length > 0) f.properties.payment = pay;
 
   // address — same shape, per-key.

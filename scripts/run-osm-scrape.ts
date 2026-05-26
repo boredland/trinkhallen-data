@@ -175,7 +175,7 @@ function applyOsmRefresh(local: Feature, fresh: OsmFeature): OsmFeature {
     fp[group] = fg;
   };
   restoreGroup("address", ["street", "number", "postalcode", "city", "district"]);
-  restoreGroup("payment", ["cash", "cards", "contactless", "girocard", "mobile"]);
+  restoreGroup("payment", ["cash", "cards", "contactless", "girocard"]);
 
   // Tags: union, no precedence — different sources legitimately contribute
   // different tags about the same place.

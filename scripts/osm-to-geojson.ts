@@ -34,7 +34,7 @@ export interface OsmFeature {
     address: { street?: string; number?: string; postalcode?: string; city?: string; district?: string };
     hours?: { raw: string };
     tags?: string[];
-    payment?: Record<"cash" | "cards" | "contactless" | "girocard" | "mobile", "yes" | "no" | "unknown">;
+    payment?: Record<"cash" | "cards" | "contactless" | "girocard", "yes" | "no" | "unknown">;
     sources: Array<{ type: "osm"; id: string; version: number }>;
     /** Set when OSM tags identify this as something other than a manned
      *  kiosk. Consumers can filter or render differently. */
@@ -203,7 +203,6 @@ export async function fetchOsmForRegion(region: Region): Promise<OsmFeature[]> {
         cards: payment.cards ?? "unknown",
         contactless: payment.contactless ?? "unknown",
         girocard: payment.girocard ?? "unknown",
-        mobile: payment.mobile ?? "unknown",
       };
     }
 
@@ -252,14 +251,14 @@ function validPlz(s: string | undefined): string | undefined {
   return s && /^\d{5}$/.test(s) ? s : undefined;
 }
 
-function mapPayment(tags: Record<string, string>): Partial<Record<"cash" | "cards" | "contactless" | "girocard" | "mobile", "yes" | "no" | "unknown">> {
+function mapPayment(tags: Record<string, string>): Partial<Record<"cash" | "cards" | "contactless" | "girocard", "yes" | "no" | "unknown">> {
   const tri = (v: string | undefined): "yes" | "no" | "unknown" | undefined => {
     if (v === undefined) return undefined;
     if (v === "yes" || v === "only") return "yes";
     if (v === "no") return "no";
     return "unknown";
   };
-  const out: Partial<Record<"cash" | "cards" | "contactless" | "girocard" | "mobile", "yes" | "no" | "unknown">> = {};
+  const out: Partial<Record<"cash" | "cards" | "contactless" | "girocard", "yes" | "no" | "unknown">> = {};
   const cash = tri(tags["payment:cash"]);
   if (cash) out.cash = cash;
   const credit = tri(tags["payment:credit_cards"]);
@@ -272,11 +271,11 @@ function mapPayment(tags: Record<string, string>): Partial<Record<"cash" | "card
   if (contactless) out.contactless = contactless;
   const girocard = tri(tags["payment:girocard"] ?? tags["payment:ec_cards"]);
   if (girocard) out.girocard = girocard;
+  // Apple/Google Pay implies a contactless terminal — fold into contactless
+  // rather than emitting a separate (removed) mobile key.
   const apple = tri(tags["payment:apple_pay"]);
   const google = tri(tags["payment:google_pay"]);
-  if (apple === "yes" || google === "yes") out.mobile = "yes";
-  else if (apple === "no" && google === "no") out.mobile = "no";
-  else if (apple || google) out.mobile = "unknown";
+  if (apple === "yes" || google === "yes") out.contactless = "yes";
   return out;
 }
 
