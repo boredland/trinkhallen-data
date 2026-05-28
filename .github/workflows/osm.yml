@@ -150,11 +150,14 @@ jobs:
         if: always()
         run: |
           set -euo pipefail
-          if git diff --quiet -- data/ _enrichment-conflicts.csv _enrichment-uncertain.csv 2>/dev/null; then
+          # `git diff --quiet` ignores untracked files — that breaks new region
+          # files (the _rest.geojson rollout). Use `git status --porcelain`,
+          # which lists modified AND new files.
+          if [ -z "$(git status --porcelain -- data/ _enrichment-conflicts.csv _enrichment-uncertain.csv)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            git diff --stat -- data/ _enrichment-*.csv | head -30
+            git status --short -- data/ _enrichment-conflicts.csv _enrichment-uncertain.csv | head -30
           fi
 
       - name: Commit to main
