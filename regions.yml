@@ -316,3 +316,116 @@ regions:
     iso3166_2: DE-BB
     admin_level: 6
     bbox: [14.15, 51.66, 14.50, 51.86]
+
+  # ── "Rest" buckets: one per area-Bundesland, catching kiosks outside the
+  # explicit city bboxes above. Queried by ISO area filter (not bbox), and
+  # ownsFeature gives city regions priority so existing city files don't
+  # shed features. Stadtstaaten (Berlin, Hamburg, Bremen) are already fully
+  # covered by their city entries — no rest bucket needed. Prefix convention:
+  # `<2-letter ISO code>r` (e.g. nwr for DE-NW). Bboxes are Bundesland
+  # envelopes — only used by ownsFeature for membership; the Overpass query
+  # itself uses the iso3166_2 area filter for accuracy.
+
+  - slug: baden-wuerttemberg-rest
+    path: data/de/baden-wuerttemberg/_rest.geojson
+    prefix: bwr
+    iso3166_2: DE-BW
+    admin_level: 4
+    bbox: [7.51, 47.53, 10.50, 49.79]
+    role: rest
+
+  - slug: bayern-rest
+    path: data/de/bayern/_rest.geojson
+    prefix: byr
+    iso3166_2: DE-BY
+    admin_level: 4
+    bbox: [8.98, 47.27, 13.84, 50.56]
+    role: rest
+
+  - slug: brandenburg-rest
+    path: data/de/brandenburg/_rest.geojson
+    prefix: bbr
+    iso3166_2: DE-BB
+    admin_level: 4
+    bbox: [11.27, 51.36, 14.77, 53.56]
+    role: rest
+
+  - slug: hessen-rest
+    path: data/de/hessen/_rest.geojson
+    prefix: her
+    iso3166_2: DE-HE
+    admin_level: 4
+    bbox: [7.77, 49.39, 10.24, 51.66]
+    role: rest
+
+  - slug: mecklenburg-vorpommern-rest
+    path: data/de/mecklenburg-vorpommern/_rest.geojson
+    prefix: mvr
+    iso3166_2: DE-MV
+    admin_level: 4
+    bbox: [10.59, 53.11, 14.41, 54.68]
+    role: rest
+
+  - slug: niedersachsen-rest
+    path: data/de/niedersachsen/_rest.geojson
+    prefix: nir
+    iso3166_2: DE-NI
+    admin_level: 4
+    bbox: [6.65, 51.30, 11.60, 53.89]
+    role: rest
+
+  - slug: nordrhein-westfalen-rest
+    path: data/de/nordrhein-westfalen/_rest.geojson
+    prefix: nwr
+    iso3166_2: DE-NW
+    admin_level: 4
+    bbox: [5.87, 50.32, 9.46, 52.53]
+    role: rest
+
+  - slug: rheinland-pfalz-rest
+    path: data/de/rheinland-pfalz/_rest.geojson
+    prefix: rpr
+    iso3166_2: DE-RP
+    admin_level: 4
+    bbox: [6.11, 48.97, 8.51, 50.94]
+    role: rest
+
+  - slug: saarland-rest
+    path: data/de/saarland/_rest.geojson
+    prefix: slr
+    iso3166_2: DE-SL
+    admin_level: 4
+    bbox: [6.36, 49.11, 7.41, 49.64]
+    role: rest
+
+  - slug: sachsen-rest
+    path: data/de/sachsen/_rest.geojson
+    prefix: snr
+    iso3166_2: DE-SN
+    admin_level: 4
+    bbox: [11.87, 50.17, 15.04, 51.69]
+    role: rest
+
+  - slug: sachsen-anhalt-rest
+    path: data/de/sachsen-anhalt/_rest.geojson
+    prefix: str
+    iso3166_2: DE-ST
+    admin_level: 4
+    bbox: [10.56, 50.93, 13.19, 53.04]
+    role: rest
+
+  - slug: schleswig-holstein-rest
+    path: data/de/schleswig-holstein/_rest.geojson
+    prefix: shr
+    iso3166_2: DE-SH
+    admin_level: 4
+    bbox: [7.86, 53.36, 11.31, 55.06]
+    role: rest
+
+  - slug: thueringen-rest
+    path: data/de/thueringen/_rest.geojson
+    prefix: thr
+    iso3166_2: DE-TH
+    admin_level: 4
+    bbox: [9.87, 50.20, 12.65, 51.65]
+    role: rest

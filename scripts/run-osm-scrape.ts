@@ -369,6 +369,15 @@ async function main(): Promise<void> {
     console.error("No matching regions in regions.yml");
     process.exit(2);
   }
+  // Cities before rest buckets: a rest scrape's ownsFeature check needs to
+  // know city features are already claimed. The check itself is stateless
+  // (just bbox + role), but ordering still matters for the existing-feature
+  // pass that marks osm_removed / cross_region_dropped.
+  targets.sort((a, b) => {
+    const ar = (a.role ?? "city") === "rest" ? 1 : 0;
+    const br = (b.role ?? "city") === "rest" ? 1 : 0;
+    return ar - br;
+  });
   const allStats: Stats[] = [];
   for (const region of targets) {
     console.error(`→ ${region.slug}: querying Overpass…`);

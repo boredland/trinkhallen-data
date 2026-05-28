@@ -22,6 +22,10 @@ export interface Region {
   iso3166_2: string;
   admin_level: number;
   bbox: [number, number, number, number]; // [w, s, e, n]
+  /** "city" (default): tight urban bbox, owns points by nearest-anchor.
+   *  "rest": Bundesland-scale catch-all, queried via ISO area filter, only
+   *  claims points that no city region owns. */
+  role?: "city" | "rest";
 }
 
 export interface OsmFeature {
@@ -69,13 +73,14 @@ function squaredAnchorDistance(r: Region, lng: number, lat: number): number {
 }
 
 /**
- * A point belongs to exactly one region: the one whose bbox center is closest,
- * among regions whose bbox actually contains the point. If only one region's
- * bbox contains the point, that's trivially the owner.
+ * A point belongs to exactly one region. Resolution order:
+ *   1. City regions whose bbox contains the point — nearest anchor wins.
+ *   2. Rest regions whose bbox contains the point — nearest anchor wins.
+ * A city region always beats any rest region, so adding `hessen-rest` next
+ * to `frankfurt` doesn't migrate Frankfurt features out of `frankfurt.geojson`.
  *
  * Returns true if `region` is that owner. Falls back to true if no region's
- * bbox contains the point (shouldn't happen because Overpass returned it
- * inside this region's bbox, but defensive).
+ * bbox contains the point (defensive: Overpass returned it inside ours).
  */
 export function ownsFeature(
   region: Region,
@@ -85,11 +90,13 @@ export function ownsFeature(
 ): boolean {
   const candidates = allRegions.filter((r) => bboxContains(r, lng, lat));
   if (candidates.length === 0) return true;
-  let best = candidates[0]!;
+  const cities = candidates.filter((r) => (r.role ?? "city") === "city");
+  const pool = cities.length > 0 ? cities : candidates;
+  let best = pool[0]!;
   let bestD = squaredAnchorDistance(best, lng, lat);
-  for (let i = 1; i < candidates.length; i++) {
-    const d = squaredAnchorDistance(candidates[i]!, lng, lat);
-    if (d < bestD) { best = candidates[i]!; bestD = d; }
+  for (let i = 1; i < pool.length; i++) {
+    const d = squaredAnchorDistance(pool[i]!, lng, lat);
+    if (d < bestD) { best = pool[i]!; bestD = d; }
   }
   return best.slug === region.slug;
 }
@@ -112,7 +119,21 @@ interface OverpassResponse {
 }
 
 function overpassQuery(region: Region): string {
-  // ISO area filter first, fall back to bbox if Overpass can't resolve it.
+  // Rest regions query by ISO area so the Bundesland envelope doesn't bleed
+  // into neighbours. Cities stay on bbox: faster, well-tested, and the bbox
+  // is already drawn tight around the urban area.
+  if (region.role === "rest") {
+    const iso = region.iso3166_2;
+    return `[out:json][timeout:300];
+area["ISO3166-2"="${iso}"]->.a;
+(
+  node["shop"="kiosk"](area.a);
+  node["shop"="beverages"](area.a);
+  way["shop"="kiosk"](area.a);
+  way["shop"="beverages"](area.a);
+);
+out center tags;`;
+  }
   const [w, s, e, n] = region.bbox;
   return `[out:json][timeout:180];
 (
