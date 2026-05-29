@@ -1,0 +1,33 @@
+name: lint
+
+# Fast gate that runs on every push and PR. Currently only validates
+# regions.yml (duplicate prefixes, hyphen-in-prefix, role values) — a
+# catch for the kind of typo that takes 12 cancelled CI runs to discover.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "regions.yml"
+      - "scripts/lint-regions.ts"
+      - ".github/workflows/lint.yml"
+  pull_request:
+    paths:
+      - "regions.yml"
+      - "scripts/lint-regions.ts"
+      - ".github/workflows/lint.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - run: bun scripts/lint-regions.ts

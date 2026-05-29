@@ -121,11 +121,14 @@ interface OverpassResponse {
 function overpassQuery(region: Region): string {
   // Rest regions query by ISO area so the Bundesland envelope doesn't bleed
   // into neighbours. Cities stay on bbox: faster, well-tested, and the bbox
-  // is already drawn tight around the urban area.
+  // is already drawn tight around the urban area. iso3166_2 holds either a
+  // subdivision code (DE-NW, AT-7) or a country code (CH) — dash presence
+  // picks the Overpass area key.
   if (region.role === "rest") {
     const iso = region.iso3166_2;
+    const key = iso.includes("-") ? "ISO3166-2" : "ISO3166-1";
     return `[out:json][timeout:300];
-area["ISO3166-2"="${iso}"]->.a;
+area["${key}"="${iso}"]->.a;
 (
   node["shop"="kiosk"](area.a);
   node["shop"="beverages"](area.a);

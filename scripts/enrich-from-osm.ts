@@ -520,7 +520,16 @@ async function photonReverse(lat: number, lng: number): Promise<PhotonProps | nu
   if (!data.features?.length) return null;
   // Rank: street + number > number-only > street-only, then by distance.
   // Photon localises country names on lang=de, so accept both spellings.
-  const okCountry = (c?: string) => !c || c === "Germany" || c === "Deutschland";
+  // DACH+LU allowlist — once regions span multiple countries, a single
+  // global allowlist is simpler than threading per-region country through.
+  const ALLOWED_COUNTRIES = new Set([
+    "Germany", "Deutschland",
+    "Austria", "Österreich",
+    "Switzerland", "Schweiz", "Suisse", "Svizzera",
+    "Liechtenstein",
+    "Luxembourg", "Luxemburg",
+  ]);
+  const okCountry = (c?: string) => !c || ALLOWED_COUNTRIES.has(c);
   let best: { props: PhotonProps; meters: number; score: number } | null = null;
   for (const hit of data.features) {
     const p = hit.properties;

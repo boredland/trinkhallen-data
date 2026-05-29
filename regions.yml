@@ -91,7 +91,11 @@ regions:
     bbox: [7.75, 49.26, 9.02, 49.70]
   - slug: freiburg
     path: data/de/baden-wuerttemberg/freiburg.geojson
-    prefix: fr-bw
+    # Was `fr-bw` — the hyphen fails kiosk.schema.json's id regex
+    # (^tk_[a-z0-9]+_…). Existing legacy IDs in this file mix `fr` (which
+    # collides with Frankfurt) and `fr-bw`; leaving them alone to avoid
+    # breaking app-side share links. Future scrapes use `frb`.
+    prefix: frb
     iso3166_2: DE-BW
     admin_level: 6
     bbox: [7.55, 47.45, 8.56, 48.36]
@@ -428,4 +432,95 @@ regions:
     iso3166_2: DE-TH
     admin_level: 4
     bbox: [9.87, 50.20, 12.65, 51.65]
+    role: rest
+
+  # ── Austria (AT). One rest per Bundesland; no city entries yet — the
+  # rest bucket for each Land collects everything until kiosk density
+  # makes a dedicated city file worthwhile. AT-9 Wien is its own Land, so
+  # at9r effectively *is* the Wien city file.
+  # Prefix convention `at<N>r` where N is the ISO 3166-2 suffix digit.
+
+  - slug: burgenland-rest
+    path: data/at/burgenland/_rest.geojson
+    prefix: at1r
+    iso3166_2: AT-1
+    admin_level: 4
+    bbox: [16.05, 46.83, 17.16, 48.13]
+    role: rest
+
+  - slug: kaernten-rest
+    path: data/at/kaernten/_rest.geojson
+    prefix: at2r
+    iso3166_2: AT-2
+    admin_level: 4
+    bbox: [12.65, 46.37, 15.07, 47.13]
+    role: rest
+
+  - slug: niederoesterreich-rest
+    path: data/at/niederoesterreich/_rest.geojson
+    prefix: at3r
+    iso3166_2: AT-3
+    admin_level: 4
+    bbox: [14.44, 47.42, 17.07, 49.02]
+    role: rest
+
+  - slug: oberoesterreich-rest
+    path: data/at/oberoesterreich/_rest.geojson
+    prefix: at4r
+    iso3166_2: AT-4
+    admin_level: 4
+    bbox: [12.74, 47.46, 14.99, 48.78]
+    role: rest
+
+  - slug: salzburg-rest
+    path: data/at/salzburg/_rest.geojson
+    prefix: at5r
+    iso3166_2: AT-5
+    admin_level: 4
+    bbox: [12.08, 46.94, 13.99, 48.04]
+    role: rest
+
+  - slug: steiermark-rest
+    path: data/at/steiermark/_rest.geojson
+    prefix: at6r
+    iso3166_2: AT-6
+    admin_level: 4
+    bbox: [13.55, 46.65, 16.17, 47.83]
+    role: rest
+
+  - slug: tirol-rest
+    path: data/at/tirol/_rest.geojson
+    prefix: at7r
+    iso3166_2: AT-7
+    admin_level: 4
+    bbox: [10.10, 46.65, 12.97, 47.74]
+    role: rest
+
+  - slug: vorarlberg-rest
+    path: data/at/vorarlberg/_rest.geojson
+    prefix: at8r
+    iso3166_2: AT-8
+    admin_level: 4
+    bbox: [9.53, 46.84, 10.24, 47.60]
+    role: rest
+
+  - slug: wien-rest
+    path: data/at/wien/_rest.geojson
+    prefix: at9r
+    iso3166_2: AT-9
+    admin_level: 4
+    bbox: [16.18, 48.12, 16.58, 48.32]
+    role: rest
+
+  # ── Switzerland (CH). One country-wide rest — 26 cantons is too fine-
+  # grained to maintain bboxes for, and we don't have CH city entries yet.
+  # Uses ISO 3166-1 (country) area filter via the dash-less iso3166_2
+  # value; overpassQuery picks the right area key.
+
+  - slug: schweiz-rest
+    path: data/ch/_rest.geojson
+    prefix: chr
+    iso3166_2: CH
+    admin_level: 2
+    bbox: [5.95, 45.81, 10.50, 47.81]
     role: rest

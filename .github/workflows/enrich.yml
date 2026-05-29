@@ -24,59 +24,14 @@ on:
   workflow_dispatch:
     inputs:
       region:
-        description: "Region to enrich (or 'random' for the cron's roll)"
+        # Free-form string instead of `type: choice` — the dropdown was
+        # a hand-maintained list of 47 city slugs that silently fell out
+        # of sync with regions.yml every time we added a region.
+        # 'random' resolves below by reading regions.yml directly.
+        description: "Region slug (or 'random' to roll one from regions.yml)"
         required: true
         default: "random"
-        type: choice
-        options:
-          - random
-          - aachen
-          - augsburg
-          - berlin
-          - bielefeld
-          - bremen
-          - bremerhaven
-          - chemnitz
-          - cottbus
-          - dresden
-          - duesseldorf
-          - erfurt
-          - frankfurt
-          - freiburg
-          - goettingen
-          - halle
-          - hamburg
-          - hannover
-          - hildesheim
-          - ingolstadt
-          - karlsruhe
-          - kassel
-          - kiel
-          - koblenz
-          - koeln
-          - leipzig
-          - luebeck
-          - magdeburg
-          - mainz
-          - mannheim
-          - muenchen
-          - muenster
-          - nuernberg
-          - osnabrueck
-          - potsdam
-          - regensburg
-          - remscheid
-          - reutlingen
-          - rostock
-          - ruhr
-          - saarbruecken
-          - salzgitter
-          - siegen
-          - stuttgart
-          - trier
-          - ulm
-          - wolfsburg
-          - wuerzburg
+        type: string
       max_runtime_min:
         description: "Script's --max-runtime-min budget. Job timeout is this + 10 min headroom."
         required: false
@@ -115,9 +70,12 @@ jobs:
           set -euo pipefail
           choice="${{ inputs.region }}"
           if [ -z "$choice" ] || [ "$choice" = "random" ]; then
-            choice=$(find data/de -name '*.geojson' \
-              | sed 's|.*/||;s|\.geojson$||' \
-              | sort -u | shuf -n 1)
+            # Pick from regions.yml slugs (was: file basenames under
+            # data/de, which broke once every Bundesland had a `_rest.geojson`
+            # that all reduce to the literal string `_rest`). Grep keeps
+            # this dependency-free so the pick job doesn't have to run
+            # `bun install` before deciding what to enrich.
+            choice=$(grep -E '^\s+- slug:' regions.yml | awk '{print $NF}' | shuf -n 1)
           fi
           echo "region=$choice" >> "$GITHUB_OUTPUT"
           echo "Picked: $choice"
