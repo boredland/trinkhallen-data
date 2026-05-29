@@ -26,6 +26,13 @@ export interface Region {
    *  "rest": Bundesland-scale catch-all, queried via ISO area filter, only
    *  claims points that no city region owns. */
   role?: "city" | "rest";
+  /** When set, a rest region's area filter is additionally clipped to `bbox`.
+   *  For territories with no ISO area of their own — e.g. Belgium's German-
+   *  speaking Community, which sits inside Wallonia — set iso3166_2 to the
+   *  containing country/region and bbox to the territory, so the query is
+   *  area ∩ bbox. Normal Bundesland rests leave this off (their bbox is just
+   *  an envelope ⊇ the area, so clipping would be a no-op at best). */
+  bbox_clip?: boolean;
 }
 
 export interface OsmFeature {
@@ -127,13 +134,16 @@ function overpassQuery(region: Region): string {
   if (region.role === "rest") {
     const iso = region.iso3166_2;
     const key = iso.includes("-") ? "ISO3166-2" : "ISO3166-1";
+    // Optional bbox clip for territories with no ISO area of their own.
+    const [w, s, e, n] = region.bbox;
+    const clip = region.bbox_clip ? `(${s},${w},${n},${e})` : "";
     return `[out:json][timeout:300];
 area["${key}"="${iso}"]->.a;
 (
-  node["shop"="kiosk"](area.a);
-  node["shop"="beverages"](area.a);
-  way["shop"="kiosk"](area.a);
-  way["shop"="beverages"](area.a);
+  node["shop"="kiosk"](area.a)${clip};
+  node["shop"="beverages"](area.a)${clip};
+  way["shop"="kiosk"](area.a)${clip};
+  way["shop"="beverages"](area.a)${clip};
 );
 out center tags;`;
   }

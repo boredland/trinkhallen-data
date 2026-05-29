@@ -531,3 +531,38 @@ regions:
     admin_level: 2
     bbox: [9.47, 47.05, 9.64, 47.27]
     role: rest
+
+  # ── Luxembourg (LU). German is one of three official languages.
+  # Country-wide rest, ISO 3166-1 area filter.
+
+  - slug: luxemburg-rest
+    path: data/lu/_rest.geojson
+    prefix: lur
+    iso3166_2: LU
+    admin_level: 2
+    bbox: [5.73, 49.44, 6.54, 50.19]
+    role: rest
+
+  # ── South Tyrol / Südtirol (IT-BZ). German-majority autonomous province.
+  # ISO 3166-2 area filter selects only Bolzano, not Italian-speaking Trento.
+
+  - slug: suedtirol-rest
+    path: data/it/suedtirol/_rest.geojson
+    prefix: itbz
+    iso3166_2: IT-BZ
+    admin_level: 4
+    bbox: [10.38, 46.21, 12.48, 47.10]
+    role: rest
+
+  # ── East Belgium / Ostbelgien. German-speaking Community has no ISO area
+  # of its own (it sits inside Wallonia), so query Belgium ∩ the eastern-
+  # cantons bbox via bbox_clip.
+
+  - slug: ostbelgien-rest
+    path: data/be/ostbelgien/_rest.geojson
+    prefix: obe
+    iso3166_2: BE
+    admin_level: 2
+    bbox: [5.86, 50.16, 6.41, 50.78]
+    role: rest
+    bbox_clip: true

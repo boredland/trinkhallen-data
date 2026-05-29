@@ -528,6 +528,10 @@ async function photonReverse(lat: number, lng: number): Promise<PhotonProps | nu
     "Switzerland", "Schweiz", "Suisse", "Svizzera",
     "Liechtenstein",
     "Luxembourg", "Luxemburg",
+    // South Tyrol (IT-BZ) is German-speaking but Photon reports country=Italy.
+    "Italy", "Italien", "Italia",
+    // Belgium's Ostbelgien (German-speaking Community).
+    "Belgium", "Belgien", "België", "Belgique",
   ]);
   const okCountry = (c?: string) => !c || ALLOWED_COUNTRIES.has(c);
   let best: { props: PhotonProps; meters: number; score: number } | null = null;
