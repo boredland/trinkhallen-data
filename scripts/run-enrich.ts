@@ -35,6 +35,7 @@ import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import PQueue from "p-queue";
 import { canWrite, rankOf, stamp, type SourceName } from "./lib/sources.ts";
+import { loadRegions } from "./osm-to-geojson.ts";
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), "../..");
 const APPLE_CONFIRM_RADIUS_M = 150;
@@ -280,19 +281,13 @@ function mergePayment(
 }
 
 async function findGeojsonFile(region: string): Promise<string | null> {
-  const { readdir, stat } = await import("node:fs/promises");
-  let found: string | null = null;
-  async function walk(dir: string): Promise<void> {
-    for (const entry of await readdir(dir)) {
-      if (found) return;
-      const p = join(dir, entry);
-      const st = await stat(p);
-      if (st.isDirectory()) await walk(p);
-      else if (entry === `${region}.geojson`) found = p;
-    }
-  }
-  await walk(join(REPO_ROOT, "data"));
-  return found;
+  // Resolve by regions.yml slug → path. Was a directory walk matching
+  // `<region>.geojson` basenames; that broke once we had many `_rest.geojson`
+  // files under different Bundesländer — same basename, different region.
+  const regions = await loadRegions();
+  const match = regions.find((r) => r.slug === region);
+  if (!match) return null;
+  return resolve(REPO_ROOT, match.path);
 }
 
 async function fetchWithTimeout(url: string, init: RequestInit, ms: number): Promise<Response> {
