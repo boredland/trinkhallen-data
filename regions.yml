@@ -91,10 +91,6 @@ regions:
     bbox: [7.75, 49.26, 9.02, 49.70]
   - slug: freiburg
     path: data/de/baden-wuerttemberg/freiburg.geojson
-    # Was `fr-bw` — the hyphen fails kiosk.schema.json's id regex
-    # (^tk_[a-z0-9]+_…). Existing legacy IDs in this file mix `fr` (which
-    # collides with Frankfurt) and `fr-bw`; leaving them alone to avoid
-    # breaking app-side share links. Future scrapes use `frb`.
     prefix: frb
     iso3166_2: DE-BW
     admin_level: 6
