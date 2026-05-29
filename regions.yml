@@ -520,3 +520,14 @@ regions:
     admin_level: 2
     bbox: [5.95, 45.81, 10.50, 47.81]
     role: rest
+
+  # ── Liechtenstein (LI). Country-wide rest; one of the smallest regions
+  # in the set. ISO 3166-1 area filter via dash-less iso3166_2.
+
+  - slug: liechtenstein-rest
+    path: data/li/_rest.geojson
+    prefix: lir
+    iso3166_2: LI
+    admin_level: 2
+    bbox: [9.47, 47.05, 9.64, 47.27]
+    role: rest
