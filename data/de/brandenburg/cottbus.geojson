@@ -32,14 +32,17 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-23",
-        "payment": {
-          "girocard": "yes",
-          "cards": "no",
-          "contactless": "yes"
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
         },
         "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-25"
+        "google_attempted": "2026-05-25",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -73,16 +76,20 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-23",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-We 07:45-18:00; Th,Fr 07:45-18:30; Sa 07:45-12:00; Su,PH off"
         },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-22",
         "payment": {
           "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "apple_id_attempted": "2026-05-22"
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -115,14 +122,17 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-23",
-        "payment": {
-          "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
         },
         "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-25"
+        "google_attempted": "2026-05-25",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -156,16 +166,20 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-23",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Sa 07:00-22:00; Su, PH off"
         },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-22",
         "payment": {
           "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "apple_id_attempted": "2026-05-22"
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -198,18 +212,25 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-25",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 08:00-18:30; Sa 08:00-14:00; Su off"
         },
-        "payment_attempted": "2026-05-22",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
         "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-25",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-25"
+        }
       }
     },
     {
@@ -243,14 +264,17 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-23",
-        "payment": {
-          "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
         },
         "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-25"
+        "google_attempted": "2026-05-25",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -284,14 +308,22 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-21",
-        "payment": {
-          "girocard": "yes",
-          "cards": "no",
-          "contactless": "yes"
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm"
         },
         "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-25"
+        "google_attempted": "2026-05-25",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -328,199 +360,22 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-22",
-        "payment": {
-          "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm"
         },
         "hours": {
           "raw": "Mo-Fr 09:30-18:00; Sa 09:30-13:00"
+        },
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
         }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.331949,
-          51.7338526
-        ]
-      },
-      "properties": {
-        "id": "tk_cb_osm_w139592653",
-        "name": "Abhohl-Bar",
-        "address": {
-          "street": "Hardenbergstraße",
-          "number": "12",
-          "postalcode": "03050",
-          "city": "Cottbus",
-          "district": "Madlow"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/139592653",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJJxqArIxzCEcRn_cFQzjgIfI"
-          }
-        ],
-        "created": "2026-05-21",
-        "updated": "2026-05-21",
-        "payment": {
-          "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.2460637,
-          51.7521462
-        ]
-      },
-      "properties": {
-        "id": "tk_cb_osm_w140902805",
-        "name": "Getränke Partner",
-        "address": {
-          "street": "Bahnhofstraße",
-          "number": "35",
-          "postalcode": "03099",
-          "city": "Kolkwitz"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/140902805",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          }
-        ],
-        "created": "2026-05-21",
-        "updated": "2026-05-21",
-        "payment": {
-          "girocard": "yes",
-          "cards": "no",
-          "contactless": "yes"
-        },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.3229331,
-          51.7593959
-        ]
-      },
-      "properties": {
-        "id": "tk_cb_osm_w151395561",
-        "name": "Getränke Hoffmann",
-        "address": {
-          "street": "August-Bebel-Straße",
-          "number": "76",
-          "postalcode": "03046",
-          "city": "Cottbus"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/151395561",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          }
-        ],
-        "created": "2026-05-21",
-        "updated": "2026-05-21",
-        "hours": {
-          "raw": "Mo-Fr 09:30-18:30; Sa 09:30-16:00"
-        },
-        "payment": {
-          "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "apple_id_attempted": "2026-05-22"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.332335,
-          51.7644403
-        ]
-      },
-      "properties": {
-        "id": "tk_cb_osm_n1205594462",
-        "name": "Club-Mate",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1205594462",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-21",
-        "updated": "2026-05-25",
-        "hours": {
-          "raw": "Tu-Sa 16:00-22:00; Su 09:00-20:00"
-        },
-        "apple_id_attempted": "2026-05-25",
-        "google_attempted": "2026-05-25"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.3432389,
-          51.7724147
-        ]
-      },
-      "properties": {
-        "id": "tk_cb_osm_n4143462432",
-        "name": "PWV Presse Shop",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4143462432",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-21",
-        "updated": "2026-05-25",
-        "hours": {
-          "raw": "Mo-Sa 08:00-18:00"
-        },
-        "tags": [
-          "barrierefrei"
-        ],
-        "apple_id_attempted": "2026-05-25",
-        "google_attempted": "2026-05-25"
       }
     },
     {
@@ -554,12 +409,239 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-25",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Sa 07:00-20:00"
         },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
         "apple_id_attempted": "2026-05-25",
-        "google_attempted": "2026-05-25"
+        "google_attempted": "2026-05-25",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.331949,
+          51.7338526
+        ]
+      },
+      "properties": {
+        "id": "tk_cb_osm_w139592653",
+        "name": "Abhohl-Bar",
+        "address": {
+          "street": "Hardenbergstraße",
+          "number": "12",
+          "postalcode": "03050",
+          "city": "Cottbus",
+          "district": "Madlow"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/139592653",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJJxqArIxzCEcRn_cFQzjgIfI"
+          }
+        ],
+        "created": "2026-05-21",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm"
+        },
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2460637,
+          51.7521462
+        ]
+      },
+      "properties": {
+        "id": "tk_cb_osm_w140902805",
+        "name": "Getränke Partner",
+        "address": {
+          "street": "Bahnhofstraße",
+          "number": "35",
+          "postalcode": "03099",
+          "city": "Kolkwitz"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/140902805",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-21",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-22",
+        "google_attempted": "2026-05-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3229331,
+          51.7593959
+        ]
+      },
+      "properties": {
+        "id": "tk_cb_osm_w151395561",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "August-Bebel-Straße",
+          "number": "76",
+          "postalcode": "03046",
+          "city": "Cottbus"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/151395561",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-21",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 09:30-18:30; Sa 09:30-16:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.332335,
+          51.7644403
+        ]
+      },
+      "properties": {
+        "id": "tk_cb_osm_n1205594462",
+        "name": "Club-Mate",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1205594462",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-21",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Tu-Sa 16:00-22:00; Su 09:00-20:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-25",
+        "google_attempted": "2026-05-25",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3432389,
+          51.7724147
+        ]
+      },
+      "properties": {
+        "id": "tk_cb_osm_n4143462432",
+        "name": "PWV Presse Shop",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4143462432",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-21",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Sa 08:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-25",
+        "google_attempted": "2026-05-25",
+        "payment": {}
       }
     },
     {
@@ -588,9 +670,17 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-25",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm"
+        },
         "apple_id_attempted": "2026-05-25",
-        "google_attempted": "2026-05-25"
+        "google_attempted": "2026-05-25",
+        "payment": {}
       }
     },
     {
@@ -614,9 +704,13 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-25",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
         "apple_id_attempted": "2026-05-25",
-        "google_attempted": "2026-05-25"
+        "google_attempted": "2026-05-25",
+        "payment": {}
       }
     },
     {
@@ -640,9 +734,13 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-25",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
         "apple_id_attempted": "2026-05-25",
-        "google_attempted": "2026-05-25"
+        "google_attempted": "2026-05-25",
+        "payment": {}
       }
     },
     {
@@ -671,7 +769,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-05-25",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 05:45-21:00; Sa 07:00-20:00; Su 07:00-21:00"
         },
@@ -684,6 +782,18 @@
         "tags": [
           "barrierefrei"
         ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm",
+          "payment.cash": "osm",
+          "payment.cards": "osm",
+          "payment.contactless": "osm",
+          "payment.girocard": "osm"
+        },
         "apple_id_attempted": "2026-05-25"
       }
     }

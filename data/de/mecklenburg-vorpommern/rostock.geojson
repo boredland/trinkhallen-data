@@ -74,17 +74,25 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-06-01",
         "tags": [
           "draussen"
         ],
-        "payment": {
-          "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm"
         },
         "apple_id_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23"
+        "google_attempted": "2026-05-23",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -117,16 +125,76 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-22",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 08:00-19:00; Sa 08:00-16:00"
         },
-        "payment": {
-          "girocard": "yes",
-          "cards": "no",
-          "contactless": "yes"
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-23"
+        "apple_id_attempted": "2026-05-23",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.1371028,
+          54.0884035
+        ]
+      },
+      "properties": {
+        "id": "tk_ro_osm_n601440261",
+        "name": "Nullzwei",
+        "address": {
+          "street": "Kröpeliner Straße",
+          "number": "18",
+          "postalcode": "18055",
+          "city": "Rostock",
+          "district": "Stadtmitte"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/601440261",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJFwmANBhXrEcRWxt86FpgXMs"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-01",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-05-25",
+        "google_attempted": "2026-05-25",
+        "hours": {
+          "raw": "Tu 09:00-22:00; Th 09:00-22:00; Fr 09:00-22:00; We 09:00-22:00; Mo 09:00-22:00; Sa 09:00-22:00; Su 10:00-22:00"
+        },
+        "payment": {}
       }
     },
     {
@@ -160,16 +228,25 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-21",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 09:00-18:00"
         },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-23",
         "payment": {
           "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "apple_id_attempted": "2026-05-23"
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -203,19 +280,23 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-23",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 08:00-19:00; Sa 08:00-14:00"
         },
         "tags": [
           "barrierefrei"
         ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-23",
         "payment": {
           "cards": "no",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "apple_id_attempted": "2026-05-23"
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -253,17 +334,22 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-25",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm"
+        },
+        "apple_attempted": "2026-05-25",
+        "google_attempted": "2026-05-23",
         "payment": {
           "cards": "yes",
-          "girocard": "yes",
-          "contactless": "yes"
-        },
-        "google_attempted": "2026-05-23",
-        "sources_by_field": {
-          "payment.mobile": "apple"
-        },
-        "apple_attempted": "2026-05-25"
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -296,18 +382,22 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-23",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "10:30+"
         },
         "tags": [
           "barrierefrei"
         ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-23",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
-        },
-        "apple_id_attempted": "2026-05-23"
+        }
       }
     },
     {
@@ -331,12 +421,16 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-25",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
+        "sources_by_field": {
+          "name": "osm"
+        },
         "apple_id_attempted": "2026-05-25",
-        "google_attempted": "2026-05-25"
+        "google_attempted": "2026-05-25",
+        "payment": {}
       }
     },
     {
@@ -350,7 +444,7 @@
       },
       "properties": {
         "id": "tk_ro_osm_n572004394",
-        "name": "ServiceStore DB",
+        "name": "Point",
         "address": {
           "street": "Konrad-Adenauer-Platz",
           "number": "4",
@@ -366,12 +460,21 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-25",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm"
+        },
+        "apple_id_attempted": "2026-05-25",
+        "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Mo-Th 05:30-21:00; Fr 05:30-22:00; Sa,Su 07:00-22:00"
         },
-        "apple_id_attempted": "2026-05-25",
-        "google_attempted": "2026-05-25"
+        "payment": {}
       }
     },
     {
@@ -395,7 +498,7 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-05-25",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Sa 09:30-20:00"
         },
@@ -408,52 +511,15 @@
         "tags": [
           "barrierefrei"
         ],
-        "apple_id_attempted": "2026-05-25"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.1371028,
-          54.0884035
-        ]
-      },
-      "properties": {
-        "id": "tk_ro_osm_n601440261",
-        "name": "Nullzwei",
-        "address": {
-          "street": "Kröpeliner Straße",
-          "number": "18",
-          "postalcode": "18055",
-          "city": "Rostock",
-          "district": "Stadtmitte"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/601440261",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJFwmANBhXrEcRWxt86FpgXMs"
-          }
-        ],
-        "created": "2026-05-20",
-        "updated": "2026-05-25",
-        "tags": [
-          "barrierefrei"
-        ],
-        "apple_id_attempted": "2026-05-25",
-        "hours": {
-          "raw": "Tu 09:00-22:00; Th 09:00-22:00; Fr 09:00-22:00; We 09:00-22:00; Mo 09:00-22:00; Sa 09:00-22:00; Su 10:00-22:00"
-        },
         "sources_by_field": {
-          "hours": "google"
+          "name": "osm",
+          "hours": "osm",
+          "payment.cash": "osm",
+          "payment.cards": "osm",
+          "payment.contactless": "osm",
+          "payment.girocard": "osm"
         },
-        "google_attempted": "2026-05-25"
+        "apple_id_attempted": "2026-05-25"
       }
     }
   ]

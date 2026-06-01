@@ -6,39 +6,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          14.2826786,
-          48.3108774
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n10103584916",
-        "name": "E-Kiosk",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/10103584916",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "24/7"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           14.3257135,
           47.7223402
         ]
@@ -63,27 +30,27 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 07:00-12:00,14:30-18:00; Th 07:00-12:00,14:30-18:00; Fr 07:00-12:00,14:30-18:00; We 07:00-12:00; Mo 07:00-12:00,14:30-18:00; Sa 07:00-12:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 07:00-12:00,14:30-18:00; Th 07:00-12:00,14:30-18:00; Fr 07:00-12:00,14:30-18:00; We 07:00-12:00; Mo 07:00-12:00,14:30-18:00; Sa 07:00-12:00"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -111,152 +78,23 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 05:00-22:00; Th 05:00-22:00; Fr 00:00-22:00; We 05:00-22:00; Mo 05:00-22:00; Sa 05:00-22:00; Su 05:00-22:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 05:00-22:00; Th 05:00-22:00; Fr 00:00-22:00; We 05:00-22:00; Mo 05:00-22:00; Sa 05:00-22:00; Su 05:00-22:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.2660145,
-          48.2682031
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1147300146",
-        "name": "Trafik im Park",
-        "address": {
-          "street": "Welser Straße",
-          "number": "37",
-          "city": "Leonding"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1147300146",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.0038854,
-          48.4498705
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n11818388169",
-        "name": "Resilacke",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/11818388169",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.3603315,
-          48.2573408
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n11975317668",
-        "name": "E-Kiosk",
-        "address": {
-          "number": "8",
-          "city": "Linz"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/11975317668",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.3563829,
-          47.9536143
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n12002684865",
-        "name": "TK",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/12002684865",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
         }
       }
     },
@@ -285,151 +123,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 07:30-12:00,13:00-18:00; Th 07:30-12:00,13:00-18:00; Fr 07:30-12:00,13:00-18:00; We 07:30-12:00,13:00-18:00; Mo 07:30-12:00,13:00-18:00; Sa 07:30-12:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 07:30-12:00,13:00-18:00; Th 07:30-12:00,13:00-18:00; Fr 07:30-12:00,13:00-18:00; We 07:30-12:00,13:00-18:00; Mo 07:30-12:00,13:00-18:00; Sa 07:30-12:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.3123431,
-          48.2532987
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n13094444453",
-        "name": "Schnäppchen Kings",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/13094444453",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.2096607,
-          48.2150884
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1345743823",
-        "name": "Tabak Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1345743823",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.2588046,
-          48.2080071
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1353669007",
-        "name": "Tabak Trafik Bless",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1353669007",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Th 05:30-12:30,15:00-18:00; Fr 05:30-18:00; Sa 06:30-12:30"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.8459779,
-          48.0441874
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n13599123904",
-        "name": "Bahnhofsshop",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/13599123904",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 05:45-08:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -461,7 +172,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -469,236 +180,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.3104631,
-          48.2910984
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1376789956",
-        "name": "Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1376789956",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 05:30-18:00; Sa 08:00-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.3084352,
-          48.2491687
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1493604944",
-        "name": "Lotto Toto Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1493604944",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 05:30-18:30; Sa 06:00-13:00"
-        },
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.2586829,
-          48.1877606
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1562532610",
-        "name": "Barta Tabak",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1562532610",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.3372739,
-          48.2432301
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1565809610",
-        "name": "Täubel Manuela",
-        "address": {
-          "street": "Ennsfeldstraße",
-          "city": "Linz"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1565809610",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 07:00-12:00, Sa 08:00-12:00, Mo-Fr 13:00-18:00"
-        },
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.city": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.2860608,
-          48.2559828
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1565970479",
-        "name": "Mistlbacher",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1565970479",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.8235826,
-          47.9811573
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1575970290",
-        "name": "Trafik Loidl",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1575970290",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.823828,
-          47.9824172
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1577388764",
-        "name": "Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1577388764",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -726,24 +209,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 06:00-18:00; Th 06:00-18:00; Fr 06:00-18:00; We 06:00-18:00; Mo 06:00-18:00; Sa 06:00-12:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 06:00-18:00; Th 06:00-18:00; Fr 06:00-18:00; We 06:00-18:00; Mo 06:00-18:00; Sa 06:00-12:00"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -771,74 +254,17 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 07:15-12:00,15:00-18:00; Th 07:15-12:00,15:00-18:00; Fr 07:15-12:00,15:00-18:00; We 07:15-12:00; Mo 07:15-12:00,15:00-18:00; Sa 08:00-11:00"
         },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.6690533,
-          48.3491475
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1651298831",
-        "name": "Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1651298831",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.0253334,
-          48.1571399
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1680780617",
-        "name": "Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1680780617",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "payment": {}
       }
     },
     {
@@ -866,57 +292,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 07:00-12:00,14:00-18:00; Th 07:00-12:00,14:00-18:00; Fr 07:00-12:00,14:00-18:00; We 07:00-12:00,14:00-18:00; Mo 07:00-12:00,14:00-18:00; Sa 07:00-12:00"
+        },
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 07:00-12:00,14:00-18:00; Th 07:00-12:00,14:00-18:00; Fr 07:00-12:00,14:00-18:00; We 07:00-12:00,14:00-18:00; Mo 07:00-12:00,14:00-18:00; Sa 07:00-12:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.0216558,
-          48.1590337
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1774353716",
-        "name": "Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1774353716",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 06:30-18:00; Sa 06:00-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -948,7 +341,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
@@ -957,19 +350,19 @@
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "google",
           "payment.cards": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "yes",
-          "girocard": "yes"
-        },
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 07:00-13:00,15:00-18:00; Fr 07:00-13:00,15:00-18:00; We 07:00-13:00,15:00-18:00; Mo 07:00-13:00,15:00-18:00; Sa 07:00-12:00"
         },
-        "google_attempted": "2026-05-29"
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -1001,7 +394,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
@@ -1010,21 +403,21 @@
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 06:00-18:00; Th 06:00-18:00; Fr 06:00-18:00; We 06:00-18:00; Mo 06:00-18:00; Sa 07:00-12:30"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 06:00-18:00; Th 06:00-18:00; Fr 06:00-18:00; We 06:00-18:00; Mo 06:00-18:00; Sa 07:00-12:30"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1052,77 +445,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.609545,
-          48.0024869
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1885119291",
-        "name": "Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1885119291",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.6634486,
-          48.0096475
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1889706458",
-        "name": "Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1889706458",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 06:30-18:30; Sa 08:00-18:30; Su,PH 08:30-18:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -1154,7 +483,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
@@ -1163,117 +492,19 @@
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "google",
           "payment.cards": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "yes",
-          "girocard": "yes"
-        },
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 06:30-12:00,15:00-18:00; Th 06:30-12:00,15:00-18:00; Fr 06:30-12:00,15:00-18:00; We 06:30-12:00,15:00-18:00; Mo 06:30-12:00,15:00-18:00; Sa 06:30-12:00"
         },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.4222034,
-          48.0689455
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1899972536",
-        "name": "Imbissstube Steffe",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1899972536",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.4280552,
-          48.2710852
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1987728824",
-        "name": "Sabine Leonhardsberger - Trafik",
-        "address": {
-          "street": "Oberfeldstraße",
-          "number": "2",
-          "city": "Luftenberg an der Donau"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1987728824",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 07:30-18:30,Sa 07:30-17:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.9999492,
-          48.4841213
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n1996902623",
-        "name": "Gahleitner GmbH",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1996902623",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -1301,7 +532,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "raucherbereich"
         ],
@@ -1309,82 +540,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.2319221,
-          48.138798
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n2245999864",
-        "name": "Trafik Meixner",
-        "address": {
-          "street": "Steyrer Straße",
-          "number": "7",
-          "city": "Neuhofen an der Krems"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2245999864",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.0244886,
-          48.1583365
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n2292179394",
-        "name": "Trafik",
-        "address": {
-          "street": "Ringstraße",
-          "number": "14",
-          "city": "Wels"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2292179394",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -1412,53 +569,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 05:30-18:30; Th 05:30-18:30; Fr 05:30-18:30; We 05:30-18:30; Mo 05:30-18:30; Sa 06:00-18:30; Su 09:00-18:00"
+        },
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 05:30-18:30; Th 05:30-18:30; Fr 05:30-18:30; We 05:30-18:30; Mo 05:30-18:30; Sa 06:00-18:30; Su 09:00-18:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.9424981,
-          48.1337649
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n2315629191",
-        "name": "Rohrer",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2315629191",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1490,89 +618,27 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 06:00-12:00,14:00-18:00; Th 06:00-12:00,14:00-18:00; Fr 06:00-12:00,13:00-18:00; We 06:00-12:00,14:00-18:00; Mo 06:00-12:00,14:00-18:00; Sa 07:00-12:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 06:00-12:00,14:00-18:00; Th 06:00-12:00,14:00-18:00; Fr 06:00-12:00,13:00-18:00; We 06:00-12:00,14:00-18:00; Mo 06:00-12:00,14:00-18:00; Sa 07:00-12:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.7710045,
-          47.805238
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n2334008532",
-        "name": "Tabak Trafik Günter Kalitzky",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2334008532",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 05:30-12:30,14:30-18:00; Sa 06:00-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.236405,
-          48.2214285
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n2370360790",
-        "name": "Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2370360790",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1600,160 +666,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.0209554,
-          48.3088216
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n2429858434",
-        "name": "Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2429858434",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.4254002,
-          48.0383919
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n2466787057",
-        "name": "Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2466787057",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 05:00-18:00; Sa 07:00-12:00"
-        },
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.0188521,
-          48.1560484
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n247306729",
-        "name": "Trafik",
-        "address": {
-          "street": "Lokalbahnplatz",
-          "number": "6",
-          "city": "Wels"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/247306729",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 06:30-12:00,14:30-18:00; Sa 06:30-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.7215597,
-          48.0122202
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n2521426782",
-        "name": "Tabaktrafik Kernmayr",
-        "address": {
-          "street": "Dr. Karl Renner-Platz",
-          "number": "1",
-          "city": "Attnang-Puchheim"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2521426782",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 06:00-19:00; Sa 07:00-19:00; PH,Su 08:00-12:00,14:00-19:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -1781,7 +700,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 08:00-17:00; Th 08:00-17:00; Fr 08:00-17:00; We 08:00-17:00; Mo 08:00-17:00; Sa 08:00-12:00"
         },
@@ -1793,12 +712,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1826,7 +745,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 08:00-12:00,12:30-17:00; Sa 08:00-12:00"
         },
@@ -1838,104 +757,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.3985231,
-          48.0432318
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n2816913125",
-        "name": "Tabak-Trafik Bramauer",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2816913125",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.0173515,
-          47.9607794
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n3008422249",
-        "name": "Bettina Seiwald",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/3008422249",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.2273376,
-          48.136448
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n312440300",
-        "name": "Eibelwimmer",
-        "address": {
-          "street": "Kremstalstraße",
-          "number": "9"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/312440300",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1963,7 +790,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 07:30-18:15; Th 07:30-18:15; Fr 07:30-18:15; We 07:30-18:15; Mo 07:30-18:15; Sa 07:30-12:15"
         },
@@ -1978,74 +805,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.2829006,
-          48.3212446
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n322704869",
-        "name": "Trafik Ernst Glasner",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/322704869",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 07:30-18:00; Sa 07:30-13:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.9902408,
-          48.5728159
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n331597108",
-        "name": "Trafik Lehner",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/331597108",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2076,7 +841,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
@@ -2084,21 +849,21 @@
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 06:00-18:30; Th 06:00-18:30; Fr 06:00-18:30; We 06:00-18:30; Mo 06:00-18:30; Sa 07:30-17:00"
+        },
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 06:00-18:30; Th 06:00-18:30; Fr 06:00-18:30; We 06:00-18:30; Mo 06:00-18:30; Sa 07:30-17:00"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2126,22 +891,22 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "yes",
-          "girocard": "yes"
-        },
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 07:00-12:30,15:00-18:00; Th 07:00-12:30,15:00-18:00; Fr 07:00-12:30,15:00-18:00; We 07:00-12:30,15:00-18:00; Mo 07:00-12:30,15:00-18:00; Sa 07:00-12:00"
         },
-        "google_attempted": "2026-05-29"
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -2169,7 +934,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "payment.cards": "google",
@@ -2177,12 +942,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2210,7 +975,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 06:30-18:30; Th 06:30-18:30; Fr 06:30-18:30; We 06:30-18:30; Mo 06:30-18:30; Sa 08:00-13:00"
         },
@@ -2219,7 +984,8 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -2247,53 +1013,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 06:00-12:00,15:00-18:00; Th 06:00-12:00,15:00-18:00; Fr 06:00-12:00,15:00-18:00; We 06:00-12:00,15:00-18:00; Mo 06:00-12:00,15:00-18:00; Sa 07:00-12:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 06:00-12:00,15:00-18:00; Th 06:00-12:00,15:00-18:00; Fr 06:00-12:00,15:00-18:00; We 06:00-12:00,15:00-18:00; Mo 06:00-12:00,15:00-18:00; Sa 07:00-12:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.1947094,
-          48.2064339
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n3772594229",
-        "name": "Tabak Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/3772594229",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2321,151 +1058,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 06:30-19:00; Th 06:30-19:00; Fr 06:30-19:00; We 06:30-19:00; Mo 06:30-19:00; Sa 07:00-18:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 06:30-19:00; Th 06:30-19:00; Fr 06:30-19:00; We 06:30-19:00; Mo 06:30-19:00; Sa 07:00-18:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.6165085,
-          47.9904063
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n382491286",
-        "name": "Tabak Trafik",
-        "address": {
-          "street": "Atterseestraße",
-          "number": "29",
-          "city": "Timelkam"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/382491286",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.9713562,
-          48.1426131
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n3829807582",
-        "name": "Tabak Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/3829807582",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.2869063,
-          48.2521364
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n3874311162",
-        "name": "Tabak Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/3874311162",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Th 06:00-12:00,14:00-18:00; Fr 06:00-18:00; Sa 07:00-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.7736177,
-          47.8124552
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n393905275",
-        "name": "Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/393905275",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2497,58 +1107,25 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "google",
           "payment.cards": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "yes",
-          "girocard": "yes"
-        },
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 08:00-11:45,14:00-16:30; Th 08:00-11:45,14:00-16:30; Fr 08:00-11:45,14:00-16:30; We 08:00-12:00; Mo 08:00-11:45,14:00-16:30; Sa 08:00-12:00"
         },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.3029508,
-          48.299424
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n4149167256",
-        "name": "Trafik Anita Ludwig",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4149167256",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 06:00-18:00; Sa 07:00-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -2576,16 +1153,17 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Fr 12:30-22:00; We 12:30-22:00"
         },
-        "google_attempted": "2026-05-29"
+        "payment": {}
       }
     },
     {
@@ -2613,7 +1191,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 06:30-12:30,14:30-18:00; Th 06:30-12:30,14:30-18:00; Fr 06:30-12:30,14:30-18:00; We 06:30-12:30,14:30-18:00; Mo 06:30-12:30,14:30-18:00; Sa 06:30-12:00"
         },
@@ -2625,12 +1203,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2658,7 +1236,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 06:30-12:00,14:00-18:00; Th 06:30-12:00,14:00-18:00; Fr 06:30-12:00,14:00-18:00; We 06:30-12:00,14:00-18:00; Mo 06:30-12:00,14:00-18:00; Sa 07:30-12:00"
         },
@@ -2670,12 +1248,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2703,16 +1281,17 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 08:00-14:00; Th 08:00-14:00; Fr 08:00-14:00; We 08:00-14:00; Mo 08:00-14:00"
         },
-        "google_attempted": "2026-05-29"
+        "payment": {}
       }
     },
     {
@@ -2740,86 +1319,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 09:00-19:00; Th 09:00-21:00; Fr 09:00-21:00; We 09:00-19:00; Mo 09:00-19:00; Sa 09:00-18:00"
+        },
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 09:00-19:00; Th 09:00-21:00; Fr 09:00-21:00; We 09:00-19:00; Mo 09:00-19:00; Sa 09:00-18:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.9268208,
-          48.000599
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n4656557279",
-        "name": "ReinRaus - Getränke Autoteile Transport",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4656557279",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.5025299,
-          48.0372356
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n469809033",
-        "name": "Getränkemarkt Zipfer Brauerei",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/469809033",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Th 09:00-12:00,13:00-17:00; Fr 9:00-12:00,13:00-18:00; PH off"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2847,7 +1364,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Th 12:00-18:00; Fr 12:00-18:00"
         },
@@ -2859,12 +1376,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2892,12 +1409,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -2925,53 +1443,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 08:00-12:00; Th 08:00-17:00; Fr 08:00-17:00; We 08:00-12:00; Mo 08:00-17:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 08:00-12:00; Th 08:00-17:00; Fr 08:00-17:00; We 08:00-12:00; Mo 08:00-17:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.9015436,
-          48.0628393
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n573450228",
-        "name": "Wögerer",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/573450228",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3003,63 +1492,27 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 06:00-12:00,15:00-18:00; Th 06:00-12:00,15:00-18:00; Fr 06:00-12:00,15:00-18:00; We 06:00-12:00,15:00-18:00; Mo 06:00-12:00,15:00-18:00; Sa 06:30-12:30"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 06:00-12:00,15:00-18:00; Th 06:00-12:00,15:00-18:00; Fr 06:00-12:00,15:00-18:00; We 06:00-12:00,15:00-18:00; Mo 06:00-12:00,15:00-18:00; Sa 06:30-12:30"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.3886052,
-          47.7126334
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n576527736",
-        "name": "Trafik Hufnagl",
-        "address": {
-          "street": "Hauptstraße",
-          "number": "15",
-          "city": "Rosenau am Hengstpaß"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/576527736",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3090,7 +1543,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.number": "osm",
@@ -3098,10 +1551,11 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 09:00-12:00,16:00-23:00; Th 09:00-12:00,16:00-23:00; Fr 09:00-12:00,16:00-23:00; We 09:00-12:00,16:00-23:00; Mo 09:00-12:00,16:00-23:00; Sa 09:00-12:00"
         },
-        "google_attempted": "2026-05-29"
+        "payment": {}
       }
     },
     {
@@ -3132,7 +1586,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 09:00-12:00,14:00-18:00; Th 09:00-12:00,14:00-18:00; Fr 09:00-12:00,14:00-18:00; We 09:00-12:00,14:00-18:00; Mo 09:00-12:00,14:00-18:00; Sa 08:00-12:00"
         },
@@ -3146,41 +1600,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.8397385,
-          48.1570948
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n5874143923",
-        "name": "Tabak Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/5874143923",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3212,7 +1637,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Fr 13:00-16:00"
         },
@@ -3224,36 +1649,8 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.1902053,
-          48.4765914
-        ]
-      },
-      "properties": {
-        "id": "tk_at4r_osm_n6484412897",
-        "name": "Kurven Stuüberl",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/6484412897",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3281,24 +1678,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 11:00-20:00; Th 11:00-20:00; Fr 11:00-20:00; We 11:00-20:00; Mo 11:00-20:00; Sa 11:00-20:00; Su 11:00-20:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 11:00-20:00; Th 11:00-20:00; Fr 11:00-20:00; We 11:00-20:00; Mo 11:00-20:00; Sa 11:00-20:00; Su 11:00-20:00"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3329,7 +1726,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 06:00-18:00; Th 06:00-18:00; Fr 06:00-18:00; We 06:00-18:00; Mo 06:00-18:00; Sa 07:00-13:00"
         },
@@ -3343,12 +1740,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3376,7 +1773,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 07:00-12:00,14:00-18:00; Th 07:00-12:00,14:00-18:00; Fr 07:00-12:00,14:00-18:00; We 07:00-12:00,14:00-18:00; Mo 07:00-12:00,14:00-18:00; Sa 07:00-12:00"
         },
@@ -3388,12 +1785,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3421,7 +1818,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 06:00-18:00; Fr 06:00-18:00; We 06:00-18:00; Mo 06:00-18:00; Sa 07:00-12:00"
         },
@@ -3433,12 +1830,1676 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2826786,
+          48.3108774
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n10103584916",
+        "name": "E-Kiosk",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/10103584916",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "24/7"
         },
-        "google_attempted": "2026-05-29"
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2660145,
+          48.2682031
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1147300146",
+        "name": "Trafik im Park",
+        "address": {
+          "street": "Welser Straße",
+          "number": "37",
+          "city": "Leonding"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1147300146",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0038854,
+          48.4498705
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n11818388169",
+        "name": "Resilacke",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/11818388169",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3603315,
+          48.2573408
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n11975317668",
+        "name": "E-Kiosk",
+        "address": {
+          "number": "8",
+          "city": "Linz"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/11975317668",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3563829,
+          47.9536143
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n12002684865",
+        "name": "TK",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12002684865",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3123431,
+          48.2532987
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n13094444453",
+        "name": "Schnäppchen Kings",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13094444453",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2096607,
+          48.2150884
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1345743823",
+        "name": "Tabak Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1345743823",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2588046,
+          48.2080071
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1353669007",
+        "name": "Tabak Trafik Bless",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1353669007",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Th 05:30-12:30,15:00-18:00; Fr 05:30-18:00; Sa 06:30-12:30"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.8459779,
+          48.0441874
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n13599123904",
+        "name": "Bahnhofsshop",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13599123904",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 05:45-08:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3104631,
+          48.2910984
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1376789956",
+        "name": "Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1376789956",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 05:30-18:00; Sa 08:00-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3084352,
+          48.2491687
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1493604944",
+        "name": "Lotto Toto Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1493604944",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 05:30-18:30; Sa 06:00-13:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2586829,
+          48.1877606
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1562532610",
+        "name": "Barta Tabak",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1562532610",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3372739,
+          48.2432301
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1565809610",
+        "name": "Täubel Manuela",
+        "address": {
+          "street": "Ennsfeldstraße",
+          "city": "Linz"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1565809610",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 07:00-12:00, Sa 08:00-12:00, Mo-Fr 13:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2860608,
+          48.2559828
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1565970479",
+        "name": "Mistlbacher",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1565970479",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8235826,
+          47.9811573
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1575970290",
+        "name": "Trafik Loidl",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1575970290",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.823828,
+          47.9824172
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1577388764",
+        "name": "Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1577388764",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.6690533,
+          48.3491475
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1651298831",
+        "name": "Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1651298831",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0253334,
+          48.1571399
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1680780617",
+        "name": "Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1680780617",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0216558,
+          48.1590337
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1774353716",
+        "name": "Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1774353716",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 06:30-18:00; Sa 06:00-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.609545,
+          48.0024869
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1885119291",
+        "name": "Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1885119291",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6634486,
+          48.0096475
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1889706458",
+        "name": "Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1889706458",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 06:30-18:30; Sa 08:00-18:30; Su,PH 08:30-18:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4222034,
+          48.0689455
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1899972536",
+        "name": "Imbissstube Steffe",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1899972536",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4280552,
+          48.2710852
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1987728824",
+        "name": "Sabine Leonhardsberger - Trafik",
+        "address": {
+          "street": "Oberfeldstraße",
+          "number": "2",
+          "city": "Luftenberg an der Donau"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1987728824",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 07:30-18:30,Sa 07:30-17:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9999492,
+          48.4841213
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n1996902623",
+        "name": "Gahleitner GmbH",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1996902623",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2319221,
+          48.138798
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n2245999864",
+        "name": "Trafik Meixner",
+        "address": {
+          "street": "Steyrer Straße",
+          "number": "7",
+          "city": "Neuhofen an der Krems"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2245999864",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0244886,
+          48.1583365
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n2292179394",
+        "name": "Trafik",
+        "address": {
+          "street": "Ringstraße",
+          "number": "14",
+          "city": "Wels"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2292179394",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9424981,
+          48.1337649
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n2315629191",
+        "name": "Rohrer",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2315629191",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7710045,
+          47.805238
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n2334008532",
+        "name": "Tabak Trafik Günter Kalitzky",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2334008532",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 05:30-12:30,14:30-18:00; Sa 06:00-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.236405,
+          48.2214285
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n2370360790",
+        "name": "Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2370360790",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0209554,
+          48.3088216
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n2429858434",
+        "name": "Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2429858434",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4254002,
+          48.0383919
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n2466787057",
+        "name": "Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2466787057",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 05:00-18:00; Sa 07:00-12:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0188521,
+          48.1560484
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n247306729",
+        "name": "Trafik",
+        "address": {
+          "street": "Lokalbahnplatz",
+          "number": "6",
+          "city": "Wels"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/247306729",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 06:30-12:00,14:30-18:00; Sa 06:30-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7215597,
+          48.0122202
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n2521426782",
+        "name": "Tabaktrafik Kernmayr",
+        "address": {
+          "street": "Dr. Karl Renner-Platz",
+          "number": "1",
+          "city": "Attnang-Puchheim"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2521426782",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 06:00-19:00; Sa 07:00-19:00; PH,Su 08:00-12:00,14:00-19:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3985231,
+          48.0432318
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n2816913125",
+        "name": "Tabak-Trafik Bramauer",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2816913125",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0173515,
+          47.9607794
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n3008422249",
+        "name": "Bettina Seiwald",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3008422249",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2273376,
+          48.136448
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n312440300",
+        "name": "Eibelwimmer",
+        "address": {
+          "street": "Kremstalstraße",
+          "number": "9"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/312440300",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2829006,
+          48.3212446
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n322704869",
+        "name": "Trafik Ernst Glasner",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/322704869",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 07:30-18:00; Sa 07:30-13:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9902408,
+          48.5728159
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n331597108",
+        "name": "Trafik Lehner",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/331597108",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1947094,
+          48.2064339
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n3772594229",
+        "name": "Tabak Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3772594229",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6165085,
+          47.9904063
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n382491286",
+        "name": "Tabak Trafik",
+        "address": {
+          "street": "Atterseestraße",
+          "number": "29",
+          "city": "Timelkam"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/382491286",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9713562,
+          48.1426131
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n3829807582",
+        "name": "Tabak Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3829807582",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2869063,
+          48.2521364
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n3874311162",
+        "name": "Tabak Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3874311162",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Th 06:00-12:00,14:00-18:00; Fr 06:00-18:00; Sa 07:00-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7736177,
+          47.8124552
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n393905275",
+        "name": "Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/393905275",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3029508,
+          48.299424
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n4149167256",
+        "name": "Trafik Anita Ludwig",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4149167256",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 06:00-18:00; Sa 07:00-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9268208,
+          48.000599
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n4656557279",
+        "name": "ReinRaus - Getränke Autoteile Transport",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4656557279",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5025299,
+          48.0372356
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n469809033",
+        "name": "Getränkemarkt Zipfer Brauerei",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/469809033",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Th 09:00-12:00,13:00-17:00; Fr 9:00-12:00,13:00-18:00; PH off"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9015436,
+          48.0628393
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n573450228",
+        "name": "Wögerer",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/573450228",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3886052,
+          47.7126334
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n576527736",
+        "name": "Trafik Hufnagl",
+        "address": {
+          "street": "Hauptstraße",
+          "number": "15",
+          "city": "Rosenau am Hengstpaß"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/576527736",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.8397385,
+          48.1570948
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n5874143923",
+        "name": "Tabak Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5874143923",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1902053,
+          48.4765914
+        ]
+      },
+      "properties": {
+        "id": "tk_at4r_osm_n6484412897",
+        "name": "Kurven Stuüberl",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/6484412897",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3466,14 +3527,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3497,11 +3559,12 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3525,11 +3588,12 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3553,7 +3617,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 07:00-12:00, 13:00-17:00"
         },
@@ -3561,7 +3625,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3589,7 +3654,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 06:30-12:00, 14:00-18:00; Sa 07:00-12:00"
         },
@@ -3600,7 +3665,8 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3627,13 +3693,14 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3657,14 +3724,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3688,11 +3756,12 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3716,14 +3785,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3751,7 +3821,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
@@ -3761,7 +3831,8 @@
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3789,7 +3860,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "We, Sa 07:30-12:00; Mo, Tu, Th, Fr 07:30-12:00, 14:00-18:00"
         },
@@ -3800,7 +3871,8 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3824,11 +3896,12 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3854,12 +3927,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3883,7 +3957,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 08:00-19:00; Sa 08:00-18:00"
         },
@@ -3891,7 +3965,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3915,11 +3990,12 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3943,7 +4019,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "PH,Mo-Su 00:00-24:00"
         },
@@ -3951,7 +4027,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3975,11 +4052,12 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4003,11 +4081,12 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4034,13 +4113,14 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4068,14 +4148,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4103,14 +4184,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4138,14 +4220,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4173,14 +4256,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4207,13 +4291,14 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4241,7 +4326,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Th 06:00-12:00,14:00-18:00; Fr 06:00-18:00; Sa 07:00-12:00"
         },
@@ -4252,7 +4337,8 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4276,11 +4362,12 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4308,14 +4395,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4343,7 +4431,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 06:30-12:00,14:00-18:00; Sa 07:00-12:00"
         },
@@ -4354,7 +4442,8 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4382,7 +4471,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo,Tu,Th,Fr 09:00-12:00, 13:30-18:00; We,Sa 09:00-12:00"
         },
@@ -4393,7 +4482,8 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4417,11 +4507,12 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4445,7 +4536,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 05:45-19:00; Sa 07:00-19:00; PH,Su 07:30-19:00"
         },
@@ -4456,7 +4547,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4480,14 +4572,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4511,7 +4604,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 05:00-20:00; Sa,Su,PH 07:30-20:00"
         },
@@ -4559,7 +4652,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Su 06:00-22:00"
         },
@@ -4572,7 +4665,8 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4596,7 +4690,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Sa 10:00-20:00"
         },
@@ -4604,7 +4698,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4632,14 +4727,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     }
   ]

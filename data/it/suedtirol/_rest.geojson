@@ -26,12 +26,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -59,27 +60,27 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 08:00-12:00,13:00-18:00; Th 08:00-12:00,13:00-18:00; Fr 08:00-12:00,13:00-18:00; We 08:00-12:00,13:00-18:00; Mo 08:00-12:00,13:00-18:00; Sa 08:00-12:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 08:00-12:00,13:00-18:00; Th 08:00-12:00,13:00-18:00; Fr 08:00-12:00,13:00-18:00; We 08:00-12:00,13:00-18:00; Mo 08:00-12:00,13:00-18:00; Sa 08:00-12:00"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -107,24 +108,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 08:30-12:30,14:30-18:30; Th 08:30-12:30,14:30-18:30; Fr 08:30-12:30,14:30-18:30; We 08:30-12:30,14:30-18:30; Mo 08:30-12:30,14:30-18:30; Sa 08:30-12:30"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 08:30-12:30,14:30-18:30; Th 08:30-12:30,14:30-18:30; Fr 08:30-12:30,14:30-18:30; We 08:30-12:30,14:30-18:30; Mo 08:30-12:30,14:30-18:30; Sa 08:30-12:30"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -152,7 +153,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
@@ -161,41 +162,12 @@
           "payment.cards": "apple",
           "payment.contactless": "apple"
         },
+        "apple_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "apple_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.1596035,
-          46.6681525
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n12001149771",
-        "name": "Bistro Therme Meran",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/12001149771",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -227,7 +199,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 08:00-12:30; Th 08:00-12:30; Fr 08:00-12:30; We 08:00-12:30"
         },
@@ -239,50 +211,12 @@
           "payment.girocard": "google"
         },
         "apple_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.210042,
-          46.2404624
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n1250591393",
-        "name": "Edicola / tabacchi -Tabakwaren / Kiosk",
-        "address": {
-          "street": "Via Roma - Romstraße",
-          "number": "5",
-          "postalcode": "39040",
-          "city": "Salorno"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1250591393",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -310,172 +244,27 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Th 07:00-12:00,15:30-19:00; Fr 07:00-12:00,15:30-19:00; We 07:00-12:00,15:30-19:00; Mo 07:00-12:00,15:30-19:00; Sa 07:00-12:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Th 07:00-12:00,15:30-19:00; Fr 07:00-12:00,15:30-19:00; We 07:00-12:00,15:30-19:00; Mo 07:00-12:00,15:30-19:00; Sa 07:00-12:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.8529346,
-          46.6186936
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n1801573740",
-        "name": "Pronto",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1801573740",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.655382,
-          46.7161735
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n1929372414",
-        "name": "Unterkofler",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1929372414",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.6521478,
-          46.7134254
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n1929381361",
-        "name": "Alberti Newspapers",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1929381361",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.1582641,
-          46.6662525
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n227022233",
-        "name": "Eni",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/227022233",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.2812623,
-          46.7328186
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n2333491051",
-        "name": "Tabak- Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2333491051",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -503,7 +292,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 08:00-12:00,15:00-18:00; Sa 08:00-12:00"
         },
@@ -516,11 +305,11 @@
           "payment.cards": "apple",
           "payment.contactless": "apple"
         },
+        "apple_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "apple_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -553,7 +342,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Sa 06:00-19:00; Su 06:00-12:00"
         },
@@ -569,7 +358,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -602,7 +392,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 08:00-18:30; Sa 08:30-12:00"
         },
@@ -616,11 +406,1370 @@
           "payment.cards": "apple",
           "payment.contactless": "apple"
         },
+        "apple_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.747942,
+          46.5585595
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n2755979674",
+        "name": "Vinotheque Riffeser otto",
+        "address": {
+          "street": "Streda Mëisules",
+          "number": "49",
+          "postalcode": "39048",
+          "city": "Sëlva - Wolkenstein in Gröden - Selva di Val Gardena"
         },
-        "apple_attempted": "2026-05-29"
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2755979674",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJe0KWke4UeEcRVPnVHbBmAyg"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Th 08:30-12:30,15:00-19:00; Fr 08:30-12:30,15:00-19:00; We 08:30-12:30,15:00-19:00; Mo 08:30-12:30,15:00-19:00; Sa 08:30-12:30,15:00-19:00"
+        },
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.2394102,
+          46.3410397
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n2756026176",
+        "name": "Bellutti",
+        "address": {
+          "street": "Rathausplatz - Piazza Municipio",
+          "number": "1a",
+          "postalcode": "39040",
+          "city": "Tramin an der Weinstraße - Termeno sulla Strada del Vino"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2756026176",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJrd86kVGBgkcRJMVivVEetuk"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 07:00-12:15,15:30-19:00; Th 07:00-12:15,15:30-19:00; Fr 07:00-12:15,15:30-19:00; We 07:00-12:15,15:30-19:00; Mo 07:00-12:15,15:30-19:00; Sa 07:00-12:15,15:00-18:00"
+        },
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.3658728,
+          46.4978153
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n3685121326",
+        "name": "Tabaccheria Piani",
+        "address": {
+          "street": "Via del Macello - Schlachthofstraße",
+          "number": "6",
+          "postalcode": "39100",
+          "city": "Bolzano - Bozen"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3685121326",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "6788908956589051056"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Sa 06:00-12:30,15:30-20:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.2620172,
+          46.471693
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n4171915669",
+        "name": "Zeitungen Tabak Arenella",
+        "address": {
+          "street": "Schloss-Warth-Weg - Strada Castel Guardia",
+          "number": "2",
+          "postalcode": "39057",
+          "city": "St. Pauls - San Paolo"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4171915669",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ67-pX5qbgkcRcnty6AoDPUE"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Th 07:00-12:00,15:30-19:00; Fr 07:00-12:00,15:30-19:00; We 07:00-12:00,15:30-19:00; Mo 07:00-12:00,15:30-19:00; Sa 07:30-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.7753234,
+          46.6245002
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n4237711091",
+        "name": "Walzl",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4237711091",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJM3Fj52HngkcRM8Hunbc1Xsw"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Th 08:00-12:00,14:30-18:30; Fr 08:00-12:00,14:30-18:30; We 08:00-12:00,14:30-18:30; Mo 08:00-12:00,14:30-18:30; Sa 08:00-12:00"
+        },
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.3522891,
+          46.4957646
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n4265862446",
+        "name": "Tabaccheria Calabrese Antonio",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4265862446",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJUTywbwifgkcRGJx-TbFgQ5A"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 05:20-19:00; Th 05:20-19:00; Fr 05:20-19:00; We 05:20-19:00; Mo 05:20-19:00; Sa 05:20-19:00; Su 06:30-12:00"
+        },
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.3583459,
+          46.496755
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n4361657615",
+        "name": "Edicola Stazione F.S.",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4361657615",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJvbdPQXeegkcRCbe5sSzHkKQ"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Tu 06:00-14:00; Th 06:00-18:00; Fr 06:00-18:00; We 06:00-18:00; Mo 06:00-18:00; Sa 06:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.2987297,
+          46.3488828
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n4490990489",
+        "name": "NewDrinkShop",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4490990489",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJZaFd6SWCgkcR2yXctxENpkg"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.4299618,
+          46.9034784
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n4589331369",
+        "name": "Martins Getränke",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4589331369",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJqwDzBxNTnUcRGIyMJKIJ2dI"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 08:30-12:30,15:00-19:00; Th 08:30-12:30,15:00-19:00; Fr 08:30-12:30,15:00-19:00; We 08:30-12:30,15:00-19:00; Mo 08:30-12:30,15:00-19:00; Sa 08:30-12:30,15:00-18:00"
+        },
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.8358995,
+          46.8070174
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n4630770289",
+        "name": "Harrasser",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4630770289",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJLRkpSHAeeEcRgFb2IYPWebc"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.girocard": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 08:00-12:00,15:00-18:30; Th 08:00-12:00,15:00-18:30; Fr 08:00-12:00,15:00-18:30; We 08:00-12:00,15:00-18:30; Mo 08:00-12:00,15:00-18:30; Sa 08:00-12:00"
+        },
+        "payment": {
+          "cards": "no",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.6435267,
+          46.6298577
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n4635823489",
+        "name": "Pronto",
+        "address": {
+          "postalcode": "39023"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4635823489",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJoUHRSOMfg0cRGIccFwqsDRM"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.postalcode": "osm",
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 09:00-19:00; Th 09:00-19:00; Fr 09:00-19:00; We 09:00-19:00; Mo 09:00-19:00; Sa 09:00-18:00; Su 10:00-18:00"
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.140082,
+          46.6792151
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n5553713664",
+        "name": "Getränkemarkt Nägele",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5553713664",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJsycV6je5gkcR8QUyF6a97Ow"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Th 08:00-12:00,14:00-18:30; Fr 08:00-12:00,14:00-18:30; We 08:00-12:00,14:00-18:30; Mo 08:00-12:00,14:00-18:30; Sa 08:00-12:30"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.6658468,
+          46.7137728
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n767946697",
+        "name": "Vonklausner",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/767946697",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "9029962366871396466"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Mo-Fr 13:30-18:00; Mo-Sa 08:00-12:00"
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.1543014,
+          46.6136838
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n7726096162",
+        "name": "Lana Drink",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/7726096162",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "4119459617544235976"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 08:00-12:00,15:00-18:30; Sa 08:00-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.5047578,
+          46.5175244
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n7738043551",
+        "name": "Gross",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/7738043551",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJuQTkBlFzeEcRHUJ9HaHM9wE"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 09:00-12:00,15:30-18:30; Th 09:00-12:00,15:30-18:30; Fr 09:00-12:00,15:30-18:30; We 09:00-12:00,15:30-18:30; Sa 09:00-12:00,15:30-18:30"
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.66844,
+          46.7983298
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n8790295288",
+        "name": "Weinpunkt Kammerer",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/8790295288",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "9534079579664786686"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ00OHC6cDeEcRXoV7EEMgvIU"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
+        },
+        "apple_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 08:30-12:00,14:00-18:00; Th 08:30-12:00,14:00-18:00; Fr 08:30-12:00,14:00-18:00; We 08:30-12:00,14:00-18:00; Mo 08:30-12:00,14:00-18:00; Sa 08:30-12:00"
+        },
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9173563,
+          46.7870228
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n8796319258",
+        "name": "Scheibers",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/8796319258",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJxy3kcX8feEcR47Yx2bsM2aM"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Tu 08:30-12:00,14:30-18:30; Th 08:30-12:00,14:30-18:30; Fr 08:30-12:00,14:30-18:30; We 08:30-12:00,14:30-18:30; Mo 08:30-12:00,14:30-18:30; Sa 08:30-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.6613222,
+          46.7102744
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n927290573",
+        "name": "Martin's",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/927290573",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJBYI3X2oFeEcRWpMIeX_BP3A"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.5625044,
+          46.6708832
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_w100463362",
+        "name": "Walzl Getränke GmbH",
+        "address": {
+          "street": "Max-Valier-Straße - Via Max Valier",
+          "number": "5",
+          "postalcode": "39020",
+          "city": "Glurns - Glorenza"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/100463362",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "12587956180762024"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 08:00-12:00,14:30-18:30; Sa 08:00-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.2278599,
+          46.2413569
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_w115377791",
+        "name": "Ansitz Dornach Tenuta",
+        "address": {
+          "street": "Via Dorna - Dornachstraße",
+          "number": "12",
+          "postalcode": "39040",
+          "city": "Salorno - Salurn"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/115377791",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "7748587750589543652"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Su 12:00-16:00; Mo 09:00-12:00,14:00-17:30; Tu-Th 09:00-17:30; Fr 11:00-17:30; Sa 11:00-21:30"
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.3298286,
+          46.4923639
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_w124051997",
+        "name": "da Pino e Lella",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/124051997",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "1722561805095586773"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Mo-Tu 15:30-20:00; We 07:30-20:00; Th-Fr 07:30-19:00"
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.8954245,
+          46.8141966
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_w146405146",
+        "name": "Happler",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/146405146",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ9V6LgsYfeEcR9ka9HMr5qmY"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "payment.cards": "google",
+          "payment.girocard": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.5405596,
+          46.429366
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_w208620065",
+        "name": "Getränke Holzknecht",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/208620065",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "5981516199021319621"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Mo-We,Fr 08:00-12:00,15:30-19:00; Th,Sa 08:00-12:00"
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.2403983,
+          46.2945835
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_w217477106",
+        "name": "New Drink GmbH",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/217477106",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJFR_rGMCAgkcRfbmzTPoHc1I"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 08:00-12:00,13:00-17:00; Th 08:00-12:00,13:00-17:00; Fr 08:00-12:00,13:00-17:00; We 08:00-12:00,13:00-17:00; Mo 08:00-12:00,13:00-17:00"
+        },
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.0869896,
+          46.7050307
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_w839945117",
+        "name": "kiosk parking Pragser Wildsee - Lago di Braies",
+        "address": {
+          "street": "Sankt Veit - Via San Vito",
+          "number": "38",
+          "postalcode": "39030",
+          "city": "Prags - Braies"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/839945117",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "4071712340908328950"
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Su 08:00-20:00"
+        },
+        "tags": [
+          "draussen"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.1596035,
+          46.6681525
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n12001149771",
+        "name": "Bistro Therme Meran",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12001149771",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.210042,
+          46.2404624
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n1250591393",
+        "name": "Edicola / tabacchi -Tabakwaren / Kiosk",
+        "address": {
+          "street": "Via Roma - Romstraße",
+          "number": "5",
+          "postalcode": "39040",
+          "city": "Salorno"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1250591393",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.8529346,
+          46.6186936
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n1801573740",
+        "name": "Pronto",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1801573740",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.655382,
+          46.7161735
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n1929372414",
+        "name": "Unterkofler",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1929372414",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.6521478,
+          46.7134254
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n1929381361",
+        "name": "Alberti Newspapers",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1929381361",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.1582641,
+          46.6662525
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n227022233",
+        "name": "Eni",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/227022233",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.2812623,
+          46.7328186
+        ]
+      },
+      "properties": {
+        "id": "tk_itbz_osm_n2333491051",
+        "name": "Tabak- Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2333491051",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -644,12 +1793,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -678,7 +1828,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Sa 08:30-12:15,15:00-18:15"
         },
@@ -724,7 +1874,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Sa 08:30-12:30, Mo-Fr 14:00-19:00"
         },
@@ -736,107 +1886,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.747942,
-          46.5585595
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n2755979674",
-        "name": "Vinotheque Riffeser otto",
-        "address": {
-          "street": "Streda Mëisules",
-          "number": "49",
-          "postalcode": "39048",
-          "city": "Sëlva - Wolkenstein in Gröden - Selva di Val Gardena"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2755979674",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJe0KWke4UeEcRVPnVHbBmAyg"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "payment.cards": "google",
-          "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Th 08:30-12:30,15:00-19:00; Fr 08:30-12:30,15:00-19:00; We 08:30-12:30,15:00-19:00; Mo 08:30-12:30,15:00-19:00; Sa 08:30-12:30,15:00-19:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.2394102,
-          46.3410397
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n2756026176",
-        "name": "Bellutti",
-        "address": {
-          "street": "Rathausplatz - Piazza Municipio",
-          "number": "1a",
-          "postalcode": "39040",
-          "city": "Tramin an der Weinstraße - Termeno sulla Strada del Vino"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2756026176",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJrd86kVGBgkcRJMVivVEetuk"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "hours": {
-          "raw": "Tu 07:00-12:15,15:30-19:00; Th 07:00-12:15,15:30-19:00; Fr 07:00-12:15,15:30-19:00; We 07:00-12:15,15:30-19:00; Mo 07:00-12:15,15:30-19:00; Sa 07:00-12:15,15:00-18:00"
-        },
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -860,247 +1911,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.3658728,
-          46.4978153
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n3685121326",
-        "name": "Tabaccheria Piani",
-        "address": {
-          "street": "Via del Macello - Schlachthofstraße",
-          "number": "6",
-          "postalcode": "39100",
-          "city": "Bolzano - Bozen"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/3685121326",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "6788908956589051056"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Sa 06:00-12:30,15:30-20:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "apple",
-          "payment.cards": "apple",
-          "payment.contactless": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.2620172,
-          46.471693
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n4171915669",
-        "name": "Zeitungen Tabak Arenella",
-        "address": {
-          "street": "Schloss-Warth-Weg - Strada Castel Guardia",
-          "number": "2",
-          "postalcode": "39057",
-          "city": "St. Pauls - San Paolo"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4171915669",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJ67-pX5qbgkcRcnty6AoDPUE"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Th 07:00-12:00,15:30-19:00; Fr 07:00-12:00,15:30-19:00; We 07:00-12:00,15:30-19:00; Mo 07:00-12:00,15:30-19:00; Sa 07:30-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "google",
-          "payment.cards": "google",
-          "payment.contactless": "google",
-          "payment.girocard": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.7753234,
-          46.6245002
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n4237711091",
-        "name": "Walzl",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4237711091",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJM3Fj52HngkcRM8Hunbc1Xsw"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "google",
-          "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Th 08:00-12:00,14:30-18:30; Fr 08:00-12:00,14:30-18:30; We 08:00-12:00,14:30-18:30; Mo 08:00-12:00,14:30-18:30; Sa 08:00-12:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.3522891,
-          46.4957646
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n4265862446",
-        "name": "Tabaccheria Calabrese Antonio",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4265862446",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJUTywbwifgkcRGJx-TbFgQ5A"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "hours": {
-          "raw": "Tu 05:20-19:00; Th 05:20-19:00; Fr 05:20-19:00; We 05:20-19:00; Mo 05:20-19:00; Sa 05:20-19:00; Su 06:30-12:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.3583459,
-          46.496755
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n4361657615",
-        "name": "Edicola Stazione F.S.",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4361657615",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJvbdPQXeegkcRCbe5sSzHkKQ"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Tu 06:00-14:00; Th 06:00-18:00; Fr 06:00-18:00; We 06:00-18:00; Mo 06:00-18:00; Sa 06:00-18:00"
-        },
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "google",
-          "payment.cards": "google",
-          "payment.contactless": "google",
-          "payment.girocard": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -1124,189 +1941,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.2987297,
-          46.3488828
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n4490990489",
-        "name": "NewDrinkShop",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4490990489",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJZaFd6SWCgkcR2yXctxENpkg"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "google",
-          "payment.contactless": "google",
-          "payment.girocard": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.4299618,
-          46.9034784
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n4589331369",
-        "name": "Martins Getränke",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4589331369",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJqwDzBxNTnUcRGIyMJKIJ2dI"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "google",
-          "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 08:30-12:30,15:00-19:00; Th 08:30-12:30,15:00-19:00; Fr 08:30-12:30,15:00-19:00; We 08:30-12:30,15:00-19:00; Mo 08:30-12:30,15:00-19:00; Sa 08:30-12:30,15:00-18:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.8358995,
-          46.8070174
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n4630770289",
-        "name": "Harrasser",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4630770289",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJLRkpSHAeeEcRgFb2IYPWebc"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "google",
-          "payment.girocard": "google",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "no",
-          "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 08:00-12:00,15:00-18:30; Th 08:00-12:00,15:00-18:30; Fr 08:00-12:00,15:00-18:30; We 08:00-12:00,15:00-18:30; Mo 08:00-12:00,15:00-18:30; Sa 08:00-12:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.6435267,
-          46.6298577
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n4635823489",
-        "name": "Pronto",
-        "address": {
-          "postalcode": "39023"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4635823489",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJoUHRSOMfg0cRGIccFwqsDRM"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.postalcode": "osm",
-          "payment.cards": "google",
-          "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 09:00-19:00; Th 09:00-19:00; Fr 09:00-19:00; We 09:00-19:00; Mo 09:00-19:00; Sa 09:00-18:00; Su 10:00-18:00"
-        },
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -1330,12 +1971,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -1359,12 +2001,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -1388,57 +2031,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.140082,
-          46.6792151
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n5553713664",
-        "name": "Getränkemarkt Nägele",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/5553713664",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJsycV6je5gkcR8QUyF6a97Ow"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Th 08:00-12:00,14:00-18:30; Fr 08:00-12:00,14:00-18:30; We 08:00-12:00,14:00-18:30; Mo 08:00-12:00,14:00-18:30; Sa 08:00-12:30"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "google",
-          "payment.cards": "google",
-          "payment.contactless": "google",
-          "payment.girocard": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -1467,7 +2066,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -1476,7 +2075,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -1500,241 +2100,19 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei",
           "draussen",
-          "sitzgelegenheiten",
-          "raucherbereich"
+          "raucherbereich",
+          "sitzgelegenheiten"
         ],
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.6658468,
-          46.7137728
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n767946697",
-        "name": "Vonklausner",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/767946697",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "9029962366871396466"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Fr 13:30-18:00; Mo-Sa 08:00-12:00"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.1543014,
-          46.6136838
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n7726096162",
-        "name": "Lana Drink",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/7726096162",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "4119459617544235976"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 08:00-12:00,15:00-18:30; Sa 08:00-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "apple",
-          "payment.cards": "apple",
-          "payment.contactless": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.5047578,
-          46.5175244
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n7738043551",
-        "name": "Gross",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/7738043551",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJuQTkBlFzeEcRHUJ9HaHM9wE"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "google",
-          "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 09:00-12:00,15:30-18:30; Th 09:00-12:00,15:30-18:30; Fr 09:00-12:00,15:30-18:30; We 09:00-12:00,15:30-18:30; Sa 09:00-12:00,15:30-18:30"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.66844,
-          46.7983298
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n8790295288",
-        "name": "Weinpunkt Kammerer",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/8790295288",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "9534079579664786686"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJ00OHC6cDeEcRXoV7EEMgvIU"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "google",
-          "payment.cards": "google",
-          "payment.contactless": "google",
-          "payment.girocard": "google"
-        },
-        "hours": {
-          "raw": "Tu 08:30-12:00,14:00-18:00; Th 08:30-12:00,14:00-18:00; Fr 08:30-12:00,14:00-18:00; We 08:30-12:00,14:00-18:00; Mo 08:30-12:00,14:00-18:00; Sa 08:30-12:00"
-        },
-        "apple_attempted": "2026-05-29",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.9173563,
-          46.7870228
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n8796319258",
-        "name": "Scheibers",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/8796319258",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJxy3kcX8feEcR47Yx2bsM2aM"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Tu 08:30-12:00,14:30-18:30; Th 08:30-12:00,14:30-18:30; Fr 08:30-12:00,14:30-18:30; We 08:30-12:00,14:30-18:30; Mo 08:30-12:00,14:30-18:30; Sa 08:30-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "google",
-          "payment.cards": "google",
-          "payment.contactless": "google",
-          "payment.girocard": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -1761,47 +2139,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.6613222,
-          46.7102744
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_n927290573",
-        "name": "Martin's",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/927290573",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJBYI3X2oFeEcRWpMIeX_BP3A"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -1825,12 +2171,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -1854,7 +2201,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "08:00+; Mo off"
         },
@@ -1883,57 +2230,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          10.5625044,
-          46.6708832
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_w100463362",
-        "name": "Walzl Getränke GmbH",
-        "address": {
-          "street": "Max-Valier-Straße - Via Max Valier",
-          "number": "5",
-          "postalcode": "39020",
-          "city": "Glurns - Glorenza"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/100463362",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "12587956180762024"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 08:00-12:00,14:30-18:30; Sa 08:00-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "apple",
-          "payment.cards": "apple",
-          "payment.contactless": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           11.120307,
           46.8933139
         ]
@@ -1950,105 +2246,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.2278599,
-          46.2413569
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_w115377791",
-        "name": "Ansitz Dornach Tenuta",
-        "address": {
-          "street": "Via Dorna - Dornachstraße",
-          "number": "12",
-          "postalcode": "39040",
-          "city": "Salorno - Salurn"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/115377791",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "7748587750589543652"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Su 12:00-16:00; Mo 09:00-12:00,14:00-17:30; Tu-Th 09:00-17:30; Fr 11:00-17:30; Sa 11:00-21:30"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.3298286,
-          46.4923639
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_w124051997",
-        "name": "da Pino e Lella",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/124051997",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "1722561805095586773"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Tu 15:30-20:00; We 07:30-20:00; Th-Fr 07:30-19:00"
-        },
-        "apple_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -2077,7 +2281,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 08:00-12:00,13:00-18:00; Sa 08:00-12:00; Su off"
         },
@@ -2090,133 +2294,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.8954245,
-          46.8141966
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_w146405146",
-        "name": "Happler",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/146405146",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJ9V6LgsYfeEcR9ka9HMr5qmY"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "google",
-          "payment.girocard": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "yes",
-          "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.5405596,
-          46.429366
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_w208620065",
-        "name": "Getränke Holzknecht",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/208620065",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "5981516199021319621"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-We,Fr 08:00-12:00,15:30-19:00; Th,Sa 08:00-12:00"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.2403983,
-          46.2945835
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_w217477106",
-        "name": "New Drink GmbH",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/217477106",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJFR_rGMCAgkcRfbmzTPoHc1I"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "google",
-          "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 08:00-12:00,13:00-17:00; Th 08:00-12:00,13:00-17:00; Fr 08:00-12:00,13:00-17:00; We 08:00-12:00,13:00-17:00; Mo 08:00-12:00,13:00-17:00"
-        },
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -2240,66 +2319,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.0869896,
-          46.7050307
-        ]
-      },
-      "properties": {
-        "id": "tk_itbz_osm_w839945117",
-        "name": "kiosk parking Pragser Wildsee - Lago di Braies",
-        "address": {
-          "street": "Sankt Veit - Via San Vito",
-          "number": "38",
-          "postalcode": "39030",
-          "city": "Prags - Braies"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/839945117",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "4071712340908328950"
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Su 08:00-20:00"
-        },
-        "tags": [
-          "draussen"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "osm",
-          "payment.cards": "apple",
-          "payment.contactless": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "apple_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     }
   ]

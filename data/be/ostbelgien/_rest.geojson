@@ -26,60 +26,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 09:30-18:00; Th 09:30-18:00; Fr 09:30-18:00; We 09:30-18:00; Mo 13:30-18:00; Sa 09:30-18:00"
+        },
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 09:30-18:00; Th 09:30-18:00; Fr 09:30-18:00; We 09:30-18:00; Mo 13:30-18:00; Sa 09:30-18:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.0144437,
-          50.7149045
-        ]
-      },
-      "properties": {
-        "id": "tk_obe_osm_n1147907828",
-        "name": "7-Eleven",
-        "address": {
-          "street": "Lütticher Straße",
-          "number": "210",
-          "city": "Kelmis"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1147907828",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -107,21 +71,21 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Mo-Su 10:00-23:00"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Su 10:00-23:00"
-        },
-        "apple_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -152,7 +116,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -160,10 +124,11 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 13:30-00:00; Th 13:30-00:00; Fr 13:30-00:00; We 13:30-00:00; Mo 13:30-00:00; Sa 13:30-00:00; Su 13:30-00:00"
         },
-        "google_attempted": "2026-05-29"
+        "payment": {}
       }
     },
     {
@@ -194,43 +159,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.1128483,
-          50.4160307
-        ]
-      },
-      "properties": {
-        "id": "tk_obe_osm_n6434549424",
-        "name": "La Kane de Kako",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/6434549424",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -262,27 +199,94 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 05:00-22:00; Th 05:00-22:00; Fr 05:00-22:00; We 05:00-22:00; Mo 05:00-22:00; Sa 07:00-22:00; Su 09:00-19:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0144437,
+          50.7149045
+        ]
+      },
+      "properties": {
+        "id": "tk_obe_osm_n1147907828",
+        "name": "7-Eleven",
+        "address": {
+          "street": "Lütticher Straße",
+          "number": "210",
+          "city": "Kelmis"
         },
-        "hours": {
-          "raw": "Tu 05:00-22:00; Th 05:00-22:00; Fr 05:00-22:00; We 05:00-22:00; Mo 05:00-22:00; Sa 07:00-22:00; Su 09:00-19:00"
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1147907828",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
         },
-        "google_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1128483,
+          50.4160307
+        ]
+      },
+      "properties": {
+        "id": "tk_obe_osm_n6434549424",
+        "name": "La Kane de Kako",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/6434549424",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -306,12 +310,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -335,12 +340,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -368,7 +374,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 10:00-18:00, Sa 09:00-13:00"
         },

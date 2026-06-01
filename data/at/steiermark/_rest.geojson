@@ -26,24 +26,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 07:00-12:30,14:30-18:00; Th 07:00-12:30,14:30-18:00; Fr 07:00-12:30,14:30-18:00; We 07:00-12:30,14:30-18:00; Mo 07:00-12:30,14:30-18:00; Sa 07:30-12:30"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 07:00-12:30,14:30-18:00; Th 07:00-12:30,14:30-18:00; Fr 07:00-12:30,14:30-18:00; We 07:00-12:30,14:30-18:00; Mo 07:00-12:30,14:30-18:00; Sa 07:30-12:30"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -78,7 +78,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.number": "osm",
@@ -88,78 +88,12 @@
           "payment.girocard": "google"
         },
         "apple_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.2993843,
-          47.0357136
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n10294253149",
-        "name": "Pentscher's 24h Shop",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/10294253149",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "24/7"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.0930485,
-          47.3594795
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n10650284220",
-        "name": "s'Gösser Depot",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/10650284220",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 08:30-12:00,12:30-15:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -189,87 +123,22 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Mo-Sa 00:00-00:30,18:00-24:00"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Sa 00:00-00:30,18:00-24:00"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.9922838,
-          46.6863789
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n11590105564",
-        "name": "Tabak Trafik Franz Maller",
-        "address": {
-          "street": "Stadtgrabenstraße",
-          "number": "1",
-          "city": "Bad Radkersburg"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/11590105564",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.6484805,
-          47.2703287
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n11982758258",
-        "name": "Hirschstüberl",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/11982758258",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -301,7 +170,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 07:00-17:00"
         },
@@ -316,206 +185,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.6634384,
-          46.9295496
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n1259895026",
-        "name": "Trafik Schönberger",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1259895026",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4414525,
-          47.0678405
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n12819684179",
-        "name": "Krone-Kiosk",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/12819684179",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 09:00-15:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.0654869,
-          47.0557513
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n13026724253",
-        "name": "See La Vie",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/13026724253",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.9012964,
-          47.5419599
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n1344333063",
-        "name": "Trafik Schauer",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1344333063",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4658613,
-          47.0662052
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n1363117574",
-        "name": "Tabak Trafik - Inh. Franz Wiedner",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1363117574",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 07:30-13:00,14:00-18:30; Sa 08:00-13:30"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.9922326,
-          47.2806734
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n13634168092",
-        "name": "Tabak Trafik",
-        "address": {
-          "street": "Im Hatric",
-          "city": "Hartberg"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/13634168092",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Ma-Mi 08:30-18:30 Do-Fr 08:00-18:30 Sa 08:00-17:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.city": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -543,16 +218,17 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "hours": "apple"
         },
+        "apple_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Mo-Su 00:00-24:00"
         },
-        "apple_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "payment": {}
       }
     },
     {
@@ -584,7 +260,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
@@ -593,197 +269,18 @@
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Mo-Fr 08:00-18:00; Sa 08:00-12:00"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Fr 08:00-18:00; Sa 08:00-12:00"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.9676168,
-          47.2791113
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n1547200463",
-        "name": "Tabak Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1547200463",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo,We,Th 06:00-12:00,14:00-18:00; Tu,Fr 06:00-18:00; Sa 06:00-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.9658936,
-          47.2775169
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n1548575656",
-        "name": "Tabak Trafik Karner",
-        "address": {
-          "street": "Grazer Straße",
-          "number": "12",
-          "city": "Hartberg"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1548575656",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Th 06:30-12:00,15:00-18:00; Fr 06:30-12:00,14:30-18:00; Sa 07:00-12:30"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.971738,
-          47.2819787
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n1550162483",
-        "name": "Tabak Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1550162483",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 07:00-12:00,15:00-18:00; Sa 07:00-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.9782015,
-          47.2825952
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n1555869829",
-        "name": "Tabak Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1555869829",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Th 06:30-12:30,14:30-18:30; Fr 06:30-18:30; Sa 07:30-15:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.6467206,
-          47.169659
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n1575083268",
-        "name": "SOCAR",
-        "address": {
-          "street": "Burggasse",
-          "number": "85a",
-          "city": "Judenburg"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1575083268",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Sa 06:00-22:00; Su 07:00-21:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -815,165 +312,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Mo 06:00-12:00; Tu,Th 06:00-12:00,15:00-18:00; We,Fr 06:00-12:00,14:30-18:00; Sa 07:00-12:00"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo 06:00-12:00; Tu,Th 06:00-12:00,15:00-18:00; We,Fr 06:00-12:00,14:30-18:00; Sa 07:00-12:00"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4077154,
-          47.0738488
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n1747362930",
-        "name": "Tabak Trafik",
-        "address": {
-          "street": "Alte Poststraße",
-          "number": "114",
-          "city": "Graz"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1747362930",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 06:30-12:30, 14:30-18:00; Sa 07:00-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4624351,
-          47.0662436
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n1795741260",
-        "name": "Tabak - Trafik",
-        "address": {
-          "street": "Schörgelgasse",
-          "number": "80",
-          "city": "Graz"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1795741260",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo- Fr 07:30-12:30,14:30-18:00; Sa 07:45-12:30"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.0088145,
-          47.1709762
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n1799711324",
-        "name": "Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1799711324",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4308542,
-          47.0754299
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n1826537412",
-        "name": "Skink",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1826537412",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1005,7 +361,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 07:00-18:00; Th 07:00-18:00; Fr 07:00-18:00; We 07:00-18:00; Mo 07:00-18:00"
         },
@@ -1020,48 +376,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.6895474,
-          47.2738016
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n1844495165",
-        "name": "Trafik-Schönherr",
-        "address": {
-          "street": "Hauptplatz",
-          "number": "18",
-          "city": "Anger"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1844495165",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1093,7 +413,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
@@ -1102,21 +422,21 @@
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 10:00-23:30; Th 10:00-23:30; Fr 10:00-23:30; We 10:00-23:30; Mo 10:00-23:30; Sa 10:00-23:30; Su 10:00-23:30"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 10:00-23:30; Th 10:00-23:30; Fr 10:00-23:30; We 10:00-23:30; Mo 10:00-23:30; Sa 10:00-23:30; Su 10:00-23:30"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1144,50 +464,21 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Mo-Fr 07:00-12:00,15:00-18:00; Sa 07:00-12:00"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Fr 07:00-12:00,15:00-18:00; Sa 07:00-12:00"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4202517,
-          47.0859943
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n2087267932",
-        "name": "Tabak Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2087267932",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1215,7 +506,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 07:15-18:00; Sa 07:15-12:30"
         },
@@ -1225,11 +516,11 @@
           "payment.cards": "apple",
           "payment.contactless": "apple"
         },
+        "apple_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "apple_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1260,7 +551,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 07:00-12:30,13:30-18:00"
         },
@@ -1274,12 +565,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1311,7 +602,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 07:00-18:00; Sa 09:00-14:00"
         },
@@ -1324,111 +615,11 @@
           "payment.cards": "apple",
           "payment.contactless": "apple"
         },
+        "apple_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.0465695,
-          47.1235725
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n2173237745",
-        "name": "Speis",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2173237745",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Su 09:00-18:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.0465075,
-          47.1239038
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n2173237757",
-        "name": "Spa Rezeption",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2173237757",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.091442,
-          47.3780522
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n2259018906",
-        "name": "Tabaktrafik",
-        "address": {
-          "street": "Waasenplatz",
-          "number": "1",
-          "city": "Leoben",
-          "district": "Waasen"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2259018906",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm",
-          "address.district": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1461,159 +652,25 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
           "address.district": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Mo-Fr 06:30-12:00,15:00-18:00; Sa 06:30-12:00"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Fr 06:30-12:00,15:00-18:00; Sa 06:30-12:00"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4049043,
-          47.0728631
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n2307853313",
-        "name": "Trafik Namor",
-        "address": {
-          "street": "Vinzenzgasse",
-          "number": "22"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2307853313",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.5467912,
-          46.7806373
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n2329087495",
-        "name": "Bahnhof-Kiosk",
-        "address": {
-          "street": "Bahnhofgürtel",
-          "number": "7"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2329087495",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 05:20-19:30; Sa 05:20-18:00; Su 08:00-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4127494,
-          47.041069
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n2440869636",
-        "name": "Tabak Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2440869636",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.3352047,
-          46.974004
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n2481348967",
-        "name": "Freisinger",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2481348967",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 07:30-12:30, 14:30-18:30; Sa 07:30-13:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1648,7 +705,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.number": "osm",
@@ -1658,16 +715,16 @@
           "payment.contactless": "google",
           "payment.girocard": "google"
         },
+        "apple_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 06:30-12:00,14:00-18:00; Th 06:30-12:00,14:00-18:00; Fr 06:30-12:00,14:00-18:00; We 06:30-12:00,14:00-18:00; Mo 06:30-12:00,14:00-18:00; Sa 06:30-12:00"
         },
-        "apple_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1699,27 +756,27 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 05:30-12:30,14:30-18:30; Th 05:30-12:30,14:30-18:30; Fr 05:30-18:30; We 05:30-12:30,14:30-18:30; Mo 05:30-12:30,14:30-18:30; Sa 05:30-13:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 05:30-12:30,14:30-18:30; Th 05:30-12:30,14:30-18:30; Fr 05:30-18:30; We 05:30-12:30,14:30-18:30; Mo 05:30-12:30,14:30-18:30; Sa 05:30-13:00"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1747,24 +804,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 07:00-18:00; Th 07:00-18:00; Fr 07:00-18:00; We 07:00-18:00; Mo 07:00-18:00; Sa 07:00-12:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 07:00-18:00; Th 07:00-18:00; Fr 07:00-18:00; We 07:00-18:00; Mo 07:00-18:00; Sa 07:00-12:00"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1796,7 +853,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
@@ -1808,10 +865,11 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 07:00-18:00; Th 07:00-18:00; Fr 07:00-18:00; We 07:00-18:00; Mo 07:00-18:00; Sa 07:30-12:30"
         },
-        "google_attempted": "2026-05-29"
+        "payment": {}
       }
     },
     {
@@ -1843,104 +901,27 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 07:00-18:00; Th 07:00-18:00; Fr 07:00-18:00; We 07:00-18:00; Mo 07:00-18:00; Sa 09:00-13:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 07:00-18:00; Th 07:00-18:00; Fr 07:00-18:00; We 07:00-18:00; Mo 07:00-18:00; Sa 09:00-13:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4266487,
-          47.0607831
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n2989087789",
-        "name": "Trafik",
-        "address": {
-          "street": "Lazarettgürtel",
-          "number": "55"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2989087789",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4264132,
-          47.0661303
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n2989385124",
-        "name": "Tabakfachgeschäft Lutz Pratter",
-        "address": {
-          "street": "Lazarettgasse",
-          "number": "4",
-          "city": "Graz"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2989385124",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 7:00-18:00; Sa 7:00-12:00; PH off"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -1972,24 +953,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Mo-Th 05:30-12:15,14:15-18:00; Fr 05:30-18:00; Sa 07:00-17:00"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Th 05:30-12:15,14:15-18:00; Fr 05:30-18:00; Sa 07:00-17:00"
-        },
-        "apple_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2025,7 +1006,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -2036,121 +1017,16 @@
           "payment.contactless": "google",
           "payment.girocard": "google"
         },
+        "apple_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 06:00-12:00,15:00-18:00; Th 06:00-12:00,15:00-18:00; Fr 06:00-12:00,14:30-18:00; We 06:00-12:00,14:30-18:00; Mo 06:00-12:00,15:00-18:00; Sa 06:30-12:00"
         },
-        "apple_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.0463328,
-          47.1236468
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n3051806040",
-        "name": "Naschkammer",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/3051806040",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "24/7"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4023826,
-          46.6768756
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n340519833",
-        "name": "Postpartner und Trafik Rebstock",
-        "address": {
-          "street": "Hauptplatz",
-          "number": "34",
-          "city": "Arnfels"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/340519833",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4055106,
-          47.095921
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n3676824249",
-        "name": "Tabak Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/3676824249",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 08:40-19:00; Sa 08:40-17:00"
-        },
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2182,7 +1058,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 06:30-12:15,14:30-18:00; Th 06:30-12:15,14:30-18:00; Fr 06:30-12:15,14:30-18:00; We 06:30-12:15,14:30-18:00; Mo 06:30-12:15,14:30-18:00; Sa 07:00-12:00"
         },
@@ -2196,11 +1072,11 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2232,46 +1108,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.7279985,
-          46.9724963
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n4069114823",
-        "name": "Freshwater Wildalp Handels GmbH",
-        "address": {
-          "number": "88",
-          "city": "Kirchberg an der Raab"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4069114823",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -2299,12 +1142,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -2332,81 +1176,17 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 11:00-22:00; Th 11:00-22:00; Fr 14:00-22:00; We 11:00-22:00; Mo 11:00-22:00; Su 10:00-21:00"
         },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4379464,
-          47.0713527
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n446864114",
-        "name": "Morawa Pressehaus",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/446864114",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.678958,
-          47.2040538
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n4718036290",
-        "name": "Getränkequelle Scheucher",
-        "address": {
-          "street": "Judenburgerstraße",
-          "number": "30",
-          "city": "Fohnsdorf"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4718036290",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "payment": {}
       }
     },
     {
@@ -2438,7 +1218,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -2446,7 +1226,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -2477,26 +1258,26 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.city": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 07:00-18:00; Th 07:00-18:00; Fr 07:00-18:00; We 07:00-18:00; Mo 07:00-18:00; Sa 07:00-13:00"
+        },
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 07:00-18:00; Th 07:00-18:00; Fr 07:00-18:00; We 07:00-18:00; Mo 07:00-18:00; Sa 07:00-13:00"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2524,203 +1305,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 07:30-12:30,14:00-18:30; Th 07:30-12:30,14:00-18:30; Fr 07:30-18:30; We 07:30-12:30,14:00-18:30; Mo 07:30-12:30,14:00-18:30; Sa 07:30-13:00"
+        },
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 07:30-12:30,14:00-18:30; Th 07:30-12:30,14:00-18:30; Fr 07:30-18:30; We 07:30-12:30,14:00-18:30; Mo 07:30-12:30,14:00-18:30; Sa 07:30-13:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4031396,
-          46.9759846
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n5440909339",
-        "name": "Tabak Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/5440909339",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.8345605,
-          47.2182637
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n5617953353",
-        "name": "Tabak Trafik",
-        "address": {
-          "street": "Seckauer Straße",
-          "number": "17",
-          "city": "Knittelfeld"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/5617953353",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.830175,
-          47.2137492
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n5631920973",
-        "name": "Babylon Markt",
-        "address": {
-          "street": "Kirchengasse",
-          "number": "5",
-          "city": "Knittefeld"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/5631920973",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.5158139,
-          46.8868333
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n615167821",
-        "name": "Zirngast",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/615167821",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4315872,
-          47.0741535
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n6363002988",
-        "name": "Bierboutique",
-        "address": {
-          "street": "Lendplatz",
-          "number": "5",
-          "city": "Graz"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/6363002988",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Tu-Fr 13:00-18:30; Sa 11:00-14:00; Mo,Su off"
-        },
-        "payment": {
-          "cash": "yes",
-          "cards": "yes",
-          "contactless": "unknown",
-          "girocard": "unknown"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm",
-          "hours": "osm",
-          "payment.cash": "osm",
-          "payment.cards": "osm",
-          "payment.contactless": "osm",
-          "payment.girocard": "osm"
-        },
-        "apple_id_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2756,7 +1358,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -2767,16 +1369,16 @@
           "payment.contactless": "google",
           "payment.girocard": "google"
         },
+        "apple_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 08:00-17:00; Th 08:00-17:00; Fr 08:00-17:00; We 08:00-17:00; Mo 08:00-17:00; Sa 08:00-12:00"
         },
-        "apple_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2808,7 +1410,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 10:00-23:00; Th 10:00-23:00; Fr 10:00-23:00; We 10:00-23:00; Mo 10:00-23:00; Sa 10:00-23:00; Su 10:00-23:00"
         },
@@ -2823,78 +1425,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.5466723,
-          47.4851663
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n6755045152",
-        "name": "Seekiosk",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/6755045152",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Fr-Su 14:00-21:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.8305599,
-          47.2124
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n7466654640",
-        "name": "Die Genussmanufaktur",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/7466654640",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Mo-Fr 09:00-12:00,15:00-19:00; Sa 09:00-12:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2925,7 +1461,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 06:30-18:00; Sa 09:00-16:00"
         },
@@ -2940,11 +1476,11 @@
           "payment.cards": "apple",
           "payment.contactless": "apple"
         },
+        "apple_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "apple_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -2972,24 +1508,24 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 08:00-12:00,14:30-18:00; Th 08:00-12:00,14:30-18:00; Fr 08:00-12:00,14:30-18:00; We 08:00-12:00,14:30-18:00; Mo 08:00-12:00,14:30-18:00; Sa 08:00-12:30"
+        },
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 08:00-12:00,14:30-18:00; Th 08:00-12:00,14:30-18:00; Fr 08:00-12:00,14:30-18:00; We 08:00-12:00,14:30-18:00; Mo 08:00-12:00,14:30-18:00; Sa 08:00-12:30"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3021,7 +1557,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 10:00-22:00; Th 10:00-22:00; Fr 10:00-22:00; We 10:00-22:00; Mo 10:00-22:00; Sa 15:00-22:00"
         },
@@ -3033,108 +1569,8 @@
           "hours": "google"
         },
         "apple_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4215534,
-          47.1032727
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n876289145",
-        "name": "Trafik",
-        "address": {
-          "street": "Andritzer Reichsstraße",
-          "number": "37b",
-          "city": "Graz"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/876289145",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "hours": {
-          "raw": "Sa 06:30-12:30; Mo-Fr 06:30-18:00"
-        },
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.6502553,
-          47.2815594
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n902505469",
-        "name": "Zetzschachtel",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/902505469",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4395296,
-          46.9045239
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n907933893",
-        "name": "Hofbräu Herzog",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/907933893",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3166,7 +1602,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 08:00-17:00, Sa 08:00-12:00, PH off"
         },
@@ -3182,101 +1618,11 @@
           "payment.cards": "apple",
           "payment.contactless": "apple"
         },
+        "apple_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.8325549,
-          47.307801
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n9590422076",
-        "name": "Badbuffet",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/9590422076",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.2866386,
-          47.4387267
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n962115781",
-        "name": "Schneidhofer",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/962115781",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4286029,
-          47.0519291
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_n964874127",
-        "name": "JessasMarie",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/964874127",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3308,7 +1654,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 07:00-13:00,14:00-18:00; Th 07:00-13:00,14:00-18:00; Fr 07:00-13:00,14:00-18:00; We 07:00-13:00,14:00-18:00; Mo 07:00-13:00,14:00-18:00; Sa 07:30-12:30"
         },
@@ -3323,12 +1669,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3356,7 +1702,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "payment.cards": "google",
@@ -3364,12 +1710,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3397,7 +1743,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 07:00-12:30,14:00-18:00; Th 07:00-12:30,14:00-18:00; Fr 07:00-12:30,14:00-18:00; We 07:00-12:30,14:00-18:00; Mo 07:00-12:30,14:00-18:00; Sa 07:30-12:30"
         },
@@ -3409,41 +1755,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.0124722,
-          47.1688583
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_w1016560686",
-        "name": "Freibad-Kiosk",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/1016560686",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3479,7 +1796,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -3487,11 +1804,12 @@
           "address.city": "osm",
           "hours": "google"
         },
+        "apple_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 08:00-16:30; Th 08:00-16:30; Fr 08:00-16:30; We 08:00-16:30; Mo 08:00-16:30"
         },
-        "apple_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "payment": {}
       }
     },
     {
@@ -3522,7 +1840,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.number": "osm",
@@ -3532,12 +1850,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3565,7 +1883,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "payment": {
           "cash": "unknown",
           "cards": "no",
@@ -3612,56 +1930,27 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "google",
           "payment.cards": "google",
           "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Tu 08:00-12:15,14:30-18:00; Th 08:00-12:15,14:30-17:30; Fr 08:00-12:15,14:00-18:00; We 08:00-12:15,14:30-18:00; Mo 08:00-12:15,14:30-17:30; Sa 08:00-12:00"
+        },
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 08:00-12:15,14:30-18:00; Th 08:00-12:15,14:30-17:30; Fr 08:00-12:15,14:00-18:00; We 08:00-12:15,14:30-18:00; Mo 08:00-12:15,14:30-17:30; Sa 08:00-12:00"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4923519,
-          47.0346885
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_w147001167",
-        "name": "Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/147001167",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3693,7 +1982,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 08:00-12:00,13:00-17:00; Fr 08:00-12:00,13:00-17:00; We 08:00-12:00,13:00-17:00; Mo 08:00-12:00,13:00-17:00"
         },
@@ -3708,12 +1997,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3745,7 +2034,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "tags": [
           "barrierefrei"
         ],
@@ -3754,18 +2043,18 @@
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Mo-Fr 08:30-12:00,14:00-17:00"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Fr 08:30-12:00,14:00-17:00"
-        },
-        "apple_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3797,7 +2086,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Tu 08:00-18:00; Th 08:00-18:00; Fr 08:00-18:00; We 08:00-18:00; Mo 08:00-18:00; Sa 08:00-17:00"
         },
@@ -3812,48 +2101,12 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.3589143,
-          47.3471477
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_w182048172",
-        "name": "Würstelstand",
-        "address": {
-          "street": "Brucker Straße",
-          "number": "2a",
-          "city": "Pernegg an der Mur"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/182048172",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3885,7 +2138,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 08:00-17:00"
         },
@@ -3897,7 +2150,8 @@
           "hours": "apple"
         },
         "apple_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        "google_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -3932,7 +2186,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.number": "osm",
@@ -3941,15 +2195,15 @@
           "payment.cards": "google",
           "payment.girocard": "google"
         },
+        "apple_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 07:00-12:00,13:00-17:00; Th 07:00-12:00,13:00-17:00; Fr 07:00-12:00,13:00-17:00; We 07:00-12:00,13:00-17:00; Mo 07:00-12:00,13:00-17:00"
         },
-        "apple_attempted": "2026-05-29",
         "payment": {
           "cards": "no",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -3985,7 +2239,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -3996,122 +2250,16 @@
           "payment.contactless": "google",
           "payment.girocard": "google"
         },
+        "apple_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
         "hours": {
           "raw": "Tu 07:00-17:00; Th 07:00-17:00; Fr 07:00-18:00; We 07:00-17:00; Mo 07:00-17:00; Sa 07:00-12:30"
         },
-        "apple_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        },
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.3917783,
-          47.0687841
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_w221771121",
-        "name": "Tabak Trafik",
-        "address": {
-          "street": "Eckertstraße",
-          "number": "126",
-          "city": "Graz"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/221771121",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.1515078,
-          47.0452485
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_w225168670",
-        "name": "Trafik Brandstätter",
-        "address": {
-          "street": "Arnsteinstraße",
-          "number": "3",
-          "city": "Voitsberg"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/225168670",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.9938087,
-          47.459902
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_w226565150",
-        "name": "Drogerie Daily",
-        "address": {
-          "number": "209",
-          "city": "Öblarn"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/226565150",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm",
-          "address.number": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-29",
-        "google_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -4144,25 +2292,25 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm",
           "address.district": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-05-29",
+        "hours": {
+          "raw": "Mo-Fr 08:00-12:00,15:00-18:00; Sa 08:00-12:00"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Fr 08:00-12:00,15:00-18:00; Sa 08:00-12:00"
-        },
-        "apple_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -4195,7 +2343,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo,We-Fr 08:00-12:00,15:00-18:00; Tu,Sa 08:00-12:00"
         },
@@ -4209,11 +2357,11 @@
           "payment.cards": "apple",
           "payment.contactless": "apple"
         },
+        "apple_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "apple_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -4245,7 +2393,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 06:00-18:00; Sa 07:30-12:00"
         },
@@ -4258,39 +2406,11 @@
           "payment.cards": "apple",
           "payment.contactless": "apple"
         },
+        "apple_attempted": "2026-05-29",
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "apple_attempted": "2026-05-29"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.4114693,
-          47.1162099
-        ]
-      },
-      "properties": {
-        "id": "tk_at6r_osm_w263997985",
-        "name": "Tabak Trafik",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/263997985",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-29",
-        "updated": "2026-05-29",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-29"
+        }
       }
     },
     {
@@ -4322,7 +2442,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 07:00-12:00,14:30-18:00; Sa 07:00-12:00"
         },
@@ -4333,7 +2453,1952 @@
           "address.city": "osm",
           "hours": "apple"
         },
-        "apple_attempted": "2026-05-29"
+        "apple_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.2993843,
+          47.0357136
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n10294253149",
+        "name": "Pentscher's 24h Shop",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/10294253149",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "24/7"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0930485,
+          47.3594795
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n10650284220",
+        "name": "s'Gösser Depot",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/10650284220",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 08:30-12:00,12:30-15:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.9922838,
+          46.6863789
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n11590105564",
+        "name": "Tabak Trafik Franz Maller",
+        "address": {
+          "street": "Stadtgrabenstraße",
+          "number": "1",
+          "city": "Bad Radkersburg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/11590105564",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.6484805,
+          47.2703287
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n11982758258",
+        "name": "Hirschstüberl",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/11982758258",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.6634384,
+          46.9295496
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n1259895026",
+        "name": "Trafik Schönberger",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1259895026",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4414525,
+          47.0678405
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n12819684179",
+        "name": "Krone-Kiosk",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12819684179",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 09:00-15:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0654869,
+          47.0557513
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n13026724253",
+        "name": "See La Vie",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13026724253",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.9012964,
+          47.5419599
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n1344333063",
+        "name": "Trafik Schauer",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1344333063",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4658613,
+          47.0662052
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n1363117574",
+        "name": "Tabak Trafik - Inh. Franz Wiedner",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1363117574",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 07:30-13:00,14:00-18:30; Sa 08:00-13:30"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.9922326,
+          47.2806734
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n13634168092",
+        "name": "Tabak Trafik",
+        "address": {
+          "street": "Im Hatric",
+          "city": "Hartberg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13634168092",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Ma-Mi 08:30-18:30 Do-Fr 08:00-18:30 Sa 08:00-17:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.9676168,
+          47.2791113
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n1547200463",
+        "name": "Tabak Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1547200463",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo,We,Th 06:00-12:00,14:00-18:00; Tu,Fr 06:00-18:00; Sa 06:00-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.9658936,
+          47.2775169
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n1548575656",
+        "name": "Tabak Trafik Karner",
+        "address": {
+          "street": "Grazer Straße",
+          "number": "12",
+          "city": "Hartberg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1548575656",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Th 06:30-12:00,15:00-18:00; Fr 06:30-12:00,14:30-18:00; Sa 07:00-12:30"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.971738,
+          47.2819787
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n1550162483",
+        "name": "Tabak Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1550162483",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 07:00-12:00,15:00-18:00; Sa 07:00-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.9782015,
+          47.2825952
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n1555869829",
+        "name": "Tabak Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1555869829",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Th 06:30-12:30,14:30-18:30; Fr 06:30-18:30; Sa 07:30-15:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.6467206,
+          47.169659
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n1575083268",
+        "name": "SOCAR",
+        "address": {
+          "street": "Burggasse",
+          "number": "85a",
+          "city": "Judenburg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1575083268",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Sa 06:00-22:00; Su 07:00-21:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4077154,
+          47.0738488
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n1747362930",
+        "name": "Tabak Trafik",
+        "address": {
+          "street": "Alte Poststraße",
+          "number": "114",
+          "city": "Graz"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1747362930",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 06:30-12:30, 14:30-18:00; Sa 07:00-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4624351,
+          47.0662436
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n1795741260",
+        "name": "Tabak - Trafik",
+        "address": {
+          "street": "Schörgelgasse",
+          "number": "80",
+          "city": "Graz"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1795741260",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo- Fr 07:30-12:30,14:30-18:00; Sa 07:45-12:30"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.0088145,
+          47.1709762
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n1799711324",
+        "name": "Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1799711324",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4308542,
+          47.0754299
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n1826537412",
+        "name": "Skink",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1826537412",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.6895474,
+          47.2738016
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n1844495165",
+        "name": "Trafik-Schönherr",
+        "address": {
+          "street": "Hauptplatz",
+          "number": "18",
+          "city": "Anger"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1844495165",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4202517,
+          47.0859943
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n2087267932",
+        "name": "Tabak Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2087267932",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.0465695,
+          47.1235725
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n2173237745",
+        "name": "Speis",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2173237745",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Su 09:00-18:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.0465075,
+          47.1239038
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n2173237757",
+        "name": "Spa Rezeption",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2173237757",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.091442,
+          47.3780522
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n2259018906",
+        "name": "Tabaktrafik",
+        "address": {
+          "street": "Waasenplatz",
+          "number": "1",
+          "city": "Leoben",
+          "district": "Waasen"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2259018906",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm",
+          "address.district": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4049043,
+          47.0728631
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n2307853313",
+        "name": "Trafik Namor",
+        "address": {
+          "street": "Vinzenzgasse",
+          "number": "22"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2307853313",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.5467912,
+          46.7806373
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n2329087495",
+        "name": "Bahnhof-Kiosk",
+        "address": {
+          "street": "Bahnhofgürtel",
+          "number": "7"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2329087495",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 05:20-19:30; Sa 05:20-18:00; Su 08:00-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4127494,
+          47.041069
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n2440869636",
+        "name": "Tabak Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2440869636",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.3352047,
+          46.974004
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n2481348967",
+        "name": "Freisinger",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2481348967",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 07:30-12:30, 14:30-18:30; Sa 07:30-13:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4266487,
+          47.0607831
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n2989087789",
+        "name": "Trafik",
+        "address": {
+          "street": "Lazarettgürtel",
+          "number": "55"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2989087789",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4264132,
+          47.0661303
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n2989385124",
+        "name": "Tabakfachgeschäft Lutz Pratter",
+        "address": {
+          "street": "Lazarettgasse",
+          "number": "4",
+          "city": "Graz"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2989385124",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 7:00-18:00; Sa 7:00-12:00; PH off"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.0463328,
+          47.1236468
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n3051806040",
+        "name": "Naschkammer",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3051806040",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "24/7"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4023826,
+          46.6768756
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n340519833",
+        "name": "Postpartner und Trafik Rebstock",
+        "address": {
+          "street": "Hauptplatz",
+          "number": "34",
+          "city": "Arnfels"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/340519833",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4055106,
+          47.095921
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n3676824249",
+        "name": "Tabak Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3676824249",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 08:40-19:00; Sa 08:40-17:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.7279985,
+          46.9724963
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n4069114823",
+        "name": "Freshwater Wildalp Handels GmbH",
+        "address": {
+          "number": "88",
+          "city": "Kirchberg an der Raab"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4069114823",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4379464,
+          47.0713527
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n446864114",
+        "name": "Morawa Pressehaus",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/446864114",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.678958,
+          47.2040538
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n4718036290",
+        "name": "Getränkequelle Scheucher",
+        "address": {
+          "street": "Judenburgerstraße",
+          "number": "30",
+          "city": "Fohnsdorf"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4718036290",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4031396,
+          46.9759846
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n5440909339",
+        "name": "Tabak Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5440909339",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.8345605,
+          47.2182637
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n5617953353",
+        "name": "Tabak Trafik",
+        "address": {
+          "street": "Seckauer Straße",
+          "number": "17",
+          "city": "Knittelfeld"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5617953353",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.830175,
+          47.2137492
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n5631920973",
+        "name": "Babylon Markt",
+        "address": {
+          "street": "Kirchengasse",
+          "number": "5",
+          "city": "Knittefeld"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5631920973",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.5158139,
+          46.8868333
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n615167821",
+        "name": "Zirngast",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/615167821",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4315872,
+          47.0741535
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n6363002988",
+        "name": "Bierboutique",
+        "address": {
+          "street": "Lendplatz",
+          "number": "5",
+          "city": "Graz"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/6363002988",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Tu-Fr 13:00-18:30; Sa 11:00-14:00; Mo,Su off"
+        },
+        "payment": {
+          "cash": "yes",
+          "cards": "yes",
+          "contactless": "unknown",
+          "girocard": "unknown"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm",
+          "hours": "osm",
+          "payment.cash": "osm",
+          "payment.cards": "osm",
+          "payment.contactless": "osm",
+          "payment.girocard": "osm"
+        },
+        "apple_id_attempted": "2026-05-29"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.5466723,
+          47.4851663
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n6755045152",
+        "name": "Seekiosk",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/6755045152",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Fr-Su 14:00-21:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.8305599,
+          47.2124
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n7466654640",
+        "name": "Die Genussmanufaktur",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/7466654640",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Mo-Fr 09:00-12:00,15:00-19:00; Sa 09:00-12:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4215534,
+          47.1032727
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n876289145",
+        "name": "Trafik",
+        "address": {
+          "street": "Andritzer Reichsstraße",
+          "number": "37b",
+          "city": "Graz"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/876289145",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "hours": {
+          "raw": "Sa 06:30-12:30; Mo-Fr 06:30-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.6502553,
+          47.2815594
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n902505469",
+        "name": "Zetzschachtel",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/902505469",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4395296,
+          46.9045239
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n907933893",
+        "name": "Hofbräu Herzog",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/907933893",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.8325549,
+          47.307801
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n9590422076",
+        "name": "Badbuffet",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/9590422076",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.2866386,
+          47.4387267
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n962115781",
+        "name": "Schneidhofer",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/962115781",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4286029,
+          47.0519291
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_n964874127",
+        "name": "JessasMarie",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/964874127",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.0124722,
+          47.1688583
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_w1016560686",
+        "name": "Freibad-Kiosk",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/1016560686",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4923519,
+          47.0346885
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_w147001167",
+        "name": "Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/147001167",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.3589143,
+          47.3471477
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_w182048172",
+        "name": "Würstelstand",
+        "address": {
+          "street": "Brucker Straße",
+          "number": "2a",
+          "city": "Pernegg an der Mur"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/182048172",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.3917783,
+          47.0687841
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_w221771121",
+        "name": "Tabak Trafik",
+        "address": {
+          "street": "Eckertstraße",
+          "number": "126",
+          "city": "Graz"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/221771121",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.1515078,
+          47.0452485
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_w225168670",
+        "name": "Trafik Brandstätter",
+        "address": {
+          "street": "Arnsteinstraße",
+          "number": "3",
+          "city": "Voitsberg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/225168670",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9938087,
+          47.459902
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_w226565150",
+        "name": "Drogerie Daily",
+        "address": {
+          "number": "209",
+          "city": "Öblarn"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/226565150",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "google_attempted": "2026-05-29",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4114693,
+          47.1162099
+        ]
+      },
+      "properties": {
+        "id": "tk_at6r_osm_w263997985",
+        "name": "Tabak Trafik",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/263997985",
+            "version": 0
+          }
+        ],
+        "created": "2026-05-29",
+        "updated": "2026-06-01",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4361,14 +4426,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4396,14 +4462,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4430,7 +4497,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Th 08:00-16:30;Fr 08:00-14:30 \"Verkauf\";12:00-13:00 off \"keine Ladetätigkeit\""
         },
@@ -4440,7 +4507,8 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4467,7 +4535,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "24/7"
         },
@@ -4511,11 +4579,12 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4543,14 +4612,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4578,14 +4648,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4613,14 +4684,15 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4644,7 +4716,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "Mo-Fr 07:00-18:00; Sa 08:00-13:00"
         },
@@ -4655,7 +4727,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     },
     {
@@ -4683,7 +4756,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-05-29",
+        "updated": "2026-06-01",
         "hours": {
           "raw": "TU-WE 8:30-12:30;TU-WE 14:30-18:00;FR 8:30-12:30;FR 14:30-18:00;SA 8:30-12:00"
         },
@@ -4697,7 +4770,8 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-29"
+        "apple_id_attempted": "2026-05-29",
+        "payment": {}
       }
     }
   ]
