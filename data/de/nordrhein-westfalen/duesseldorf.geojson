@@ -38548,12 +38548,20 @@
             "type": "osm",
             "id": "node/13899418700",
             "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "12202870089335313530"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJM3okvcu-uEcRlMfeXDkpYfo"
           }
         ],
         "created": "2026-06-01",
         "updated": "2026-06-01",
         "hours": {
-          "raw": "Mo-Fr 06:00-01:00; Fr 06:00-01:00; Sa 07:00-01:00; Su 09:00-01:00"
+          "raw": "Mo 06:00-01:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -38561,8 +38569,10 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
-        }
+          "hours": "google"
+        },
+        "apple_attempted": "2026-06-01",
+        "google_attempted": "2026-06-01"
       }
     },
     {
