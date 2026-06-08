@@ -379,13 +379,31 @@ async function main(): Promise<void> {
     return ar - br;
   });
   const allStats: Stats[] = [];
+  const failures: Array<{ region: string; error: string }> = [];
   for (const region of targets) {
     console.error(`→ ${region.slug}: querying Overpass…`);
-    const stats = await processRegion(region, regions);
-    console.error(`  +${stats.added} ~${stats.updated} -${stats.removed} (kept ${stats.kept_non_osm} non-OSM, suppressed ${stats.suppressed_dup} dup, cross-region dropped ${stats.cross_region_dropped})`);
-    allStats.push(stats);
+    try {
+      const stats = await processRegion(region, regions);
+      console.error(`  +${stats.added} ~${stats.updated} -${stats.removed} (kept ${stats.kept_non_osm} non-OSM, suppressed ${stats.suppressed_dup} dup, cross-region dropped ${stats.cross_region_dropped})`);
+      allStats.push(stats);
+    } catch (err: unknown) {
+      // A transient Overpass blip (504/timeout) on one region must not throw
+      // away the dozens already refreshed this run. Skip it — the region's
+      // existing data file is left untouched, and next week's sweep retries.
+      const msg = err instanceof Error ? err.message : String(err);
+      console.error(`  ✗ ${region.slug} failed: ${msg} — skipping region, keeping existing data`);
+      failures.push({ region: region.slug, error: msg });
+    }
   }
   process.stdout.write(JSON.stringify(allStats, null, 2) + "\n");
+  if (failures.length > 0) {
+    console.error(`\n${failures.length}/${targets.length} region(s) failed this run:`);
+    for (const f of failures) console.error(`  - ${f.region}: ${f.error}`);
+    // Stay green on partial failure so the good regions still commit; the
+    // stderr summary above is the signal. Only hard-fail when nothing
+    // succeeded — that means Overpass is wholesale down, not just flaky.
+    if (allStats.length === 0) process.exit(1);
+  }
 }
 
 main().catch((err: unknown) => {
