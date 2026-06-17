@@ -69734,13 +69734,28 @@
             "type": "osm",
             "id": "node/4687773961",
             "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "14543761792136798302"
           }
         ],
         "created": "2026-06-15",
-        "updated": "2026-06-15",
+        "updated": "2026-06-17",
         "sources_by_field": {
-          "name": "osm"
-        }
+          "name": "osm",
+          "payment.cards": "apple",
+          "payment.contactless": "apple",
+          "hours": "apple"
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        },
+        "hours": {
+          "raw": "Su 09:00-22:00; Mo-Th 06:00-22:30; Fr 06:00-23:00; Sa 07:00-23:00"
+        },
+        "apple_attempted": "2026-06-17"
       }
     },
     {
