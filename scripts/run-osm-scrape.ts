@@ -17,7 +17,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { existsSync } from "node:fs";
-import { fetchOsmForRegion, loadRegions, ownsFeature, type OsmFeature, type Region } from "./osm-to-geojson.ts";
+import { fetchOsmForRegion, isNonKioskBeverageMarket, loadRegions, ownsFeature, type OsmFeature, type Region } from "./osm-to-geojson.ts";
 import { rankOf } from "./lib/sources.ts";
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), "../..");
@@ -50,6 +50,13 @@ interface Stats {
    *  region files. Also counts pre-existing wrong-region copies that this
    *  pass removes. */
   cross_region_dropped: number;
+  /** Existing OSM-sourced features whose name marks them as a beverage-market
+   *  chain (REWE/Fristo/Trinkgut/…) or an obvious Getränkemarkt. We purge them
+   *  here regardless of how many other sources confirm them — chain identity
+   *  isn't a function of enrichment. The fetch step drops the same POIs at the
+   *  source, so they don't reappear. Purely human/hopfenstop features (no OSM
+   *  source) are left alone: those were curated, not fetched. */
+  dropped_market: number;
 }
 
 // Near-duplicate dedup: 30 m radius, Dice ≥ 0.6 on normalised names.
@@ -230,7 +237,16 @@ function isOsmOnly(f: Feature): boolean {
 
 async function processRegion(region: Region, allRegions: Region[]): Promise<Stats> {
   const path = resolve(REPO_ROOT, region.path);
-  const existing = await loadExisting(path);
+  let droppedMarket = 0;
+  const existing = (await loadExisting(path)).filter((f) => {
+    const hasOsm = (f.properties.sources ?? []).some((s) => s.type === "osm");
+    const name = typeof f.properties.name === "string" ? f.properties.name : "";
+    if (hasOsm && name && isNonKioskBeverageMarket({ name })) {
+      droppedMarket++;
+      return false;
+    }
+    return true;
+  });
   const fresh = await fetchOsmForRegion(region);
 
   let crossRegionDropped = 0;
@@ -358,6 +374,7 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
     kept_non_osm: keptNonOsm,
     suppressed_dup: suppressedDup,
     cross_region_dropped: crossRegionDropped,
+    dropped_market: droppedMarket,
   };
 }
 
@@ -384,7 +401,7 @@ async function main(): Promise<void> {
     console.error(`→ ${region.slug}: querying Overpass…`);
     try {
       const stats = await processRegion(region, regions);
-      console.error(`  +${stats.added} ~${stats.updated} -${stats.removed} (kept ${stats.kept_non_osm} non-OSM, suppressed ${stats.suppressed_dup} dup, cross-region dropped ${stats.cross_region_dropped})`);
+      console.error(`  +${stats.added} ~${stats.updated} -${stats.removed} (kept ${stats.kept_non_osm} non-OSM, suppressed ${stats.suppressed_dup} dup, cross-region dropped ${stats.cross_region_dropped}, market dropped ${stats.dropped_market})`);
       allStats.push(stats);
     } catch (err: unknown) {
       // A transient Overpass blip (504/timeout) on one region must not throw

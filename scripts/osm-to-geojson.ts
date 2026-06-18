@@ -203,6 +203,11 @@ export async function fetchOsmForRegion(region: Region): Promise<OsmFeature[]> {
     const tags = el.tags ?? {};
     const name = tags["name"];
     if (!name) continue;
+    // Beverage-market chains (REWE/Edeka/Fristo/Trinkgut…) and obvious
+    // Getränkemärkte arrive via the shop=beverages branch but aren't
+    // Trinkhallen. Skip them at the source: existing OSM-only copies then
+    // fall out as osm_removed on the next scrape.
+    if (isNonKioskBeverageMarket(tags)) continue;
     const sourceId = `${el.type === "node" ? "node" : "way"}/${el.id}`;
     const id = `tk_${region.prefix}_osm_${el.type[0]}${el.id}`;
 
@@ -279,6 +284,51 @@ function detectKind(tags: Record<string, string>): "vending_machine" | undefined
   if (tags["self_service"] === "only") return "vending_machine";
   if (tags["automated"] === "yes") return "vending_machine";
   return undefined;
+}
+
+/**
+ * A Getränkemarkt is not a Trinkhalle. shop=beverages catches both the
+ * dedicated beverage chains and one-off bottle shops; this drops the ones
+ * the user wouldn't recognise as a kiosk while leaving genuinely ambiguous
+ * independents (a named Späti that happens to be tagged shop=beverages) in
+ * place. Three signals, any one is enough:
+ *   1. name/brand/operator reads as a beverage market ("… Getränkemarkt",
+ *      "Getränkeland").
+ *   2. it carries a known beverage-chain brand — covers branch names that
+ *      don't spell out "Getränkemarkt" (a bare "Fristo" or "Trinkgut").
+ *   3. it's a shop=beverages with a brand:wikidata, OSM's strongest "this is
+ *      a chain entity, not an independent" signal.
+ */
+function normaliseChain(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+const BEVERAGE_MARKET_NAME = /getraenke ?markt|getraenkeland/;
+const BEVERAGE_CHAIN_KEYWORDS = [
+  "fristo",
+  "trinkgut",
+  "getraenke hoffmann",
+  "dursty",
+  "hol ab",
+  "orterer",
+  "trink und spare",
+  "getraenke geins",
+  "getraenke quelle",
+];
+
+export function isNonKioskBeverageMarket(tags: Record<string, string>): boolean {
+  for (const raw of [tags["name"], tags["brand"], tags["operator"]]) {
+    if (!raw) continue;
+    const v = normaliseChain(raw);
+    if (BEVERAGE_MARKET_NAME.test(v)) return true;
+    if (BEVERAGE_CHAIN_KEYWORDS.some((k) => v.includes(k))) return true;
+  }
+  if (tags["shop"] === "beverages" && tags["brand:wikidata"]) return true;
+  return false;
 }
 
 function validPlz(s: string | undefined): string | undefined {
