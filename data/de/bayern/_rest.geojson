@@ -43015,7 +43015,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-06-16"
+        "apple_id_attempted": "2026-06-16",
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43039,21 +43040,33 @@
             "type": "osm",
             "id": "way/165899314",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJAQDQ76AOn0cRlBHzY2TwL-A"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "hours": {
-          "raw": "Mo-Sa 08:00-20:00; PH off"
+          "raw": "Tu 08:00-20:00; Th 08:00-20:00; Fr 08:00-20:00; We 08:00-20:00; Mo 08:00-20:00; Sa 08:00-20:00"
         },
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43086,7 +43099,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43132,7 +43146,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43153,6 +43168,10 @@
             "type": "osm",
             "id": "way/168448007",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ7XgrlttPdUcRkodrJRYkRGk"
           }
         ],
         "created": "2026-05-28",
@@ -43168,7 +43187,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43195,12 +43215,16 @@
             "type": "osm",
             "id": "way/172170064",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJL0zKUOuRnkcRXXXfsoa_c0o"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "hours": {
-          "raw": "Mo-Sa 08:00-20:00"
+          "raw": "Tu 08:00-20:00; Th 08:00-20:00; Fr 08:00-20:00; We 08:00-20:00; Mo 08:00-20:00; Sa 08:00-20:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -43209,10 +43233,18 @@
           "address.postalcode": "osm",
           "address.city": "osm",
           "address.district": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43248,7 +43280,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43277,7 +43310,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43306,7 +43340,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43332,12 +43367,16 @@
             "type": "osm",
             "id": "way/177571851",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJxQF1Zd_en0cRVCo8SJCeKGA"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "hours": {
-          "raw": "Mo-Fr 08:30-18:00; Sa 08:00-12:00; PH off"
+          "raw": "Tu 08:30-18:00; Th 08:30-18:00; Fr 08:30-18:00; We 08:30-18:00; Mo 08:30-18:00; Sa 08:00-12:00"
         },
         "tags": [
           "barrierefrei"
@@ -43348,10 +43387,18 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43389,7 +43436,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43427,7 +43475,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43467,7 +43516,8 @@
           "address.district": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43512,7 +43562,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43538,12 +43589,16 @@
             "type": "osm",
             "id": "way/191466868",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ5aPgz2XknkcRNlhdKEmPkyY"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "hours": {
-          "raw": "Mo-Fr 08:30-19:00; Sa 08:00-16:00"
+          "raw": "Tu 08:30-19:00; Th 08:30-19:00; Fr 08:30-19:00; We 08:30-19:00; Mo 08:30-19:00; Sa 08:00-16:00"
         },
         "tags": [
           "barrierefrei"
@@ -43554,10 +43609,18 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43595,7 +43658,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43621,19 +43685,28 @@
             "type": "osm",
             "id": "way/193833447",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJtwBYlo1YoEcR6z4pZMbI52o"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
-          "address.city": "osm"
+          "address.city": "osm",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "hours": {
+          "raw": "Tu 13:30-18:00; Th 13:30-18:00; Fr 13:30-18:00; We 13:30-18:00; Mo 13:30-18:00; Sa 09:00-12:00"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43659,19 +43732,35 @@
             "type": "osm",
             "id": "way/194290735",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJkdN6KxmjoUcRHujUfaXZozo"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
-          "address.city": "osm"
+          "address.city": "osm",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 08:30-18:00; Th 08:30-18:00; Fr 08:30-18:00; We 08:30-18:00; Mo 08:30-18:00; Sa 08:30-13:00"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43716,7 +43805,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43749,7 +43839,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43793,7 +43884,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43819,12 +43911,16 @@
             "type": "osm",
             "id": "way/199104995",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJOSpEp9J4dUcRRdtsPBM28fw"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "hours": {
-          "raw": "Mo-Fr 08:30-18:00; Sa 08:00-16:00; Su,PH off"
+          "raw": "Tu 08:00-18:00; Th 08:00-18:00; Fr 08:00-18:00; We 08:00-18:00; Mo 08:00-18:00; Sa 08:00-16:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -43832,10 +43928,18 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43877,7 +43981,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43903,12 +44008,16 @@
             "type": "osm",
             "id": "way/200046157",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJFc7bKAAHokcR7Kg5LHKX_qk"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "hours": {
-          "raw": "Mo-Fr 09:00-15:00,17:00-18:00; Tu off; Sa 09:00-12:00"
+          "raw": "Th 09:00-15:00,17:00-18:00; Fr 09:00-15:00,17:00-18:00; We 09:00-15:00,17:00-18:00; Mo 09:00-15:00,17:00-18:00; Sa 09:00-12:00"
         },
         "tags": [
           "barrierefrei"
@@ -43919,10 +44028,11 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43948,12 +44058,16 @@
             "type": "osm",
             "id": "way/201160007",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJZyIh2v5PdUcR6puSni2CVxs"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "hours": {
-          "raw": "Mo-Sa 08:00-20:00"
+          "raw": "Tu 08:00-20:00; Th 08:00-20:00; Fr 08:00-20:00; We 08:00-20:00; Mo 08:00-20:00; Sa 08:00-20:00"
         },
         "tags": [
           "barrierefrei"
@@ -43964,10 +44078,18 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -43996,7 +44118,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44041,7 +44164,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44079,7 +44203,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44108,7 +44233,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44141,7 +44267,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44230,7 +44357,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44259,7 +44387,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44304,7 +44433,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44349,7 +44479,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44387,7 +44518,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44413,12 +44545,16 @@
             "type": "osm",
             "id": "way/223680557",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ09ZagQSMdUcRBJ4p9FNhF2c"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "hours": {
-          "raw": "Mo-Fr 08:30-19:00, Sa 08:00-18:00"
+          "raw": "Tu 08:30-19:00; Th 08:30-19:00; Fr 08:30-19:00; We 08:30-19:00; Mo 08:30-19:00; Sa 08:00-18:00"
         },
         "tags": [
           "barrierefrei"
@@ -44429,10 +44565,18 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44453,18 +44597,34 @@
             "type": "osm",
             "id": "way/224137427",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJFQpQdeVXdUcRl_BaM0QNauw"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "tags": [
           "barrierefrei"
         ],
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 08:00-20:00; Th 08:00-20:00; Fr 07:00-20:00; We 08:00-20:00; Mo 08:00-20:00; Sa 07:00-20:00"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44504,7 +44664,8 @@
           "address.district": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44533,7 +44694,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44574,7 +44736,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44615,7 +44778,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44641,12 +44805,16 @@
             "type": "osm",
             "id": "way/225903256",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJuVwTQUjen0cRMNotUql5Fvc"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "hours": {
-          "raw": "Mo-Sa 08:00-20:00"
+          "raw": "Tu 08:00-20:00; Th 08:00-20:00; Fr 08:00-20:00; We 08:00-20:00; Mo 08:00-20:00; Sa 08:00-20:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -44654,10 +44822,18 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44697,7 +44873,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44726,7 +44903,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44752,19 +44930,33 @@
             "type": "osm",
             "id": "way/231497735",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJJzoPFHLknkcRoZpKS9VCUEw"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
-          "address.city": "osm"
+          "address.city": "osm",
+          "payment.cards": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 08:00-18:00; Th 08:00-18:00; Fr 08:00-18:00; We 08:00-18:00; Mo 08:00-18:00; Sa 08:00-12:30"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44802,7 +44994,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44828,6 +45021,10 @@
             "type": "osm",
             "id": "way/232043417",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJyR9JC8AhoEcRSrqI-F0DNaA"
           }
         ],
         "created": "2026-05-28",
@@ -44840,7 +45037,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44882,7 +45080,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44927,7 +45126,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44965,7 +45165,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -44994,7 +45195,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -45037,7 +45239,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -45075,7 +45278,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -45102,12 +45306,16 @@
             "type": "osm",
             "id": "way/235931140",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJqTVeYvU4oEcRYqD5lBu3yuM"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "hours": {
-          "raw": "Mo-Fr 08:30-19:00; Sa 08:30-16:00"
+          "raw": "Tu 08:30-19:00; Th 08:30-19:00; Fr 08:30-19:00; We 08:30-19:00; Mo 08:30-19:00; Sa 08:30-16:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -45116,10 +45324,18 @@
           "address.postalcode": "osm",
           "address.city": "osm",
           "address.district": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -45164,7 +45380,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -45193,7 +45410,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -45219,12 +45437,16 @@
             "type": "osm",
             "id": "way/237812580",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJT2hXtUfLmEcRdFfkCcDgkl8"
           }
         ],
         "created": "2026-05-28",
-        "updated": "2026-06-15",
+        "updated": "2026-06-19",
         "hours": {
-          "raw": "Mo-Fr 08:30-12:30, 13:30-18:00; Sa 08:30-12:30"
+          "raw": "Tu 08:30-12:30,13:30-18:00; Th 08:30-12:30,13:30-18:00; Fr 08:30-12:30,13:30-18:00; We 08:30-12:30,13:30-18:00; Mo 08:30-12:30,13:30-18:00; Sa 08:30-12:30"
         },
         "sources_by_field": {
           "name": "osm",
@@ -45232,10 +45454,18 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -45273,7 +45503,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -45318,7 +45549,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
@@ -45381,6 +45613,10 @@
             "type": "osm",
             "id": "way/242857578",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ90o_cj5_C0ERxym_J_cdMrM"
           }
         ],
         "created": "2026-05-28",
@@ -45389,7 +45625,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-05-29",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-06-19"
       }
     },
     {
