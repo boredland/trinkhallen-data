@@ -14568,7 +14568,9 @@
         "updated": "2026-06-15",
         "sources_by_field": {
           "name": "osm"
-        }
+        },
+        "apple_id_attempted": "2026-06-20",
+        "google_attempted": "2026-06-20"
       }
     },
     {
@@ -14789,10 +14791,14 @@
             "type": "osm",
             "id": "node/662881651",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJzzCKSosdkUcRd_B_G_Pn7C8"
           }
         ],
         "created": "2026-06-15",
-        "updated": "2026-06-15",
+        "updated": "2026-06-20",
         "tags": [
           "barrierefrei"
         ],
@@ -14801,8 +14807,20 @@
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
-          "address.city": "osm"
-        }
+          "address.city": "osm",
+          "payment.cards": "google",
+          "payment.girocard": "google",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-06-20",
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 09:00-22:00; Th 09:00-22:00; Fr 09:00-23:45; We 09:00-22:00; Mo 09:00-22:00; Sa 09:00-23:45"
+        },
+        "google_attempted": "2026-06-20"
       }
     },
     {
