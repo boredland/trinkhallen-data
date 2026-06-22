@@ -32,7 +32,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Fr 07:00-13:00; Sa 07:00-13:00; Su 07:00-10:00"
         },
@@ -81,7 +81,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm",
           "hours": "apple"
@@ -99,46 +99,42 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          10.7458716,
-          53.8710506
+          10.6921669,
+          53.8643352
         ]
       },
       "properties": {
-        "id": "tk_lu_osm_n1490053017",
-        "name": "Familia Getränkemarkt",
+        "id": "tk_lu_osm_n13898494165",
+        "name": "Kiosk Multi Kulti",
         "address": {
-          "street": "Wesloer Landstraße",
-          "number": "50-70",
-          "postalcode": "23566",
-          "city": "Lübeck",
-          "district": "Marli / Brandenbaum"
+          "street": "Krähenstraße",
+          "number": "13-19"
         },
         "sources": [
           {
             "type": "osm",
-            "id": "node/1490053017",
+            "id": "node/13898494165",
             "version": 0
           },
           {
             "type": "gmaps",
-            "id": "payment"
+            "id": "ChIJ-YE_aSoJskcRtzExcSQumdI"
           }
         ],
-        "created": "2026-05-21",
-        "updated": "2026-06-15",
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm"
+        "created": "2026-06-01",
+        "updated": "2026-06-22",
+        "hours": {
+          "raw": "Tu 09:00-22:00; Th 09:00-22:00; Fr 09:00-00:00; We 09:00-22:00; Mo 09:00-22:00; Sa 09:00-00:00; Su 09:00-22:00"
         },
-        "apple_id_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        }
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-06-17",
+        "google_attempted": "2026-06-17",
+        "payment": {}
       }
     },
     {
@@ -172,7 +168,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm"
         },
@@ -216,7 +212,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Th 07:00-12:00,14:00-19:00; Fr 07:00-20:00;Sa 06:00-20:00;Su 07:00-20:00"
         },
@@ -267,7 +263,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm"
         },
@@ -311,7 +307,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Fr 05:00-18:00; Sa 06:00-14:00"
         },
@@ -324,150 +320,6 @@
         },
         "payment": {
           "cards": "yes",
-          "contactless": "yes",
-          "girocard": "yes"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.6403403,
-          53.8433715
-        ]
-      },
-      "properties": {
-        "id": "tk_lu_osm_n1696389389",
-        "name": "REWE Getränkemarkt",
-        "address": {
-          "street": "August-Bebel-Straße",
-          "number": "30",
-          "postalcode": "23560",
-          "city": "Lübeck",
-          "district": "Moisling"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1696389389",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          }
-        ],
-        "created": "2026-05-21",
-        "updated": "2026-06-15",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes",
-          "girocard": "yes"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.670918,
-          53.9031276
-        ]
-      },
-      "properties": {
-        "id": "tk_lu_osm_n1811693297",
-        "name": "Getränke Hoffmann",
-        "address": {
-          "street": "Zum Vorwerk",
-          "number": "2a",
-          "postalcode": "23611",
-          "city": "Bad Schwartau"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1811693297",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJBwNU3kk2YkERNZtkeMT3a3k"
-          }
-        ],
-        "created": "2026-05-21",
-        "updated": "2026-06-15",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm"
-        },
-        "apple_id_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.6614718,
-          53.8786418
-        ]
-      },
-      "properties": {
-        "id": "tk_lu_osm_n2246553779",
-        "name": "Getränke Hoffmann",
-        "address": {
-          "street": "Krempelsdorfer Allee",
-          "number": "4",
-          "postalcode": "23556",
-          "city": "Lübeck"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2246553779",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          }
-        ],
-        "created": "2026-05-21",
-        "updated": "2026-06-15",
-        "hours": {
-          "raw": "Mo-Sa 09:00-20:00"
-        },
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-23",
-        "payment": {
-          "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
         }
@@ -504,7 +356,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm"
         },
@@ -547,7 +399,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Fr 07:00-17:00; Sa 09:00-14:00; PH off"
         },
@@ -596,7 +448,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "24/7"
         },
@@ -651,7 +503,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm",
           "hours": "apple"
@@ -695,7 +547,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Tu-Su 08:00-18:00"
         },
@@ -743,7 +595,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Fr 06:00-22:00;Sa-Su 07:00-22:00"
         },
@@ -794,7 +646,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -803,53 +655,6 @@
         },
         "apple_id_attempted": "2026-05-23",
         "google_attempted": "2026-05-23",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.8072089,
-          53.9014287
-        ]
-      },
-      "properties": {
-        "id": "tk_lu_osm_n3860564935",
-        "name": "famila Getränkemarkt",
-        "address": {
-          "street": "Möllerung",
-          "number": "11",
-          "postalcode": "23569",
-          "city": "Lübeck",
-          "district": "Herrenwyk"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/3860564935",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          }
-        ],
-        "created": "2026-05-21",
-        "updated": "2026-06-15",
-        "hours": {
-          "raw": "Mo-Sa 08:00-21:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-23",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -888,7 +693,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "payment": {
           "cash": "yes",
           "cards": "unknown",
@@ -939,7 +744,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Sa 10:00-01:00"
         },
@@ -994,7 +799,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Tu-Fr 07:00-18:00; Sa 07:00-13:00"
         },
@@ -1002,56 +807,6 @@
           "name": "osm",
           "hours": "osm"
         },
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.6775966,
-          53.8417821
-        ]
-      },
-      "properties": {
-        "id": "tk_lu_osm_n559106997",
-        "name": "Getränkemarkt Hoffmann",
-        "address": {
-          "street": "Kronsforder Allee",
-          "number": "126a",
-          "postalcode": "23560",
-          "city": "Lübeck",
-          "district": "Strecknitz"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/559106997",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          }
-        ],
-        "created": "2026-05-21",
-        "updated": "2026-06-15",
-        "hours": {
-          "raw": "Mo-Fr 09:00-19:00; Sa 09:00-16:00"
-        },
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-23",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -1089,7 +844,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -1099,56 +854,6 @@
         },
         "apple_id_attempted": "2026-05-23",
         "google_attempted": "2026-05-23",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.6654238,
-          53.8717313
-        ]
-      },
-      "properties": {
-        "id": "tk_lu_osm_n567936966",
-        "name": "Edeka Getränkemarkt",
-        "address": {
-          "street": "Ziegelstraße",
-          "number": "2b",
-          "postalcode": "23556",
-          "city": "Lübeck",
-          "district": "Holstentor-Nord"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/567936966",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "payment"
-          }
-        ],
-        "created": "2026-05-21",
-        "updated": "2026-06-15",
-        "hours": {
-          "raw": "Mo-Sa 08:00-21:00"
-        },
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-23",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -1187,7 +892,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm"
         },
@@ -1227,7 +932,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Fr 08:00-18:00; Sa 09:00-15:00"
         },
@@ -1274,7 +979,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Fr 05:30-18:00; Sa 07:00-13:00"
         },
@@ -1324,7 +1029,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Sa 09:00-23:00; Su 12:00-22:00"
         },
@@ -1372,7 +1077,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Sa 07:00-20:00"
         },
@@ -1422,7 +1127,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Su off"
         },
@@ -1469,7 +1174,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm"
         },
@@ -1513,7 +1218,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Fr 07:00-18:00; Sa 07:00-16:00; Su 07:00-12:00"
         },
@@ -1561,7 +1266,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -1604,7 +1309,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Fr 08:00-17:00"
         },
@@ -1649,7 +1354,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "payment": {
           "cash": "yes",
           "cards": "unknown",
@@ -1692,7 +1397,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Sa 07:00-21:00"
         },
@@ -1706,86 +1411,6 @@
         "apple_id_attempted": "2026-05-25",
         "google_attempted": "2026-05-25",
         "payment": {}
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.666385,
-          53.869998
-        ]
-      },
-      "properties": {
-        "id": "tk_lu_osm_n1316827591",
-        "name": "REWE Getränkemarkt",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1316827591",
-            "version": 0
-          }
-        ],
-        "created": "2026-05-21",
-        "updated": "2026-06-15",
-        "hours": {
-          "raw": "Mo-Sa 07:00-23:00"
-        },
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "apple_id_attempted": "2026-05-25",
-        "google_attempted": "2026-05-25",
-        "payment": {}
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.6921669,
-          53.8643352
-        ]
-      },
-      "properties": {
-        "id": "tk_lu_osm_n13898494165",
-        "name": "Kiosk Multi Kulti",
-        "address": {
-          "street": "Krähenstraße",
-          "number": "13-19"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/13898494165",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJ-YE_aSoJskcRtzExcSQumdI"
-          }
-        ],
-        "created": "2026-06-01",
-        "updated": "2026-06-17",
-        "hours": {
-          "raw": "Tu 09:00-22:00; Th 09:00-22:00; Fr 09:00-00:00; We 09:00-22:00; Mo 09:00-22:00; Sa 09:00-00:00; Su 09:00-22:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "hours": "google"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-06-17",
-        "google_attempted": "2026-06-17"
       }
     },
     {
@@ -1809,7 +1434,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm"
         },
@@ -1839,7 +1464,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Sa 07:00-12:30, Mo-Fr 15:00-18:00"
         },
@@ -1873,7 +1498,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Sa 07:00-22:00; Su 08:00-20:00"
         },
@@ -1912,7 +1537,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -1946,7 +1571,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Fr 06:30-18:00, Sa 07:00-13:00, Su 08:00-13:00"
         },
@@ -1980,7 +1605,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm"
         },
@@ -2010,7 +1635,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-06-15",
+        "updated": "2026-06-22",
         "hours": {
           "raw": "Mo-Fr 06:30-20:30; Sa-Su 08:00-19:00"
         },
@@ -2029,63 +1654,6 @@
           "payment.girocard": "osm"
         },
         "apple_id_attempted": "2026-05-25"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.7395364,
-          53.8129746
-        ]
-      },
-      "properties": {
-        "id": "tk_lu_osm_n981398689",
-        "name": "Getränkeland",
-        "address": {
-          "street": "Grönauer Heide",
-          "number": "3",
-          "postalcode": "23627",
-          "city": "Groß Grönau"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/981398689",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJ4VTuUigJskcRral1s5nhNbc"
-          }
-        ],
-        "created": "2026-06-15",
-        "updated": "2026-06-17",
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "payment.cards": "google",
-          "payment.contactless": "google",
-          "payment.girocard": "google",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-06-17",
-        "payment": {
-          "cards": "no",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
-        "hours": {
-          "raw": "Tu 08:00-19:00; Th 08:00-19:00; Fr 08:00-19:00; We 08:00-19:00; Mo 08:00-19:00; Sa 08:00-14:00"
-        },
-        "google_attempted": "2026-06-17"
       }
     }
   ]
