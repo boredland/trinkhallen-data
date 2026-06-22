@@ -141,8 +141,8 @@
           "address.city": "osm",
           "address.district": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
           "cash": "yes"
         }
@@ -228,7 +228,7 @@
           },
           {
             "type": "gmaps",
-            "id": "ChIJw9JG2K5RqEcR71j6FUwElpo"
+            "id": "ChIJc5TsFXNRqEcRiFefx2COvVk"
           }
         ],
         "created": "2026-05-20",
@@ -239,11 +239,15 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "address.district": "osm"
+          "address.district": "osm",
+          "hours": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-22",
-        "payment": {}
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
+        "payment": {},
+        "hours": {
+          "raw": "Tu 09:00-00:00; Th 09:00-00:00; Fr 09:00-00:00; We 09:00-00:00; Mo 09:00-00:00; Sa 09:00-00:00; Su 09:00-00:00"
+        }
       }
     },
     {
@@ -285,8 +289,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-22",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -430,8 +434,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -470,10 +474,60 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2419763,
+          52.4233265
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n1078531663",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Ludwigsfelder Straße",
+          "number": "53-55",
+          "postalcode": "14165",
+          "city": "Berlin"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1078531663",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
         }
@@ -518,8 +572,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -615,8 +669,8 @@
           "address.city": "osm",
           "address.district": "osm"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-22",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -654,8 +708,8 @@
           "address.street": "osm",
           "address.number": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -695,11 +749,65 @@
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
-          "address.number": "osm"
+          "address.number": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
-        "payment": {}
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
+        "payment": {},
+        "hours": {
+          "raw": "Tu 07:00-22:00; Th 07:00-22:00; Fr 07:00-22:00; We 07:00-22:00; Mo 07:00-22:00; Sa 07:00-22:00"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2882031,
+          52.4995966
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n111810609",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Lützenstraße",
+          "number": "7a",
+          "postalcode": "10711",
+          "city": "Berlin",
+          "district": "Halensee"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/111810609",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -782,6 +890,10 @@
           {
             "type": "gmaps",
             "id": "payment"
+          },
+          {
+            "type": "apple",
+            "id": "9150413768835896452"
           }
         ],
         "created": "2026-05-20",
@@ -797,7 +909,6 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -836,7 +947,7 @@
           },
           {
             "type": "gmaps",
-            "id": "payment"
+            "id": "ChIJxywMX-hRqEcRgRjmI8wKCEY"
           }
         ],
         "created": "2026-05-19",
@@ -848,13 +959,15 @@
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop",
-          "address.district": "hopfenstop"
+          "address.district": "hopfenstop",
+          "payment.cards": "google",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "description": "Kleiner Späti",
         "payment": {
-          "cards": "no",
+          "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
         },
@@ -866,7 +979,10 @@
           "snacks",
           "sonne",
           "ueberdacht"
-        ]
+        ],
+        "hours": {
+          "raw": "Tu 10:00-04:00; Th 10:00-04:00; Fr 10:00-04:00; We 10:00-04:00; Mo 10:00-04:00; Sa 10:00-04:00"
+        }
       }
     },
     {
@@ -908,7 +1024,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -1056,14 +1172,19 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "address.district": "osm"
+          "address.district": "osm",
+          "payment.cards": "google",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
-          "cards": "no",
+          "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 08:00-22:00; Th 08:00-22:00; Fr 08:00-22:00; We 08:00-22:00; Mo 08:00-22:00; Sa 09:00-23:00"
         }
       }
     },
@@ -1101,13 +1222,17 @@
         "updated": "2026-06-22",
         "sources_by_field": {
           "name": "osm",
-          "address.city": "osm"
+          "address.city": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 08:00-23:00; Th 08:00-23:00; Fr 08:00-23:00; We 08:00-23:00; Mo 08:00-23:00; Sa 08:00-23:00; Su 08:00-23:00"
         }
       }
     },
@@ -1195,21 +1320,25 @@
         "updated": "2026-06-22",
         "payment": {
           "cash": "yes",
-          "cards": "yes",
-          "contactless": "unknown",
-          "girocard": "unknown"
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
         },
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "payment.cash": "osm",
-          "payment.cards": "osm",
-          "payment.contactless": "osm",
-          "payment.girocard": "osm"
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
+        "hours": {
+          "raw": "Tu 08:00-02:00; Th 08:00-02:00; Fr 08:00-02:00; We 08:00-02:00; Mo 08:00-02:00; Sa 08:00-02:00"
+        }
       }
     },
     {
@@ -1265,6 +1394,61 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.3785649,
+          52.4667562
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n11750293248",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Manteuffelstraße",
+          "number": "71",
+          "postalcode": "12103",
+          "city": "Berlin",
+          "district": "Tempelhof"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/11750293248",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00; Su,PH off"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.3517171,
           52.4801352
         ]
@@ -1287,20 +1471,25 @@
           },
           {
             "type": "gmaps",
-            "id": "ChIJf_hECmtQqEcRAiMKWn1os6o"
+            "id": "ChIJ1QeDDGxRqEcR6XC8KYIWss8"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "payment.cards": "google",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
-          "cards": "no",
+          "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 08:00-23:00; Th 08:00-23:00; Fr 08:00-23:00; We 08:00-23:00; Mo 08:00-23:00; Sa 10:00-23:00"
         }
       }
     },
@@ -1336,11 +1525,15 @@
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
-          "address.number": "osm"
+          "address.number": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
-        "payment": {}
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
+        "payment": {},
+        "hours": {
+          "raw": "Tu 09:00-00:00; Th 09:00-00:00; Fr 09:00-00:00; We 09:00-00:00; Mo 09:00-00:00; Sa 09:00-00:00"
+        }
       }
     },
     {
@@ -1374,7 +1567,7 @@
           },
           {
             "type": "gmaps",
-            "id": "ChIJi50BzHdPqEcR_CmLgmg7chc"
+            "id": "ChIJbzbQuVtOqEcRB6idfkFuKG8"
           }
         ],
         "created": "2026-05-19",
@@ -1387,16 +1580,22 @@
           "address.city": "osm",
           "description": "hopfenstop",
           "hours": "hopfenstop",
-          "address.district": "hopfenstop"
+          "address.district": "hopfenstop",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "description": "Späti Mit einer großen Wein- und Bierauswahl ",
         "hours": {
           "raw": "Mo-Th 08:00-00:00; Fr 08:00-03:00; Sa 08:00-00:00; Su 08:00-20:00"
         },
         "payment": {
-          "cash": "yes"
+          "cash": "yes",
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
         },
         "tags": [
           "wein"
@@ -1486,7 +1685,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -1673,14 +1872,18 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 10:00-00:00; Th 10:00-00:00; Fr 10:00-00:00; We 10:00-00:00; Mo 10:00-00:00; Sa 10:00-00:00; Su 10:00-00:00"
         }
       }
     },
@@ -1770,13 +1973,17 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 06:00-18:00; Th 06:00-18:00; Fr 06:00-18:00; We 06:00-18:00; Mo 06:00-18:00; Sa 06:00-20:00"
         }
       }
     },
@@ -1861,19 +2068,23 @@
         "updated": "2026-06-22",
         "payment": {
           "cash": "yes",
-          "cards": "yes",
-          "contactless": "unknown",
-          "girocard": "unknown"
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
         },
         "sources_by_field": {
           "name": "osm",
           "payment.cash": "osm",
-          "payment.cards": "osm",
-          "payment.contactless": "osm",
-          "payment.girocard": "osm"
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22"
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
+        "hours": {
+          "raw": "Tu 07:00-01:00; Th 07:00-01:00; Fr 07:00-00:00; We 07:00-01:00; Mo 07:00-01:00; Su 08:00-01:00"
+        }
       }
     },
     {
@@ -1915,7 +2126,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -1956,11 +2167,15 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
-        "payment": {}
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
+        "payment": {},
+        "hours": {
+          "raw": "Tu 08:00-20:00; Th 08:00-20:00; Fr 08:00-20:00; We 08:00-20:00; Mo 08:00-20:00; Sa 08:00-20:00"
+        }
       }
     },
     {
@@ -2156,13 +2371,17 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 09:00-18:00; Th 09:00-18:00; Fr 09:00-18:00; We 09:00-18:00; Mo 09:00-18:00; Sa 09:00-17:00"
         }
       }
     },
@@ -2296,11 +2515,15 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
-        "payment": {}
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
+        "payment": {},
+        "hours": {
+          "raw": "Tu 07:30-21:00; Th 07:30-21:00; Fr 07:30-21:00; We 07:30-21:00; Mo 07:30-21:00; Sa 10:00-21:00; Su 11:00-18:00"
+        }
       }
     },
     {
@@ -2394,8 +2617,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -2442,14 +2665,18 @@
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
-          "address.city": "osm"
+          "address.city": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 06:30-18:30; Th 06:30-18:30; Fr 06:30-18:30; We 06:30-18:30; Mo 06:30-18:30; Sa 07:00-16:00"
         }
       }
     },
@@ -2486,12 +2713,16 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
           "cards": "yes"
+        },
+        "hours": {
+          "raw": "Tu 09:00-19:00; Th 09:00-19:00; Fr 09:00-19:00; We 09:00-19:00; Mo 09:00-19:00; Sa 10:00-20:00"
         }
       }
     },
@@ -2528,14 +2759,19 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "payment.cards": "google",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
-          "cards": "no",
+          "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 07:00-20:30; Th 07:00-20:30; Fr 07:00-20:30; We 07:00-20:30; Mo 07:00-20:30; Sa 07:00-20:30; Su 07:00-20:30"
         }
       }
     },
@@ -2571,13 +2807,17 @@
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
-          "address.number": "osm"
+          "address.number": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 06:00-01:00; Th 06:00-01:00; Fr 06:00-01:00; We 06:00-01:00; Mo 06:00-01:00; Sa 06:00-01:00"
         }
       }
     },
@@ -2619,7 +2859,7 @@
           "address.number": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -2660,14 +2900,19 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "payment.cards": "google",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
-          "cards": "no",
+          "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 08:00-18:45; Th 08:00-18:45; Fr 08:00-18:45; We 08:00-18:45; Mo 08:00-18:45; Sa 10:00-17:45"
         }
       }
     },
@@ -2771,8 +3016,8 @@
           "address.city": "hopfenstop",
           "address.district": "hopfenstop"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "description": "In der B-Ebene"
       }
     },
@@ -2862,8 +3107,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -2955,8 +3200,8 @@
         "payment": {
           "cash": "yes",
           "cards": "yes",
-          "contactless": "unknown",
-          "girocard": "unknown"
+          "contactless": "yes",
+          "girocard": "yes"
         },
         "sources_by_field": {
           "name": "osm",
@@ -2964,11 +3209,11 @@
           "address.number": "osm",
           "payment.cash": "osm",
           "payment.cards": "osm",
-          "payment.contactless": "osm",
-          "payment.girocard": "osm"
+          "payment.contactless": "apple",
+          "payment.girocard": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-22"
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22"
       }
     },
     {
@@ -3053,14 +3298,14 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "hours": {
-          "raw": "Mo-Fr 05:00-22:00, Sa 24"
+          "raw": "Tu 05:00-22:00; Th 05:00-22:00; Fr 05:00-22:00; We 05:00-22:00; Mo 05:00-22:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -3135,14 +3380,14 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "hours": {
-          "raw": "Mo-Th 10:00-02:00; Fr, Sa 10:00-04:00"
+          "raw": "Tu 09:00-02:00; Th 09:00-02:00; Fr 09:00-04:00; We 09:00-02:00; Mo 09:00-02:00; Sa 09:00-04:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -3275,11 +3520,15 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
-        "payment": {}
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
+        "payment": {},
+        "hours": {
+          "raw": "Tu 07:30-18:00; Th 07:30-18:00; Fr 07:30-18:00; We 07:30-18:00; Mo 07:30-18:00"
+        }
       }
     },
     {
@@ -3375,7 +3624,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -3416,14 +3665,19 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "payment.cards": "google",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
-          "cards": "no",
+          "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 07:30-18:00; Th 07:30-18:00; Fr 07:30-18:00; We 07:30-18:00; Mo 07:30-18:00; Sa 07:30-13:00"
         }
       }
     },
@@ -3460,11 +3714,15 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
-        "payment": {}
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
+        "payment": {},
+        "hours": {
+          "raw": "Tu 08:00-23:00; Th 08:00-23:00; Fr 08:00-23:00; We 08:00-23:00; Mo 08:00-23:00; Sa 08:00-00:00"
+        }
       }
     },
     {
@@ -3505,8 +3763,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -3592,11 +3850,15 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
-        "payment": {}
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
+        "payment": {},
+        "hours": {
+          "raw": "Tu 09:00-00:00; Th 09:00-00:00; Fr 09:00-00:00; We 09:00-00:00; Mo 09:00-00:00; Sa 09:00-00:00; Su 09:00-00:00"
+        }
       }
     },
     {
@@ -3778,7 +4040,7 @@
           "address.city": "hopfenstop",
           "address.district": "hopfenstop"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "description": "Getränke, Snacks, Zigaretten",
         "hours": {
@@ -3887,7 +4149,54 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.129105,
+          52.528425
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n1428001849",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Nennhauser Damm",
+          "number": "155",
+          "postalcode": "13591",
+          "city": "Berlin",
+          "district": "Staaken"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1428001849",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-05-25",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -3993,7 +4302,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
@@ -4037,14 +4346,14 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "hours": {
-          "raw": "Mo-Sa 16:00-00:00; Su 17:00-00:00"
+          "raw": "Tu 17:00-00:00; Th 17:00-00:00; Fr 17:00-01:00; We 17:00-00:00; Mo 17:00-00:00; Sa 17:00-00:00; Su 17:00-00:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -4087,7 +4396,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
@@ -4277,7 +4586,7 @@
           "address.city": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 09:00-01:00; Th 09:00-03:00; Fr 09:00-03:00; We 09:00-01:00; Mo 09:00-01:00; Sa 09:00-03:00; Su 09:00-01:00"
@@ -4364,15 +4673,68 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "hours": {
-          "raw": "Mo-Su 05:00-18:00"
+          "raw": "Tu 05:00-18:00; Th 05:00-18:00; Fr 05:00-18:00; We 05:00-18:00; Mo 05:00-18:00; Sa 05:00-18:00; Su 05:00-18:00"
         },
         "payment": {
           "cash": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3459168,
+          52.5465108
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n1653588605",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Seestraße",
+          "number": "20",
+          "postalcode": "13353",
+          "city": "Berlin",
+          "district": "Wedding"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1653588605",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
         }
       }
     },
@@ -4418,7 +4780,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
@@ -4587,8 +4949,55 @@
           "address.city": "hopfenstop",
           "address.district": "hopfenstop"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "description": "Klassischer Späti"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3141693,
+          52.4378304
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n1744019474",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Hindenburgdamm",
+          "number": "105A",
+          "postalcode": "12203",
+          "city": "Berlin",
+          "district": "Lichterfelde"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1744019474",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-05-25",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -4671,7 +5080,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -4782,7 +5191,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -4829,7 +5238,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -4876,7 +5285,7 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 10:00-22:00; Th 10:00-22:00; Fr 10:00-00:00; We 10:00-22:00; Mo 10:00-22:00; Sa 10:00-00:00"
@@ -4990,6 +5399,59 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.5103055,
+          52.5688442
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n1869640504",
+        "name": "Markgrafen Getränkemarkt",
+        "address": {
+          "street": "Egon-Erwin-Kisch-Straße",
+          "number": "80",
+          "postalcode": "13059",
+          "city": "Berlin"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1869640504",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-18:00; Sa 09:00-14:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.3619397,
           52.4914731
         ]
@@ -5084,7 +5546,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
@@ -5240,7 +5702,7 @@
           "address.district": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 09:00-02:00; Th 09:00-02:00; Fr 09:00-02:00; We 09:00-02:00; Mo 09:00-02:00; Sa 09:00-02:00; Su 11:00-02:00"
@@ -5291,7 +5753,7 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 06:30-19:00; Th 06:30-19:00; Fr 06:30-19:00; We 06:30-19:00; Mo 06:30-19:00; Sa 06:30-18:00; Su 07:30-14:00"
@@ -5341,9 +5803,62 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0972956,
+          52.5624747
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n2083586837",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Bahnhofstraße",
+          "number": "44-46",
+          "postalcode": "14612",
+          "city": "Falkensee"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2083586837",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 08:00-18:00; PH off"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
         }
@@ -5542,7 +6057,7 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "yes",
@@ -5592,12 +6107,13 @@
           "address.street": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "address.district": "osm"
+          "address.district": "osm",
+          "hours": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "hours": {
-          "raw": "Mo-Fr 07:00-18:00; Sa 09:00-12:00"
+          "raw": "Tu 06:00-18:00; Th 06:00-18:00; Fr 06:00-18:00; We 06:00-18:00; Mo 06:00-18:00"
         },
         "payment": {}
       }
@@ -5641,7 +6157,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
@@ -5686,7 +6202,7 @@
           "address.number": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
@@ -5727,7 +6243,7 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "hours": {
-          "raw": "Mo-Su 05:00-20:00"
+          "raw": "Mo-Sa 00:00-24:00"
         },
         "tags": [
           "barrierefrei"
@@ -5739,10 +6255,10 @@
           "address.postalcode": "osm",
           "address.city": "osm",
           "address.district": "osm",
-          "hours": "osm"
+          "hours": "apple"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -5843,6 +6359,60 @@
         "payment": {
           "cards": "yes",
           "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3417764,
+          52.5202957
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n2283101504",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "number": "27",
+          "postalcode": "10557",
+          "city": "Berlin",
+          "district": "Hansaviertel",
+          "street": "Flensburger Straße"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2283101504",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr, 10:00-19:00; Sa 10:00-16:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
         }
       }
     },
@@ -5988,7 +6558,7 @@
           "address.city": "osm",
           "address.district": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "no",
@@ -6087,7 +6657,7 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 10:00-21:00; Th 10:00-21:00; Fr 10:00-21:00; We 10:00-21:00; Mo 10:00-21:00; Sa 10:00-21:00"
@@ -6184,7 +6754,7 @@
           "address.postalcode": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
@@ -6219,7 +6789,7 @@
           },
           {
             "type": "gmaps",
-            "id": "ChIJu75ZPyhQqEcRKNAeai83t3c"
+            "id": "ChIJv0GgYulRqEcRS1RwGBkKJYs"
           },
           {
             "type": "apple",
@@ -6235,14 +6805,19 @@
           "name": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "address.district": "osm"
+          "address.district": "osm",
+          "payment.cards": "apple",
+          "hours": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
-          "cards": "no",
+          "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 06:00-02:00; Th 06:00-02:00; Fr 06:00-03:00; We 06:00-02:00; Mo 06:00-02:00; Sa 06:00-03:00; Su 07:00-02:00"
         }
       }
     },
@@ -6282,11 +6857,119 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 08:00-20:00; Th 08:00-20:00; Fr 08:00-20:00; We 08:00-20:00; Mo 08:00-20:00; Sa 08:00-19:00; Su 09:00-16:00"
         },
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4477894,
+          52.5497411
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n2499997001",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Langhansstraße",
+          "number": "12",
+          "postalcode": "13086",
+          "city": "Berlin"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2499997001",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3223719,
+          52.4954324
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n254125468",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Düsseldorfer Straße",
+          "number": "71",
+          "postalcode": "10719",
+          "city": "Berlin",
+          "district": "Wilmersdorf"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/254125468",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 09:00-21:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -6380,7 +7063,7 @@
           "address.district": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 07:00-01:00; Th 07:00-01:00; Fr 07:00-01:00; We 07:00-01:00; Mo 07:00-01:00; Sa 07:00-01:00"
@@ -6439,6 +7122,53 @@
         "hours": {
           "raw": "Mo 14:30-23:30; Tu-Th 09:30-23:30; Fr 09:30-24:00; Sa 00:00-02:30,09:30-24:00; Su 00:00-02:30,14:30-23:30"
         },
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4872426,
+          52.556009
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n2625367381",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Hansastraße",
+          "number": "188",
+          "postalcode": "13088",
+          "city": "Berlin"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2625367381",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-05-25",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -6544,7 +7274,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -6700,10 +7430,11 @@
           "payment.girocard": "google",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-06-18",
-        "google_attempted": "2026-06-18",
-        "hours": {
-          "raw": "Tu 06:00-20:00; Th 06:00-20:00; Fr 06:00-20:00; We 06:00-20:00; Mo 06:00-20:00; Sa 07:00-20:00"
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
         }
       }
     },
@@ -6743,6 +7474,61 @@
         "apple_id_attempted": "2026-05-25",
         "google_attempted": "2026-05-28",
         "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.475479,
+          52.475452
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n2820135428",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Dammweg",
+          "number": "153",
+          "postalcode": "12437",
+          "city": "Berlin",
+          "district": "Plänterwald"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2820135428",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -6888,7 +7674,59 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1832326,
+          52.5140411
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n2902744831",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Gatower Straße",
+          "number": "76",
+          "postalcode": "13595",
+          "city": "Berlin",
+          "district": "Wilhelmstadt"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2902744831",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -6939,7 +7777,7 @@
           "address.city": "osm",
           "address.district": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "no",
@@ -6992,7 +7830,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -7042,7 +7880,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
@@ -7095,7 +7933,54 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3615791,
+          52.4174573
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n301845928",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Malteserstraße",
+          "number": "162/164",
+          "postalcode": "12277",
+          "city": "Berlin",
+          "district": "Marienfelde"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/301845928",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -7139,11 +8024,63 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 07:00-18:00; Th 07:00-18:00; Fr 07:00-18:00; We 07:00-18:00; Mo 07:00-18:00; Sa 07:00-17:00"
         },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4459821,
+          52.5526432
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n3048781123",
+        "name": "EDEKA Getränkemarkt",
+        "address": {
+          "street": "Pistoriusstraße",
+          "number": "114A",
+          "postalcode": "13086",
+          "city": "Berlin",
+          "district": "Weißensee"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3048781123",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 07:00-21:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
@@ -7201,6 +8138,56 @@
         },
         "payment": {
           "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5096438,
+          52.4046285
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n3071531737",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Waltersdorfer Chaussee",
+          "number": "148",
+          "postalcode": "12355",
+          "city": "Berlin",
+          "district": "Rudow"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3071531737",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
         }
@@ -7290,7 +8277,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
@@ -7345,6 +8332,59 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.0625354,
+          52.5414155
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n3151236679",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Wilmsstraße",
+          "number": "49a",
+          "postalcode": "14624",
+          "city": "Dallgow-Döberitz"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3151236679",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 08:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.488705,
           52.5125189
         ]
@@ -7376,7 +8416,7 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 07:00-01:00; Th 07:00-01:00; Fr 07:00-01:00; We 07:00-01:00; Mo 07:00-01:00; Sa 07:00-01:00; Su 13:00-20:00"
@@ -7470,8 +8510,8 @@
           "address.city": "hopfenstop",
           "address.district": "hopfenstop"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "description": "Kiosk",
         "payment": {},
         "tags": [
@@ -7513,7 +8553,7 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "yes",
@@ -7688,7 +8728,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes"
@@ -7737,10 +8777,64 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3612371,
+          52.4815
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n3446653828",
+        "name": "Getränkemarkt Drinks&More",
+        "address": {
+          "street": "Leberstraße",
+          "number": "60",
+          "postalcode": "10829",
+          "city": "Berlin",
+          "district": "Schöneberg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3446653828",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 10:00-21:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "yes",
           "girocard": "yes"
         }
       }
@@ -7792,7 +8886,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -7835,7 +8929,7 @@
           "address.number": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 08:30-02:00; Th 08:30-02:00; Fr 08:30-02:00; We 08:30-02:00; Mo 08:30-02:00; Sa 10:00-03:00"
@@ -7891,7 +8985,7 @@
           "address.district": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cash": "yes"
@@ -7958,6 +9052,120 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.3047256,
+          52.514114
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n3553888916",
+        "name": "Ullrich Getränkemarkt",
+        "address": {
+          "street": "Wilmersdorfer Straße",
+          "number": "25",
+          "postalcode": "10585",
+          "city": "Berlin",
+          "district": "Charlottenburg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3553888916",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "10292195805596012062"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 07:00-22:00; Su,PH off"
+        },
+        "payment": {
+          "cash": "yes",
+          "cards": "yes",
+          "contactless": "unknown",
+          "girocard": "unknown"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm",
+          "payment.cash": "osm",
+          "payment.cards": "osm",
+          "payment.contactless": "osm",
+          "payment.girocard": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3336073,
+          52.4518412
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n3630778531",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Albrechtstraße",
+          "number": "37",
+          "postalcode": "12167",
+          "city": "Berlin",
+          "district": "Steglitz"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3630778531",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00, Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.3532418,
           52.4842984
         ]
@@ -7997,7 +9205,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
@@ -8237,7 +9445,62 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2619759,
+          52.4876129
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n3830429377",
+        "name": "REWE Getränkemarkt",
+        "address": {
+          "street": "Auerbachstraße",
+          "number": "12",
+          "postalcode": "14193",
+          "city": "Berlin",
+          "district": "Grunewald"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3830429377",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 07:00-21:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
@@ -8285,7 +9548,7 @@
           "address.city": "osm",
           "address.district": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "no",
@@ -8337,7 +9600,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -8425,6 +9688,10 @@
           {
             "type": "hopfenstop",
             "id": "9bac3372-fa6c-4e31-b962-19f22a9f4ef4"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJubPJTgBPqEcRR-pmqvKN-qU"
           }
         ],
         "created": "2026-05-19",
@@ -8438,8 +9705,8 @@
           "description": "hopfenstop",
           "address.district": "hopfenstop"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "description": "Späti an der Warschauer Strasse. ",
         "payment": {}
       }
@@ -8536,7 +9803,7 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
@@ -8582,8 +9849,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -8676,7 +9943,7 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 07:30-22:00; Th 07:30-22:00; Fr 07:30-23:00; We 07:30-22:00; Mo 07:30-22:00; Sa 10:00-23:00; Su 10:00-22:00"
@@ -8735,6 +10002,56 @@
           "address.city": "osm",
           "hours": "osm"
         },
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1453745,
+          52.4553485
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n4097785284",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Kladower Damm",
+          "number": "364",
+          "postalcode": "14089",
+          "city": "Berlin",
+          "district": "Kladow"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4097785284",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 08:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -8941,7 +10258,7 @@
           "address.city": "osm",
           "address.district": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "no",
@@ -9039,7 +10356,7 @@
           "hours": "google",
           "payment.cards": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 08:00-20:00; Th 08:00-20:00; Fr 08:00-20:00; We 08:00-20:00; Mo 08:00-20:00; Sa 08:00-20:00"
@@ -9138,7 +10455,7 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cash": "yes",
@@ -9363,7 +10680,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -9407,7 +10724,7 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 08:00-00:00; Th 08:00-00:00; Fr 08:00-01:00; We 08:00-00:00; Mo 08:00-00:00; Sa 08:00-01:00"
@@ -9461,9 +10778,59 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3802664,
+          52.4388209
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n4379223691",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Großbeerenstraße",
+          "number": "2",
+          "postalcode": "12107",
+          "city": "Berlin",
+          "district": "Mariendorf"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4379223691",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 08:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
           "girocard": "yes"
         }
       }
@@ -9613,7 +10980,7 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes"
         }
@@ -9676,6 +11043,57 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.3271606,
+          52.447127
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n4414791194",
+        "name": "Lehmann Getränkemarkt",
+        "address": {
+          "street": "Birkbuschstraße",
+          "number": "64",
+          "postalcode": "12167"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4414791194",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00+; Sa 09:00-16:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.4280893,
           52.4805775
         ]
@@ -9709,14 +11127,61 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "address.district": "osm"
+          "address.district": "osm",
+          "hours": "apple"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "hours": {
           "raw": "Mo-Sa 09:00-23:00"
         },
         "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2345381,
+          52.406279
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n4449056821",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Zehlendorfer Damm",
+          "number": "119",
+          "postalcode": "14532",
+          "city": "Kleinmachnow"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4449056821",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -9800,7 +11265,7 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "no",
@@ -9854,6 +11319,52 @@
         "hours": {
           "raw": "Mo-Su 06:00-23:00"
         },
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4324181,
+          52.4426716
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n445821399",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Mohriner Allee",
+          "number": "21"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/445821399",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -9995,7 +11506,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "girocard": "yes"
@@ -10090,7 +11601,7 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "no",
@@ -10181,7 +11692,7 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 08:00-01:00; Th 08:00-01:00; Fr 08:00-02:00; We 08:00-01:00; Mo 08:00-01:00; Sa 09:00-02:00; Su 10:00-01:00"
@@ -10241,7 +11752,7 @@
           "hours": "osm",
           "description": "hopfenstop"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "description": "Kiosk ",
         "payment": {
           "cards": "yes",
@@ -10251,6 +11762,56 @@
         "tags": [
           "fritz_kola"
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2886867,
+          52.4186924
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n473072251",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Platz des 4. Juli",
+          "number": "26",
+          "postalcode": "14167",
+          "city": "Berlin",
+          "district": "Lichterfelde"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/473072251",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -10296,6 +11857,116 @@
           "name": "osm",
           "hours": "osm"
         },
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3446696,
+          52.4807232
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n4805256254",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Martin-Luther-Straße",
+          "number": "122",
+          "postalcode": "10825",
+          "city": "Berlin",
+          "district": "Schöneberg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4805256254",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-16:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3580674,
+          52.501326
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n4883870521",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Kurfürstenstraße",
+          "number": "48",
+          "postalcode": "10785",
+          "city": "Berlin",
+          "district": "Tiergarten"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4883870521",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 09:00-20:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -10440,10 +12111,11 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "address.district": "osm"
+          "address.district": "osm",
+          "hours": "apple"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "hours": {
           "raw": "Mo-Sa 09:30-19:00"
         },
@@ -10492,7 +12164,7 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -10542,7 +12214,57 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1966953,
+          52.5435232
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n5030221038",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Falkenseer Damm",
+          "number": "21",
+          "postalcode": "13585",
+          "city": "Berlin",
+          "district": "Spandau"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5030221038",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -10664,6 +12386,57 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.4713778,
+          52.4327347
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n5077848824",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Rudower Straße",
+          "number": "152",
+          "postalcode": "12351"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5077848824",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 08:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.3389674,
           52.4860299
         ]
@@ -10717,6 +12490,58 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.322179,
+          52.4789008
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n5159321997",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Detmolder Straße",
+          "number": "15-16",
+          "postalcode": "10715",
+          "city": "Berlin",
+          "district": "Wilmersdorf"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5159321997",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-16:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.3875215,
           52.4932414
         ]
@@ -10756,6 +12581,59 @@
         },
         "payment": {
           "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5124943,
+          52.4690996
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n5277879723",
+        "name": "REWE Getränkemarkt",
+        "address": {
+          "street": "Rummelsburger Straße",
+          "number": "16",
+          "postalcode": "12459",
+          "city": "Berlin"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5277879723",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 06:00-22:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
         }
@@ -10889,6 +12767,55 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.4308175,
+          52.547697
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n5618092636",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Erich-Weinert-Straße",
+          "number": "95"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5618092636",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.4178259,
           52.5441521
         ]
@@ -10925,7 +12852,7 @@
           "address.district": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 09:00-00:00; Th 09:00-00:00; Fr 09:00-00:00; We 09:00-00:00; Mo 09:00-00:00; Sa 09:00-00:00; Su 09:00-00:00"
@@ -10974,8 +12901,8 @@
         "created": "2026-05-20",
         "updated": "2026-05-23",
         "osm_removed": true,
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23"
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22"
       }
     },
     {
@@ -11087,6 +13014,58 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.2959691,
+          52.5397451
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n587835273",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Heckerdamm",
+          "number": "240",
+          "postalcode": "13627",
+          "city": "Berlin",
+          "district": "Charlottenburg-Nord"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/587835273",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 09:00-20:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.3308397,
           52.4669684
         ]
@@ -11123,7 +13102,7 @@
           "address.district": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 08:00-20:00; Th 08:00-20:00; Fr 08:00-20:00; We 08:00-20:00; Mo 08:00-20:00; Sa 08:00-20:00"
@@ -11174,7 +13153,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
@@ -11261,7 +13240,7 @@
           "address.postalcode": "osm",
           "address.district": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "no",
@@ -11308,7 +13287,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -11356,12 +13335,13 @@
           "barrierefrei"
         ],
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "hours": {
-          "raw": "Mo-Su 00:00-24:00"
+          "raw": "Tu 07:30-00:00; Th 07:30-00:00; Fr 07:30-00:00; We 07:30-00:00; Mo 07:30-00:00; Sa 07:30-00:00; Su 09:00-00:00"
         },
         "payment": {}
       }
@@ -11575,6 +13555,56 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.363061,
+          52.4512783
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n633548583",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Röblingstraße",
+          "number": "130-132",
+          "postalcode": "12105",
+          "city": "Berlin",
+          "district": "Tempelhof"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/633548583",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.4729764,
           52.5129823
         ]
@@ -11609,7 +13639,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -11810,7 +13840,7 @@
           "description": "hopfenstop",
           "hours": "hopfenstop"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "description": "Getränke aller Art",
         "hours": {
           "raw": "Mo-Su 09:00-23:00"
@@ -11866,6 +13896,105 @@
         },
         "apple_id_attempted": "2026-05-25",
         "google_attempted": "2026-05-28",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2984994,
+          52.5078355
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n665535048",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Pestalozzistraße",
+          "number": "57a",
+          "postalcode": "10627",
+          "city": "Berlin",
+          "district": "Charlottenburg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/665535048",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 10:00-19:00; Sa 10:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2571177,
+          52.5193151
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n667211373",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Reichsstraße",
+          "number": "36"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/667211373",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-18:30; Su 09:00-14:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -11953,7 +14082,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes"
         }
@@ -11991,17 +14120,17 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "hours": {
-          "raw": "Tu-Fr 08:00-18:00; Sa 08:00-13:00"
+          "raw": "Tu-We,Fr 08:00-18:00; Th 08:00-15:00; Sa 08:00-12:00"
         },
         "tags": [
           "barrierefrei"
         ],
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "apple"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -12041,7 +14170,7 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 06:00-22:00; Th 06:00-22:00; Fr 06:00-22:00; We 06:00-22:00; Mo 06:00-22:00; Sa 07:00-22:00; Su 08:00-20:00"
@@ -12092,8 +14221,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
@@ -12143,7 +14272,57 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3233007,
+          52.4904192
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n715203793",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Uhlandstraße",
+          "number": "123",
+          "postalcode": "10717",
+          "city": "Berlin",
+          "district": "Wilmersdorf"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/715203793",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -12193,9 +14372,110 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4292367,
+          52.5601562
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n721617848",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Prenzlauer Promenade",
+          "number": "43",
+          "postalcode": "13089",
+          "city": "Berlin",
+          "district": "Heinersdorf"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/721617848",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-05-25",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3383353,
+          52.4168311
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n7222928021",
+        "name": "Grabsch Getränkemarkt",
+        "address": {
+          "street": "Mariannenstraße",
+          "number": "25",
+          "postalcode": "12209",
+          "city": "Berlin"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/7222928021",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          },
+          {
+            "type": "apple",
+            "id": "18061443637655753244"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm"
+        },
+        "hours": {
+          "raw": "Mo-Fr 10:00-19:00; Sa 09:00-15:00"
+        },
+        "payment": {
+          "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
         }
@@ -12237,7 +14517,7 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 10:00-23:30; Th 10:00-23:30; Fr 10:00-23:30; We 10:00-23:30; Mo 10:00-23:30; Sa 10:00-23:30; Su 13:30-00:00"
@@ -12481,14 +14761,14 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "hours": {
-          "raw": "Mo-Fr 07:00-22:00; Sa 08:00-22:00"
+          "raw": "Tu 08:00-00:00; Th 08:00-00:00; Fr 08:00-00:00; We 08:00-00:00; Mo 08:00-00:00; Sa 08:00-00:00; Su 08:00-00:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -12654,13 +14934,17 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "apple"
         },
-        "apple_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
         "google_attempted": "2026-05-23",
         "payment": {
           "cards": "yes",
           "contactless": "yes"
+        },
+        "hours": {
+          "raw": "Su 00:00-03:30,11:00-24:00; Mo 00:00-03:00,08:00-24:00; Tu,Fr-Sa 00:00-02:00,08:00-24:00; We 00:00-02:00,06:00-24:00; Th 00:00-04:00,08:00-24:00"
         }
       }
     },
@@ -12702,7 +14986,7 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "no",
@@ -12749,10 +15033,62 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1677804,
+          52.5341868
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n747081742",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Brunsbütteler Damm",
+          "number": "196",
+          "postalcode": "13581",
+          "city": "Berlin",
+          "district": "Spandau"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/747081742",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-05-25",
+        "payment": {
+          "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
         }
@@ -12839,7 +15175,7 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 08:00-00:00; Th 08:00-00:00; Fr 08:00-00:00; We 08:00-00:00; Mo 08:00-00:00; Sa 08:00-00:00; Su 08:00-00:00"
@@ -12947,7 +15283,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -12991,7 +15327,7 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 05:30-00:00; Th 05:30-00:00; Fr 05:30-01:30; We 05:30-00:00; Mo 05:30-00:00; Sa 05:30-01:30; Su 05:30-00:00"
@@ -13189,8 +15525,8 @@
           "address.city": "hopfenstop",
           "address.district": "hopfenstop"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "description": "Kiosk Späti ",
         "payment": {},
         "tags": [
@@ -13257,7 +15593,7 @@
           "payment.girocard": "osm",
           "description": "hopfenstop"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "description": "Kiosk Späti "
       }
     },
@@ -13351,7 +15687,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -13394,6 +15730,59 @@
         },
         "apple_id_attempted": "2026-05-25",
         "google_attempted": "2026-05-28",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3430759,
+          52.4724964
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n7747350431",
+        "name": "Hust Getränkemarkt",
+        "address": {
+          "street": "Rubensstraße",
+          "number": "50",
+          "postalcode": "12159",
+          "city": "Berlin",
+          "district": "Schöneberg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/7747350431",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "18377683155993332518"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJyy7yknFQqEcRpQrfpUNpCZg"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-22",
+        "hours": {
+          "raw": "Tu 09:00-18:00; Th 09:00-18:00; Fr 09:00-18:00; We 09:00-18:00; Mo 09:00-18:00; Sa 10:00-14:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "google"
+        },
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -13457,6 +15846,61 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.4017407,
+          52.5058825
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n779036079",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Oranienstraße",
+          "number": "110",
+          "postalcode": "10969",
+          "city": "Berlin",
+          "district": "Kreuzberg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/779036079",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 08:00-22:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.3548337,
           52.5745181
         ]
@@ -13487,7 +15931,7 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "yes",
@@ -13537,7 +15981,7 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -13728,13 +16172,13 @@
           },
           {
             "type": "gmaps",
-            "id": "ChIJA1_eA1dRqEcR4kUfGxsW-bA"
+            "id": "ChIJVVVVlWdQqEcRBNre1J428lk"
           }
         ],
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "hours": {
-          "raw": "Mo-Fr 06:30-21:00; Sa 07:30-21:00"
+          "raw": "Tu 06:30-23:00; Th 06:30-23:00; Fr 06:30-23:00; We 06:30-23:00; Mo 06:30-23:00; Sa 06:30-23:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -13743,10 +16187,10 @@
           "address.postalcode": "osm",
           "address.city": "osm",
           "address.district": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -13797,7 +16241,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
@@ -13917,6 +16361,61 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.3214404,
+          52.4733762
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n846251059",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Südwestkorso",
+          "number": "15",
+          "postalcode": "12161",
+          "city": "Berlin",
+          "district": "Friedenau"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/846251059",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-19:00; Sa 09:00-16:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.4963509,
           52.5700527
         ]
@@ -13959,6 +16458,61 @@
         },
         "payment": {
           "cards": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4365174,
+          52.5691932
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n847026515",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Rothenbachstraße",
+          "number": "27",
+          "postalcode": "13089",
+          "city": "Berlin",
+          "district": "Heinersdorf"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/847026515",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
           "girocard": "yes"
         }
       }
@@ -14012,7 +16566,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -14060,9 +16614,62 @@
           "address.city": "osm",
           "address.district": "osm"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4065774,
+          52.4053495
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n855494308",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Lichtenrader Damm",
+          "number": "91",
+          "postalcode": "12305",
+          "city": "Berlin"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/855494308",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00, Sa 08:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -14241,7 +16848,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cash": "yes",
           "cards": "no"
@@ -14326,6 +16933,55 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.4376829,
+          52.556538
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n8822215031",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Pistoriusstraße",
+          "number": "66"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/8822215031",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 09:00-20:00; Sa 09:00-17:00; PH closed"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.4252575,
           52.48096
         ]
@@ -14362,6 +17018,55 @@
         "apple_id_attempted": "2026-05-25",
         "google_attempted": "2026-05-28",
         "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4696432,
+          52.5629353
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n9036196590",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Berliner Allee",
+          "number": "282",
+          "postalcode": "13088",
+          "city": "Berlin",
+          "district": "Weißensee"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/9036196590",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-05-25",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -14549,6 +17254,56 @@
           "address.city": "osm",
           "hours": "osm"
         },
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2850832,
+          52.5226708
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_n918358361",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Sophie-Charlotten-Straße",
+          "number": "4",
+          "postalcode": "14059",
+          "city": "Berlin",
+          "district": "Charlottenburg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/918358361",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 08:00-20:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -14821,12 +17576,13 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "address.district": "osm"
+          "address.district": "osm",
+          "hours": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "hours": {
-          "raw": "Su 00:00-04:00; Mo 09:00-24:00; Tu-Th 00:00-02:00,09:00-24:00; Fr 00:00-03:00,09:00-24:00; Sa 00:00-04:00,10:00-24:00"
+          "raw": "Tu 09:00-02:00; Th 09:00-03:00; Fr 09:00-04:00; We 09:00-02:00; Mo 09:00-02:00; Sa 10:00-04:00"
         },
         "payment": {}
       }
@@ -14866,7 +17622,7 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "yes",
@@ -14914,7 +17670,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -15080,7 +17836,7 @@
           "address.district": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 10:00-00:00; Th 10:00-00:00; Fr 10:00-00:00; We 10:00-00:00; Mo 10:00-00:00; Sa 10:00-00:00; Su 12:00-00:00"
@@ -15131,7 +17887,7 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
@@ -15226,7 +17982,7 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cards": "no",
@@ -15320,14 +18076,14 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "hours": {
-          "raw": "Mo-Fr 08:00-22:00; Sa 10:00-22:00; PH,Su 12:00-18:00"
+          "raw": "Tu 08:00-22:00; Th 08:00-22:00; Fr 08:00-22:00; We 08:00-22:00; Mo 08:00-22:00; Sa 09:00-22:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {}
       }
     },
@@ -15451,7 +18207,7 @@
           "address.number": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 07:00-00:30; Th 07:00-00:30; Fr 07:00-03:00; We 07:00-00:30; Mo 07:00-00:30; Sa 07:00-03:00; Su 11:00-00:30"
@@ -15549,14 +18305,18 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 11:00-22:00; Th 11:00-22:00; Fr 11:00-23:00; We 11:00-22:00; Mo 11:00-22:00; Sa 10:30-23:00; Su 10:30-23:00"
         }
       }
     },
@@ -15745,6 +18505,58 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.2335719,
+          52.4321284
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w118935911",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Potsdamer Chaussee",
+          "number": "13",
+          "postalcode": "14163",
+          "city": "Berlin",
+          "district": "Schlachtensee"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/118935911",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00; PH,Su off"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.2359237,
           52.5420268
         ]
@@ -15781,6 +18593,61 @@
         "payment": {
           "cards": "yes",
           "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2162728,
+          52.5597157
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w122387248",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Rauchstraße",
+          "number": "20",
+          "postalcode": "13587",
+          "city": "Berlin",
+          "district": "Hakenfelde"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/122387248",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00; Su,PH off"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
         }
       }
     },
@@ -15829,7 +18696,7 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -15874,14 +18741,125 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "hours": {
-          "raw": "Mo-Fr 07:30-21:00; Sa 08:30-20:00"
+          "raw": "Tu 07:30-21:00; Th 07:30-21:00; Fr 07:30-21:00; We 07:30-21:00; Mo 07:30-21:00; Sa 09:00-20:00"
         },
         "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.304415,
+          52.4498925
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w126734858",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Unter den Eichen",
+          "number": "38",
+          "postalcode": "12203",
+          "city": "Berlin",
+          "district": "Lichterfelde"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/126734858",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 09:00-20:00; PH,Su off"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4684686,
+          52.5220708
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w128460933",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Hermann-Blankenstein-Straße",
+          "number": "46",
+          "postalcode": "10249",
+          "city": "Berlin",
+          "district": "Prenzlauer Berg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/128460933",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00, Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -15962,7 +18940,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -16029,6 +19007,269 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.352265,
+          52.4402941
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w144109958",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Kaiser-Wilhelm-Straße",
+          "number": "121"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/144109958",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 08:00-21:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2694904,
+          52.4064017
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w158221992",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Teltower Damm",
+          "number": "297",
+          "postalcode": "14167",
+          "city": "Berlin",
+          "district": "Lichterfelde"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/158221992",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 08:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4036669,
+          52.4986366
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w168227966",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Gitschiner Straße",
+          "number": "84",
+          "postalcode": "10969",
+          "city": "Berlin",
+          "district": "Kreuzberg"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/168227966",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4294932,
+          52.5879969
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w174724424",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Blankenburger Straße",
+          "number": "156",
+          "postalcode": "13127",
+          "city": "Berlin",
+          "district": "Französisch Buchholz"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/174724424",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4412426,
+          52.4076606
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w216360741",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Am Schulzenpfuhl",
+          "number": "1",
+          "postalcode": "12529",
+          "city": "Schönefeld",
+          "district": "Großziethen"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/216360741",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-05-25",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.3653772,
           52.5493204
         ]
@@ -16060,13 +19301,225 @@
           "name": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 08:00-19:00; Th 08:00-19:00; Fr 08:00-19:00; We 08:00-19:00; Mo 08:00-19:00; Sa 08:00-19:00"
         },
         "payment": {
           "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0716886,
+          52.5623734
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w233033348",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Falkenstraße",
+          "number": "1",
+          "postalcode": "14612",
+          "city": "Falkensee"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/233033348",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 08:00-18:00; PH off"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3143369,
+          52.4204469
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w27481236",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Hildburghauser Straße",
+          "number": "250",
+          "postalcode": "12207",
+          "city": "Berlin",
+          "district": "Lichterfelde"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/27481236",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 08:00-20:00; Sa 08:00-18:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1688751,
+          52.5509477
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w275251287",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Falkenseer Chaussee",
+          "number": "78",
+          "postalcode": "13589",
+          "city": "Berlin",
+          "district": "Falkenhagener Feld"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/275251287",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4452293,
+          52.5105836
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w28235303",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Rüdersdorfer Straße",
+          "number": "65-70",
+          "postalcode": "10243",
+          "city": "Berlin",
+          "district": "Friedrichshain"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/28235303",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00; Su,PH off"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
         }
@@ -16116,7 +19569,7 @@
           "address.district": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
@@ -16205,7 +19658,7 @@
           "address.district": "osm",
           "hours": "google"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "hours": {
           "raw": "Tu 06:00-22:00; Th 06:00-22:00; Fr 06:00-22:00; We 06:00-22:00; Mo 06:00-22:00; Sa 07:00-22:00; Su 08:00-22:00"
@@ -16275,6 +19728,114 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.4984084,
+          52.5437126
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w43545432",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Große-Leege-Straße",
+          "number": "96a",
+          "postalcode": "13055",
+          "city": "Berlin",
+          "district": "Alt-Hohenschönhausen"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/43545432",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3074685,
+          52.4923013
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w43976615",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Westfälische Straße",
+          "postalcode": "10709",
+          "city": "Berlin",
+          "number": "85",
+          "district": "Wilmersdorf"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/43976615",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00; Su,PH off"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.3024747,
           52.5049982
         ]
@@ -16333,6 +19894,156 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.2718857,
+          52.40153
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w45069920",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Lichterfelder Allee",
+          "number": "7",
+          "postalcode": "14513",
+          "city": "Teltow"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/45069920",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-18:00; Sa 09:00-16:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3147088,
+          52.5308098
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w454758312",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Sickingenstraße",
+          "number": "47",
+          "city": "Berlin"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/454758312",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2998426,
+          52.578534
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w47172069",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "city": "Berlin",
+          "district": "Reinickendorf",
+          "street": "Wittestraße",
+          "number": "34",
+          "postalcode": "13509"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/47172069",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Sa 09:00-20:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.4316166,
           52.4669582
         ]
@@ -16366,9 +20077,64 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "payment": {
           "cards": "yes",
+          "girocard": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4948173,
+          52.4307934
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w489960938",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Kanalstraße",
+          "number": "8",
+          "postalcode": "12357",
+          "city": "Berlin",
+          "district": "Rudow"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/489960938",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 08:00-20:00; Sa 08:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "address.district": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
           "girocard": "yes"
         }
       }
@@ -16450,10 +20216,63 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-25",
         "payment": {
           "cash": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5093995,
+          52.4506468
+        ]
+      },
+      "properties": {
+        "id": "tk_b_osm_w70130291",
+        "name": "Getränke Hoffmann",
+        "address": {
+          "street": "Pietschkerstraße",
+          "number": "14",
+          "postalcode": "12487",
+          "city": "Berlin"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/70130291",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "payment"
+          }
+        ],
+        "created": "2026-05-20",
+        "updated": "2026-06-15",
+        "hours": {
+          "raw": "Mo-Fr 09:00-20:00; Sa 09:00-18:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-06-22",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
         }
       }
     },
@@ -16493,12 +20312,13 @@
         "created": "2026-05-20",
         "updated": "2026-06-22",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
-        "apple_attempted": "2026-05-23",
-        "google_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "hours": {
-          "raw": "Mo,We-Th,Sa-Su 09:00-18:00; Tu,Fr 10:00-18:00"
+          "raw": "Tu 10:00-18:00; Th 10:00-18:00; Fr 10:00-18:00; We 10:00-18:00; Mo 10:00-18:00; Sa 10:00-18:00; Su 10:00-18:00"
         },
         "payment": {}
       }
@@ -16635,7 +20455,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "gmaps_id_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -16738,7 +20558,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "gmaps_id_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -16790,7 +20610,7 @@
           "cards": "no",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -16839,7 +20659,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -16884,7 +20704,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -16918,7 +20738,7 @@
           "district": "Bezirk Lichtenberg"
         },
         "hours": {
-          "raw": "Mo-Th 10:00-23:00; Fr-Sa 10:00-01:00; Su 10:00-23:00"
+          "raw": "Tu 10:00-23:00; Th 10:00-23:00; Fr 10:00-23:00; We 10:00-23:00; Mo 10:00-23:00; Sa 10:00-23:00; Su 10:00-23:00"
         },
         "sources": [
           {
@@ -16935,9 +20755,9 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "google_attempted": "2026-05-22",
-        "apple_attempted": "2026-05-23",
+        "updated": "2026-06-22",
+        "google_attempted": "2026-06-22",
+        "apple_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -16946,7 +20766,7 @@
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop",
           "address.district": "hopfenstop",
-          "hours": "hopfenstop"
+          "hours": "google"
         }
       }
     },
@@ -16978,7 +20798,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "gmaps_id_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -17032,7 +20852,7 @@
           "girocard": "yes",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -17080,7 +20900,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "gmaps_id_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -17141,8 +20961,8 @@
         "payment": {
           "cash": "yes"
         },
-        "google_attempted": "2026-05-22",
-        "apple_attempted": "2026-05-23",
+        "google_attempted": "2026-06-22",
+        "apple_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -17244,8 +21064,8 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -17293,8 +21113,8 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -17327,7 +21147,7 @@
           "district": "Potsdam Nord"
         },
         "hours": {
-          "raw": "Mo-Th 07:30-01:00; Fr 07:30-03:00; Sa 09:00-03:00"
+          "raw": "Su 00:00-01:00; Mo-Fr 08:00-24:00; Sa 00:00-01:00,09:00-24:00"
         },
         "tags": [
           "sitzgelegenheiten",
@@ -17344,9 +21164,9 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "google_attempted": "2026-05-22",
-        "apple_attempted": "2026-05-23",
+        "updated": "2026-06-22",
+        "google_attempted": "2026-06-22",
+        "apple_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -17355,7 +21175,7 @@
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop",
           "address.district": "hopfenstop",
-          "hours": "hopfenstop"
+          "hours": "apple"
         }
       }
     },
@@ -17399,7 +21219,7 @@
           "girocard": "yes",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -17443,8 +21263,8 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -17496,8 +21316,8 @@
           "cards": "no",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -17597,9 +21417,9 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "updated": "2026-06-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -17607,7 +21427,11 @@
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop",
-          "address.district": "hopfenstop"
+          "address.district": "hopfenstop",
+          "hours": "google"
+        },
+        "hours": {
+          "raw": "Tu 07:00-03:00; Th 07:00-03:00; Fr 07:00-03:00; We 07:00-03:00; Mo 07:00-03:00; Sa 07:00-03:00"
         }
       }
     },
@@ -17650,9 +21474,9 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-20",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "updated": "2026-06-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -17660,7 +21484,11 @@
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop",
-          "address.district": "hopfenstop"
+          "address.district": "hopfenstop",
+          "hours": "google"
+        },
+        "hours": {
+          "raw": "Tu 06:00-02:00; Th 06:00-02:00; Fr 06:00-02:00; We 06:00-02:00; Mo 06:00-02:00; Sa 06:00-02:00"
         }
       }
     },
@@ -17748,8 +21576,8 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -17860,8 +21688,8 @@
         "hours": {
           "raw": "Mo-Sa 09:00-01:00"
         },
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -17913,8 +21741,8 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-20",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -17957,8 +21785,8 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
-        "google_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
+        "google_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -18001,7 +21829,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18060,7 +21888,7 @@
           "girocard": "yes",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18104,7 +21932,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18148,7 +21976,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18192,7 +22020,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18245,7 +22073,7 @@
           "girocard": "yes",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18296,7 +22124,7 @@
         "payment": {
           "cards": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18344,7 +22172,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18388,7 +22216,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18436,7 +22264,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18480,7 +22308,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18524,7 +22352,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18589,7 +22417,7 @@
           "cards": "yes",
           "girocard": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -18646,7 +22474,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-20",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18703,7 +22531,7 @@
           "cards": "no",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -18751,7 +22579,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18849,7 +22677,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18901,7 +22729,7 @@
           "cards": "no",
           "girocard": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -18954,7 +22782,7 @@
           "girocard": "yes",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19002,7 +22830,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19046,7 +22874,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19095,7 +22923,7 @@
           "girocard": "yes",
           "cards": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19136,7 +22964,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19180,7 +23008,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19233,7 +23061,7 @@
           "girocard": "yes",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19277,7 +23105,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19325,7 +23153,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19443,7 +23271,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19551,7 +23379,7 @@
           "raw": "Su 00:00-04:00,13:00-24:00; Mo,Sa 00:00-04:00,14:00-24:00; Tu-Fr 00:00-03:00,14:00-24:00"
         },
         "google_attempted": "2026-05-22",
-        "apple_attempted": "2026-05-23",
+        "apple_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -19559,7 +23387,8 @@
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop",
-          "address.district": "hopfenstop"
+          "address.district": "hopfenstop",
+          "hours": "apple"
         }
       }
     },
@@ -19599,7 +23428,7 @@
           "cards": "yes",
           "girocard": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19662,7 +23491,7 @@
           "cards": "no",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -19703,7 +23532,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19753,7 +23582,7 @@
           "girocard": "yes",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19803,7 +23632,7 @@
           "girocard": "yes",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19844,7 +23673,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19885,7 +23714,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -19984,7 +23813,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -20106,7 +23935,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -20168,7 +23997,7 @@
           "cards": "no",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -20238,7 +24067,7 @@
           "cards": "yes",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
@@ -20284,7 +24113,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -20400,7 +24229,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-20",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -20513,7 +24342,7 @@
           "girocard": "yes",
           "cards": "no"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -20563,7 +24392,7 @@
           "cards": "no",
           "contactless": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -20607,7 +24436,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -20652,7 +24481,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -20710,7 +24539,7 @@
           "cards": "yes",
           "girocard": "yes"
         },
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -20751,7 +24580,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -20792,7 +24621,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -20845,7 +24674,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-20",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -20942,7 +24771,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -21069,7 +24898,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -21191,7 +25020,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -21235,7 +25064,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -21280,7 +25109,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -21326,7 +25155,7 @@
         ],
         "created": "2026-05-19",
         "updated": "2026-05-19",
-        "apple_id_attempted": "2026-05-22",
+        "apple_id_attempted": "2026-06-22",
         "google_attempted": "2026-05-22",
         "sources_by_field": {
           "name": "hopfenstop",
