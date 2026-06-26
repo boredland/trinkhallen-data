@@ -199,3 +199,9 @@ jobs:
           done
           echo "push failed after 5 attempts"
           exit 1
+
+      - name: Trigger app rebuild
+        if: steps.diff.outputs.changed == 'true'
+        run: curl -fsS -X POST "$CF_DEPLOY_HOOK_URL"
+        env:
+          CF_DEPLOY_HOOK_URL: ${{ secrets.CF_DEPLOY_HOOK_URL }}
