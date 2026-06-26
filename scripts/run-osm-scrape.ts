@@ -57,6 +57,10 @@ interface Stats {
    *  source, so they don't reappear. Purely human/hopfenstop features (no OSM
    *  source) are left alone: those were curated, not fetched. */
   dropped_market: number;
+  /** Hopfenstop / user features that were linked to a matching fresh OSM
+   *  POI (≤30 m, Dice ≥0.6 on names) by attaching the OSM source instead
+   *  of suppressing the OSM duplicate. Prevents re-IDing on the next scrape. */
+  linked_non_osm: number;
 }
 
 // Near-duplicate dedup: 30 m radius, Dice ≥ 0.6 on normalised names.
@@ -268,6 +272,7 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
   let removed = 0;
   let keptNonOsm = 0;
   let suppressedDup = 0;
+  let linkedNonOsm = 0;
 
   const merged: Feature[] = [];
   // Tracks OSM source ids already emitted into `merged`, so a second existing
@@ -337,17 +342,52 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
     }
   }
 
-  // Pass 2: append genuinely-new OSM POIs, but skip ones that look like
-  // duplicates of existing local features (same area + similar name). That
-  // covers the un-enriched majority: hopfenstop features without an OSM
-  // source attached. The next enrichment run can link them; until then,
-  // we'd rather under-add than create dupes.
-  for (const f of freshById.values()) {
-    if (looksLikeDuplicateOf(f, merged)) {
+  // Pass 2: link fresh OSM POIs to existing non-OSM features where they
+  // match geographically + by name (≤30 m, Dice ≥0.6). This attaches the
+  // OSM source to hopfenstop/user features instead of suppressing the OSM
+  // duplicate, so the next scrape recognises them by source ID rather than
+  // re-creating them with a new tk_<prefix>_osm_… id.
+  const nonOsmFeatures = merged.filter(
+    (f) => !(f.properties.sources ?? []).some((s: { type: string }) => s.type === "osm"),
+  );
+  const linkedOsm = new Set<string>();
+  for (const [osmId, f] of freshById) {
+    const match = nonOsmFeatures.find(
+      (e) =>
+        haversineMeters(
+          f.geometry.coordinates[1],
+          f.geometry.coordinates[0],
+          e.geometry.coordinates[1],
+          e.geometry.coordinates[0],
+        ) <= DEDUP_RADIUS_M &&
+        diceCoef(
+          normalise(f.properties.name ?? ""),
+          normalise((e.properties["name"] as string) ?? ""),
+        ) >= DEDUP_NAME_SIM,
+    );
+    if (match) {
+      // Attach the OSM source to the existing feature and union tags.
+      const sources = (match.properties["sources"] as Array<{ type: string; id: string }>) ?? [];
+      sources.push({ type: "osm", id: osmId });
+      match.properties["sources"] = sources;
+      const localTags = new Set((match.properties["tags"] as string[]) ?? []);
+      for (const t of f.properties.tags ?? []) localTags.add(t);
+      match.properties["tags"] = [...localTags].sort();
+      match.properties["updated"] = f.properties.updated ?? new Date().toISOString().slice(0, 10);
+      linkedOsm.add(osmId);
+      linkedNonOsm++;
+    }
+  }
+
+  // Pass 3: append genuinely-new OSM POIs, skip ones already linked above
+  // and ones that shadow remaining un-linkable non-OSM features.
+  for (const [osmId, f] of freshById) {
+    if (linkedOsm.has(osmId)) continue;
+    if (looksLikeDuplicateOf(f, nonOsmFeatures)) {
       suppressedDup++;
       continue;
     }
-    merged.push(f);
+    merged.push(f as unknown as Feature);
     added++;
   }
 
@@ -372,6 +412,7 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
     updated,
     removed,
     kept_non_osm: keptNonOsm,
+    linked_non_osm: linkedNonOsm,
     suppressed_dup: suppressedDup,
     cross_region_dropped: crossRegionDropped,
     dropped_market: droppedMarket,
@@ -401,7 +442,7 @@ async function main(): Promise<void> {
     console.error(`→ ${region.slug}: querying Overpass…`);
     try {
       const stats = await processRegion(region, regions);
-      console.error(`  +${stats.added} ~${stats.updated} -${stats.removed} (kept ${stats.kept_non_osm} non-OSM, suppressed ${stats.suppressed_dup} dup, cross-region dropped ${stats.cross_region_dropped}, market dropped ${stats.dropped_market})`);
+      console.error(`  +${stats.added} ~${stats.updated} -${stats.removed} (kept ${stats.kept_non_osm} non-OSM, linked ${stats.linked_non_osm}, suppressed ${stats.suppressed_dup} dup, cross-region dropped ${stats.cross_region_dropped}, market dropped ${stats.dropped_market})`);
       allStats.push(stats);
     } catch (err: unknown) {
       // A transient Overpass blip (504/timeout) on one region must not throw
