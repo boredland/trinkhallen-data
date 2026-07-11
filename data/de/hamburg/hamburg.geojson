@@ -21732,7 +21732,9 @@
           "name": "osm",
           "hours": "osm"
         },
-        "payment": {}
+        "payment": {},
+        "apple_id_attempted": "2026-07-11",
+        "google_attempted": "2026-07-11"
       }
     },
     {
@@ -23641,7 +23643,9 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "payment": {}
+        "payment": {},
+        "apple_id_attempted": "2026-07-11",
+        "google_attempted": "2026-07-11"
       }
     },
     {
@@ -24531,14 +24535,28 @@
             "type": "osm",
             "id": "node/5183609542",
             "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "1786975857809105762"
           }
         ],
         "created": "2026-06-29",
-        "updated": "2026-07-06",
+        "updated": "2026-07-11",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "payment.cards": "apple",
+          "payment.contactless": "apple",
+          "hours": "apple"
         },
-        "payment": {}
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        },
+        "hours": {
+          "raw": "Mo-Su 00:00-24:00"
+        },
+        "apple_attempted": "2026-07-11"
       }
     },
     {
@@ -24715,8 +24733,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-06-08",
-        "google_attempted": "2026-06-08",
+        "apple_id_attempted": "2026-07-11",
+        "google_attempted": "2026-07-11",
         "payment": {}
       }
     },
@@ -25517,7 +25535,9 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "payment": {}
+        "payment": {},
+        "apple_id_attempted": "2026-07-11",
+        "google_attempted": "2026-07-11"
       }
     },
     {
@@ -26586,7 +26606,8 @@
           "payment.cards": "osm",
           "payment.contactless": "osm",
           "payment.girocard": "osm"
-        }
+        },
+        "apple_id_attempted": "2026-07-11"
       }
     },
     {
