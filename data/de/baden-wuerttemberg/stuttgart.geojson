@@ -4116,16 +4116,29 @@
           {
             "type": "gmaps",
             "id": "ChIJC3xEoo7bmUcR8NEKkNyb894"
+          },
+          {
+            "type": "apple",
+            "id": "495300257519972092"
           }
         ],
         "created": "2026-06-08",
-        "updated": "2026-07-06",
+        "updated": "2026-07-11",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "payment.cards": "apple",
+          "payment.contactless": "apple",
+          "hours": "apple"
         },
-        "apple_id_attempted": "2026-06-08",
         "google_attempted": "2026-06-08",
-        "payment": {}
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        },
+        "hours": {
+          "raw": "Mo-Su 00:00-24:00"
+        },
+        "apple_attempted": "2026-07-11"
       }
     },
     {
