@@ -34547,7 +34547,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Gemütliches, symphatisches und gepflegtes Einkaufskiosk mit Stehausschank drinnen und 2-3 kleinen Tischen mit Stühlen draußen (wenn´s warm ist ! )",
         "hours": {
           "raw": "Mo-Fr 10:00-22:00; Su 10:00-22:00"
@@ -34660,7 +34660,7 @@
         },
         "apple_id_attempted": "2026-05-22",
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "begehbarer Inhouse Mini Kiosk Hufnagelstraße 3 / Ecke Mainzer Landstraße",
         "payment": {}
       }
@@ -34700,13 +34700,13 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 09:00-22:00; Sa,Su 10:00-22:00"
+          "raw": "Tu 09:00-22:00; Th 09:00-22:00; Fr 09:00-22:00; We 09:00-22:00; Mo 09:00-22:00; Sa 10:00-22:00; Su 10:00-22:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm",
+          "hours": "google",
           "description": "hopfenstop",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
@@ -34715,7 +34715,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kleiner überdachter Stehbereich nebenan.  Geöffnet: Mo. - Fr.: 09:00 -22:00 Uhr Sa./ So. und Feiertags: 10:00 - 22:00 Uhr",
         "payment": {},
         "tags": [
@@ -34944,7 +34944,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Trinkhalle am Mainufer Kelsterbach",
         "payment": {}
       }
@@ -34983,7 +34983,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -35029,7 +35029,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kleines Inhouse Wasserhäuschen mit Schiebefenster, Außentheke und Überdachung",
         "payment": {}
       }
@@ -35341,10 +35341,14 @@
           {
             "type": "hopfenstop",
             "id": "7515d5cd-c268-48e5-82f7-c2fdfb91b512"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJkVjH4iSnvUcRD_x0d6tIFmk"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -35352,15 +35356,20 @@
           "address.postalcode": "osm",
           "address.city": "osm",
           "description": "hopfenstop",
-          "hours": "hopfenstop"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kleiner Kiosk in Eschborn in der Berlinerstraße ",
         "hours": {
-          "raw": "Mo-Fr 06:30-18:30; Sa 06:30-15:30"
+          "raw": "Tu 07:00-20:00; Th 07:00-20:00; Fr 07:00-20:00; We 07:00-20:00; Mo 07:00-20:00; Sa 07:00-20:00"
         },
-        "payment": {}
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -35619,16 +35628,16 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo,We-Fr 08:00-13:00,14:30-17:00; Tu,Sa 08:00-13:00"
+          "raw": "Tu 08:00-13:00; Th 08:00-13:00,14:30-17:00; Fr 08:00-13:00,14:30-17:00; We 08:00-13:00,14:30-17:00; Mo 08:00-13:00,14:30-17:00; Sa 08:00-13:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -35666,9 +35675,9 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Su 10:00-21:00; Mo-Sa 11:00-21:00"
+          "raw": "Tu 10:00-21:00; Th 10:00-21:00; Fr 10:00-21:00; We 10:00-21:00; Mo 10:00-21:00; Sa 10:00-21:00; Su 14:00-20:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -35676,10 +35685,10 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -35763,7 +35772,7 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
           "raw": "Tu 08:00-21:00; Th 08:00-21:00; Fr 10:00-23:00; We 08:00-21:00; Mo 08:00-21:00; Sa 10:00-23:00; Su 10:00-22:00"
         },
@@ -35775,12 +35784,15 @@
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop",
-          "address.district": "hopfenstop"
+          "address.district": "hopfenstop",
+          "payment.cards": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Einfacher Kiosk im Gallus.",
-        "payment": {}
+        "payment": {
+          "cards": "yes"
+        }
       }
     },
     {
@@ -35899,7 +35911,7 @@
           "hours": "apple"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Sa-Su 10:00-20:00; Mo 00:00-24:00; Tu-Fr 12:00-20:00"
         },
@@ -35993,7 +36005,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Klassische freistehende alt eingesessene Trinkhalle  Leo-Gans-Str. 51 gegenüber Max-Eyth-Straße",
         "payment": {},
         "tags": [
@@ -36043,9 +36055,9 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "24/7"
+          "raw": "Tu 06:30-17:00; Th 06:30-17:00; Fr 06:30-17:00; We 06:30-17:00; Mo 06:30-17:00; Sa 07:00-13:00"
         },
         "tags": [
           "barrierefrei",
@@ -36054,7 +36066,7 @@
         ],
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm",
+          "hours": "google",
           "description": "hopfenstop",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
@@ -36063,7 +36075,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Büdchen direkt an der Galluswarte. Im Grunde ist es eigentlich diese Bude, die direkt im Turm an der Galluswarte ist. Das macht aber nichts, das Bier schmeckt hier genau so gut. Ist sozusagen der Mitbewerber zur Trinkhalle im Turm.",
         "payment": {}
       }
@@ -36300,7 +36312,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -36338,9 +36350,9 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Sa 10:00-19:00"
+          "raw": "Tu 10:00-19:00; Th 10:00-19:00; Fr 10:00-19:00; We 10:00-19:00; Mo 10:00-19:00; Sa 10:00-19:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -36348,10 +36360,10 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -36656,13 +36668,13 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo 09:15-21:00; Tu-Th 09:00-21:00; Fr 10:00-23:00; Sa 09:00-21:00; Su 10:00-21:00"
+          "raw": "Tu 09:00-21:00; Th 09:00-21:00; Fr 10:00-23:00; We 09:00-21:00; Mo 09:15-21:00; Sa 09:00-21:00; Su 10:00-21:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm",
+          "hours": "google",
           "description": "hopfenstop",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
@@ -36671,7 +36683,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kleines Kiosk mit Lotto, diversen Getränken, Snacks und Knabberzeug der Luxusklasse. In der Nähe des Friedberger Platzes gelegen und deshalb auch bei den Feiernden dort beliebt.  Studenten holen sich dort immer wieder gerne die Zeitung oder versuchen sich an Rubbellosen.",
         "payment": {},
         "tags": [
@@ -36719,10 +36731,14 @@
           {
             "type": "hopfenstop",
             "id": "ebb47db9-eb89-4c3f-99e5-d24ea8365890"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJNVHVLyEJvUcR25VlA0pBy7I"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "tags": [
           "applewoi",
           "barrierefrei",
@@ -36740,20 +36756,27 @@
         "sources_by_field": {
           "name": "osm",
           "description": "hopfenstop",
-          "hours": "hopfenstop",
+          "hours": "google",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop",
-          "address.district": "hopfenstop"
+          "address.district": "hopfenstop",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Netter Besitzer und Binding nur 1.10",
         "hours": {
-          "raw": "Mo 09:00-23:00; Tu 10:00-23:00; We-Su 09:00-23:00"
+          "raw": "Tu 10:00-23:00; Th 10:00-23:00; Fr 06:00-22:00; We 10:00-23:00; Mo 10:00-23:00; Sa 06:00-21:00; Su 06:00-22:00"
         },
-        "payment": {}
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -36803,7 +36826,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Frei stehende Trinkhalle mit Schiebefenster, Außentheke und Überdachung",
         "hours": {
           "raw": "Tu 08:00-22:00; Th 08:00-22:00; Fr 08:00-22:00; We 08:00-22:00; Mo 08:00-22:00; Sa 08:00-22:00; Su 10:30-22:00"
@@ -37100,9 +37123,9 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Su 12:00-18:00; Mo-Fr 07:30-12:00,13:00-20:00; Sa 08:00-20:00"
+          "raw": "Tu 07:30-13:00,15:00-20:00; Th 07:30-13:00,15:00-20:00; Fr 07:30-13:00,15:00-20:00; We 07:30-13:00,15:00-20:00; Mo 07:30-20:00; Sa 09:00-20:00; Su 12:00-18:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -37110,12 +37133,12 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "apple",
+          "hours": "google",
           "description": "hopfenstop",
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Inhouse Kiosk mit Schiebefenster, Außentheke, aber auch begehbar. Tabakwaren, Süßwaren, Getränke, Zeitungen und dergl.",
         "payment": {},
         "tags": [
@@ -37218,12 +37241,16 @@
           {
             "type": "hopfenstop",
             "id": "3c8b0197-4e72-4165-9e7b-bd7dcc939c56"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJFf2NepMJvUcRrNgmj9mamgs"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Su 06:00-22:00"
+          "raw": "Tu 07:00-21:30; Th 07:00-21:30; Fr 07:00-21:30; We 07:00-21:30; Mo 07:00-21:30; Sa 07:00-21:30; Su 07:00-21:30"
         },
         "sources_by_field": {
           "name": "osm",
@@ -37231,12 +37258,12 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm",
+          "hours": "google",
           "description": "hopfenstop",
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "tja... ein Wasserhäuschen.   Wer hierzu mehr Informationen hat, bitte über den Link \"Änderung Vorschlagen\" eintragen!",
         "payment": {},
         "tags": [
@@ -37286,12 +37313,16 @@
           {
             "type": "hopfenstop",
             "id": "61b143c5-0d0d-4b66-90fb-1641e139f293"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJeQqAghcJvUcRZ6p766pKby8"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Su 08:00-23:00"
+          "raw": "Tu 07:00-22:30; Th 07:00-22:30; Fr 07:00-22:30; We 07:00-22:30; Mo 07:00-22:30; Sa 07:00-22:30; Su 07:00-22:30"
         },
         "sources_by_field": {
           "name": "osm",
@@ -37299,14 +37330,21 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm",
+          "hours": "google",
           "description": "hopfenstop",
-          "address.district": "hopfenstop"
+          "address.district": "hopfenstop",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Sehr kompakte Trinkhalle in der Ginnheimer Landstraße. Durch die klassische Bretterbauweise macht dieses Häuschen direkt einen traditionellen Eindruck und man kommt sich willkommen vor. Die Bauweise entspricht dem der alten Jöst-Häuschen.",
-        "payment": {},
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
         "tags": [
           "applewoi",
           "gemischte_tuete",
@@ -37436,7 +37474,7 @@
           "hours": "apple"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "We-Fr 15:00-19:00; Sa 11:00-15:00"
         },
@@ -37488,7 +37526,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Begehbarer barrierefreier Kiosk. Zeitungen, Getränke, Snacks, Sportwetten, Telekarten, Tabakwaren.",
         "hours": {
           "raw": "Tu 07:00-00:00; Th 07:00-00:00; Fr 07:00-02:00; We 07:00-00:00; Mo 07:00-00:00; Sa 07:00-02:00; Su 09:00-00:00"
@@ -37609,7 +37647,7 @@
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Klassische freistehende Trinkhalle  Mörfelder Landstr. 203 Ecke Beuthener Str. Die Haltestelle der Tram 14 liegt schräg gegenüber.",
         "hours": {
           "raw": "Su 12:00-21:45"
@@ -37703,7 +37741,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Binding 1.4. Diverse Lebensmittel ebenfalls erhältlich, sowie Presse und Tabak. Stets freundlicher Service.",
         "payment": {}
       }
@@ -37802,7 +37840,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 09:00-13:00,15:30-20:00; Th 09:00-13:00,15:30-20:00; Fr 09:00-20:00; We 09:00-13:00,15:30-20:00; Mo 09:00-13:00,15:30-20:00; Sa 09:00-20:00; Su 14:00-20:00"
         },
@@ -37839,7 +37877,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -37947,7 +37985,7 @@
           "hours": "apple"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Mo-Su 10:00-20:00"
         },
@@ -38181,7 +38219,7 @@
           "hours": "osm"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -38300,7 +38338,7 @@
           "address.district": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -38347,7 +38385,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Schon von aussen macht der Buddha-Bar Kiosk (unter Liebhabern auch liebevoll BBK genannt) einiges her. Vor dem Laden stehen mehrere Tische und Stühle, die zum Verweilen einladen, in den Schaufenstern sind dutzende Wein- und Spirituosenflaschen zu sehen und das grell leuchtende \"OPEN\"-Schild lockt den durstigen sowie neugierigen Kunden ins Ladeninnere. Dort offenbart sich dann ein reichhaltiges Biersortiment, das in der Frankfurter Trinkhallen- und Kioskszene wohl einzigartig sein dürfte.  Für Entertaiment ist indes auch gesorgt: Ein Laptop versorgt die Kundschaft fortlaufend mit den heissesten youtube-Clips und bei Bedarf auch mit spiritueller Musik aus dem Lande Buddhas. Sollte der Gast einmal einen Druck auf der Blase verspüren, so steht einem das kioskeigene WC selbstverständlich zur Verfügung.",
         "hours": {
           "raw": "Mo-Su 09:00-01:00"
@@ -38597,7 +38635,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -38701,21 +38739,21 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "description": "hopfenstop",
-          "hours": "apple",
+          "hours": "google",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Mit Charme in der Nähe der English School ",
         "hours": {
-          "raw": "Su 08:00-20:00; Mo-Sa 06:00-20:00"
+          "raw": "Tu 06:00-20:00; Th 06:00-20:00; Fr 06:00-20:00; We 06:00-20:00; Mo 06:00-20:00; Sa 06:00-20:00; Su 08:00-20:00"
         },
         "payment": {},
         "tags": [
@@ -38817,7 +38855,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -38906,7 +38944,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -38961,7 +38999,7 @@
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Kiosk",
         "hours": {
           "raw": "Mo-Fr 07:00-21:30; Sa-Su 09:00-21:30"
@@ -39273,7 +39311,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "In Bornheim gelegen.",
         "hours": {
           "raw": "Mo-Su 10:00-23:00"
@@ -39312,7 +39350,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 07:00-18:00; Th 07:00-18:00; Fr 07:00-18:00; We 07:00-18:00; Mo 07:00-18:00; Sa 09:00-14:00"
         },
@@ -39411,15 +39449,15 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 08:00-16:00"
+          "raw": "Tu 08:00-16:30; Th 08:00-16:30; Fr 08:00-12:00; We 08:00-16:30; Mo 08:00-16:30"
         },
         "payment": {}
       }
@@ -39469,7 +39507,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Trinkhalle mit Standard Sortiment. Viel Stammkunden. ",
         "hours": {
           "raw": "Mo-Fr 15:30-19:00; Sa 09:00-14:30"
@@ -39570,7 +39608,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 06:30-22:30; Th 06:30-22:30; Fr 06:30-22:30; We 06:30-22:30; Mo 06:30-22:30; Sa 06:30-22:30; Su 09:00-22:30"
         },
@@ -39910,7 +39948,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kleine alte Eckbude mit üblichem Sortiment ",
         "hours": {
           "raw": "Tu 07:00-23:30; Th 07:00-23:30; Fr 07:00-23:30; We 07:00-23:30; Mo 07:00-23:30; Sa 07:00-23:30; Su 07:00-23:30"
@@ -40049,7 +40087,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -40273,7 +40311,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Man kann auch Pakete abholen",
         "payment": {}
       }
@@ -40719,10 +40757,14 @@
           {
             "type": "apple",
             "id": "6495726703690794672"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ5Y-Qt_l5vUcRmsNhw6lt3MA"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "tags": [
           "barrierefrei"
         ],
@@ -40732,14 +40774,21 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "apple"
+          "hours": "apple",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Su 11:00-22:00; Mo-Fr 11:00-21:00; Sa 11:00-23:00"
         },
-        "payment": {}
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -40773,7 +40822,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 06:00-18:00; Th 06:00-18:00; Fr 06:00-18:00; We 06:00-18:00; Mo 06:00-18:00; Sa 06:00-18:00; Su 06:00-18:00"
         },
@@ -40830,7 +40879,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Trinkhalle mit Schiebefenster und Aussentheke zur Kiesstraße hin. Begehbarer kleiner Laden mit Tür zur Robert-Mayer-Straße hin. Im Sommer Sonnenschirm mit Sitzplätzen",
         "payment": {},
         "tags": [
@@ -41068,21 +41117,21 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "description": "hopfenstop",
-          "hours": "apple",
+          "hours": "google",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Alt eingesessener inhouse Kiosk, mit Schiebefenster und Außentheke. Im Sommer Tische außen rechts am Haus. Klassisches Büdchen Sortiment, Lotto.  Öffnungszeiten: Mo-Sa 06:00 h - 20:00 h, Sonntag geschlossen",
         "hours": {
-          "raw": "Mo-Su 06:00-21:00"
+          "raw": "Tu 06:00-21:00; Th 06:00-21:00; Fr 06:00-21:00; We 06:00-21:00; Mo 06:00-21:00; Sa 06:00-21:00; Su 06:00-21:00"
         },
         "payment": {},
         "tags": [
@@ -41188,7 +41237,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Schicker Kiosk im Herzen Darmstadts, direkt am Jugendstilbad. Pfungstädter Bier, Possmann Äppelwoi und diverse alkoholfreie Getränke sowie kleine Speisen zu ebensolchen Preisen werden angeboten. Schöne Freisitzmöglichkeiten vorhanden. Außerdem gibt es Sky-Fußball im kleinen Kneipenraum. ",
         "payment": {}
       }
@@ -41233,7 +41282,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 07:00-00:00; Th 07:00-00:00; Fr 07:00-02:00; We 07:00-00:00; Mo 07:00-00:00; Sa 09:00-02:00; Su 14:00-23:00"
         },
@@ -41517,7 +41566,7 @@
           "hours": "apple"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Mo,We,Fr 09:30-12:00,15:00-18:00; Sa 09:30-13:00"
         },
@@ -41559,16 +41608,16 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Tu-Su 12:00-18:00"
+          "raw": "Tu 12:00-18:00; Th 12:00-18:00; Fr 12:00-18:00; We 12:00-18:00; Sa 12:00-18:00; Su 12:00-18:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -41754,7 +41803,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Gute Getränkeauswahl, Zeitschriften, Zigaretten, nette Bedienung ",
         "payment": {},
         "tags": [
@@ -41793,7 +41842,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 09:00-23:00; Th 09:00-23:00; Fr 09:00-01:00; We 09:00-23:00; Mo 09:00-23:00; Sa 10:00-01:00; Su 10:00-23:00"
         },
@@ -41940,7 +41989,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 08:30-18:30; Th 08:30-18:30; Fr 08:30-18:30; We 08:30-18:30; Mo 08:30-18:30"
         },
@@ -41994,7 +42043,7 @@
           "hours": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Klassische Trinkhalle mit Außenbereich, lecker Bier, kleine Speisen und Sky!",
         "hours": {
           "raw": "Mo-Su 11:00-00:00"
@@ -42188,7 +42237,7 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
@@ -42284,9 +42333,9 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 06:30-18:00; Sa 08:00-15:00; PH,Su off"
+          "raw": "Tu 07:00-22:00; Th 07:00-22:00; Fr 07:00-00:00; We 07:00-22:00; Mo 07:00-22:00; Sa 09:00-00:00; Su 10:00-22:00"
         },
         "tags": [
           "applewoi",
@@ -42306,7 +42355,7 @@
         ],
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm",
+          "hours": "google",
           "description": "hopfenstop",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
@@ -42315,7 +42364,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "kleiner begehbarer Kiosk direkt neben der Musterschule Eckenheimer Landstraße Ecke Oberweg Presseerzeugnisse + Schreibwaren, Lotto-Toto, Tabakwaren, Getränke, Süßwaren",
         "payment": {}
       }
@@ -42377,7 +42426,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kleine Trinkhalle mit allerlei Getränken, Spirituosen und Snacks. In Bockenheim gelegen ist diese Trinkahlle gerne von jüngerem Publikum besucht, hält sich aber die Wage mit der Stammkundschaft.",
         "payment": {}
       }
@@ -42425,7 +42474,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "In der Nähe des Kirchplatzes gelegen findet ihr die Kiosk-Oase. Kleiner Kiosk mit Unterstand und Kaugummiautomat. Aufpassen sollte man, wenn man auf Toilette geht, der Eingang ist niedriger als man es ihm auf den ersten Blick ansieht. Die Betreiber sind sehr entgegenkommend und super nett!",
         "hours": {
           "raw": "Mo-Th 06:30-00:00; Fr 06:30-01:00; Sa 07:30-02:00; Su 08:00-00:30"
@@ -42558,7 +42607,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -42655,7 +42704,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -42792,7 +42841,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -42833,7 +42882,7 @@
           "hours": "apple"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Mo 10:30-12:00,14:30-18:30; We-Fr 14:30-18:30; Sa 10:00-15:00"
         },
@@ -43076,7 +43125,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kleiner begehbarer Kiosk, Freiherr-vom-Stein-Str. 22 Ecke Eppsteiner Str. Getränke, Internationale Presse, Tabakwaren. Süßwaren und Lotto",
         "payment": {
           "cards": "yes",
@@ -43283,7 +43332,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Eckladen mit drei Stufen, Kiosk Angebot, Getränke etc.  MoneyGram Geldtransfer, Kopieren, Scannen, Drucken, Faxen  Öffnungszeiten: Mo.-So. 09:00 - 23:59 h",
         "hours": {
           "raw": "Mo 09:00-23:59; Tu 10:00-23:59; We-Su 09:00-23:59"
@@ -43395,7 +43444,7 @@
           "hours": "apple"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -43593,7 +43642,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kleiner begehbarer Laden mit Kiosk Sortiment: Eis, Getränke, Süßwaren, Spirituosen, Zeitungen, Zigaretten",
         "payment": {},
         "tags": [
@@ -43631,7 +43680,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -43678,7 +43727,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Begehbares Kiosk mit großem Sortiment.",
         "hours": {
           "raw": "Mo-Fr 07:00-22:00; Sa-Su 09:00-22:30"
@@ -43825,7 +43874,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -44022,7 +44071,7 @@
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Begehbarer Inhouse Kiosk mit Presse, Tababkwaren, Getränken, Süßigkeiten, etc. Gutleutstr. 152",
         "hours": {
           "raw": "Mo-Su 00:00-24:00"
@@ -44073,7 +44122,7 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "tags": [
           "applewoi",
           "backwaren",
@@ -44103,7 +44152,7 @@
         "sources_by_field": {
           "name": "osm",
           "description": "hopfenstop",
-          "hours": "hopfenstop",
+          "hours": "google",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
@@ -44111,10 +44160,10 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Frankfurter Institution! Größenmäßig fast schon ein Supermarkt und trotzdem eine Trinkhalle! Geht nicht? Geht doch! Und zwar hier! Die Auswahl lässt wirklich wenig wünsche offen. Direkt an der Buga gelegen kann man sich hier super für den Sommertag auf dem Gelände der ehemaligen Bundesgartenschau versorgen! Muss bleiben; wird bleiben!",
         "hours": {
-          "raw": "Mo-Su 07:00-21:00"
+          "raw": "Tu 08:00-22:30; Th 08:00-22:30; Fr 08:00-22:30; We 08:00-22:30; Mo 08:00-22:30; Sa 08:00-22:30; Su 08:00-22:30"
         },
         "payment": {}
       }
@@ -44200,7 +44249,7 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -44208,12 +44257,12 @@
           "address.postalcode": "osm",
           "address.city": "osm",
           "address.district": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Mo 14:00-18:30; Tu 14:00-17:00; Th-Fr 14:00-18:00; Sa 09:00-14:00"
+          "raw": "Tu 14:00-17:00; Th 14:00-18:00; Fr 14:00-18:00; Sa 09:00-14:00"
         },
         "payment": {}
       }
@@ -44518,7 +44567,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Direkt an der Schleuse an der Lahn in Löhnberg, gelegen an frühindustrieller Fabrikanlage, Füße im Wasser baumeln lassen und entspannen",
         "hours": {
           "raw": "Tu-Su 11:00-20:00"
@@ -44570,7 +44619,7 @@
           "hours": "apple"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Mo-Sa 09:00-20:00"
         },
@@ -44617,7 +44666,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Klassische Trinkhalle und Kiosk ",
         "payment": {}
       }
@@ -44806,7 +44855,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Traditionsreicher Kiosik mit Sitzgelegenheiten und WC.",
         "payment": {}
       }
@@ -44860,7 +44909,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Der Kiosk befindet sich auf Bahnsteig 1. Verkauft VGF Karten, Zeitungen, Getränke etc.",
         "payment": {}
       }
@@ -44904,13 +44953,13 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Su 12:00-20:00; Mo-Sa 09:00-21:00"
+          "raw": "Tu 09:00-21:00; Th 09:00-21:00; Fr 09:00-21:00; We 09:00-21:00; Mo 09:00-21:00; Sa 09:00-21:00; Su 15:00-21:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "apple",
+          "hours": "google",
           "description": "hopfenstop",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
@@ -44919,7 +44968,7 @@
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Mischung aus Call shop und Kiosk mitten in Bornheim. ",
         "payment": {},
         "tags": [
@@ -44968,7 +45017,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -45172,7 +45221,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -45364,7 +45413,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -45463,7 +45512,7 @@
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Gepflegtes kleines Wasserhäuschen, Raucherraum mit Spielautomaten und Sitzgelegenheiten, kleiner Nichtraucheraum vor den Toiletten, im Sommer Sitzbänke im Freien. Nette Leute. günstige Preise. Samstags jedes Bier 1 Euro (0,5L)",
         "hours": {
           "raw": "Mo-Su 09:00-24:00"
@@ -45559,20 +45608,31 @@
           {
             "type": "apple",
             "id": "7786485649198294165"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJf8w4x-wOvUcRzpZ57-HHfoA"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 07:00-18:30; Sa 07:00-14:30"
+          "raw": "Tu 07:00-19:00; Th 07:00-19:00; Fr 07:00-19:00; We 07:00-19:00; Mo 07:00-19:00; Sa 07:00-18:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "apple"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
-        "payment": {}
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -45639,7 +45699,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Unter neuem Betreiber wieder neu eröffnet! Dieses Kiosk hat sich gemacht und steht mit einem neuen Konzept dem modernen Kiosk inkl. kleiner Vinothek in nichts nach! ",
         "payment": {}
       }
@@ -45678,9 +45738,9 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Su 09:00-18:00; Mo,Th 09:00-19:00; Tu-We,Fr 09:00-20:00; Sa 09:00-18:30"
+          "raw": "Tu 09:00-19:00; Th 09:00-19:00; Fr 09:00-19:00; We 09:00-19:00; Mo 09:00-19:00; Sa 09:00-18:30; Su 09:00-18:00"
         },
         "tags": [
           "barrierefrei",
@@ -45693,10 +45753,10 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -45747,7 +45807,7 @@
           "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 09:00-21:00; Th 09:00-21:00; Fr 09:00-21:00; We 09:00-21:00; Mo 09:00-21:00"
         },
@@ -45787,7 +45847,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -45990,7 +46050,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -46028,9 +46088,9 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Tu,Th-Fr 09:00-11:00,17:00-19:00; Sa 10:00-14:00"
+          "raw": "Tu 09:00-11:00,17:00-19:00; Th 09:00-11:00,17:00-19:00; Fr 09:00-11:00,17:00-19:00; Mo 09:00-11:00,17:00-19:00; Sa 10:00-14:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -46038,10 +46098,10 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -46124,15 +46184,15 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Tu 06:00-20:00; Th 06:00-20:00; Fr 06:00-20:00; We 06:00-20:00; Mo 06:00-20:00"
+          "raw": "Tu 06:00-20:00; Th 06:00-20:00; Fr 06:00-20:00; We 06:00-20:00; Mo 06:00-20:00; Sa 06:00-20:00"
         },
         "payment": {}
       }
@@ -46230,7 +46290,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Ein Kiosk mit bequemen Sitzmöglichkeiten draussen direkt an der Frankfurter Strasse. Drinnen mit durchdachter Holzeinrichtung und einem Nebenzimmer mit Billardtisch. ",
         "payment": {},
         "tags": [
@@ -46336,7 +46396,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -46381,7 +46441,7 @@
           "address.district": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -46580,7 +46640,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Einkaufskiosk",
         "payment": {}
       }
@@ -46620,15 +46680,19 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "payment": {
           "cards": "yes",
           "contactless": "yes"
+        },
+        "hours": {
+          "raw": "Tu 09:30-21:30; Th 09:30-21:30; Fr 09:30-21:30; We 09:30-21:30; Mo 09:30-21:30; Sa 09:30-21:30"
         }
       }
     },
@@ -46680,7 +46744,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Deutsche Bier Weizenbier Internationale Bier Wasser Limonade ",
         "payment": {},
         "tags": [
@@ -47031,7 +47095,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kleiner begehbarer Kiosk Laden mit Getränken, Backwaren, Presse, etc.",
         "payment": {},
         "tags": [
@@ -47100,7 +47164,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -47645,7 +47709,7 @@
         },
         "apple_id_attempted": "2026-05-22",
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Begehbarer Kiosk mit späten Öffnungszeiten",
         "payment": {},
         "tags": [
@@ -47704,7 +47768,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Klassische alt eingesessene inhouseTrinkhalle mit Schiebefenster und Außentheke Getränke, Süßwaren, Tabakwaren, Eis, etc.",
         "payment": {},
         "tags": [
@@ -47806,7 +47870,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kleines Inhouse-Kiosk mit allem was man erwarten würde.",
         "payment": {},
         "tags": [
@@ -47854,7 +47918,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -48145,7 +48209,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -48267,7 +48331,7 @@
           "hours": "osm"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -48353,7 +48417,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -48391,9 +48455,9 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 08:30-12:30,16:00-18:30, Sa 08:30-13:30"
+          "raw": "Tu 09:00-12:30,16:00-18:00; Th 09:00-12:30,16:00-18:00; Fr 09:00-12:30,16:00-18:00; We 09:00-12:30; Mo 09:00-12:30,16:00-18:00; Sa 09:00-13:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -48401,10 +48465,10 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -48583,7 +48647,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kiosk direkt am Dornbusch. Hier gibt es Zeitschriften, Snacks, Bier und Schnaps. Kurz: einfach alles. ",
         "payment": {},
         "tags": [
@@ -48634,7 +48698,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -48722,7 +48786,7 @@
           "name": "osm"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -48903,15 +48967,15 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 10:00-19:00; Sa 10:00-18:00"
+          "raw": "Tu 10:00-19:00; Th 10:00-19:00; Fr 10:00-19:00; We 10:00-19:00; Mo 10:00-19:00; Sa 10:00-18:00"
         },
         "payment": {}
       }
@@ -48961,7 +49025,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "2,5€ für den halben Liter ",
         "hours": {
           "raw": "Tu 08:00-23:00; Th 08:00-23:00; Fr 08:00-23:00; We 08:00-23:00; Mo 08:00-23:00; Sa 09:00-23:03; Su 09:00-23:03"
@@ -49010,7 +49074,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -49137,20 +49201,20 @@
           },
           {
             "type": "gmaps",
-            "id": "ChIJaaf7v1oIvUcRBNw1iyava_g"
+            "id": "ChIJE5-5qpwJvUcRWjdv8nZCKFo"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Th 10:00-22:00"
+          "raw": "Tu 11:00-21:00; Th 11:00-21:00; Fr 11:00-21:00; We 11:00-21:00; Mo 11:00-21:00; Sa 11:00-22:00; Su 11:00-22:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -49242,7 +49306,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 09:00-17:00; Th 09:00-17:00; Fr 09:00-17:00; We 09:00-17:00; Mo 09:00-17:00"
         },
@@ -49283,7 +49347,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -49344,7 +49408,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kiosk in der Innenstadt mit Stehtischen draussen",
         "payment": {}
       }
@@ -49384,15 +49448,15 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Mo-Sa 09:00-18:00"
+          "raw": "Tu 09:00-18:00; Th 09:00-18:00; Fr 09:00-18:00; We 09:00-18:00; Mo 09:00-18:00; Sa 09:00-18:00"
         },
         "payment": {}
       }
@@ -49436,9 +49500,9 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Th,Su 10:00-23:00; Mo-We 09:00-22:00; Fr 10:00-24:00; Sa 09:00-24:00"
+          "raw": "Tu 10:00-23:00; Th 10:00-23:00; Fr 10:00-00:00; We 10:00-23:00; Mo 10:00-23:00; Sa 10:00-00:00; Su 10:00-23:00"
         },
         "tags": [
           "applewoi",
@@ -49458,7 +49522,7 @@
         ],
         "sources_by_field": {
           "name": "osm",
-          "hours": "apple",
+          "hours": "google",
           "description": "hopfenstop",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
@@ -49467,7 +49531,7 @@
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Cooles Kiosk in Alt-Bornheim.",
         "payment": {}
       }
@@ -49560,7 +49624,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Begehbarer Kiosk Einkaufskiosk im Eckhaus Friedrichstr Ecke Bleichstr, drei Stufen hoch. Straßenverkauf mit Schiebefenster und Außentheke.",
         "payment": {}
       }
@@ -49657,7 +49721,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -49701,7 +49765,7 @@
           "name": "osm"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -49930,7 +49994,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Klassisches Kiosk inmitten von Rödelheim. In der nähe des anderen Teils der Michael-Ende-Schule (ehemals Arndtschule) ist dieser Kiosk bei den Schülern und Schülerinnen sehr beliebt",
         "payment": {}
       }
@@ -50040,7 +50104,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -50166,7 +50230,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Halbrunde Trinkhalle mit Schiebefenster, Außentheke und Überdachung. Klassisches Büdchen Sortiment, Kaffee und Brötchen, Fahrkarten, Fahrpläne, Tintenpatronen und Tonerkartuschen.  Mo.-Sa. 06:00 - 22:00 h So. geschlossen  ",
         "hours": {
           "raw": "Tu 06:00-23:00; Th 06:00-23:00; Fr 06:00-23:00; We 06:00-23:00; Mo 06:00-23:00; Sa 06:00-23:00; Su 10:00-23:00"
@@ -50337,7 +50401,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kleiner Kiosk, nur für eingefleischte Fans ... Oder Familie",
         "payment": {},
         "tags": [
@@ -50439,7 +50503,7 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "description": "hopfenstop",
@@ -50447,10 +50511,11 @@
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop",
-          "address.district": "hopfenstop"
+          "address.district": "hopfenstop",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kleiner begehbarer Laden  im Sommer mit Tischen und Stühlen davor. Presse, kleine Imbisse, Getränke, Snacks, Süßigkeiten, Eis, Schreibwaren ",
         "payment": {
           "cash": "yes"
@@ -50462,7 +50527,10 @@
           "snacks",
           "sonne",
           "wc"
-        ]
+        ],
+        "hours": {
+          "raw": "Tu 08:00-23:00; Th 08:00-23:00; Fr 08:00-23:00; We 08:00-23:00; Mo 08:00-23:00; Sa 08:00-23:00; Su 08:00-23:00"
+        }
       }
     },
     {
@@ -50500,15 +50568,15 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Su 09:00-24:00; Mo-Tu,Th-Sa 11:00-24:00; We 17:00-24:00"
+          "raw": "Tu 11:00-00:00; Th 11:00-00:00; Fr 11:00-00:00; We 17:00-00:00; Mo 11:00-00:00; Sa 11:00-00:00; Su 09:00-00:00"
         },
         "payment": {}
       }
@@ -50637,7 +50705,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kiosk und indische, Asiatische Lebensmittel",
         "hours": {
           "raw": "Mo-Fr 09:00-21:00; Sa 15:00-21:00; Su 11:30-21:00"
@@ -50811,10 +50879,14 @@
           {
             "type": "hopfenstop",
             "id": "8389af96-1d41-4ac3-b07a-23d8f31e8d38"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJqz6iKfegvUcRNOxcCxQE_0A"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "description": "hopfenstop",
@@ -50822,16 +50894,27 @@
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop",
-          "address.district": "hopfenstop"
+          "address.district": "hopfenstop",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Mehr als klassische Trinkhalle mit schwerem Eintracht-Flaire. Alles was das Herz begehrt: Gemischte Tüte, Getränke, Kleinwaren. Ein Paradies für Stehbiertrinker!",
-        "payment": {},
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
         "tags": [
           "gemischte_tuete",
           "mate"
-        ]
+        ],
+        "hours": {
+          "raw": "Tu 13:00-18:00; Th 13:00-18:00; Fr 13:00-18:00; Mo 13:00-18:00; Sa 09:00-14:00"
+        }
       }
     },
     {
@@ -51031,7 +51114,7 @@
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Kiosk mit Tischen im Schatten draussen direkt an der Stresemannalle gelegen. Umgeben von Döner ist immer ein Snack in Reichweite ",
         "payment": {},
         "tags": [
@@ -51434,19 +51517,19 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Tu 16:15-19:15; We-Th 16:00-19:00; Fr 14:30-19:00; Sa 09:30-14:00"
+          "raw": "Th 16:00-19:00; Fr 14:30-19:00; Sa 09:30-14:00"
         },
         "payment": {}
       }
@@ -51491,7 +51574,7 @@
           "hours": "apple"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Mo-Fr 08:30-21:00; Sa 09:30-22:00"
         },
@@ -51528,7 +51611,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -51677,7 +51760,7 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25"
+        "google_attempted": "2026-07-24"
       }
     },
     {
@@ -51755,7 +51838,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -51965,7 +52048,7 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {
           "cards": "no",
           "contactless": "yes",
@@ -52116,7 +52199,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Freistehender begehbarer Kiosk mit Presse, Tabakwaren, Lotto, Fahrkarten etc.",
         "payment": {},
         "tags": [
@@ -52165,7 +52248,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Frei stehendes Gebäude, rechts die Trinkhalle, links der Blumenpavillon. Die Trinkhalle hat klassisches Büdchen Sortiment. Straßenverkauf über Schiebefenster mit Außentheke",
         "payment": {},
         "tags": [
@@ -52354,7 +52437,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Klassiches inhouse Kiosk mit Schiebefenster und Aussentheke. Weine, Spiritosen, Süßwaren, Tabakwaren, Presse, Eis etc.",
         "payment": {},
         "tags": [
@@ -52405,7 +52488,7 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {
           "cards": "yes",
           "girocard": "yes"
@@ -52464,7 +52547,7 @@
         },
         "apple_id_attempted": "2026-05-22",
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Hart klassische Bude auf der Berger, direkt neben dem Schönebergers. ",
         "hours": {
           "raw": "Mo-Su 11:00-23:00"
@@ -52774,7 +52857,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Nobis Kiosk & Schankwirtschaft ",
         "hours": {
           "raw": "Mo-Fr 09:00-21:00; Sa-Su 09:00-15:00"
@@ -52811,16 +52894,16 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Fr 15:00-22:00; Mo 12:00-19:00; Sa 15:00-20:00; Su 12:00-19:00"
+          "raw": "Th 15:00-20:00; Fr 15:00-22:00; Sa 13:00-20:00; Su 12:00-20:00"
         },
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -52905,7 +52988,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Fotokopie, Fax, Telefonkarten, Tabak und das Übliche",
         "hours": {
           "raw": "Mo-Su 10:00-22:00"
@@ -52975,7 +53058,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Neuer Kiosk in der Lahnstraße mit Gemischter Tüte, einer mittelgroßen Auswahl an Alkohol und Alltagsartikeln. Großer Vorteil: der extrem leckere Sushi-Laden daneben.",
         "payment": {},
         "tags": [
@@ -53122,7 +53205,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -53173,7 +53256,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Klassische Inhouse Trinkhalle alt eingesessen",
         "hours": {
           "raw": "Tu 08:00-20:00; Th 08:00-20:00; Fr 08:00-20:00; Mo 08:00-20:00; Sa 08:00-20:00; Su 08:00-20:00"
@@ -53228,7 +53311,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -53263,7 +53346,7 @@
           },
           {
             "type": "gmaps",
-            "id": "ChIJl1SuNccLvUcRaRTguhV7z_I"
+            "id": "ChIJMwabBGwLvUcRxJxW0hBLis4"
           }
         ],
         "created": "2026-05-19",
@@ -53282,7 +53365,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Gemütliches Kiosk im\nGallus.",
         "payment": {}
       }
@@ -53333,7 +53416,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kühles Bier",
         "payment": {},
         "tags": [
@@ -53498,7 +53581,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Kleiner In-House Kiosk in ziemlicher Nähe zur Hauptwache. Standard-Sortiment.",
         "payment": {},
         "tags": [
@@ -53591,19 +53674,19 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 07:00-14:00"
+          "raw": "Tu 07:00-14:00; Th 07:00-14:00; Fr 07:00-14:00; We 07:00-14:00; Mo 07:00-14:00"
         },
         "payment": {}
       }
@@ -53692,7 +53775,7 @@
           "hours": "apple"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Mo-Su 11:00-19:00"
         },
@@ -53983,15 +54066,15 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Tu 15:00-17:00; We 15:00-17:00"
+          "raw": "Tu 08:00-13:00,15:00-20:00; Th 08:00-13:00,15:00-20:00; Fr 08:00-13:00,15:00-20:00; We 08:00-13:00,15:00-20:00; Mo 08:00-13:00,15:00-20:00; Sa 08:00-13:00,15:00-20:00; Su 08:00-13:00,15:00-20:00"
         },
         "payment": {}
       }
@@ -54152,7 +54235,7 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -54160,13 +54243,13 @@
           "address.postalcode": "osm",
           "address.city": "osm",
           "description": "hopfenstop",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Bester Kiosk",
         "hours": {
-          "raw": "Mo,Sa 12:30-24:00; Tu-Fr 00:00-01:30,12:30-24:00; Su 00:00-03:00,13:00-16:00"
+          "raw": "Tu 12:30-01:30; Th 12:30-01:30; Fr 12:30-00:00; We 12:30-01:30; Mo 12:30-01:30; Sa 12:30-03:00; Su 13:00-16:00"
         },
         "payment": {},
         "tags": [
@@ -54311,10 +54394,14 @@
           {
             "type": "hopfenstop",
             "id": "effd1dbd-3586-4c3d-927b-e38865ba03a0"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJB6yb_VxwvUcRVmyrJ23ALCM"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "tags": [
           "barrierefrei",
           "wc"
@@ -54326,12 +54413,16 @@
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop",
-          "address.district": "hopfenstop"
+          "address.district": "hopfenstop",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Trinkhallen Kiosk am Rhönring",
-        "payment": {}
+        "payment": {},
+        "hours": {
+          "raw": "Tu 10:00-22:00; Th 10:00-22:00; Fr 10:00-22:00; We 10:00-22:00; Mo 10:00-22:00; Sa 10:00-22:00; Su 10:00-22:00"
+        }
       }
     },
     {
@@ -54368,15 +54459,15 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 08:30-12:30,16:30-19:00; Sa 08:30-18:00"
+          "raw": "Tu 08:30-12:30,16:30-19:00; Th 08:30-12:30,16:30-19:00; Fr 08:30-12:30,16:30-19:00; We 08:30-12:30,16:30-19:00; Mo 08:30-12:30,16:30-19:00; Sa 08:30-18:00"
         },
         "payment": {}
       }
@@ -54454,7 +54545,7 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -54466,9 +54557,9 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {
-          "cards": "no",
+          "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
         }
@@ -54508,7 +54599,7 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "tags": [
           "barrierefrei"
         ],
@@ -54518,14 +54609,19 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "apple"
+          "hours": "apple",
+          "payment.cards": "google",
+          "payment.girocard": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 08:00-10:00; We-Sa 08:00-13:00"
         },
-        "payment": {}
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -54667,7 +54763,7 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "address.postalcode": "osm",
@@ -54675,9 +54771,9 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Tu 11:00-18:00; Th 11:00-18:00; Fr 11:00-18:00; We 11:00-18:00; Mo 11:00-18:00; Sa 11:00-18:00; Su 11:00-18:00"
+          "raw": "Tu 12:00-17:00; Th 12:00-17:00; Fr 12:00-17:00; We 12:00-17:00; Mo 12:00-17:00; Sa 11:00-17:30; Su 11:00-17:30"
         },
         "payment": {}
       }
@@ -54716,19 +54812,19 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 07:45-18:00; Sa 08:00-13:00"
+          "raw": "Tu 08:00-18:00; Th 08:00-18:00; Fr 08:00-18:00; We 08:00-12:00; Mo 08:00-18:00; Sa 08:00-13:00"
         },
         "payment": {}
       }
@@ -54769,7 +54865,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 08:30-11:00,14:00-18:00; Th 08:30-11:00,14:00-18:00; Fr 08:30-18:00; We 08:30-11:00; Mo 08:30-11:00,15:00-18:00; Sa 08:30-13:00"
         },
@@ -54815,11 +54911,11 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "description": "hopfenstop",
-          "hours": "apple",
+          "hours": "google",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
@@ -54827,10 +54923,10 @@
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Klassische alt eingesessene freistehende Trinkhalle unter alten Linden",
         "hours": {
-          "raw": "Mo-Su 10:00-22:00"
+          "raw": "Tu 10:00-22:00; Th 10:00-22:00; Fr 10:00-22:00; We 10:00-22:00; Mo 10:00-22:00; Sa 10:00-22:00; Su 10:00-22:00"
         },
         "payment": {}
       }
@@ -54869,17 +54965,18 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.postalcode": "osm",
-          "address.city": "osm"
+          "address.city": "osm",
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Su 11:00-20:00; Tu 15:00-20:00; We-Th 15:30-20:00; Fr 14:00-20:00; Sa 13:00-20:00"
+          "raw": "Tu 15:00-20:00; Th 11:00-20:00; Fr 13:30-20:00; We 15:00-20:00; Sa 13:30-20:00; Su 11:00-20:00"
         },
         "payment": {}
       }
@@ -54948,7 +55045,7 @@
         },
         "apple_id_attempted": "2026-05-22",
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Der Friedberger Platz wird seit Jahren regelmäßig von Studenten, Jugendlichen und kommunikationsfreudigen Menschen aufgesucht. Unter dem Namen \"Friedberger Markt\" existiert hiermit seit geraumer Zeit immer wieder bis in die Nacht hinein ein ganz eigener Flair. Mittendrin befindet sich das Kiosk, welches mit verschiedenen Snacks, Getränken etc. den Anwesenden den Aufenthalt noch mehr versüßt. ",
         "payment": {}
       }
@@ -54995,7 +55092,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Direkt neben der Hadrian Apotheke unter Bäumen  Täglich ab Mittags geöffnet.",
         "payment": {},
         "tags": [
@@ -55045,9 +55142,9 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 07:00-19:00; Sa off; Su,PH 08:00-18:00"
+          "raw": "Tu 07:00-19:00; Th 07:00-19:00; Fr 07:00-19:00; We 07:00-19:00; Mo 07:00-19:00; Su 08:00-18:00"
         },
         "tags": [
           "applewoi",
@@ -55059,7 +55156,7 @@
         ],
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm",
+          "hours": "google",
           "description": "hopfenstop",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
@@ -55068,7 +55165,7 @@
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "description": "früher als Jost bekannt. Schönes am Holzhausenpark gelegenes Wasserhäuschen.  Wer hierzu mehr Informationen hat, bitte über den Link \"Änderung Vorschlagen\" eintragen!",
         "payment": {}
       }
@@ -55221,7 +55318,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 10:00-21:30; Th 10:00-21:30; Fr 10:00-21:30; We 10:00-21:30; Mo 10:00-21:30; Sa 10:00-21:30; Su 10:00-21:30"
         },
@@ -55415,7 +55512,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 10:00-21:00; Th 10:00-21:00; Fr 10:00-21:00; We 10:00-21:00; Mo 14:00-21:00; Sa 10:00-21:00"
         },
@@ -55453,10 +55550,10 @@
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -55555,7 +55652,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Büdchen an der End-Haltestelle der Linie 14.  Wer hierzu mehr Informationen hat, bitte über den Link \"Änderung Vorschlagen\" eintragen!",
         "payment": {},
         "tags": [
@@ -55699,7 +55796,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Uriges Büdchen im Wohngebiet",
         "hours": {
           "raw": "Mo-Sa 12:00-21:30"
@@ -55759,7 +55856,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Klassische Trinkhalle mit überdachter Laube, direkt rechts hinter dem Durchgang von Seckbacher Landstr zu An den Röthen",
         "hours": {
           "raw": "Tu 09:00-23:00; Th 09:00-23:00; Fr 09:00-23:00; We 09:00-23:00; Mo 09:00-23:00; Sa 09:00-23:00; Su 09:00-23:00"
@@ -55896,7 +55993,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Freistehendes, massives Büdchen mit Sportwettenannahme. Sehr gemütlich!",
         "payment": {},
         "tags": [
@@ -56004,7 +56101,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Traditionelles Wasserhäuschen, direkt am Waldrand des Riederwaldes gelegen.  Wer hierzu mehr Informationen hat, bitte über den Link \"Änderung Vorschlagen\" eintragen!",
         "payment": {},
         "tags": [
@@ -56111,7 +56208,7 @@
           "address.city": "osm"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -56330,7 +56427,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -56380,7 +56477,7 @@
           "description": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Trinkhalle nahe der Altstadt von Hanau Steinheim",
         "payment": {},
         "tags": [
@@ -56661,7 +56758,7 @@
           "address.district": "osm"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -56749,12 +56846,16 @@
           {
             "type": "apple",
             "id": "14584698363042789529"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ6STyHHVwvUcRQwggOKJsfus"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Su 00:00-24:00"
+          "raw": "Tu 06:00-15:30; Th 06:00-15:30; Fr 06:00-15:30; We 06:00-15:30; Mo 06:00-15:30; Sa 07:00-12:00; Su 08:00-12:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -56763,11 +56864,11 @@
           "address.postalcode": "osm",
           "address.city": "osm",
           "address.district": "osm",
-          "hours": "apple",
+          "hours": "google",
           "description": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Backwaren, Stadionnähe ",
         "payment": {},
         "tags": [
@@ -56946,15 +57047,15 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Su 11:00-20:00; Mo-Th 12:00-21:00; Fr-Sa 12:00-22:00"
+          "raw": "Tu 12:00-21:00; Th 12:00-21:00; Fr 12:00-22:00; We 12:00-21:00; Mo 12:00-21:00; Sa 12:00-22:00; Su 11:00-20:00"
         },
         "payment": {}
       }
@@ -57646,7 +57747,7 @@
           "address.district": "osm"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -57720,7 +57821,7 @@
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "description": "Frei stehendes begehbares Kiosk, Kaiserstraße 30a, direkt an der Gallusanlage, mit Presse, Getränken, Zigaretten, Süßigkeiten, Eis, etc.",
         "hours": {
           "raw": "Mo-Su 00:00-24:00"
@@ -57916,9 +58017,9 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 06:00-23:00; Sa,Su 10:00-23:00"
+          "raw": "Tu 06:00-23:00; Th 06:00-23:00; Fr 06:00-23:00; We 06:00-23:00; Mo 06:00-23:00; Sa 10:00-23:00; Su 10:00-23:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -57926,12 +58027,12 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm",
+          "hours": "google",
           "description": "hopfenstop",
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Der Name täuscht etwas. Eigentlich ist es eher ein halbrundes, klassisches Büdchen. ",
         "payment": {},
         "tags": [
@@ -57992,7 +58093,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 09:00-21:00; Th 09:00-21:00; Fr 08:00-20:00; We 08:00-20:00; Mo 08:00-20:00; Sa 08:00-20:00; Su 08:00-21:00"
         },
@@ -58033,7 +58134,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -58308,11 +58409,11 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "description": "hopfenstop",
-          "hours": "apple",
+          "hours": "google",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
@@ -58320,10 +58421,10 @@
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Klassische freistehende Trinkhalle mit kleinem Gastraum   Die Trinkhalle befindet sich unter der Fußgängerbrücke, die die Hanauer Landstraße überspannt. Hanauer Landstraße 509b / Ecke Cassellastraße. ",
         "hours": {
-          "raw": "Mo-Su 00:00-24:00"
+          "raw": "Tu 07:00-23:00; Th 07:00-23:00; Fr 07:00-23:00; We 07:00-23:00; Mo 07:00-23:00; Sa 11:00-23:00; Su 11:00-23:00"
         },
         "payment": {
           "cash": "yes"
@@ -58425,12 +58526,16 @@
           {
             "type": "hopfenstop",
             "id": "0b2902ce-9684-447c-bba8-ecdd9bead61a"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJQwtKvv8RvUcRcOy8nMchgy4"
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 06:30-20:30; Sa 08:00-20:30; Su 09:00-20:30"
+          "raw": "Tu 06:00-20:30; Th 06:00-20:30; Fr 06:00-20:30; We 06:00-20:30; Mo 06:00-20:30; Sa 06:00-20:30; Su 06:00-20:30"
         },
         "sources_by_field": {
           "name": "osm",
@@ -58438,11 +58543,11 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm",
+          "hours": "google",
           "description": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Wasserhäuschen in klassischer Bauweise.  Geöffnet: Mo-Fr 6-21, Sa 7-21, So 8-22",
         "payment": {},
         "tags": [
@@ -58553,7 +58658,7 @@
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "tags": [
           "kaffee",
           "raucherbereich",
@@ -58562,17 +58667,17 @@
         "sources_by_field": {
           "name": "osm",
           "description": "hopfenstop",
-          "hours": "hopfenstop",
+          "hours": "google",
           "address.street": "hopfenstop",
           "address.number": "hopfenstop",
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Gourmet Tempel für Bierliebhaber\n\n",
         "hours": {
-          "raw": "Mo-Su 09:00-05:00"
+          "raw": "Tu 09:30-21:00; Th 09:30-21:00; Fr 09:30-21:00; We 09:30-21:00; Mo 09:30-21:00; Sa 09:30-21:00"
         },
         "payment": {}
       }
@@ -58734,9 +58839,9 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Tu 09:00-17:00; Th 09:00-17:00; Fr 09:00-17:00; We 09:00-17:00; Mo 09:00-17:00; Sa 09:00-17:00; Su 09:00-17:00"
+          "raw": "Tu 06:30-20:00; Th 06:30-20:00; Fr 06:30-20:00; We 06:30-20:00; Mo 06:30-20:00; Sa 08:00-20:00; Su 08:00-20:00"
         },
         "tags": [
           "barrierefrei"
@@ -58750,7 +58855,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -58785,7 +58890,7 @@
           },
           {
             "type": "gmaps",
-            "id": "ChIJjbmfBQAPvUcRNFnWaa6uusI"
+            "id": "ChIJfUvjALcOvUcRWJXG_wmhjw4"
           },
           {
             "type": "apple",
@@ -58805,7 +58910,7 @@
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Die Trinkhalle am Adlerflychplatz liegt umringt von ein paar großen alten Bäumen am Oeder Weg und lädt nicht nur im Sommer zum verweilen ein. Das Sortiment ist reichhaltig, preislich absolut in Ordnung und mit dem übergroßen Eintrachtwappen an der Kioskfront auch zum Posendurchaus geeignet. Ach ja, wenn einem der Hunger zwischen den Schoppen überkommen sollte: 20 Meter weiter runter gibt es den \"Aroma Falafel\", der bekanntlich zu den schmackhaftesten Imbissen der Stadt gehört. Pissoir vorhanden.",
         "hours": {
           "raw": "Mo-Su 00:00-24:00"
@@ -58875,7 +58980,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Tu 07:00-21:00; Th 07:00-21:00; Fr 07:00-21:00; We 07:00-21:00; Mo 07:00-21:00; Sa 07:00-22:00; Su 07:00-22:00"
         },
@@ -58916,18 +59021,18 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Mo-Th 15:00-18:30; Fr 08:00-18:30; Sa 08:00-14:00"
+          "raw": "Tu 15:00-18:30; Th 15:00-18:30; Fr 08:00-18:30; We 15:00-18:30; Mo 15:00-18:30; Sa 08:00-14:00"
         },
         "payment": {}
       }
@@ -59072,7 +59177,7 @@
           "description": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Schöne Sicht auf die AOK",
         "payment": {}
       }
@@ -59124,7 +59229,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Trinkhalle mit Schiebefenster, Außentheke und Überdachung",
         "hours": {
           "raw": "Mo-Su 07:00-23:00"
@@ -59276,7 +59381,7 @@
           "address.city": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Trinkhalle an der U-Bahn Station Nieder-Eschbach",
         "hours": {
           "raw": "Mo-Su 08:30-23:00"
@@ -59408,7 +59513,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Klassische freistehende alt eingesessene Trinkhalle. Im Sommer Tische und Stühle im Außenbereich.",
         "hours": {
           "raw": "Tu-Sa 09:00-22:00; Su 11:00-22:00"
@@ -59581,7 +59686,7 @@
           "address.district": "hopfenstop"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-22",
+        "google_attempted": "2026-07-24",
         "description": "Freistehender Kiosk direkt gegenüber der Tram Haltestelle Mühlberg Tabakwaren, Snacks, Süßigkeiten, Getränke ",
         "payment": {
           "cash": "yes"
@@ -59637,19 +59742,19 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "apple"
+          "hours": "google"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23",
+        "google_attempted": "2026-07-24",
         "hours": {
-          "raw": "Mo-Tu,Th-Fr 09:00-13:00,14:00-18:00; Sa 09:00-13:00"
+          "raw": "Tu 09:00-13:00,14:00-18:00; Fr 09:00-13:00,14:00-18:00; Mo 09:00-13:00,14:00-18:00; Sa 09:00-13:00"
         },
         "payment": {}
       }
@@ -59703,7 +59808,7 @@
           "address.district": "hopfenstop"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "description": "Neu eröffnete Trinkhalle Ecke Immermann-/Fallerslebenstrasse",
         "payment": {}
       }
@@ -59761,7 +59866,7 @@
           "payment.girocard": "osm"
         },
         "apple_attempted": "2026-06-26",
-        "google_attempted": "2026-05-23"
+        "google_attempted": "2026-07-24"
       }
     },
     {
@@ -59794,7 +59899,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -59825,7 +59930,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -59858,7 +59963,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -59888,7 +59993,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -59918,7 +60023,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -59956,7 +60061,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -59986,7 +60091,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60016,7 +60121,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60046,7 +60151,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60085,7 +60190,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60118,7 +60223,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60164,7 +60269,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60194,7 +60299,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60228,7 +60333,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60267,7 +60372,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60289,19 +60394,23 @@
             "type": "osm",
             "id": "node/1126644521",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJA9P-cXYJvUcRhGSPzSGi9W8"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Sa 09:00-14:00,15:00-20:00; Su 10:00-20:00"
+          "raw": "Tu 08:00-23:00; Th 08:00-23:00; Fr 08:00-23:00; We 08:00-23:00; Mo 08:00-23:00; Sa 08:00-23:00; Su 09:00-23:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60367,7 +60476,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60397,7 +60506,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60427,7 +60536,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-30",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-07-24"
       }
     },
     {
@@ -60456,7 +60566,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60585,7 +60695,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60624,7 +60734,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60654,7 +60764,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60697,7 +60807,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60734,7 +60844,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60764,7 +60874,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60794,7 +60904,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60879,7 +60989,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -60916,7 +61026,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -60944,10 +61054,14 @@
             "type": "osm",
             "id": "node/1270146975",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJhW7aahsRvUcRZ6rq7GffDl8"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
           "raw": "Mo-Fr 07:00-20:00; Sa 07:00-20:00; Su 08:00-20:00"
         },
@@ -60957,11 +61071,18 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "osm",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {}
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -61039,7 +61160,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61073,7 +61194,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61103,7 +61224,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -61134,7 +61255,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61164,7 +61285,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61186,20 +61307,31 @@
             "type": "osm",
             "id": "node/12851842980",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJp32kCwWovUcRxqlM-q3bcqA"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Tu-Fr 06:30-13:00; Mo-Tu 15:00-18:00; Fr 15:00-18:00; Sa 07:00-13:00"
+          "raw": "Tu 06:00-13:00,15:00-18:30; Th 06:30-13:00; Fr 06:00-13:00,15:00-18:30; We 06:00-13:00,15:00-18:30; Sa 07:00-13:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {}
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -61237,7 +61369,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61283,7 +61415,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -61323,7 +61455,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61353,7 +61485,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61387,7 +61519,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61417,7 +61549,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61439,16 +61571,24 @@
             "type": "osm",
             "id": "node/13091885377",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJab-qJgALvUcROm4jPDzqLJg"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {}
+        "google_attempted": "2026-07-24",
+        "payment": {},
+        "hours": {
+          "raw": "Tu 09:00-01:00; Th 09:00-01:00; Fr 09:00-02:00; We 09:00-01:00; Mo 09:00-01:00; Sa 09:00-02:00; Su 09:00-01:00"
+        }
       }
     },
     {
@@ -61481,7 +61621,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61505,21 +61645,32 @@
             "type": "osm",
             "id": "node/1329408690",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ56-l3aMTc0ERS3P_Z6vO7CQ"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Su-Fr 16:00-24:00; Sa 14:00-24:00"
+          "raw": "Tu 16:00-00:00; Th 16:00-00:00; Fr 16:00-00:00; We 16:00-00:00; Mo 16:00-00:00; Sa 14:00-00:00; Su 16:00-00:00"
         },
         "sources_by_field": {
           "name": "osm",
           "address.postalcode": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {}
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -61555,7 +61706,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61585,7 +61736,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61615,7 +61766,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61690,7 +61841,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61720,7 +61871,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61750,7 +61901,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61780,7 +61931,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61819,7 +61970,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61858,7 +62009,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61892,7 +62043,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -61973,12 +62124,16 @@
             "type": "osm",
             "id": "node/13925502709",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJHTveu4osvEcRrutMqrNhJFw"
           }
         ],
         "created": "2026-06-29",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 08:00-12:30,13:30-18:00; Sa 08:00-13:00"
+          "raw": "Tu 13:00-17:00; Th 13:00-17:00; Fr 13:00-17:00; We 13:00-17:00; Mo 13:00-17:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -61986,10 +62141,18 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-30",
-        "payment": {}
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "google_attempted": "2026-07-24"
       }
     },
     {
@@ -62010,15 +62173,29 @@
             "type": "osm",
             "id": "node/13980674475",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJx0IUbngHvUcRUhv7jFrcUoc"
           }
         ],
         "created": "2026-07-06",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "payment.cards": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-07-09",
-        "payment": {}
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 09:00-13:00,15:00-18:30; Th 09:00-13:00,15:00-18:30; Fr 09:00-13:00,15:00-18:30; We 09:00-13:00,15:00-18:30; Mo 09:00-13:00,15:00-18:30; Sa 08:00-14:00"
+        },
+        "google_attempted": "2026-07-24"
       }
     },
     {
@@ -62047,7 +62224,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-09",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-07-24"
       }
     },
     {
@@ -62085,7 +62263,8 @@
           "payment.contactless": "osm",
           "payment.girocard": "osm"
         },
-        "apple_id_attempted": "2026-07-15"
+        "apple_id_attempted": "2026-07-15",
+        "google_attempted": "2026-07-24"
       }
     },
     {
@@ -62114,7 +62293,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-15",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-07-24"
       }
     },
     {
@@ -62135,18 +62315,31 @@
             "type": "osm",
             "id": "node/14017874930",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJhcEDPZg6vUcRXkyLAFPR6ZA"
           }
         ],
         "created": "2026-07-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Th-Fr 09:30-12:00,15:00-18:00; Sa 09:30-13:00"
+          "raw": "Th 09:30-12:00,15:00-18:00; Fr 09:30-12:00,15:00-18:00; Sa 09:30-13:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
-        "apple_id_attempted": "2026-07-22"
+        "apple_id_attempted": "2026-07-22",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "google_attempted": "2026-07-24"
       }
     },
     {
@@ -62174,7 +62367,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-07-22"
+        "apple_id_attempted": "2026-07-22",
+        "google_attempted": "2026-07-24"
       }
     },
     {
@@ -62211,7 +62405,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -62238,10 +62432,14 @@
             "type": "osm",
             "id": "node/1478105852",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ_eZNLbcGvUcRm6zcGceMAAY"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-06-15",
+        "updated": "2026-07-24",
         "tags": [
           "barrierefrei"
         ],
@@ -62250,12 +62448,23 @@
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
-          "address.city": "osm"
+          "address.city": "osm",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {},
-        "osm_removed": true
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "osm_removed": true,
+        "hours": {
+          "raw": "Tu 09:00-18:30; Th 09:00-18:30; Fr 09:00-18:30; We 09:00-18:30; Mo 09:00-18:30; Sa 08:30-16:00"
+        }
       }
     },
     {
@@ -62284,7 +62493,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -62317,7 +62526,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -62396,7 +62605,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -62442,7 +62651,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -62482,7 +62691,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -62515,7 +62724,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -62545,7 +62754,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -62568,23 +62777,34 @@
             "type": "osm",
             "id": "node/1716462497",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJJYGHZVkQvUcRO8PY1MKiZzI"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-06-15",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 08:30-20:00; Sa 08:00-20:00"
+          "raw": "Tu 08:30-20:00; Th 08:30-20:00; Fr 08:30-20:00; We 08:30-20:00; Mo 08:30-20:00; Sa 08:00-20:00"
         },
         "tags": [
           "barrierefrei"
         ],
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {},
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
         "osm_removed": true
       }
     },
@@ -62618,7 +62838,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -62698,7 +62918,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -62733,7 +62953,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -62832,7 +63052,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -62970,7 +63190,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63000,7 +63220,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63046,7 +63266,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -63080,7 +63300,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -63163,7 +63383,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63203,7 +63423,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -63232,22 +63452,37 @@
             "type": "osm",
             "id": "node/2270965064",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ3cF_3fQXvUcRNW1AoOMrq5U"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-06-15",
+        "updated": "2026-07-24",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "address.district": "osm"
+          "address.district": "osm",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {},
-        "osm_removed": true
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "osm_removed": true,
+        "hours": {
+          "raw": "Tu 08:30-19:00; Th 08:30-19:00; Fr 08:30-19:00; We 08:30-19:00; Mo 08:30-19:00; Sa 08:30-19:00"
+        }
       }
     },
     {
@@ -63287,7 +63522,7 @@
           "address.district": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63332,7 +63567,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63362,7 +63597,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63436,7 +63671,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63482,7 +63717,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63528,7 +63763,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -63613,7 +63848,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63635,23 +63870,32 @@
             "type": "osm",
             "id": "node/2615977747",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ_6CLbN0LvUcROXujEJK6ku4"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Su-Th 11:00-01:00, Fr,Sa 11:00-03:00"
+          "raw": "Tu 12:00-01:00; Th 12:00-03:00; Fr 12:00-04:00; We 12:00-01:00; Mo 11:30-01:00; Sa 12:00-04:00; Su 12:00-01:00"
         },
         "tags": [
           "barrierefrei"
         ],
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {}
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -63683,7 +63927,7 @@
           "address.postalcode": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63726,7 +63970,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63756,7 +64000,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63793,7 +64037,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63880,7 +64124,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63913,7 +64157,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63954,7 +64198,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -63984,7 +64228,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64014,7 +64258,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64041,12 +64285,16 @@
             "type": "osm",
             "id": "node/2852668483",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJOYDXhuhHvUcRJgOLTWtAlsc"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Sa 09:00-20:00"
+          "raw": "Tu 09:00-20:00; Th 09:00-20:00; Fr 09:00-20:00; We 09:00-20:00; Mo 09:00-20:00; Sa 09:00-00:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -64054,11 +64302,18 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {}
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -64087,7 +64342,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64134,7 +64389,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64222,7 +64477,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -64269,7 +64524,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64317,7 +64572,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64350,7 +64605,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64384,7 +64639,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64414,7 +64669,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64448,7 +64703,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64530,7 +64785,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64567,7 +64822,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64595,12 +64850,16 @@
             "type": "osm",
             "id": "node/3248634673",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJfSeTEYVxvUcROpXflMr3CSU"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Sa 09:00-21:00; Su,PH off"
+          "raw": "Tu 11:00-19:00; Th 11:00-19:00; Fr 10:00-19:30; We 11:00-19:00; Mo 11:00-19:00; Sa 11:00-21:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -64609,10 +64868,10 @@
           "address.postalcode": "osm",
           "address.city": "osm",
           "address.district": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64711,7 +64970,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -64742,7 +65001,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64776,7 +65035,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64813,7 +65072,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64847,7 +65106,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64888,7 +65147,7 @@
           "address.district": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64921,7 +65180,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64955,7 +65214,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -64989,7 +65248,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65019,7 +65278,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65060,7 +65319,7 @@
           "address.district": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65097,7 +65356,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -65141,7 +65400,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65178,7 +65437,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -65218,7 +65477,8 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-30",
-        "payment": {}
+        "payment": {},
+        "google_attempted": "2026-07-24"
       }
     },
     {
@@ -65245,12 +65505,16 @@
             "type": "osm",
             "id": "node/4006388435",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJhSIEUABxvUcRSc_NXrypdOA"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Sa 09:00-24:00; Su 15:00-21:00"
+          "raw": "Tu 09:00-00:00; Th 09:00-00:00; Fr 09:00-00:00; We 09:00-00:00; Mo 09:00-00:00; Sa 09:00-00:00; Su 15:00-23:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -65259,10 +65523,10 @@
           "address.postalcode": "osm",
           "address.city": "osm",
           "address.district": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65284,6 +65548,10 @@
             "type": "osm",
             "id": "node/4057193142",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJqWfXLB4NvUcRpkRoRcolOhc"
           }
         ],
         "created": "2026-05-20",
@@ -65292,7 +65560,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65322,7 +65590,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65352,7 +65620,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65382,7 +65650,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65421,7 +65689,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65454,7 +65722,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65487,7 +65755,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -65522,7 +65790,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65606,7 +65874,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65645,7 +65913,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65675,7 +65943,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65709,7 +65977,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65746,7 +66014,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65787,7 +66055,7 @@
           "address.district": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65817,7 +66085,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65850,7 +66118,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65884,7 +66152,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65917,7 +66185,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65951,7 +66219,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -65973,17 +66241,32 @@
             "type": "osm",
             "id": "node/4369425764",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJtf9YIFk3vUcRkEdMdokvlzA"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-06-15",
+        "updated": "2026-07-24",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {},
-        "osm_removed": true
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "osm_removed": true,
+        "hours": {
+          "raw": "Tu 08:30-19:00; Th 08:30-19:00; Fr 08:30-19:00; We 08:30-19:00; Mo 08:30-19:00; Sa 08:00-18:00"
+        }
       }
     },
     {
@@ -66025,7 +66308,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66055,7 +66338,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66092,7 +66375,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -66177,7 +66460,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66199,20 +66482,31 @@
             "type": "osm",
             "id": "node/465780850",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJNazWhGFwvUcR7FCXQ88SmJQ"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 07:00-19:00; Sa 10:00-19:00; Su 13:00-19:00"
+          "raw": "Tu 07:00-19:00; Th 07:00-19:00; Fr 07:00-19:00; We 07:00-19:00; Mo 07:00-19:00; Sa 10:00-16:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {}
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "no",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -66290,7 +66584,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -66366,7 +66660,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66396,7 +66690,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66426,7 +66720,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66510,7 +66804,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66544,7 +66838,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66578,7 +66872,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66600,16 +66894,29 @@
             "type": "osm",
             "id": "node/5103292067",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJJyCafwFzvUcR3JaWMvd4KnE"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "payment.cards": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {}
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 06:30-13:00,14:00-19:00; Th 06:30-13:00,14:00-19:00; Fr 06:30-19:00; We 06:30-13:00,14:00-19:00; Mo 06:30-13:00,14:00-19:00; Sa 06:30-19:00; Su 07:30-13:00"
+        }
       }
     },
     {
@@ -66683,7 +66990,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66713,7 +67020,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66735,20 +67042,35 @@
             "type": "osm",
             "id": "node/5306760305",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJDRG0vDg9vUcR2bsLBfzKMqY"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-06-15",
+        "updated": "2026-07-24",
         "tags": [
           "barrierefrei"
         ],
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {},
-        "osm_removed": true
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "osm_removed": true,
+        "hours": {
+          "raw": "Tu 09:00-19:00; Th 09:00-19:00; Fr 09:00-19:00; We 09:00-19:00; Mo 09:00-19:00; Sa 08:30-19:00"
+        }
       }
     },
     {
@@ -66781,7 +67103,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66820,7 +67142,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66850,7 +67172,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -66877,6 +67199,10 @@
             "type": "osm",
             "id": "node/5542215302",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ8_UQsXkNvUcRdKzDrVq5kIM"
           }
         ],
         "created": "2026-05-20",
@@ -66890,7 +67216,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "hours": {
           "raw": "Th 15:00-18:00"
         },
@@ -66939,7 +67265,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -66970,7 +67296,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67000,7 +67326,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67081,7 +67407,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67123,7 +67449,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67169,7 +67495,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67199,7 +67525,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67229,7 +67555,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67272,7 +67598,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67315,7 +67641,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67352,7 +67678,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67436,7 +67762,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67464,12 +67790,16 @@
             "type": "osm",
             "id": "node/6171173390",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJFSAI_pIZvUcRwgbNDUxyd94"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-06-15",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Sa 08:00-20:00; PH off"
+          "raw": "Tu 08:00-20:00; Th 08:00-20:00; Fr 08:00-20:00; We 08:00-20:00; Mo 08:00-20:00; Sa 08:00-20:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -67478,11 +67808,18 @@
           "address.postalcode": "osm",
           "address.city": "osm",
           "address.district": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {},
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
         "osm_removed": true
       }
     },
@@ -67523,7 +67860,7 @@
           "address.district": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -67608,7 +67945,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67642,7 +67979,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67687,7 +68024,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -67722,7 +68059,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67809,7 +68146,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67843,7 +68180,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67870,12 +68207,16 @@
             "type": "osm",
             "id": "node/6498819715",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJRWeyTQwOvUcRdMylkON171Y"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Sa 08:30-21:00; Su 12:00-21:00"
+          "raw": "Tu 08:30-21:00; Th 08:30-21:00; Fr 08:30-14:15,15:15-21:00; We 08:30-21:00; Mo 08:30-21:00; Sa 08:30-21:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -67883,11 +68224,18 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
-        "payment": {}
+        "google_attempted": "2026-07-24",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -67908,19 +68256,23 @@
             "type": "osm",
             "id": "node/650601881",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJT8diHBQRvUcReoUZWkBZzzs"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 07:00-18:00; Sa 07:00-14:00"
+          "raw": "Tu 07:00-18:30; Th 07:00-18:30; Fr 07:00-18:30; We 07:00-18:30; Mo 07:00-18:30; Sa 07:00-14:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -67957,7 +68309,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68003,7 +68355,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68030,12 +68382,16 @@
             "type": "osm",
             "id": "node/6774872306",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJETuNEQk_vUcRODs_ccICYZI"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-06-15",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Fr 09:00-19:00; Sa 08:30-18:00"
+          "raw": "Tu 09:00-19:00; Th 09:00-19:00; Fr 09:00-19:00; We 09:00-19:00; Mo 09:00-19:00; Sa 08:30-18:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -68043,10 +68399,10 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -68084,7 +68440,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -68115,7 +68471,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68149,7 +68505,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68186,7 +68542,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68216,7 +68572,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68250,7 +68606,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68280,7 +68636,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68326,7 +68682,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68356,7 +68712,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68386,7 +68742,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68416,7 +68772,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -68460,7 +68816,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -68509,7 +68865,7 @@
           "payment.girocard": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25"
+        "google_attempted": "2026-07-24"
       }
     },
     {
@@ -68541,7 +68897,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68571,7 +68927,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68601,7 +68957,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68631,7 +68987,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68661,7 +69017,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68695,7 +69051,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -68780,7 +69136,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68814,7 +69170,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -68845,7 +69201,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68884,7 +69240,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68918,7 +69274,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68957,7 +69313,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -68991,7 +69347,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69033,7 +69389,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69067,7 +69423,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69101,7 +69457,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69135,7 +69491,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69174,7 +69530,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69213,7 +69569,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69300,7 +69656,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69322,6 +69678,10 @@
             "type": "osm",
             "id": "way/1058521615",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJNyhaZDVwvUcRMtbFEepmSNw"
           }
         ],
         "created": "2026-05-20",
@@ -69330,7 +69690,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69421,7 +69781,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69443,19 +69803,29 @@
             "type": "osm",
             "id": "way/1091854755",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ7yBbvNcRvUcRojzFhDXtgP0"
           }
         ],
         "created": "2026-06-29",
-        "updated": "2026-07-20",
+        "updated": "2026-07-24",
         "hours": {
-          "raw": "Mo-Sa 14:00-22:00; Su,PH 12:00-22:00"
+          "raw": "Tu 14:00-22:00; Th 14:00-22:00; Fr 14:00-22:00; We 14:00-22:00; Mo 14:00-22:00; Sa 14:00-22:00; Su 12:00-22:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-06-30",
-        "payment": {}
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        },
+        "google_attempted": "2026-07-24"
       }
     },
     {
@@ -69487,7 +69857,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69517,7 +69887,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -69548,7 +69918,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69582,7 +69952,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69624,7 +69994,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69665,7 +70035,7 @@
           "address.district": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69756,7 +70126,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -69803,7 +70173,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -69850,7 +70220,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -69894,7 +70264,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -69932,7 +70302,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69969,7 +70339,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -69999,7 +70369,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -70045,7 +70415,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {},
         "osm_removed": true
       }
@@ -70076,7 +70446,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -70109,7 +70479,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
@@ -70150,7 +70520,7 @@
           "address.district": "osm"
         },
         "apple_id_attempted": "2026-06-26",
-        "google_attempted": "2026-05-25",
+        "google_attempted": "2026-07-24",
         "payment": {}
       }
     },
