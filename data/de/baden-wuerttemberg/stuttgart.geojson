@@ -13783,7 +13783,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -13878,7 +13878,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -13960,7 +13960,7 @@
           "hours": "apple"
         },
         "apple_attempted": "2026-08-07",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "hours": {
           "raw": "Mo-Fr 06:00-23:00; Sa 10:00-22:00"
         },
@@ -14500,7 +14500,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -15122,7 +15122,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -15648,7 +15648,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -16212,7 +16212,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -16633,7 +16633,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -16714,17 +16714,20 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-08-03",
+        "updated": "2026-08-07",
         "sources_by_field": {
           "name": "osm",
-          "hours": "google"
+          "hours": "google",
+          "payment.cards": "google"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "hours": {
-          "raw": "Tu 08:00-22:00; Th 08:00-22:00; Fr 08:00-22:00; We 08:00-22:00; Sa 08:00-22:00; Su 08:00-22:00"
+          "raw": "Tu 11:00-23:00; Th 11:00-23:00; Fr 11:00-23:00; We 11:00-23:00; Mo 11:00-23:00; Sa 11:00-23:00; Su 16:00-23:00"
         },
-        "payment": {}
+        "payment": {
+          "cards": "yes"
+        }
       }
     },
     {
@@ -16916,7 +16919,7 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -17215,7 +17218,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -18866,7 +18869,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-08-07",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -18931,16 +18934,31 @@
             "type": "osm",
             "id": "node/13964983950",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJTRC8dNB0mUcR4i5H3JHV0Qg"
           }
         ],
         "created": "2026-06-29",
-        "updated": "2026-08-03",
+        "updated": "2026-08-07",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-08-07",
-        "google_attempted": "2026-07-05",
-        "payment": {}
+        "google_attempted": "2026-08-07",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 08:30-19:00; Th 08:30-19:00; Fr 08:30-19:00; We 08:30-19:00; Mo 08:30-19:00; Sa 08:00-16:00"
+        }
       }
     },
     {
@@ -21232,7 +21250,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21266,7 +21284,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21296,7 +21314,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21318,23 +21336,34 @@
             "type": "osm",
             "id": "node/4346804294",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJYzwEtL_ZmUcR4RwBi4JcrN4"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-08-03",
+        "updated": "2026-08-07",
         "hours": {
-          "raw": "Mo-Fr 05:00-20:00; Sa 07:00-19:00; Su 09:00-15:00; PH 09:00-15:00"
+          "raw": "Tu 05:00-20:00; Th 05:00-20:00; Fr 05:00-20:00; We 05:00-20:00; Mo 05:00-20:00; Sa 07:00-19:00; Su 09:00-15:00"
         },
         "tags": [
           "barrierefrei"
         ],
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
-        "payment": {}
+        "google_attempted": "2026-08-07",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -21367,7 +21396,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21401,7 +21430,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21438,7 +21467,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21471,7 +21500,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21549,7 +21578,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21595,7 +21624,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21617,23 +21646,34 @@
             "type": "osm",
             "id": "node/474496943",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJhbPkgggwmEcRSkZkCL3ej3M"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-08-03",
+        "updated": "2026-08-07",
         "hours": {
-          "raw": "Mo-Fr 08:30-12:30,13:30-18:30; Sa 08:00-14:00"
+          "raw": "Tu 08:30-12:30,13:30-18:30; Th 08:30-12:30,13:30-18:30; Fr 08:30-12:30,13:30-18:30; We 08:30-12:30,13:30-18:30; Mo 08:30-12:30,13:30-18:30; Sa 08:00-14:00"
         },
         "tags": [
           "barrierefrei"
         ],
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
-        "payment": {}
+        "google_attempted": "2026-08-07",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -21675,7 +21715,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21705,7 +21745,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21738,7 +21778,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21780,7 +21820,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21810,7 +21850,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21840,7 +21880,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21877,7 +21917,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {},
         "osm_removed": true
       }
@@ -21969,7 +22009,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -21999,7 +22039,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22086,7 +22126,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22132,7 +22172,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {},
         "osm_removed": true
       }
@@ -22176,7 +22216,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22210,7 +22250,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22240,7 +22280,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22274,7 +22314,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22304,7 +22344,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22347,7 +22387,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22419,7 +22459,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22461,7 +22501,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22504,7 +22544,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22547,7 +22587,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22577,7 +22617,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22610,7 +22650,7 @@
           "address.postalcode": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22637,21 +22677,36 @@
             "type": "osm",
             "id": "node/6269466487",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJgYxxZh8vmEcRl9mrUAHdMyA"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-06-15",
+        "updated": "2026-08-07",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
-          "address.city": "osm"
+          "address.city": "osm",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
-        "payment": {},
-        "osm_removed": true
+        "google_attempted": "2026-08-07",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "osm_removed": true,
+        "hours": {
+          "raw": "Tu 09:00-19:00; Th 09:00-19:00; Fr 09:00-19:00; We 09:00-19:00; Mo 09:00-19:00; Sa 09:00-17:00"
+        }
       }
     },
     {
@@ -22687,7 +22742,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22724,7 +22779,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22754,7 +22809,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22787,7 +22842,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22817,7 +22872,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22850,7 +22905,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -22979,7 +23034,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23001,20 +23056,29 @@
             "type": "osm",
             "id": "node/762936744",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJGf4oHPbFmUcRGuW4zjrPTek"
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-08-03",
+        "updated": "2026-08-07",
         "hours": {
-          "raw": "Mo-Fr 09:00-19:00; Sa 09:00-18:00"
+          "raw": "Tu 09:00-19:00; Th 09:00-19:00; Fr 09:00-19:00; We 09:00-19:00; Mo 09:00-19:00; Sa 09:00-18:00"
         },
         "sources_by_field": {
           "name": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
-        "payment": {}
+        "google_attempted": "2026-08-07",
+        "payment": {
+          "cards": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -23047,7 +23111,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23077,7 +23141,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23116,7 +23180,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23195,7 +23259,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23229,7 +23293,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23272,7 +23336,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23315,7 +23379,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23408,7 +23472,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23438,7 +23502,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23472,7 +23536,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23502,7 +23566,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23545,7 +23609,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23584,7 +23648,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23614,7 +23678,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23656,7 +23720,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23702,7 +23766,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23732,7 +23796,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23775,7 +23839,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23821,7 +23885,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23865,7 +23929,7 @@
           "address.district": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23903,7 +23967,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23940,7 +24004,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -23974,7 +24038,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -24017,7 +24081,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -24047,7 +24111,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -24086,7 +24150,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -24116,7 +24180,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -24146,7 +24210,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -24185,7 +24249,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -24215,7 +24279,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -24254,7 +24318,7 @@
           "address.city": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -24297,7 +24361,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -24343,7 +24407,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
@@ -24431,7 +24495,7 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-07-30",
-        "google_attempted": "2026-07-05",
+        "google_attempted": "2026-08-07",
         "payment": {}
       }
     },
