@@ -773,20 +773,37 @@
             "type": "osm",
             "id": "node/11893059379",
             "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "1588430638157726628"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJdX8LwR0DvEcRXnkoTSZ8sAE"
           }
         ],
         "created": "2026-07-06",
-        "updated": "2026-08-10",
+        "updated": "2026-08-13",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
-          "address.city": "osm"
+          "address.city": "osm",
+          "payment.cards": "apple",
+          "payment.contactless": "apple",
+          "hours": "google"
         },
-        "apple_id_attempted": "2026-07-12",
-        "google_attempted": "2026-07-12",
-        "payment": {}
+        "google_attempted": "2026-08-13",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        },
+        "apple_attempted": "2026-08-13",
+        "hours": {
+          "raw": "Tu 10:00-22:00; Th 10:00-22:00; Fr 10:00-00:00; We 10:00-22:00; Mo 10:00-22:00; Sa 10:00-00:00"
+        }
       }
     },
     {
@@ -812,12 +829,16 @@
             "type": "osm",
             "id": "way/145704479",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJJ2PxW5YcvEcRE-7OWO_wAaY"
           }
         ],
         "created": "2026-07-06",
-        "updated": "2026-08-10",
+        "updated": "2026-08-13",
         "hours": {
-          "raw": "Mo-Fr 06:00-22:00,Sa,Su 07:00-22:00"
+          "raw": "Tu 06:00-22:00; Th 06:00-22:00; Fr 06:00-22:00; We 06:00-22:00; Mo 06:00-22:00; Sa 08:00-22:00; Su 08:00-22:00"
         },
         "tags": [
           "barrierefrei"
@@ -828,11 +849,18 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
-        "apple_id_attempted": "2026-07-12",
-        "google_attempted": "2026-07-12",
-        "payment": {}
+        "apple_id_attempted": "2026-08-13",
+        "google_attempted": "2026-08-13",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
