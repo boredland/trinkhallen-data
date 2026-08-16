@@ -1629,7 +1629,7 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-08-15",
-        "google_attempted": "2026-07-03",
+        "google_attempted": "2026-08-16",
         "payment": {}
       }
     },
@@ -1651,16 +1651,31 @@
             "type": "osm",
             "id": "node/5218978368",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJO-MVeA4JskcR8UNZg08Frps"
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-08-10",
+        "updated": "2026-08-16",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-08-15",
-        "google_attempted": "2026-07-03",
-        "payment": {}
+        "google_attempted": "2026-08-16",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        },
+        "hours": {
+          "raw": "Tu 06:30-17:30; Th 06:30-17:30; Fr 06:30-17:30; We 06:30-17:30; Mo 06:30-17:30"
+        }
       }
     },
     {
