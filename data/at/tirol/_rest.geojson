@@ -864,17 +864,24 @@
           }
         ],
         "created": "2026-06-15",
-        "updated": "2026-08-17",
+        "updated": "2026-08-19",
         "sources_by_field": {
           "name": "osm",
-          "hours": "google"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
-        "apple_id_attempted": "2026-07-18",
-        "google_attempted": "2026-07-18",
+        "apple_id_attempted": "2026-08-19",
+        "google_attempted": "2026-08-19",
         "hours": {
-          "raw": "Th 07:00-12:00,13:30-18:00"
+          "raw": "Tu 07:00-12:00,13:30-18:00; Th 07:00-12:00,13:30-18:00; Fr 07:00-12:00,13:30-18:00; We 07:00-12:00,13:30-18:00; Mo 07:00-12:00,13:30-18:00; Sa 08:00-12:00"
         },
-        "payment": {}
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -3924,7 +3931,9 @@
         "updated": "2026-08-17",
         "sources_by_field": {
           "name": "osm"
-        }
+        },
+        "apple_id_attempted": "2026-08-19",
+        "google_attempted": "2026-08-19"
       }
     },
     {
