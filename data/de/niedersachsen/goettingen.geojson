@@ -3365,20 +3365,33 @@
             "type": "osm",
             "id": "node/6907053991",
             "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "3503644184847089940"
           }
         ],
         "created": "2026-07-20",
-        "updated": "2026-08-10",
+        "updated": "2026-08-20",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
-          "address.city": "osm"
+          "address.city": "osm",
+          "payment.cards": "apple",
+          "payment.contactless": "apple",
+          "hours": "apple"
         },
-        "apple_id_attempted": "2026-07-20",
         "google_attempted": "2026-07-20",
-        "payment": {}
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        },
+        "hours": {
+          "raw": "Mo-Fr 10:00-12:00,15:00-17:00; Sa 10:00-12:00"
+        },
+        "apple_attempted": "2026-08-20"
       }
     },
     {
