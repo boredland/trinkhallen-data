@@ -4422,12 +4422,16 @@
             "type": "osm",
             "id": "way/332918533",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJDYSJy9LXuEcRqjwwS2NYKE4"
           }
         ],
         "created": "2026-07-13",
-        "updated": "2026-08-17",
+        "updated": "2026-08-21",
         "hours": {
-          "raw": "Mo 11:30-21:30; We-Fr 11:30-21:30; Sa,Su 10:00-21:30"
+          "raw": "Th 11:30-21:30; We 11:30-21:30; Mo 11:30-21:30; Su 10:00-21:30"
         },
         "sources_by_field": {
           "name": "osm",
@@ -4435,11 +4439,18 @@
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "osm"
+          "hours": "google",
+          "payment.cards": "google",
+          "payment.contactless": "google",
+          "payment.girocard": "google"
         },
-        "apple_id_attempted": "2026-07-17",
-        "google_attempted": "2026-07-17",
-        "payment": {}
+        "apple_id_attempted": "2026-08-21",
+        "google_attempted": "2026-08-21",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
