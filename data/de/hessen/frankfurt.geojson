@@ -11208,18 +11208,18 @@
           "district": "Innenstadt"
         },
         "hours": {
-          "raw": "Mo-Th 07:00-01:00; Fr-Sa 07:00-03:00; Su 07:00-01:00"
+          "raw": "Mo-Sa 07:00-01:00, Su 13:00-19:00"
         },
         "tags": [
-          "gluecksspiele",
-          "kaffee",
-          "craft_bier",
           "applewoi",
-          "schnaps",
+          "craft_bier",
           "eis",
+          "gemischte_tuete",
+          "gluecksspiele",
           "innenraum",
-          "snacks",
-          "gemischte_tuete"
+          "kaffee",
+          "schnaps",
+          "snacks"
         ],
         "sources": [
           {
@@ -11229,17 +11229,25 @@
           {
             "type": "gmaps",
             "id": "ChIJn6dWjKQOvUcRZl2IpI9-f9Q"
+          },
+          {
+            "type": "osm",
+            "id": "node/5065030521",
+            "version": 0
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-25",
+        "updated": "2026-09-01",
         "apple_id_attempted": "2026-07-26",
         "payment": {
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
         },
-        "google_attempted": "2026-05-25"
+        "google_attempted": "2026-05-25",
+        "sources_by_field": {
+          "hours": "osm"
+        }
       }
     },
     {
