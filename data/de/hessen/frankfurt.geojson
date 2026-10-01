@@ -19923,7 +19923,7 @@
         "description": "freistehendes Profi-Häuschen auf Parkplatz",
         "address": {
           "street": "In der Witz",
-          "number": "12A",
+          "number": "12a",
           "postalcode": "55252",
           "city": "Wiesbaden",
           "district": "Mainz-Kastel"
@@ -19943,17 +19943,22 @@
           {
             "type": "gmaps",
             "id": "ChIJ82QeFsaXvUcRjY1lzyK13nc"
+          },
+          {
+            "type": "osm",
+            "id": "way/588549906",
+            "version": 0
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-08-22",
+        "updated": "2026-10-01",
         "google_attempted": "2026-08-22",
         "apple_attempted": "2026-09-01",
         "sources_by_field": {
           "name": "hopfenstop",
           "description": "hopfenstop",
           "address.street": "hopfenstop",
-          "address.number": "hopfenstop",
+          "address.number": "osm",
           "address.postalcode": "hopfenstop",
           "address.city": "hopfenstop",
           "address.district": "hopfenstop",
@@ -22423,10 +22428,15 @@
           {
             "type": "hopfenstop",
             "id": "47994c09-11c5-48b3-b309-33e3bc4c8971"
+          },
+          {
+            "type": "osm",
+            "id": "node/5163575718",
+            "version": 0
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-05-19",
+        "updated": "2026-10-01",
         "apple_id_attempted": "2026-09-01",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -24724,10 +24734,15 @@
           {
             "type": "gmaps",
             "id": "ChIJSxPEwN8NvUcRVxdqcxEhnlA"
+          },
+          {
+            "type": "osm",
+            "id": "node/454315429",
+            "version": 0
           }
         ],
         "created": "2026-05-19",
-        "updated": "2026-07-22",
+        "updated": "2026-10-01",
         "apple_id_attempted": "2026-09-01",
         "sources_by_field": {
           "name": "hopfenstop",
@@ -24747,7 +24762,10 @@
         "payment": {
           "cards": "yes",
           "girocard": "yes"
-        }
+        },
+        "tags": [
+          "barrierefrei"
+        ]
       }
     },
     {
