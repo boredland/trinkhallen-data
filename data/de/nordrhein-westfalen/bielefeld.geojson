@@ -33,7 +33,7 @@
         "created": "2026-05-20",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Mo-Fr 06:30-13:00, 15:00-18:30; Sa 06:30-13:30"
+          "raw": "Mo-Th 06:30-13:30,15:00-18:30; Fr 06:30-18:30; Sa 06:30-13:30; Su off"
         },
         "tags": [
           "barrierefrei"
@@ -1981,7 +1981,7 @@
       },
       "properties": {
         "id": "tk_bi_osm_n13417042559",
-        "name": "N&H Kiosk",
+        "name": "Gogo Kiosk",
         "address": {
           "street": "Radewiger Straße",
           "number": "22",
@@ -3208,9 +3208,6 @@
         ],
         "created": "2026-05-20",
         "updated": "2026-10-14",
-        "hours": {
-          "raw": "Mo-Th 10:00-22:00; Fr-Sa 10:00-00:00; Su 11:00-22:00"
-        },
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -3221,6 +3218,9 @@
           "hours": "osm"
         },
         "google_attempted": "2026-05-22",
+        "hours": {
+          "raw": "Mo-Th 10:00-22:00; Fr-Sa 10:00-00:00; Su 11:00-22:00"
+        },
         "payment": {
           "cards": "yes",
           "contactless": "yes",
@@ -4378,7 +4378,7 @@
       },
       "properties": {
         "id": "tk_bi_osm_n2516628317",
-        "name": "Prost Brudi!",
+        "name": "Altstadt-Kiosk",
         "address": {
           "street": "Notpfortenstraße",
           "number": "1a",
@@ -4610,9 +4610,6 @@
         "hours": {
           "raw": "Tu 06:00-19:00; Th 06:00-19:00; Fr 06:00-19:00; We 06:00-19:00; Mo 06:00-19:00; Sa 07:00-18:00; Su 09:00-12:00"
         },
-        "tags": [
-          "barrierefrei"
-        ],
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -4626,7 +4623,10 @@
         "google_attempted": "2026-08-12",
         "payment": {
           "cards": "yes"
-        }
+        },
+        "tags": [
+          "barrierefrei"
+        ]
       }
     },
     {
@@ -6140,7 +6140,7 @@
         "created": "2026-05-20",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Su-Th 11:00-23:00; Fr,Sa 11:00-02:00"
+          "raw": "Su-Th 11:00-23:00; Fr, Sa 11:00-2:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -7562,7 +7562,7 @@
       },
       "properties": {
         "id": "tk_bi_osm_n4084889001",
-        "name": "Xalo Kiosk",
+        "name": "Drug Store",
         "address": {
           "street": "Herbert-Hinnendahl-Straße",
           "number": "21",
@@ -7734,9 +7734,6 @@
         ],
         "created": "2026-05-20",
         "updated": "2026-10-14",
-        "hours": {
-          "raw": "Su-Th 11:00-23:00; Fr-Sa 11:00-00:00"
-        },
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -7745,6 +7742,9 @@
           "address.city": "osm",
           "address.district": "osm",
           "hours": "osm"
+        },
+        "hours": {
+          "raw": "Su-Th 11:00-23:00; Fr-Sa 11:00-00:00"
         },
         "payment": {
           "cards": "no",
@@ -9013,9 +9013,6 @@
         ],
         "created": "2026-06-22",
         "updated": "2026-10-14",
-        "tags": [
-          "draussen"
-        ],
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -9029,7 +9026,10 @@
         "hours": {
           "raw": "Tu 09:00-23:00; Th 09:00-23:00; Fr 09:00-01:00; We 09:00-23:00; Mo 09:00-23:00; Sa 09:00-01:00; Su 09:00-23:00"
         },
-        "payment": {}
+        "payment": {},
+        "tags": [
+          "draussen"
+        ]
       }
     },
     {
@@ -10162,7 +10162,7 @@
         "created": "2026-05-20",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Mo-Fr 09:00-19:00; Sa 09:00-16:00"
+          "raw": "Mo-Fr 09:00-19:00; Sa 09:00-16:00; Su,PH off"
         },
         "sources_by_field": {
           "name": "osm",
@@ -10695,7 +10695,7 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-09-28",
+        "updated": "2026-10-14",
         "hours": {
           "raw": "Tu 08:00-16:00; Th 08:00-16:00; Fr 08:00-16:00; We 08:00-16:00; Mo 08:00-16:00; Sa 08:00-16:00"
         },
@@ -12614,7 +12614,7 @@
         "created": "2026-05-19",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Mo-Th 09:00-22:00; Fr-Sa 09:00-03:00; Su 12:00-22:00"
+          "raw": "Mo-Th 09:00-22:00; Fr,Sa 09:00-00:00 open \"open end\"; Su,PH 12:00-22:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -15992,7 +15992,7 @@
           }
         ],
         "created": "2026-05-20",
-        "updated": "2026-09-14",
+        "updated": "2026-10-14",
         "tags": [
           "barrierefrei"
         ],
@@ -16001,8 +16001,7 @@
         },
         "apple_id_attempted": "2026-09-18",
         "google_attempted": "2026-09-24",
-        "payment": {},
-        "osm_removed": true
+        "payment": {}
       }
     },
     {
@@ -16570,7 +16569,7 @@
       },
       "properties": {
         "id": "tk_bi_osm_n4734949659",
-        "name": "Sweeties",
+        "name": "Miami Kiosk by Zülfo",
         "address": {},
         "sources": [
           {
@@ -16581,16 +16580,15 @@
         ],
         "created": "2026-05-20",
         "updated": "2026-10-14",
-        "hours": {
-          "raw": "24/7"
-        },
-        "kind": "vending_machine",
         "sources_by_field": {
           "name": "osm",
           "hours": "osm"
         },
         "apple_id_attempted": "2026-06-29",
         "google_attempted": "2026-06-14",
+        "hours": {
+          "raw": "24/7"
+        },
         "payment": {}
       }
     },
