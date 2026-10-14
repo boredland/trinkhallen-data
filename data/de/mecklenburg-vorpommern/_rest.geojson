@@ -233,13 +233,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          11.4579966,
-          53.8993082
+          11.4579939,
+          53.8993497
         ]
       },
       "properties": {
         "id": "tk_mvr_osm_n10962213716",
-        "name": "Hafen-Konsum",
+        "name": "Hafen Konsum",
         "address": {},
         "sources": [
           {
@@ -254,9 +254,6 @@
         ],
         "created": "2026-05-29",
         "updated": "2026-10-14",
-        "hours": {
-          "raw": "Tu 10:00-21:30; Th 10:00-21:30; Fr 10:00-21:30; We 10:00-21:30; Mo 10:00-21:30; Sa 10:00-21:30; Su 10:00-21:30"
-        },
         "sources_by_field": {
           "name": "osm",
           "hours": "google",
@@ -265,6 +262,9 @@
         },
         "apple_id_attempted": "2026-09-06",
         "google_attempted": "2026-08-02",
+        "hours": {
+          "raw": "Tu 10:00-21:30; Th 10:00-21:30; Fr 10:00-21:30; We 10:00-21:30; Mo 10:00-21:30; Sa 10:00-21:30; Su 10:00-21:30"
+        },
         "payment": {
           "cards": "yes",
           "girocard": "yes"
@@ -505,17 +505,17 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-09-06",
+        "updated": "2026-10-14",
         "sources_by_field": {
           "name": "osm",
           "hours": "apple"
         },
+        "apple_attempted": "2026-09-06",
         "google_attempted": "2026-09-06",
-        "payment": {},
         "hours": {
           "raw": "Mo-Su 10:00-19:30"
         },
-        "apple_attempted": "2026-09-06"
+        "payment": {}
       }
     },
     {
@@ -523,8 +523,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.0975009,
-          54.3091887
+          13.0975629,
+          54.3091967
         ]
       },
       "properties": {
@@ -2093,7 +2093,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-08-17",
+        "updated": "2026-10-14",
         "hours": {
           "raw": "We-Su 12:00-18:00"
         },
@@ -3480,8 +3480,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.8224605,
-          53.274222
+          12.822421,
+          53.2742291
         ]
       },
       "properties": {
@@ -3501,15 +3501,6 @@
         ],
         "created": "2026-05-29",
         "updated": "2026-10-14",
-        "hours": {
-          "raw": "Tu 09:00-18:30; Th 09:00-18:30; Fr 09:00-18:30; We 09:00-18:30; Mo 09:00-18:30; Sa 09:00-13:00"
-        },
-        "payment": {
-          "cash": "unknown",
-          "cards": "yes",
-          "contactless": "yes",
-          "girocard": "yes"
-        },
         "tags": [
           "barrierefrei"
         ],
@@ -3522,7 +3513,16 @@
           "payment.girocard": "google"
         },
         "apple_id_attempted": "2026-09-06",
-        "google_attempted": "2026-07-24"
+        "google_attempted": "2026-07-24",
+        "hours": {
+          "raw": "Tu 09:00-18:30; Th 09:00-18:30; Fr 09:00-18:30; We 09:00-18:30; Mo 09:00-18:30; Sa 09:00-13:00"
+        },
+        "payment": {
+          "cash": "unknown",
+          "cards": "yes",
+          "contactless": "yes",
+          "girocard": "yes"
+        }
       }
     },
     {
@@ -3743,9 +3743,6 @@
         "hours": {
           "raw": "Tu 09:00-18:30; Th 09:00-18:30; Fr 09:00-18:30; We 09:00-18:30; Mo 09:00-18:30; Sa 09:00-13:00"
         },
-        "tags": [
-          "barrierefrei"
-        ],
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -3763,7 +3760,10 @@
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        }
+        },
+        "tags": [
+          "barrierefrei"
+        ]
       }
     },
     {
@@ -4743,7 +4743,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-08-17",
+        "updated": "2026-10-14",
         "hours": {
           "raw": "10:00-12:00,15:00-18:30"
         },
@@ -4753,8 +4753,7 @@
         },
         "apple_id_attempted": "2026-09-06",
         "google_attempted": "2026-09-06",
-        "payment": {},
-        "osm_removed": true
+        "payment": {}
       }
     },
     {
@@ -4855,7 +4854,7 @@
         "created": "2026-05-29",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "\"Sommersaison\""
+          "raw": "innerhalb Sommersaison"
         },
         "payment": {
           "cash": "yes",
@@ -5184,8 +5183,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.0776256,
-          54.3086055
+          13.0777299,
+          54.3086857
         ]
       },
       "properties": {
@@ -5202,7 +5201,7 @@
         "created": "2026-05-29",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Mo-Fr 08:00-17:00, Sa 09:00-18:00; Su 10:00-19:00"
+          "raw": "Mo-Fr, Su 10:00-18:00"
         },
         "tags": [
           "barrierefrei"
@@ -6118,7 +6117,7 @@
         "created": "2026-05-29",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Mo-Sa 06:00-20:00; Su,PH 07:00-20:00"
+          "raw": "Mo-Sa 06:00 - 20:00; Su,PH 7:00-20:00;"
         },
         "sources_by_field": {
           "name": "osm",
@@ -6264,7 +6263,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-08-17",
+        "updated": "2026-10-14",
         "hours": {
           "raw": "Mo-Su 08:00-12:00,15:00-19:00"
         },
@@ -6274,8 +6273,7 @@
         },
         "apple_id_attempted": "2026-09-06",
         "google_attempted": "2026-08-30",
-        "payment": {},
-        "osm_removed": true
+        "payment": {}
       }
     },
     {
@@ -6750,8 +6748,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.1911453,
-          54.1149462
+          12.191671,
+          54.1153606
         ]
       },
       "properties": {
@@ -6804,9 +6802,6 @@
         ],
         "created": "2026-05-29",
         "updated": "2026-10-14",
-        "hours": {
-          "raw": "Mo-Su,PH 10:00-18:00"
-        },
         "tags": [
           "draussen"
         ],
@@ -6816,6 +6811,9 @@
         },
         "apple_id_attempted": "2026-09-06",
         "google_attempted": "2026-08-30",
+        "hours": {
+          "raw": "Mo-Su,PH 10:00-18:00"
+        },
         "payment": {}
       }
     },
@@ -7138,7 +7136,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-08-17",
+        "updated": "2026-10-14",
         "tags": [
           "barrierefrei"
         ],
@@ -7147,8 +7145,7 @@
         },
         "apple_id_attempted": "2026-09-06",
         "google_attempted": "2026-08-30",
-        "payment": {},
-        "osm_removed": true
+        "payment": {}
       }
     },
     {
@@ -7200,7 +7197,7 @@
         "type": "Point",
         "coordinates": [
           13.6111324,
-          54.4000075
+          54.3999735
         ]
       },
       "properties": {
@@ -7222,9 +7219,6 @@
         ],
         "created": "2026-05-29",
         "updated": "2026-10-14",
-        "hours": {
-          "raw": "Mo-Fr 09:00-18:00; Sa 09:00-17:00; Su 10:00-16:00"
-        },
         "tags": [
           "barrierefrei"
         ],
@@ -7239,6 +7233,9 @@
         },
         "apple_id_attempted": "2026-09-06",
         "google_attempted": "2026-08-30",
+        "hours": {
+          "raw": "Mo-Fr 09:00-18:00; Sa 09:00-17:00; Su 10:00-16:00"
+        },
         "payment": {}
       }
     },
@@ -7264,15 +7261,15 @@
         ],
         "created": "2026-05-29",
         "updated": "2026-10-14",
-        "hours": {
-          "raw": "Mo-Fr 08:00-18:00, Sa 09:00-14:00, Sa 18:00-24:00; Su off"
-        },
         "sources_by_field": {
           "name": "osm",
           "hours": "osm"
         },
         "apple_id_attempted": "2026-09-06",
         "google_attempted": "2026-08-30",
+        "hours": {
+          "raw": "Mo-Fr 08:00-18:00, Sa 09:00-14:00, Sa 18:00-24:00; Su off"
+        },
         "payment": {}
       }
     },
@@ -7437,7 +7434,7 @@
         "created": "2026-05-29",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Jan-Dec: Mo-Su 10:00-18:00"
+          "raw": "Th-Su 10:00-18:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -7703,8 +7700,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.9241727,
-          53.2278834
+          12.9241665,
+          53.2278812
         ]
       },
       "properties": {
@@ -7721,7 +7718,7 @@
         "created": "2026-05-29",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Easter-Oct 08:00-11:00,15:00-18:00"
+          "raw": "Mo-Su 08:00-11:00,15:00-18:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -7938,14 +7935,13 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-08-17",
+        "updated": "2026-10-14",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-09-06",
         "google_attempted": "2026-08-30",
-        "payment": {},
-        "osm_removed": true
+        "payment": {}
       }
     },
     {
