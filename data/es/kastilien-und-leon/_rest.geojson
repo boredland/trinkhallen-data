@@ -6,34 +6,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -3.6646098,
-          42.3517211
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n10183326990",
-        "name": "Ferprensa G9",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/10183326990",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "kind": "vending_machine",
-        "sources_by_field": {
-          "name": "osm"
-        }
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -4.7825372,
           41.659071
         ]
@@ -70,7 +42,8 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -103,7 +76,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -137,10 +111,11 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-10-14",
+        "google_attempted": "2026-10-14",
         "hours": {
           "raw": "Tu 09:30-22:30; Th 09:30-22:30; Fr 09:30-22:30; We 09:30-22:30; Mo 09:30-22:30; Sa 10:00-15:00; Su 10:00-15:00"
         },
-        "google_attempted": "2026-10-14"
+        "payment": {}
       }
     },
     {
@@ -171,18 +146,18 @@
         "updated": "2026-10-14",
         "sources_by_field": {
           "name": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Mo-Su 10:00-14:30,17:00-21:30"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Su 10:00-14:30,17:00-21:30"
-        },
-        "apple_attempted": "2026-10-14"
+        }
       }
     },
     {
@@ -213,18 +188,18 @@
         "updated": "2026-10-14",
         "sources_by_field": {
           "name": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Mo-Su 10:00-14:30,17:00-21:30"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Su 10:00-14:30,17:00-21:30"
-        },
-        "apple_attempted": "2026-10-14"
+        }
       }
     },
     {
@@ -261,7 +236,1147 @@
           "hours": "google"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.3932466,
+          41.5221899
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n12017841101",
+        "name": "Casa Gorosabel",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12017841101",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "6443956509945443724"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJb6uBKNOUOA0RH4dmpq-DjNI"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google"
+        },
+        "apple_attempted": "2026-10-14",
+        "google_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Tu 10:00-14:00,17:00-20:00; Th 10:00-14:00,17:00-20:00; Fr 10:00-14:00,17:00-20:00; We 10:00-14:00,17:00-20:00; Mo 10:00-14:00,17:00-20:00; Sa 10:00-14:00; Su 10:00-14:00"
+        },
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.7496218,
+          41.5053725
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n12158461574",
+        "name": "Tienda 24h & Kiosko EclipsE",
+        "address": {
+          "street": "Calle de Puebla de Sanabria",
+          "number": "3",
+          "postalcode": "49005",
+          "city": "Zamora"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12158461574",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "8068544896903722739"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "hours": {
+          "raw": "Mo-Su 00:00-24:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.6477851,
+          40.9684682
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n12367314617",
+        "name": "Chupetilandia",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12367314617",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "9785564273908217746"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Mo-Su 08:30-14:15"
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.7191479,
+          41.6655347
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n12674061207",
+        "name": "Heladería Mar",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12674061207",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ_Za5gOcNRw0R6XE7HI4I40U"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-10-14",
+        "google_attempted": "2026-10-14",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.7415036,
+          41.5128291
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n12682525498",
+        "name": "Don Kiosko",
+        "address": {
+          "street": "Avenida del Cardenal Cisneros",
+          "number": "45",
+          "postalcode": "49010",
+          "city": "Zamora"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12682525498",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJmU_QXjseOQ0RnuvyyLr8Pdg"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "hours": {
+          "raw": "Tu 09:30-15:00,18:00-21:00; Th 09:30-15:00,18:00-21:00; Fr 09:30-15:00,18:00-21:00; We 09:30-15:00,18:00-21:00; Mo 09:30-15:00,18:00-21:00; Sa 09:30-15:00,18:00-21:00; Su 09:30-15:00,18:00-21:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-10-14",
+        "google_attempted": "2026-10-14",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.7399816,
+          41.5091406
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n12704778607",
+        "name": "Kiosko L'amargura",
+        "address": {
+          "street": "Calle de la Amargura",
+          "number": "6",
+          "postalcode": "49012",
+          "city": "Zamora"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12704778607",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "1571658918907848630"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Sa-Su 00:00-03:00,10:00-14:30,18:00-24:00; Mo-Fr 00:00-01:00,10:00-14:30,17:30-24:00"
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.5918514,
+          41.0196559
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n12870180897",
+        "name": "Nubes de Azúcar",
+        "address": {
+          "street": "Plaza Mayor",
+          "number": "4",
+          "postalcode": "37439",
+          "city": "Castellanos de Moriscos"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12870180897",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJkaFX5LEvPw0RLWxTuPw5eA4"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "hours": {
+          "raw": "Tu 09:30-22:30; Th 09:30-22:30; Fr 09:30-22:30; We 09:30-22:30; Mo 09:30-22:30; Sa 09:30-22:30; Su 09:30-22:30"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-10-14",
+        "google_attempted": "2026-10-14",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.6630388,
+          40.9650578
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n1290167373",
+        "name": "Dulzura",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1290167373",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJr0BgPhQmPw0RkaKx7ORL3Us"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-10-14",
+        "google_attempted": "2026-10-14",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.7551511,
+          41.5133983
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n13456811307",
+        "name": "Quiosco Calpi",
+        "address": {
+          "street": "Calle de La Hiniesta",
+          "number": "119",
+          "postalcode": "49025",
+          "city": "Zamora"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13456811307",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "109103327808270575"
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJVw9jQEEeOQ0R4DP9Gv1Gg4A"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "hours": {
+          "raw": "Tu 07:00-15:00; Th 07:00-15:00; Fr 07:00-15:00; We 07:00-15:00; Mo 07:00-15:00; Sa 07:00-15:00; Su 07:00-15:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "google"
+        },
+        "apple_attempted": "2026-10-14",
+        "google_attempted": "2026-10-14",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.5303249,
+          40.5995841
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n14029768170",
+        "name": "Kiosko Los Tilos",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/14029768170",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJF30JvN4vPA0R9TFRD21Q-2I"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-10-14",
+        "google_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Tu 08:30-14:00,16:30-20:00; Th 08:30-14:00,16:30-20:00; Fr 08:30-14:00,16:30-20:00; We 08:30-14:00; Mo 08:30-14:00,16:30-20:00; Sa 08:30-14:00,16:30-20:00; Su 08:30-14:00,16:30-20:00"
+        },
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.5750805,
+          42.5915663
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n14166370095",
+        "name": "Kiosk Mickey Mouse",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/14166370095",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJvcJAgb2aNw0RQjHemyhCWwo"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-10-14",
+        "google_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Tu 07:30-14:30; Th 07:30-14:30; Fr 07:30-14:30; We 07:30-14:30; Mo 07:30-14:30; Sa 07:30-14:30; Su 07:30-14:30"
+        },
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.8273112,
+          41.5905515
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n1831498170",
+        "name": "Kiosko Simancas",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1831498170",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJj3pw6LluRw0R0S5_xorgQiU"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-10-14",
+        "google_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Tu 09:30-14:30,17:00-20:30; Th 09:30-14:30,17:00-20:30; Fr 09:30-14:30,17:00-20:30; We 09:30-14:30,17:00-20:30; Mo 09:30-14:30,17:00-20:30; Sa 09:30-14:30,17:00-20:30; Su 09:30-14:30,17:00-20:30"
+        },
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.7346109,
+          41.4448006
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n1988329128",
+        "name": "Kiosco/Heladería CELI",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1988329128",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJkczB84ghOQ0RvG4vKseJAG4"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-10-14",
+        "google_attempted": "2026-10-14",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.7488874,
+          41.5019824
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n2116572177",
+        "name": "Kiosco Felipe",
+        "address": {
+          "street": "Rúa de los Francos",
+          "number": "8",
+          "postalcode": "49001",
+          "city": "Zamora"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2116572177",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJXU9dxTUeOQ0RmvVP2EIhGZA"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "hours": {
+          "raw": "Tu 10:00-15:00,18:00-23:00; Th 10:00-15:00,18:00-23:00; Fr 10:00-15:00,18:00-23:00; We 10:00-15:00,18:00-21:00; Mo 10:00-15:00,18:00-23:00; Sa 10:00-15:00,18:00-23:00; Su 10:00-15:00,18:00-23:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-10-14",
+        "google_attempted": "2026-10-14",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.6641192,
+          40.9727799
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n2455666205",
+        "name": "El Goloseo",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2455666205",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "9161154375481792669"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "tags": [
+          "barrierefrei"
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Sa-Su 09:30-15:00,17:00-22:30; Mo-Fr 09:00-22:30"
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7600621,
+          42.0260833
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n2941194878",
+        "name": "Consejo Regulador de la D.O. Arlanza",
+        "address": {
+          "street": "Calle Ronda de la Cárcel",
+          "number": "4",
+          "postalcode": "09340",
+          "city": "Lerma"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2941194878",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "11666262659967823867"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Mo-Fr 09:00-14:30"
+        },
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.6711522,
+          40.9779129
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n3164409490",
+        "name": "Kiosco Barrio Blanco",
+        "address": {
+          "street": "Calle San Arcadio",
+          "number": "6",
+          "postalcode": "37006",
+          "city": "Salamanca"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3164409490",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "2797371818380924297"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Mo-Fr 09:30-14:00,16:30-20:00; Sa 10:30-14:00"
+        },
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.73369,
+          41.6613055
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n4510503106",
+        "name": "La Magia del Dulce",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4510503106",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "10267330091883443161"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Mo-We,Su 10:15-15:00,18:00-20:30; Th-Sa 10:15-15:00"
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.5904576,
+          41.4724815
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n6184674802",
+        "name": "El Antojillo",
+        "address": {
+          "street": "Avenida Reverendo José Montero",
+          "number": "16",
+          "postalcode": "47160",
+          "city": "Portillo"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/6184674802",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "14994568253912105849"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "hours": {
+          "raw": "Mo-Su 08:00-20:00"
+        },
+        "payment": {
+          "cash": "yes",
+          "cards": "yes",
+          "contactless": "unknown",
+          "girocard": "unknown"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm",
+          "payment.cash": "osm",
+          "payment.cards": "osm",
+          "payment.contactless": "osm",
+          "payment.girocard": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.6618534,
+          40.9674201
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n6379657315",
+        "name": "Kiosko San Boal",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/6379657315",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "14989063549465024082"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Su 07:30-15:00; Mo-Fr 07:30-21:00; Sa 07:30-15:00,17:30-21:00"
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.6557217,
+          40.9654656
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n6413611679",
+        "name": "Locutorio Ciber Kiosko",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/6413611679",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "15338972301651660712"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_attempted": "2026-10-14",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.6540178,
+          40.9765858
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n680627577",
+        "name": "Kiosko de Pepe",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/680627577",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "967652947407158547"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Mo-Fr,Su 09:00-15:00,17:30-21:00; Sa 09:00-15:00"
+        },
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.7734217,
+          41.6251001
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n7176092727",
+        "name": "Sueños de Caramelo",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/7176092727",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "11901326367150193032"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "hours": {
+          "raw": "Sa-Su 18:30-21:30; Mo-Fr 10:30-14:00,18:30-21:30"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.775778,
+          41.6252925
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n7176092737",
+        "name": "Kiosco la Flecha",
+        "address": {
+          "street": "Calle los Picones"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/7176092737",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "2729884805585576083"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "hours": {
+          "raw": "Mo-Su 09:00-14:30,18:00-21:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.6583359,
+          40.9645361
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n8792621509",
+        "name": "kiosko Canalejas",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/8792621509",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "4415389950472914229"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "hours": {
+          "raw": "Sa-Su 08:00-14:00; Mo-Fr 07:00-14:30,16:00-20:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9294692,
+          41.6968957
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_w1504442796",
+        "name": "Puchero Kiosko",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/1504442796",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "16538726968594519999"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "apple"
+        },
+        "apple_attempted": "2026-10-14",
+        "hours": {
+          "raw": "Tu-We,Su 09:00-14:00,17:00-20:00; Mo,Th 09:00-14:00; Fr-Sa 09:00-14:00,17:00-21:00"
+        },
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.6646098,
+          42.3517211
+        ]
+      },
+      "properties": {
+        "id": "tk_esclr_osm_n10183326990",
+        "name": "Ferprensa G9",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/10183326990",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "kind": "vending_machine",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "payment": {}
       }
     },
     {
@@ -329,7 +1444,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -361,350 +1477,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.3932466,
-          41.5221899
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n12017841101",
-        "name": "Casa Gorosabel",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/12017841101",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "6443956509945443724"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJb6uBKNOUOA0RH4dmpq-DjNI"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "google"
-        },
-        "apple_attempted": "2026-10-14",
-        "hours": {
-          "raw": "Tu 10:00-14:00,17:00-20:00; Th 10:00-14:00,17:00-20:00; Fr 10:00-14:00,17:00-20:00; We 10:00-14:00,17:00-20:00; Mo 10:00-14:00,17:00-20:00; Sa 10:00-14:00; Su 10:00-14:00"
-        },
-        "google_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.7496218,
-          41.5053725
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n12158461574",
-        "name": "Tienda 24h & Kiosko EclipsE",
-        "address": {
-          "street": "Calle de Puebla de Sanabria",
-          "number": "3",
-          "postalcode": "49005",
-          "city": "Zamora"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/12158461574",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "8068544896903722739"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "hours": {
-          "raw": "Mo-Su 00:00-24:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "apple",
-          "payment.cards": "apple",
-          "payment.contactless": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "apple_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.6477851,
-          40.9684682
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n12367314617",
-        "name": "Chupetilandia",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/12367314617",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "9785564273908217746"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Su 08:30-14:15"
-        },
-        "apple_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.7191479,
-          41.6655347
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n12674061207",
-        "name": "Heladería Mar",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/12674061207",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJ_Za5gOcNRw0R6XE7HI4I40U"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.7415036,
-          41.5128291
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n12682525498",
-        "name": "Don Kiosko",
-        "address": {
-          "street": "Avenida del Cardenal Cisneros",
-          "number": "45",
-          "postalcode": "49010",
-          "city": "Zamora"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/12682525498",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJmU_QXjseOQ0RnuvyyLr8Pdg"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "hours": {
-          "raw": "Tu 09:30-15:00,18:00-21:00; Th 09:30-15:00,18:00-21:00; Fr 09:30-15:00,18:00-21:00; We 09:30-15:00,18:00-21:00; Mo 09:30-15:00,18:00-21:00; Sa 09:30-15:00,18:00-21:00; Su 09:30-15:00,18:00-21:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.7399816,
-          41.5091406
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n12704778607",
-        "name": "Kiosko L'amargura",
-        "address": {
-          "street": "Calle de la Amargura",
-          "number": "6",
-          "postalcode": "49012",
-          "city": "Zamora"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/12704778607",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "1571658918907848630"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Sa-Su 00:00-03:00,10:00-14:30,18:00-24:00; Mo-Fr 00:00-01:00,10:00-14:30,17:30-24:00"
-        },
-        "apple_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.5918514,
-          41.0196559
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n12870180897",
-        "name": "Nubes de Azúcar",
-        "address": {
-          "street": "Plaza Mayor",
-          "number": "4",
-          "postalcode": "37439",
-          "city": "Castellanos de Moriscos"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/12870180897",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJkaFX5LEvPw0RLWxTuPw5eA4"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "hours": {
-          "raw": "Tu 09:30-22:30; Th 09:30-22:30; Fr 09:30-22:30; We 09:30-22:30; Mo 09:30-22:30; Sa 09:30-22:30; Su 09:30-22:30"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.6630388,
-          40.9650578
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n1290167373",
-        "name": "Dulzura",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1290167373",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJr0BgPhQmPw0RkaKx7ORL3Us"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -733,7 +1507,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -762,57 +1537,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.7551511,
-          41.5133983
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n13456811307",
-        "name": "Quiosco Calpi",
-        "address": {
-          "street": "Calle de La Hiniesta",
-          "number": "119",
-          "postalcode": "49025",
-          "city": "Zamora"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/13456811307",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "109103327808270575"
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJVw9jQEEeOQ0R4DP9Gv1Gg4A"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "hours": {
-          "raw": "Tu 07:00-15:00; Th 07:00-15:00; Fr 07:00-15:00; We 07:00-15:00; Mo 07:00-15:00; Sa 07:00-15:00; Su 07:00-15:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "google"
-        },
-        "apple_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -841,44 +1567,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.5303249,
-          40.5995841
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n14029768170",
-        "name": "Kiosko Los Tilos",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/14029768170",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJF30JvN4vPA0R9TFRD21Q-2I"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-10-14",
-        "hours": {
-          "raw": "Tu 08:30-14:00,16:30-20:00; Th 08:30-14:00,16:30-20:00; Fr 08:30-14:00,16:30-20:00; We 08:30-14:00; Mo 08:30-14:00,16:30-20:00; Sa 08:30-14:00,16:30-20:00; Su 08:30-14:00,16:30-20:00"
-        },
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -907,44 +1597,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.5750805,
-          42.5915663
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n14166370095",
-        "name": "Kiosk Mickey Mouse",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/14166370095",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJvcJAgb2aNw0RQjHemyhCWwo"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-10-14",
-        "hours": {
-          "raw": "Tu 07:30-14:30; Th 07:30-14:30; Fr 07:30-14:30; We 07:30-14:30; Mo 07:30-14:30; Sa 07:30-14:30; Su 07:30-14:30"
-        },
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -973,7 +1627,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1002,7 +1657,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1031,44 +1687,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.8273112,
-          41.5905515
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n1831498170",
-        "name": "Kiosko Simancas",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1831498170",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJj3pw6LluRw0R0S5_xorgQiU"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "google"
-        },
-        "apple_id_attempted": "2026-10-14",
-        "hours": {
-          "raw": "Tu 09:30-14:30,17:00-20:30; Th 09:30-14:30,17:00-20:30; Fr 09:30-14:30,17:00-20:30; We 09:30-14:30,17:00-20:30; Mo 09:30-14:30,17:00-20:30; Sa 09:30-14:30,17:00-20:30; Su 09:30-14:30,17:00-20:30"
-        },
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1101,7 +1721,8 @@
           "hours": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1130,7 +1751,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1162,40 +1784,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.7346109,
-          41.4448006
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n1988329128",
-        "name": "Kiosco/Heladería CELI",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1988329128",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJkczB84ghOQ0RvG4vKseJAG4"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1224,7 +1814,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1253,7 +1844,8 @@
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "google_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1281,53 +1873,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.7488874,
-          41.5019824
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n2116572177",
-        "name": "Kiosco Felipe",
-        "address": {
-          "street": "Rúa de los Francos",
-          "number": "8",
-          "postalcode": "49001",
-          "city": "Zamora"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2116572177",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJXU9dxTUeOQ0RmvVP2EIhGZA"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "hours": {
-          "raw": "Tu 10:00-15:00,18:00-23:00; Th 10:00-15:00,18:00-23:00; Fr 10:00-15:00,18:00-23:00; We 10:00-15:00,18:00-21:00; Mo 10:00-15:00,18:00-23:00; Sa 10:00-15:00,18:00-23:00; Su 10:00-15:00,18:00-23:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "google"
-        },
         "apple_id_attempted": "2026-10-14",
-        "google_attempted": "2026-10-14"
+        "payment": {}
       }
     },
     {
@@ -1355,7 +1902,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1383,7 +1931,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1423,7 +1972,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1451,7 +2001,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1479,52 +2030,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.6641192,
-          40.9727799
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n2455666205",
-        "name": "El Goloseo",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2455666205",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "9161154375481792669"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "tags": [
-          "barrierefrei"
-        ],
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Sa-Su 09:30-15:00,17:00-22:30; Mo-Fr 09:00-22:30"
-        },
-        "apple_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1552,7 +2059,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1587,7 +2095,8 @@
           "address.number": "osm",
           "address.postalcode": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1615,7 +2124,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1643,7 +2153,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1674,52 +2185,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.7600621,
-          42.0260833
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n2941194878",
-        "name": "Consejo Regulador de la D.O. Arlanza",
-        "address": {
-          "street": "Calle Ronda de la Cárcel",
-          "number": "4",
-          "postalcode": "09340",
-          "city": "Lerma"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2941194878",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "11666262659967823867"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "apple"
-        },
-        "hours": {
-          "raw": "Mo-Fr 09:00-14:30"
-        },
-        "apple_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1747,7 +2214,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1775,7 +2243,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1807,52 +2276,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.6711522,
-          40.9779129
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n3164409490",
-        "name": "Kiosco Barrio Blanco",
-        "address": {
-          "street": "Calle San Arcadio",
-          "number": "6",
-          "postalcode": "37006",
-          "city": "Salamanca"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/3164409490",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "2797371818380924297"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "apple"
-        },
-        "hours": {
-          "raw": "Mo-Fr 09:30-14:00,16:30-20:00; Sa 10:30-14:00"
-        },
-        "apple_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1880,7 +2305,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1908,7 +2334,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1936,7 +2363,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1964,7 +2392,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -1992,7 +2421,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2020,7 +2450,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2048,7 +2479,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2076,7 +2508,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2104,7 +2537,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2132,7 +2566,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2160,7 +2595,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2195,7 +2631,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2223,7 +2660,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2251,7 +2689,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2279,7 +2718,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2311,7 +2751,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2339,7 +2780,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2367,7 +2809,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2395,7 +2838,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2423,7 +2867,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2460,7 +2905,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2488,7 +2934,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2523,7 +2970,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2555,7 +3003,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2587,7 +3036,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2615,7 +3065,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2643,7 +3094,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2671,7 +3123,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2708,7 +3161,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2736,7 +3190,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2767,49 +3222,8 @@
           "name": "osm",
           "address.street": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.73369,
-          41.6613055
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n4510503106",
-        "name": "La Magia del Dulce",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4510503106",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "10267330091883443161"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-We,Su 10:15-15:00,18:00-20:30; Th-Sa 10:15-15:00"
-        },
-        "apple_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2846,7 +3260,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2881,7 +3296,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2909,7 +3325,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2946,7 +3363,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -2981,7 +3399,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3018,7 +3437,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3046,7 +3466,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3074,7 +3495,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3102,7 +3524,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3130,7 +3553,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3167,7 +3591,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3195,7 +3620,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3227,7 +3653,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3255,61 +3682,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.5904576,
-          41.4724815
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n6184674802",
-        "name": "El Antojillo",
-        "address": {
-          "street": "Avenida Reverendo José Montero",
-          "number": "16",
-          "postalcode": "47160",
-          "city": "Portillo"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/6184674802",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "14994568253912105849"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "hours": {
-          "raw": "Mo-Su 08:00-20:00"
-        },
-        "payment": {
-          "cash": "yes",
-          "cards": "yes",
-          "contactless": "unknown",
-          "girocard": "unknown"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.number": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "osm",
-          "payment.cash": "osm",
-          "payment.cards": "osm",
-          "payment.contactless": "osm",
-          "payment.girocard": "osm"
-        }
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3340,7 +3714,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3368,7 +3743,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3405,81 +3781,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.6618534,
-          40.9674201
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n6379657315",
-        "name": "Kiosko San Boal",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/6379657315",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "14989063549465024082"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Su 07:30-15:00; Mo-Fr 07:30-21:00; Sa 07:30-15:00,17:30-21:00"
-        },
-        "apple_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.6557217,
-          40.9654656
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n6413611679",
-        "name": "Locutorio Ciber Kiosko",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/6413611679",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "15338972301651660712"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "apple_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3514,7 +3817,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3549,7 +3853,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3577,7 +3882,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3614,7 +3920,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3651,7 +3958,8 @@
           "address.postalcode": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3679,49 +3987,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.6540178,
-          40.9765858
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n680627577",
-        "name": "Kiosko de Pepe",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/680627577",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "967652947407158547"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Fr,Su 09:00-15:00,17:30-21:00; Sa 09:00-15:00"
-        },
-        "apple_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3756,7 +4023,8 @@
           "address.street": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3791,94 +4059,8 @@
           "address.street": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.7734217,
-          41.6251001
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n7176092727",
-        "name": "Sueños de Caramelo",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/7176092727",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "11901326367150193032"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "hours": {
-          "raw": "Sa-Su 18:30-21:30; Mo-Fr 10:30-14:00,18:30-21:30"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "apple",
-          "payment.cards": "apple",
-          "payment.contactless": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "apple_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.775778,
-          41.6252925
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n7176092737",
-        "name": "Kiosco la Flecha",
-        "address": {
-          "street": "Calle los Picones"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/7176092737",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "2729884805585576083"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "hours": {
-          "raw": "Mo-Su 09:00-14:30,18:00-21:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "hours": "apple",
-          "payment.cards": "apple",
-          "payment.contactless": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "apple_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3906,7 +4088,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3934,7 +4117,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3962,7 +4146,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -3990,49 +4175,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.6583359,
-          40.9645361
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_n8792621509",
-        "name": "kiosko Canalejas",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/8792621509",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "4415389950472914229"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "hours": {
-          "raw": "Sa-Su 08:00-14:00; Mo-Fr 07:00-14:30,16:00-20:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "apple",
-          "payment.cards": "apple",
-          "payment.contactless": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "apple_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4067,7 +4211,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4095,7 +4240,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4123,7 +4269,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4151,7 +4298,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4179,7 +4327,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4207,7 +4356,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4235,7 +4385,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4263,7 +4414,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4291,7 +4443,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4319,7 +4472,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4347,7 +4501,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4384,7 +4539,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4421,7 +4577,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4449,7 +4606,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4486,7 +4644,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4514,7 +4673,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4542,7 +4702,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4570,7 +4731,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4598,7 +4760,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4626,7 +4789,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4663,7 +4827,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4691,7 +4856,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4719,7 +4885,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4747,7 +4914,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4775,43 +4943,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.9294692,
-          41.6968957
-        ]
-      },
-      "properties": {
-        "id": "tk_esclr_osm_w1504442796",
-        "name": "Puchero Kiosko",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/1504442796",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "16538726968594519999"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "apple"
-        },
-        "hours": {
-          "raw": "Tu-We,Su 09:00-14:00,17:00-20:00; Mo,Th 09:00-14:00; Fr-Sa 09:00-14:00,17:00-21:00"
-        },
-        "apple_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4848,7 +4981,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4883,7 +5017,8 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     },
     {
@@ -4918,7 +5053,8 @@
           "address.number": "osm",
           "address.postalcode": "osm"
         },
-        "apple_id_attempted": "2026-10-14"
+        "apple_id_attempted": "2026-10-14",
+        "payment": {}
       }
     }
   ]

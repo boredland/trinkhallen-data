@@ -558,9 +558,6 @@
         ],
         "created": "2026-05-20",
         "updated": "2026-10-14",
-        "hours": {
-          "raw": "Mo, Th-Fr 08:00-12:00, 14:00-18:00; Sa 08:00-13:00"
-        },
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -571,6 +568,9 @@
         },
         "apple_id_attempted": "2026-10-06",
         "google_attempted": "2026-05-23",
+        "hours": {
+          "raw": "Mo, Th-Fr 08:00-12:00, 14:00-18:00; Sa 08:00-13:00"
+        },
         "payment": {
           "cards": "yes",
           "contactless": "yes",
@@ -752,9 +752,6 @@
         "hours": {
           "raw": "Mo-Th 11:00-22:00, Fr 12:00-23:00, Sa 12:00-24:00, Su 11:00-22:00"
         },
-        "tags": [
-          "barrierefrei"
-        ],
         "sources_by_field": {
           "name": "osm",
           "hours": "osm"
@@ -764,7 +761,10 @@
           "cards": "no",
           "contactless": "yes",
           "girocard": "yes"
-        }
+        },
+        "tags": [
+          "barrierefrei"
+        ]
       }
     },
     {
@@ -1150,9 +1150,6 @@
         ],
         "created": "2026-05-20",
         "updated": "2026-10-14",
-        "tags": [
-          "barrierefrei"
-        ],
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -1171,7 +1168,10 @@
           "cards": "yes",
           "contactless": "yes",
           "girocard": "yes"
-        }
+        },
+        "tags": [
+          "barrierefrei"
+        ]
       }
     },
     {
@@ -1864,6 +1864,46 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          8.0467329,
+          52.2668922
+        ]
+      },
+      "properties": {
+        "id": "tk_os_osm_n306385189",
+        "name": "Kiez Kiosk",
+        "address": {
+          "street": "Hermannstraße",
+          "number": "6",
+          "postalcode": "49080",
+          "city": "Osnabrück"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/306385189",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "hours": {
+          "raw": "Mo-Fr 13:00-21:00; Su 13:00-18:00; PH off"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           8.0499234,
           52.2716048
         ]
@@ -2121,7 +2161,7 @@
       },
       "properties": {
         "id": "tk_os_osm_w1212232039",
-        "name": "Aussenkiosk Café MIK",
+        "name": "Aussenkiosk Cafee MIK",
         "address": {},
         "sources": [
           {
@@ -2133,7 +2173,7 @@
         "created": "2026-05-20",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Sa,Su,PH -17:00"
+          "raw": "SA SO; feiertags bis 17Uhr"
         },
         "sources_by_field": {
           "name": "osm",
