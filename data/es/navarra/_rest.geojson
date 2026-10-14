@@ -45,7 +45,7 @@
           "street": "Calle Doctor Irigaray",
           "number": "1",
           "postalcode": "31012",
-          "city": "Pamplona / Iruña"
+          "city": "Pamplona/Iruña"
         },
         "sources": [
           {
@@ -110,7 +110,9 @@
       "properties": {
         "id": "tk_esncr_osm_n2264364563",
         "name": "La Chacha",
-        "address": {},
+        "address": {
+          "street": "Plaza de San Jaime"
+        },
         "sources": [
           {
             "type": "osm",
@@ -121,7 +123,8 @@
         "created": "2026-10-14",
         "updated": "2026-10-14",
         "sources_by_field": {
-          "name": "osm"
+          "name": "osm",
+          "address.street": "osm"
         },
         "payment": {}
       }
@@ -158,6 +161,33 @@
           "address.street": "osm"
         },
         "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2836537,
+          42.5768271
+        ]
+      },
+      "properties": {
+        "id": "tk_esncr_osm_n3756084744",
+        "name": "Ultramarinos",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3756084744",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-14",
+        "sources_by_field": {
+          "name": "osm"
+        }
       }
     },
     {
