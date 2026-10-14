@@ -176,11 +176,28 @@ out center tags;`;
 out center tags;`;
 }
 
-/** `minElements`: answers with fewer elements are treated as a failed
- *  attempt and retried on the next endpoint. */
+/** An answer missing more than this share of `expectedIds` is treated as a
+ *  failed attempt and retried on the next endpoint. */
+const MAX_MISSING_SHARE = 0.2;
+const MIN_EXPECTED_FOR_CHECK = 10;
+
+function missingShare(elements: OverpassElement[], expectedIds: Set<string>): number {
+  if (expectedIds.size < MIN_EXPECTED_FOR_CHECK) return 0;
+  const got = new Set(elements.map((el) => `${el.type}/${el.id}`));
+  let missing = 0;
+  for (const id of expectedIds) if (!got.has(id)) missing++;
+  return missing / expectedIds.size;
+}
+
+/** `expectedIds`: OSM ids (`node/123`) the region file holds as live.
+ *  Mirrors with a stale or half-built area index answer with HTTP 200 and a
+ *  partial list (private.coffee: 0 of 105 for IT-BZ; one run lost 14 of 25
+ *  Extremadura kiosks that both other hosts still return), which the merge
+ *  would read as closures. Real weekly churn is a few percent, so a large
+ *  gap means a bad answer, not closed kiosks. */
 export async function fetchOsmForRegion(
   region: Region,
-  { minElements = 0 }: { minElements?: number } = {},
+  { expectedIds = new Set<string>() }: { expectedIds?: Set<string> } = {},
 ): Promise<OsmFeature[]> {
   const body = `data=${encodeURIComponent(overpassQuery(region))}`;
 
@@ -204,8 +221,9 @@ export async function fetchOsmForRegion(
         // Overpass reports runtime errors (e.g. "Dispatcher_Client timeout")
         // as HTML with status 200, so a parse failure counts as a failed try.
         const parsed = (await resp.json()) as OverpassResponse;
-        if (parsed.elements.length < minElements) {
-          errors.push(`${new URL(endpoint).host}: ${parsed.elements.length} elements, expected ≥ ${minElements}`);
+        const missing = missingShare(parsed.elements, expectedIds);
+        if (missing > MAX_MISSING_SHARE) {
+          errors.push(`${new URL(endpoint).host}: ${Math.round(missing * 100)}% of ${expectedIds.size} known elements missing`);
         } else {
           json = parsed;
           preferredEndpoint = idx;

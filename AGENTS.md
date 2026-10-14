@@ -136,9 +136,11 @@ never re-orders existing entries. Any new script that writes to
   The sharded run then showed overpass.private.coffee answering area
   queries with HTTP 200 and zero elements (IT-BZ: 0 vs 105 on
   overpass-api.de), which flagged 18 Südtirol and 55 Steiermark kiosks
-  `osm_removed`. Those flags were reverted, and `processRegion` now passes
-  `minElements` (half the region's live OSM-sourced features, once there
-  are ≥10) so a suspiciously small answer is retried on the next endpoint
-  instead of being merged.
+  `osm_removed`. Those flags were reverted. A later run showed a subtler
+  case: an answer with 11 of 25 known Extremadura kiosks, while
+  overpass-api.de and maps.mail.ru both still returned all 25. So
+  `processRegion` now passes the region's live OSM ids as `expectedIds`,
+  and `fetchOsmForRegion` retries on the next endpoint when more than 20%
+  of them are missing from an answer (once ≥10 are known).
 
 When adding a new entry: date it, name what changed, link the PR.
