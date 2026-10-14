@@ -76,7 +76,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-09-14",
+        "updated": "2026-10-14",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -239,7 +239,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-09-14",
+        "updated": "2026-10-14",
         "sources_by_field": {
           "name": "osm",
           "payment.cards": "google"
@@ -1028,7 +1028,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-09-14",
+        "updated": "2026-10-14",
         "hours": {
           "raw": "Mo-Sa 09:00-12:00; Tu-Fr 14:00-17:00"
         },
@@ -2144,7 +2144,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-09-14",
+        "updated": "2026-10-14",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -2166,8 +2166,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.3880482,
-          50.076462
+          7.3880442,
+          50.0764902
         ]
       },
       "properties": {
@@ -2194,11 +2194,11 @@
         "updated": "2026-10-14",
         "sources_by_field": {
           "name": "osm",
-          "hours": "google",
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
-          "address.city": "osm"
+          "address.city": "osm",
+          "hours": "google"
         },
         "apple_id_attempted": "2026-09-05",
         "google_attempted": "2026-09-05",
@@ -3062,8 +3062,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.6458748,
-          50.2242855
+          6.6458834,
+          50.224251
         ]
       },
       "properties": {
@@ -3166,8 +3166,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.3263795,
-          49.6067905
+          7.3263676,
+          49.6067858
         ]
       },
       "properties": {
@@ -3818,7 +3818,7 @@
         "created": "2026-05-29",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Mo-Fr 08:00-18:30, Sa 08:00-13:00"
+          "raw": "Mo-Fr 08:00-18:30, SA 08:00-13:00"
         },
         "payment": {
           "cash": "yes",
@@ -4132,8 +4132,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.324875,
-          50.3050585
+          7.3248989,
+          50.3050061
         ]
       },
       "properties": {
@@ -4160,11 +4160,11 @@
         "updated": "2026-10-14",
         "sources_by_field": {
           "name": "osm",
+          "hours": "apple",
           "address.street": "osm",
           "address.number": "osm",
           "address.postalcode": "osm",
           "address.city": "osm",
-          "hours": "apple",
           "payment.cards": "apple",
           "payment.contactless": "apple"
         },
@@ -4240,8 +4240,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.4543805,
-          50.0779122
+          7.4543777,
+          50.077893
         ]
       },
       "properties": {
@@ -4393,8 +4393,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.8712332,
-          50.233109
+          7.8712761,
+          50.2331133
         ]
       },
       "properties": {
@@ -4447,8 +4447,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.4144615,
-          50.2497969
+          6.4144274,
+          50.2498072
         ]
       },
       "properties": {
@@ -5146,7 +5146,7 @@
         "created": "2026-05-29",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Mo-Fr 06:00-22:00; Sa 08:00-00:00; Su 08:00-24:00"
+          "raw": "Mo-FR 06:00-22:00; Sa 08:00-00:00; Su 08:00-24:00"
         },
         "payment": {
           "cash": "yes",
@@ -5347,7 +5347,8 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "payment": {}
+        "payment": {},
+        "osm_removed": true
       }
     },
     {
@@ -5418,7 +5419,8 @@
           "name": "osm",
           "hours": "osm"
         },
-        "payment": {}
+        "payment": {},
+        "osm_removed": true
       }
     },
     {
@@ -5448,7 +5450,8 @@
         },
         "apple_id_attempted": "2026-09-17",
         "google_attempted": "2026-09-17",
-        "payment": {}
+        "payment": {},
+        "osm_removed": true
       }
     },
     {
@@ -5486,8 +5489,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.7769822,
-          49.7294734
+          7.7769621,
+          49.7294665
         ]
       },
       "properties": {
@@ -5507,7 +5510,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-07-20",
+        "updated": "2026-10-14",
         "hours": {
           "raw": "Mo-Fr 06:00-20:00; Sa,Su 07:00-19:00"
         },
@@ -5521,8 +5524,7 @@
         },
         "apple_id_attempted": "2026-09-05",
         "google_attempted": "2026-09-05",
-        "payment": {},
-        "osm_removed": true
+        "payment": {}
       }
     },
     {
@@ -6628,7 +6630,8 @@
         },
         "apple_id_attempted": "2026-08-19",
         "google_attempted": "2026-08-19",
-        "payment": {}
+        "payment": {},
+        "osm_removed": true
       }
     },
     {
@@ -6747,7 +6750,7 @@
           }
         ],
         "created": "2026-05-29",
-        "updated": "2026-08-17",
+        "updated": "2026-10-14",
         "hours": {
           "raw": "Mo-Sa 06:00-22:00; Su 07:00-22:00"
         },
@@ -6762,8 +6765,7 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "payment": {},
-        "osm_removed": true
+        "payment": {}
       }
     },
     {
@@ -6976,7 +6978,8 @@
         },
         "apple_id_attempted": "2026-09-05",
         "google_attempted": "2026-09-05",
-        "payment": {}
+        "payment": {},
+        "osm_removed": true
       }
     },
     {
@@ -7425,8 +7428,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.628156,
-          50.178639
+          6.6281767,
+          50.1786333
         ]
       },
       "properties": {
@@ -7541,7 +7544,8 @@
         },
         "apple_id_attempted": "2026-09-05",
         "google_attempted": "2026-09-05",
-        "payment": {}
+        "payment": {},
+        "osm_removed": true
       }
     },
     {
@@ -7632,7 +7636,8 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "payment": {}
+        "payment": {},
+        "osm_removed": true
       }
     },
     {
@@ -7705,7 +7710,8 @@
         },
         "apple_id_attempted": "2026-09-05",
         "google_attempted": "2026-09-05",
-        "payment": {}
+        "payment": {},
+        "osm_removed": true
       }
     },
     {
