@@ -187,7 +187,7 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "osm_removed": true
+        "payment": {}
       }
     },
     {
@@ -220,7 +220,7 @@
           "address.street": "osm",
           "address.number": "osm"
         },
-        "osm_removed": true
+        "payment": {}
       }
     },
     {
@@ -248,7 +248,7 @@
         "sources_by_field": {
           "name": "osm"
         },
-        "osm_removed": true
+        "payment": {}
       }
     },
     {
@@ -465,8 +465,7 @@
           "payment.cards": "osm",
           "payment.contactless": "osm",
           "payment.girocard": "osm"
-        },
-        "osm_removed": true
+        }
       }
     },
     {
@@ -1000,9 +999,9 @@
         "id": "tk_esibr_osm_w164286187",
         "name": "Kiosko Cala Gat",
         "address": {
+          "street": "Carrer de l'Arcàdia",
           "postalcode": "07590",
-          "city": "Capdepera",
-          "street": "Carrer de l'Arcàdia"
+          "city": "Capdepera"
         },
         "sources": [
           {
@@ -1016,17 +1015,6 @@
         "hours": {
           "raw": "Mo-Su 10:30-18:00"
         },
-        "sources_by_field": {
-          "name": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm",
-          "hours": "osm",
-          "address.street": "osm",
-          "payment.cash": "osm",
-          "payment.cards": "osm",
-          "payment.contactless": "osm",
-          "payment.girocard": "osm"
-        },
         "payment": {
           "cash": "unknown",
           "cards": "yes",
@@ -1036,7 +1024,18 @@
         "tags": [
           "draussen",
           "wc"
-        ]
+        ],
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "hours": "osm",
+          "payment.cash": "osm",
+          "payment.cards": "osm",
+          "payment.contactless": "osm",
+          "payment.girocard": "osm"
+        }
       }
     },
     {
