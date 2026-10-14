@@ -19,7 +19,7 @@ on top is replaceable, the dataset isn't.
 
 | Workflow | Cadence | What it does |
 |---|---|---|
-| `osm-scrape.yml` | Weekly (Mon 04:17 UTC) + dispatch | Overpass-fetches kiosks per region's bbox, merges into the region file. Drops OSM-only features no longer in Overpass; appends genuinely new ones; cross-region dedup via `ownsFeature`. Opens a PR. |
+| `osm.yml` (mode `scrape`) | Weekly (Mon 04:17 UTC) + dispatch | Overpass-fetches kiosks per region, merges into the region file. Drops OSM-only features no longer in Overpass; appends genuinely new ones; cross-region dedup via `ownsFeature`. Runs with `--max-runtime-min 70` and fails over between `OVERPASS_ENDPOINT` hosts. Commits to main. |
 | `osm-enrich.yml` | Monthly + dispatch | Walks features without an OSM source, matches them to Overpass POIs by name+distance, backfills `hours`/`payment`/`address`/`tags`. Defaults to a `--since 40d` cutoff so each run only retries recently-added or recently-edited features; dispatch with `full=true` for a sweep. Opens a PR. |
 | `deploy-app.yml` | Push to main (paths: data, regions.yml, schema) | POSTs `$CF_DEPLOY_HOOK_URL` to redeploy trinkhallen.app. |
 
@@ -118,5 +118,16 @@ never re-orders existing entries. Any new script that writes to
   that is also the name of park drinks kiosks. The app has no Spanish UI or
   Spanish holiday calendar; `PH` rules there resolve against its default
   Baden-Württemberg calendar.
+- **2026-10-14 — Scrape made to finish inside the job timeout.** Since
+  August 6 of 9 weekly scrapes hit the 90 min cancel: overpass-api.de
+  alternated 504s with accepted-then-stalled connections, and an un-timed
+  `fetch` plus 5 retries cost ~12 min per region, so rest regions (AT/CH/
+  …/ES, last in order) were never reached. Now each attempt is capped at
+  150 s (`[timeout:120]` server-side), retries rotate through
+  `OVERPASS_ENDPOINT` (comma list; default overpass-api.de,
+  private.coffee, maps.mail.ru) and the next region starts on the last
+  host that answered, 4 consecutive all-endpoint failures stop the run,
+  and `osm.yml` passes `--max-runtime-min 70` so unfinished regions are
+  listed as "Not attempted" and the commit step always runs.
 
 When adding a new entry: date it, name what changed, link the PR.

@@ -419,8 +419,17 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
   };
 }
 
+// Stop starting regions once this many in a row failed on every endpoint:
+// Overpass is down, and each further try only burns minutes of job time.
+const MAX_CONSECUTIVE_FAILURES = 4;
+
 async function main(): Promise<void> {
-  const wantSlug = process.argv[2];
+  const args = process.argv.slice(2);
+  const budgetIx = args.indexOf("--max-runtime-min");
+  const maxRuntimeMin = budgetIx >= 0 ? Number.parseFloat(args[budgetIx + 1] ?? "") : Number.NaN;
+  if (budgetIx >= 0) args.splice(budgetIx, 2);
+  const deadline = Number.isFinite(maxRuntimeMin) ? Date.now() + maxRuntimeMin * 60_000 : Infinity;
+  const wantSlug = args[0];
   const regions = await loadRegions();
   const targets = wantSlug ? regions.filter((r) => r.slug === wantSlug) : regions;
   if (targets.length === 0) {
@@ -438,12 +447,21 @@ async function main(): Promise<void> {
   });
   const allStats: Stats[] = [];
   const failures: Array<{ region: string; error: string }> = [];
+  const skipped: string[] = [];
+  let consecutiveFailures = 0;
   for (const region of targets) {
+    // Leave the rest for next week rather than let the job timeout kill the
+    // run mid-write; the commit step still sees every finished region.
+    if (Date.now() > deadline || consecutiveFailures >= MAX_CONSECUTIVE_FAILURES) {
+      skipped.push(region.slug);
+      continue;
+    }
     console.error(`→ ${region.slug}: querying Overpass…`);
     try {
       const stats = await processRegion(region, regions);
       console.error(`  +${stats.added} ~${stats.updated} -${stats.removed} (kept ${stats.kept_non_osm} non-OSM, linked ${stats.linked_non_osm}, suppressed ${stats.suppressed_dup} dup, cross-region dropped ${stats.cross_region_dropped}, market dropped ${stats.dropped_market})`);
       allStats.push(stats);
+      consecutiveFailures = 0;
     } catch (err: unknown) {
       // A transient Overpass blip (504/timeout) on one region must not throw
       // away the dozens already refreshed this run. Skip it — the region's
@@ -451,9 +469,16 @@ async function main(): Promise<void> {
       const msg = err instanceof Error ? err.message : String(err);
       console.error(`  ✗ ${region.slug} failed: ${msg} — skipping region, keeping existing data`);
       failures.push({ region: region.slug, error: msg });
+      consecutiveFailures++;
     }
   }
   process.stdout.write(JSON.stringify(allStats, null, 2) + "\n");
+  if (skipped.length > 0) {
+    const why = consecutiveFailures >= MAX_CONSECUTIVE_FAILURES
+      ? `${MAX_CONSECUTIVE_FAILURES} consecutive failures`
+      : `--max-runtime-min ${maxRuntimeMin} reached`;
+    console.error(`\nNot attempted (${why}): ${skipped.join(", ")}`);
+  }
   if (failures.length > 0) {
     console.error(`\n${failures.length}/${targets.length} region(s) failed this run:`);
     for (const f of failures) console.error(`  - ${f.region}: ${f.error}`);

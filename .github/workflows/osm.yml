@@ -104,10 +104,12 @@ jobs:
           mode="${{ needs.pick.outputs.mode }}"
           region="${{ inputs.region }}"
           if [ "$mode" = "scrape" ]; then
+            # Budget leaves the 90 min job timeout room for the last region
+            # (worst case ~11 min when every endpoint stalls) plus commit.
             if [ -n "$region" ]; then
-              bun scripts/run-osm-scrape.ts "$region" > stats.json
+              bun scripts/run-osm-scrape.ts "$region" --max-runtime-min 70 > stats.json
             else
-              bun scripts/run-osm-scrape.ts > stats.json
+              bun scripts/run-osm-scrape.ts --max-runtime-min 70 > stats.json
             fi
             title=$(jq -r '
               map("\(.region) +\(.added)/~\(.updated)/-\(.removed)") | join(", ")

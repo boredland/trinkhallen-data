@@ -108,7 +108,25 @@ export function ownsFeature(
   return best.slug === region.slug;
 }
 
-const OVERPASS_ENDPOINT = process.env["OVERPASS_ENDPOINT"] ?? "https://overpass-api.de/api/interpreter";
+// Comma-separated; retries rotate through the list. Every public Overpass
+// instance has multi-hour stretches of 504s or refused connections, so a
+// retry against the same host rarely helps.
+const OVERPASS_ENDPOINTS = (
+  process.env["OVERPASS_ENDPOINT"] ??
+  "https://overpass-api.de/api/interpreter,https://overpass.private.coffee/api/interpreter,https://maps.mail.ru/osm/tools/overpass/api/interpreter"
+)
+  .split(",")
+  .map((s) => s.trim())
+  .filter(Boolean);
+// Server-side query budget, and the client-side cap on one attempt (request
+// plus body). Real answers arrive in seconds; without the client cap a host
+// that accepts the TCP connection and then stalls cost ~12 min per region and
+// pushed the weekly run into the 90 min job timeout.
+const QUERY_TIMEOUT_S = 120;
+const ATTEMPT_TIMEOUT_MS = (QUERY_TIMEOUT_S + 30) * 1000;
+// Index of the endpoint that last answered; the next region starts there
+// instead of re-probing a host that is down for the rest of the run.
+let preferredEndpoint = 0;
 const USER_AGENT = "trinkhallen-data/0.1 (https://github.com/boredland/trinkhallen-data)";
 
 interface OverpassElement {
@@ -137,7 +155,7 @@ function overpassQuery(region: Region): string {
     // Optional bbox clip for territories with no ISO area of their own.
     const [w, s, e, n] = region.bbox;
     const clip = region.bbox_clip ? `(${s},${w},${n},${e})` : "";
-    return `[out:json][timeout:300];
+    return `[out:json][timeout:${QUERY_TIMEOUT_S}];
 area["${key}"="${iso}"]->.a;
 (
   node["shop"="kiosk"](area.a)${clip};
@@ -148,7 +166,7 @@ area["${key}"="${iso}"]->.a;
 out center tags;`;
   }
   const [w, s, e, n] = region.bbox;
-  return `[out:json][timeout:180];
+  return `[out:json][timeout:${QUERY_TIMEOUT_S}];
 (
   node["shop"="kiosk"](${s},${w},${n},${e});
   node["shop"="beverages"](${s},${w},${n},${e});
@@ -161,38 +179,44 @@ out center tags;`;
 export async function fetchOsmForRegion(region: Region): Promise<OsmFeature[]> {
   const body = `data=${encodeURIComponent(overpassQuery(region))}`;
 
-  // Retry on 5xx + 429 with exponential backoff. Overpass is volunteer-run and
-  // periodically returns 504 under load; a single transient failure used to
-  // crash the whole weekly scrape (see run 26167365806 — aachen 504).
-  let resp: Response | null = null;
-  let lastErr: unknown = null;
-  const backoff = [2_000, 5_000, 12_000, 30_000, 60_000];
-  for (let attempt = 0; attempt < backoff.length; attempt++) {
+  let json: OverpassResponse | null = null;
+  const errors: string[] = [];
+  const backoff = [5_000, 15_000, 30_000];
+  for (let attempt = 0; attempt <= backoff.length; attempt++) {
+    const idx = (preferredEndpoint + attempt) % OVERPASS_ENDPOINTS.length;
+    const endpoint = OVERPASS_ENDPOINTS[idx]!;
     try {
-      resp = await fetch(OVERPASS_ENDPOINT, {
+      const resp = await fetch(endpoint, {
         method: "POST",
         headers: {
           "content-type": "application/x-www-form-urlencoded",
           "user-agent": USER_AGENT,
         },
         body,
+        signal: AbortSignal.timeout(ATTEMPT_TIMEOUT_MS),
       });
-      if (resp.ok) break;
-      if (resp.status < 500 && resp.status !== 429) {
-        throw new Error(`Overpass ${OVERPASS_ENDPOINT} returned HTTP ${resp.status}: ${await resp.text().catch(() => "")}`);
+      if (resp.ok) {
+        // Overpass reports runtime errors (e.g. "Dispatcher_Client timeout")
+        // as HTML with status 200, so a parse failure counts as a failed try.
+        json = (await resp.json()) as OverpassResponse;
+        preferredEndpoint = idx;
+        break;
       }
-      lastErr = new Error(`HTTP ${resp.status}`);
+      if (resp.status < 500 && resp.status !== 429) {
+        throw new Error(`Overpass ${endpoint} returned HTTP ${resp.status}: ${await resp.text().catch(() => "")}`);
+      }
+      errors.push(`${new URL(endpoint).host}: HTTP ${resp.status}`);
     } catch (err) {
-      lastErr = err;
+      if ((err as Error).message.startsWith("Overpass ")) throw err;
+      errors.push(`${new URL(endpoint).host}: ${(err as Error).name === "TimeoutError" ? "timeout" : (err as Error).message}`);
     }
-    if (attempt < backoff.length - 1) {
+    if (attempt < backoff.length) {
       await new Promise((r) => setTimeout(r, backoff[attempt]!));
     }
   }
-  if (!resp || !resp.ok) {
-    throw new Error(`Overpass ${OVERPASS_ENDPOINT} failed after retries: ${(lastErr as Error)?.message ?? "unknown"}`);
+  if (!json) {
+    throw new Error(`Overpass failed after retries: ${errors.join("; ")}`);
   }
-  const json = (await resp.json()) as OverpassResponse;
   const today = new Date().toISOString().slice(0, 10);
   const out: OsmFeature[] = [];
 
