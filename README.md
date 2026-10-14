@@ -1,6 +1,7 @@
 # trinkhallen-data
 
-Open dataset of **Trinkhallen**, **Wasserhäuschen** and **Spätis** in Germany.
+Open dataset of **Trinkhallen**, **Wasserhäuschen** and **Spätis** in Germany,
+its German-speaking neighbours and Spain.
 
 Consumed by [trinkhallen.app](https://trinkhallen.app). The application is just a UI on top of this repository — *the data is the project*.
 
@@ -9,6 +10,9 @@ Consumed by [trinkhallen.app](https://trinkhallen.app). The application is just 
 ```
 data/
   de/<bundesland>/<city>.geojson     One GeoJSON FeatureCollection per city
+  <cc>/[<area>/]_rest.geojson        Catch-all per Bundesland / canton /
+                                     comunidad / country (at, ch, li, lu,
+                                     it, be, es)
 schema/
   kiosk.schema.json                  JSON Schema for a kiosk Feature
   tags.json                          Controlled vocabulary (slug ⇄ German label)

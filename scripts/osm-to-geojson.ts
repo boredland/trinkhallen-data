@@ -208,6 +208,7 @@ export async function fetchOsmForRegion(region: Region): Promise<OsmFeature[]> {
     // Trinkhallen. Skip them at the source: existing OSM-only copies then
     // fall out as osm_removed on the next scrape.
     if (isNonKioskBeverageMarket(tags)) continue;
+    if (region.iso3166_2.startsWith("ES") && isSpanishNonDrinkKiosk(tags)) continue;
     const sourceId = `${el.type === "node" ? "node" : "way"}/${el.id}`;
     const id = `tk_${region.prefix}_osm_${el.type[0]}${el.id}`;
 
@@ -328,6 +329,28 @@ export function isNonKioskBeverageMarket(tags: Record<string, string>): boolean 
     if (BEVERAGE_CHAIN_KEYWORDS.some((k) => v.includes(k))) return true;
   }
   if (tags["shop"] === "beverages" && tags["brand:wikidata"]) return true;
+  return false;
+}
+
+/**
+ * In Spain shop=kiosk mostly means a newspaper stand, an ONCE lottery booth
+ * or an estanco, none of which sell a cold beer. Drop the ones whose tags or
+ * name say so outright; a bare "Kiosco"/"Quiosco" stays, since that is also
+ * what a drinks kiosk in a park is called.
+ */
+const ES_NON_DRINK_NAME = /\b(prensa|premsa|revistas?|periodicos?|loterias?|apuestas|estanco|tabacs?|tabacos?)\b/;
+
+export function isSpanishNonDrinkKiosk(tags: Record<string, string>): boolean {
+  if (tags["lottery"] && tags["lottery"] !== "no") return true;
+  for (const raw of [tags["name"], tags["brand"], tags["operator"]]) {
+    if (!raw) continue;
+    // "once" is also the Spanish word for eleven; only the blind-people's
+    // lottery spells it in capitals or stands alone as the whole name.
+    if (/\bONCE\b/.test(raw)) return true;
+    const v = raw.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+    if (v.trim() === "once") return true;
+    if (ES_NON_DRINK_NAME.test(v)) return true;
+  }
   return false;
 }
 

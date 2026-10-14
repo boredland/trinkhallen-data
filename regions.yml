@@ -566,3 +566,160 @@ regions:
     bbox: [5.86, 50.16, 6.41, 50.78]
     role: rest
     bbox_clip: true
+
+  # ── Spain (ES). One rest per comunidad autónoma plus the autonomous
+  # cities Ceuta and Melilla, ISO 3166-2 area filter at admin_level 4.
+  # Spanish shop=kiosk is mostly press/lottery/tobacco stalls; those are
+  # dropped at the source (isSpanishNonDrinkKiosk in osm-to-geojson.ts).
+
+  - slug: andalusien-rest
+    path: data/es/andalusien/_rest.geojson
+    prefix: esanr
+    iso3166_2: ES-AN
+    admin_level: 4
+    bbox: [-7.53, 35.93, -1.62, 38.73]
+    role: rest
+
+  - slug: aragonien-rest
+    path: data/es/aragonien/_rest.geojson
+    prefix: esarr
+    iso3166_2: ES-AR
+    admin_level: 4
+    bbox: [-2.18, 39.84, 0.78, 42.93]
+    role: rest
+
+  - slug: asturien-rest
+    path: data/es/asturien/_rest.geojson
+    prefix: esasr
+    iso3166_2: ES-AS
+    admin_level: 4
+    bbox: [-7.19, 42.88, -4.51, 43.67]
+    role: rest
+
+  - slug: balearen-rest
+    path: data/es/balearen/_rest.geojson
+    prefix: esibr
+    iso3166_2: ES-IB
+    admin_level: 4
+    bbox: [1.15, 38.64, 4.33, 40.10]
+    role: rest
+
+  - slug: baskenland-rest
+    path: data/es/baskenland/_rest.geojson
+    prefix: espvr
+    iso3166_2: ES-PV
+    admin_level: 4
+    bbox: [-3.46, 42.47, -1.72, 43.46]
+    role: rest
+
+  - slug: ceuta-rest
+    path: data/es/ceuta/_rest.geojson
+    prefix: escer
+    iso3166_2: ES-CE
+    admin_level: 4
+    bbox: [-5.43, 35.87, -5.27, 35.92]
+    role: rest
+
+  - slug: extremadura-rest
+    path: data/es/extremadura/_rest.geojson
+    prefix: esexr
+    iso3166_2: ES-EX
+    admin_level: 4
+    bbox: [-7.55, 37.94, -4.64, 40.49]
+    role: rest
+
+  - slug: galicien-rest
+    path: data/es/galicien/_rest.geojson
+    prefix: esgar
+    iso3166_2: ES-GA
+    admin_level: 4
+    bbox: [-9.31, 41.80, -6.73, 43.80]
+    role: rest
+
+  - slug: kanaren-rest
+    path: data/es/kanaren/_rest.geojson
+    prefix: escnr
+    iso3166_2: ES-CN
+    admin_level: 4
+    bbox: [-18.17, 27.63, -13.33, 29.42]
+    role: rest
+
+  - slug: kantabrien-rest
+    path: data/es/kantabrien/_rest.geojson
+    prefix: escbr
+    iso3166_2: ES-CB
+    admin_level: 4
+    bbox: [-4.86, 42.75, -3.14, 43.52]
+    role: rest
+
+  - slug: kastilien-la-mancha-rest
+    path: data/es/kastilien-la-mancha/_rest.geojson
+    prefix: escmr
+    iso3166_2: ES-CM
+    admin_level: 4
+    bbox: [-5.41, 38.02, -0.91, 41.33]
+    role: rest
+
+  - slug: kastilien-und-leon-rest
+    path: data/es/kastilien-und-leon/_rest.geojson
+    prefix: esclr
+    iso3166_2: ES-CL
+    admin_level: 4
+    bbox: [-7.08, 40.08, -1.77, 43.24]
+    role: rest
+
+  - slug: katalonien-rest
+    path: data/es/katalonien/_rest.geojson
+    prefix: esctr
+    iso3166_2: ES-CT
+    admin_level: 4
+    bbox: [0.15, 40.52, 3.33, 42.87]
+    role: rest
+
+  - slug: la-rioja-rest
+    path: data/es/la-rioja/_rest.geojson
+    prefix: esrir
+    iso3166_2: ES-RI
+    admin_level: 4
+    bbox: [-3.14, 41.91, -1.67, 42.65]
+    role: rest
+
+  - slug: madrid-rest
+    path: data/es/madrid/_rest.geojson
+    prefix: esmdr
+    iso3166_2: ES-MD
+    admin_level: 4
+    bbox: [-4.58, 39.88, -3.05, 41.17]
+    role: rest
+
+  - slug: melilla-rest
+    path: data/es/melilla/_rest.geojson
+    prefix: esmlr
+    iso3166_2: ES-ML
+    admin_level: 4
+    bbox: [-2.98, 35.26, -2.92, 35.33]
+    role: rest
+
+  - slug: murcia-rest
+    path: data/es/murcia/_rest.geojson
+    prefix: esmcr
+    iso3166_2: ES-MC
+    admin_level: 4
+    bbox: [-2.35, 37.37, -0.64, 38.76]
+    role: rest
+
+  - slug: navarra-rest
+    path: data/es/navarra/_rest.geojson
+    prefix: esncr
+    iso3166_2: ES-NC
+    admin_level: 4
+    bbox: [-2.50, 41.90, -0.72, 43.32]
+    role: rest
+
+  - slug: valencia-rest
+    path: data/es/valencia/_rest.geojson
+    prefix: esvcr
+    iso3166_2: ES-VC
+    admin_level: 4
+    bbox: [-1.53, 37.84, 0.70, 40.79]
+    role: rest

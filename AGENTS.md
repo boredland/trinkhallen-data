@@ -108,5 +108,15 @@ never re-orders existing entries. Any new script that writes to
   Revisit when (a) community ratings remain too sparse to be useful AND
   (b) we're willing to pay for the official Google Places API (~€17/1000
   requests, ToS-clean).
+- **2026-10-14 — Spain added (19 rests, `data/es/<comunidad>/`).** One
+  ISO 3166-2 rest per comunidad autónoma plus Ceuta/Melilla, no city
+  regions yet. Spanish `shop=kiosk` is mostly press stands, ONCE lottery
+  booths and estancos, so `isSpanishNonDrinkKiosk` in
+  `scripts/osm-to-geojson.ts` drops those by `lottery=*`, an `ONCE`
+  name/brand/operator, or a name containing prensa/revistas/estanco/tabacos
+  (about a third of named Madrid entries). Bare "Kiosco"/"Quiosco" is kept:
+  that is also the name of park drinks kiosks. The app has no Spanish UI or
+  Spanish holiday calendar; `PH` rules there resolve against its default
+  Baden-Württemberg calendar.
 
 When adding a new entry: date it, name what changed, link the PR.

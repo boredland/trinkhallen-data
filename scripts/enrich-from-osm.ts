@@ -532,6 +532,7 @@ async function photonReverse(lat: number, lng: number): Promise<PhotonProps | nu
     "Italy", "Italien", "Italia",
     // Belgium's Ostbelgien (German-speaking Community).
     "Belgium", "Belgien", "België", "Belgique",
+    "Spain", "Spanien", "España",
   ]);
   const okCountry = (c?: string) => !c || ALLOWED_COUNTRIES.has(c);
   let best: { props: PhotonProps; meters: number; score: number } | null = null;
