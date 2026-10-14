@@ -34,7 +34,7 @@
         "created": "2026-05-21",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Mo-Fr 09:00-20:00; Sa 08:00-20:00"
+          "raw": "Mo-Sa 09:00-20:00"
         },
         "tags": [
           "barrierefrei"
@@ -379,6 +379,12 @@
         ],
         "created": "2026-05-21",
         "updated": "2026-10-14",
+        "payment": {
+          "cash": "unknown",
+          "cards": "yes",
+          "contactless": "unknown",
+          "girocard": "unknown"
+        },
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -390,12 +396,6 @@
         },
         "hours": {
           "raw": "We-Fr,Su 11:00-21:00; Mo 13:00-21:00; Tu 13:00-18:00; Sa 11:00-22:00"
-        },
-        "payment": {
-          "cash": "unknown",
-          "cards": "yes",
-          "contactless": "unknown",
-          "girocard": "unknown"
         }
       }
     },
@@ -935,6 +935,12 @@
         "hours": {
           "raw": "Mo-Th 07:00-01:00; Fr 07:00-03:00; Sa-Su 07:00-04:00"
         },
+        "payment": {
+          "cash": "unknown",
+          "cards": "yes",
+          "contactless": "unknown",
+          "girocard": "unknown"
+        },
         "sources_by_field": {
           "name": "osm",
           "hours": "osm",
@@ -942,12 +948,6 @@
           "payment.cards": "osm",
           "payment.contactless": "osm",
           "payment.girocard": "osm"
-        },
-        "payment": {
-          "cash": "unknown",
-          "cards": "yes",
-          "contactless": "unknown",
-          "girocard": "unknown"
         }
       }
     },
@@ -1508,9 +1508,9 @@
         "id": "tk_ul_osm_w106562986",
         "name": "Lotto",
         "address": {
-          "postalcode": "89073",
           "street": "König-Wilhelm-Straße",
           "number": "2",
+          "postalcode": "89073",
           "city": "Ulm",
           "district": "Oststadt"
         },
@@ -1532,8 +1532,8 @@
         },
         "sources_by_field": {
           "name": "osm",
-          "address.postalcode": "osm",
-          "hours": "google"
+          "hours": "google",
+          "address.postalcode": "osm"
         },
         "apple_id_attempted": "2026-09-11",
         "google_attempted": "2026-09-11",
@@ -2356,7 +2356,8 @@
         },
         "apple_id_attempted": "2026-09-11",
         "google_attempted": "2026-09-11",
-        "payment": {}
+        "payment": {},
+        "osm_removed": true
       }
     },
     {
@@ -2490,8 +2491,7 @@
           "address.city": "osm",
           "hours": "osm"
         },
-        "payment": {},
-        "osm_removed": true
+        "payment": {}
       }
     },
     {
@@ -2698,7 +2698,8 @@
           "payment.contactless": "osm",
           "payment.girocard": "osm"
         },
-        "apple_id_attempted": "2026-09-11"
+        "apple_id_attempted": "2026-09-11",
+        "osm_removed": true
       }
     },
     {
@@ -2872,7 +2873,8 @@
         },
         "apple_id_attempted": "2026-09-11",
         "google_attempted": "2026-09-11",
-        "payment": {}
+        "payment": {},
+        "osm_removed": true
       }
     },
     {
@@ -3024,13 +3026,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          10.0042102,
-          48.3925723
+          10.004237,
+          48.3926005
         ]
       },
       "properties": {
         "id": "tk_ul_osm_w186545311",
-        "name": "ServiceStore DB",
+        "name": "avec",
         "address": {
           "street": "Julius-Rohm-Platz",
           "number": "1",
