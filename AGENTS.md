@@ -141,6 +141,13 @@ never re-orders existing entries. Any new script that writes to
   overpass-api.de and maps.mail.ru both still returned all 25. So
   `processRegion` now passes the region's live OSM ids as `expectedIds`,
   and `fetchOsmForRegion` retries on the next endpoint when more than 20%
-  of them are missing from an answer (once ≥10 are known).
+  of them are missing from an answer (once ≥10 are known). That still
+  let smaller gaps through: the next run flagged 28 Köln, 8
+  Rheinland-Pfalz, 4 Nürnberg and 4 Galicia kiosks that OSM still has.
+  So a feature now only gets `osm_removed` after `confirmRemoved` looks
+  its id up directly (`node(id:…)`, no area index involved) and finds it
+  deleted, retagged or filtered out; unconfirmed absences stay as they
+  are until a later run. All flags set since the first fixed run were
+  re-checked that way and the false ones cleared.
 
 When adding a new entry: date it, name what changed, link the PR.

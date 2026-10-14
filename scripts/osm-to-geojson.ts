@@ -189,19 +189,13 @@ function missingShare(elements: OverpassElement[], expectedIds: Set<string>): nu
   return missing / expectedIds.size;
 }
 
-/** `expectedIds`: OSM ids (`node/123`) the region file holds as live.
- *  Mirrors with a stale or half-built area index answer with HTTP 200 and a
- *  partial list (private.coffee: 0 of 105 for IT-BZ; one run lost 14 of 25
- *  Extremadura kiosks that both other hosts still return), which the merge
- *  would read as closures. Real weekly churn is a few percent, so a large
- *  gap means a bad answer, not closed kiosks. */
-export async function fetchOsmForRegion(
-  region: Region,
-  { expectedIds = new Set<string>() }: { expectedIds?: Set<string> } = {},
-): Promise<OsmFeature[]> {
-  const body = `data=${encodeURIComponent(overpassQuery(region))}`;
-
-  let json: OverpassResponse | null = null;
+/** POST `query` to the Overpass endpoints in rotation until one returns JSON
+ *  that `check` accepts (`check` returns a rejection reason or null). */
+async function overpass(
+  query: string,
+  check: (r: OverpassResponse) => string | null = () => null,
+): Promise<OverpassResponse> {
+  const body = `data=${encodeURIComponent(query)}`;
   const errors: string[] = [];
   const backoff = [5_000, 15_000, 30_000];
   for (let attempt = 0; attempt <= backoff.length; attempt++) {
@@ -221,14 +215,12 @@ export async function fetchOsmForRegion(
         // Overpass reports runtime errors (e.g. "Dispatcher_Client timeout")
         // as HTML with status 200, so a parse failure counts as a failed try.
         const parsed = (await resp.json()) as OverpassResponse;
-        const missing = missingShare(parsed.elements, expectedIds);
-        if (missing > MAX_MISSING_SHARE) {
-          errors.push(`${new URL(endpoint).host}: ${Math.round(missing * 100)}% of ${expectedIds.size} known elements missing`);
-        } else {
-          json = parsed;
+        const rejected = check(parsed);
+        if (rejected === null) {
           preferredEndpoint = idx;
-          break;
+          return parsed;
         }
+        errors.push(`${new URL(endpoint).host}: ${rejected}`);
       } else if (resp.status < 500 && resp.status !== 429) {
         throw new Error(`Overpass ${endpoint} returned HTTP ${resp.status}: ${await resp.text().catch(() => "")}`);
       } else {
@@ -242,9 +234,39 @@ export async function fetchOsmForRegion(
       await new Promise((r) => setTimeout(r, backoff[attempt]!));
     }
   }
-  if (!json) {
-    throw new Error(`Overpass failed after retries: ${errors.join("; ")}`);
-  }
+  throw new Error(`Overpass failed after retries: ${errors.join("; ")}`);
+}
+
+/** Would `fetchOsmForRegion` import this element (coordinates aside)? */
+function isWanted(region: Region, el: OverpassElement): boolean {
+  const tags = el.tags ?? {};
+  if (tags["shop"] !== "kiosk" && tags["shop"] !== "beverages") return false;
+  if (!tags["name"]) return false;
+  // Beverage-market chains (REWE/Edeka/Fristo/Trinkgut…) and obvious
+  // Getränkemärkte arrive via the shop=beverages branch but aren't
+  // Trinkhallen. Skip them at the source: existing OSM-only copies then
+  // fall out as osm_removed on the next scrape.
+  if (isNonKioskBeverageMarket(tags)) return false;
+  if (region.iso3166_2.startsWith("ES") && isSpanishNonDrinkKiosk(tags)) return false;
+  return true;
+}
+
+/** `expectedIds`: OSM ids (`node/123`) the region file holds as live.
+ *  Mirrors with a stale or half-built area index answer with HTTP 200 and a
+ *  partial list (private.coffee: 0 of 105 for IT-BZ), so an answer missing
+ *  most of them is retried on the next endpoint. Smaller gaps still slip
+ *  through (a run lost 28 of ~1070 live Köln kiosks); `confirmRemoved`
+ *  is what decides closures. */
+export async function fetchOsmForRegion(
+  region: Region,
+  { expectedIds = new Set<string>() }: { expectedIds?: Set<string> } = {},
+): Promise<OsmFeature[]> {
+  const json = await overpass(overpassQuery(region), (r) => {
+    const missing = missingShare(r.elements, expectedIds);
+    return missing > MAX_MISSING_SHARE
+      ? `${Math.round(missing * 100)}% of ${expectedIds.size} known elements missing`
+      : null;
+  });
   const today = new Date().toISOString().slice(0, 10);
   const out: OsmFeature[] = [];
 
@@ -252,15 +274,9 @@ export async function fetchOsmForRegion(
     const lat = el.lat ?? el.center?.lat;
     const lon = el.lon ?? el.center?.lon;
     if (lat === undefined || lon === undefined) continue;
-    const tags = el.tags ?? {};
-    const name = tags["name"];
-    if (!name) continue;
-    // Beverage-market chains (REWE/Edeka/Fristo/Trinkgut…) and obvious
-    // Getränkemärkte arrive via the shop=beverages branch but aren't
-    // Trinkhallen. Skip them at the source: existing OSM-only copies then
-    // fall out as osm_removed on the next scrape.
-    if (isNonKioskBeverageMarket(tags)) continue;
-    if (region.iso3166_2.startsWith("ES") && isSpanishNonDrinkKiosk(tags)) continue;
+    if (!isWanted(region, el)) continue;
+    const tags = el.tags!;
+    const name = tags["name"]!;
     const sourceId = `${el.type === "node" ? "node" : "way"}/${el.id}`;
     const id = `tk_${region.prefix}_osm_${el.type[0]}${el.id}`;
 
@@ -319,6 +335,28 @@ export async function fetchOsmForRegion(
     out.push(feature);
   }
   return out;
+}
+
+/**
+ * Of `ids` (OSM ids a region scrape didn't return), the ones that are really
+ * gone: deleted, retagged, or now filtered out. Looked up by id rather than
+ * by area, so a mirror's stale area index can't fake a closure; a partial
+ * area answer that loses a few dozen live kiosks is otherwise
+ * indistinguishable from real churn. Throws when no endpoint answers, so
+ * the caller keeps the file instead of guessing.
+ */
+export async function confirmRemoved(region: Region, ids: string[]): Promise<Set<string>> {
+  if (ids.length === 0) return new Set();
+  const nodes = ids.filter((i) => i.startsWith("node/")).map((i) => i.slice(5));
+  const ways = ids.filter((i) => i.startsWith("way/")).map((i) => i.slice(4));
+  const query = `[out:json][timeout:${QUERY_TIMEOUT_S}];
+(${nodes.length ? `node(id:${nodes.join(",")});` : ""}${ways.length ? `way(id:${ways.join(",")});` : ""});
+out tags;`;
+  const json = await overpass(query);
+  const stillWanted = new Set(
+    json.elements.filter((el) => isWanted(region, el)).map((el) => `${el.type}/${el.id}`),
+  );
+  return new Set(ids.filter((id) => !stillWanted.has(id)));
 }
 
 /**

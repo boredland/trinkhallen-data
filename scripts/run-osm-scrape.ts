@@ -17,7 +17,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { existsSync } from "node:fs";
-import { fetchOsmForRegion, isNonKioskBeverageMarket, loadRegions, ownsFeature, type OsmFeature, type Region } from "./osm-to-geojson.ts";
+import { confirmRemoved, fetchOsmForRegion, isNonKioskBeverageMarket, loadRegions, ownsFeature, type OsmFeature, type Region } from "./osm-to-geojson.ts";
 import { rankOf } from "./lib/sources.ts";
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), "../..");
@@ -272,6 +272,15 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
     freshById.set(osmId, f);
   }
 
+  // Live OSM-only features the area answer didn't include. Mirrors drop
+  // live kiosks from area answers, so only the ones an id lookup confirms
+  // as deleted/retagged get osm_removed below.
+  const absentIds = existing
+    .filter((f) => isOsmOnly(f) && !f.properties.osm_removed)
+    .flatMap(osmIdsFromSources)
+    .filter((id) => !freshById.has(id));
+  const confirmedGone = await confirmRemoved(region, absentIds);
+
   let added = 0;
   let updated = 0;
   let removed = 0;
@@ -292,7 +301,8 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
   //     and local non-osm sources (hopfenstop / apple / gmaps) get unioned
   //     onto the result.
   //   - OSM-only features whose id Overpass didn't return get marked
-  //     osm_removed (or dropped on cross-region ownership).
+  //     osm_removed once confirmRemoved agrees (or dropped on cross-region
+  //     ownership); otherwise they're kept unchanged until a later run.
   //   - Hybrid features whose id Overpass didn't return are kept verbatim:
   //     their other sources are still valid even if the OSM node is gone.
   //   - Pure non-OSM features are kept verbatim.
@@ -332,7 +342,7 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
           crossRegionDropped++;
           continue;
         }
-        if (!f.properties.osm_removed) {
+        if (!f.properties.osm_removed && osmIds.every((id) => confirmedGone.has(id))) {
           f.properties.osm_removed = true;
           removed++;
         }
