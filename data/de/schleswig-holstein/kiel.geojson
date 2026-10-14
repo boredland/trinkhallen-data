@@ -390,6 +390,9 @@
         ],
         "created": "2026-05-20",
         "updated": "2026-10-14",
+        "hours": {
+          "raw": "Tu 10:00-22:30; Th 10:00-22:30; Fr 10:00-22:30; We 10:00-22:30; Mo 10:00-22:30; Sa 10:00-22:30; Su 10:00-22:30"
+        },
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -400,9 +403,6 @@
         },
         "apple_attempted": "2026-10-12",
         "google_attempted": "2026-08-22",
-        "hours": {
-          "raw": "Tu 10:00-22:30; Th 10:00-22:30; Fr 10:00-22:30; We 10:00-22:30; Mo 10:00-22:30; Sa 10:00-22:30; Su 10:00-22:30"
-        },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
@@ -896,24 +896,24 @@
         ],
         "created": "2026-05-20",
         "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "google",
-          "payment.cash": "osm",
-          "payment.cards": "osm",
-          "payment.contactless": "osm",
-          "payment.girocard": "osm"
-        },
-        "apple_id_attempted": "2026-10-12",
-        "google_attempted": "2026-06-22",
-        "hours": {
-          "raw": "Tu 10:00-20:00; Th 10:00-19:30; Fr 10:00-20:00; We 10:00-20:00; Mo 10:00-20:00; Sa 10:00-19:30"
-        },
         "payment": {
           "cash": "unknown",
           "cards": "yes",
           "contactless": "unknown",
           "girocard": "unknown"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "payment.cash": "osm",
+          "payment.cards": "osm",
+          "payment.contactless": "osm",
+          "payment.girocard": "osm",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-10-12",
+        "google_attempted": "2026-06-22",
+        "hours": {
+          "raw": "Tu 10:00-20:00; Th 10:00-19:30; Fr 10:00-20:00; We 10:00-20:00; Mo 10:00-20:00; Sa 10:00-19:30"
         }
       }
     },
@@ -1067,7 +1067,7 @@
       },
       "properties": {
         "id": "tk_ki_osm_n1730509861",
-        "name": "Glücksmomente",
+        "name": "Kiosk Wellsee",
         "address": {},
         "sources": [
           {
@@ -1186,6 +1186,12 @@
         "hours": {
           "raw": "Mo-Sa 05:00-21:00; Su,PH 12:00-17:00"
         },
+        "payment": {
+          "cash": "unknown",
+          "cards": "yes",
+          "contactless": "unknown",
+          "girocard": "unknown"
+        },
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -1199,13 +1205,7 @@
           "payment.girocard": "osm"
         },
         "apple_id_attempted": "2026-10-12",
-        "google_attempted": "2026-05-22",
-        "payment": {
-          "cash": "unknown",
-          "cards": "yes",
-          "contactless": "unknown",
-          "girocard": "unknown"
-        }
+        "google_attempted": "2026-05-22"
       }
     },
     {
@@ -2146,7 +2146,7 @@
         "created": "2026-05-20",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Mo-Fr 05:30-13:00"
+          "raw": "Mo-Fr 05:30-11:30"
         },
         "sources_by_field": {
           "name": "osm",
@@ -2192,7 +2192,7 @@
         "created": "2026-05-20",
         "updated": "2026-10-14",
         "hours": {
-          "raw": "Mo-Fr 06:00-21:00; Sa 07:00-21:00"
+          "raw": "Mo-Fr 06:00-23:00; Sa 07:00-23:00"
         },
         "payment": {
           "cash": "yes",
@@ -2629,7 +2629,7 @@
       },
       "properties": {
         "id": "tk_ki_osm_w718898589",
-        "name": "DB ServiceStore",
+        "name": "ServiceStore DB",
         "address": {},
         "sources": [
           {
