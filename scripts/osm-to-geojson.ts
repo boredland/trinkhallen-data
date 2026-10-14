@@ -176,7 +176,12 @@ out center tags;`;
 out center tags;`;
 }
 
-export async function fetchOsmForRegion(region: Region): Promise<OsmFeature[]> {
+/** `minElements`: answers with fewer elements are treated as a failed
+ *  attempt and retried on the next endpoint. */
+export async function fetchOsmForRegion(
+  region: Region,
+  { minElements = 0 }: { minElements?: number } = {},
+): Promise<OsmFeature[]> {
   const body = `data=${encodeURIComponent(overpassQuery(region))}`;
 
   let json: OverpassResponse | null = null;
@@ -198,14 +203,19 @@ export async function fetchOsmForRegion(region: Region): Promise<OsmFeature[]> {
       if (resp.ok) {
         // Overpass reports runtime errors (e.g. "Dispatcher_Client timeout")
         // as HTML with status 200, so a parse failure counts as a failed try.
-        json = (await resp.json()) as OverpassResponse;
-        preferredEndpoint = idx;
-        break;
-      }
-      if (resp.status < 500 && resp.status !== 429) {
+        const parsed = (await resp.json()) as OverpassResponse;
+        if (parsed.elements.length < minElements) {
+          errors.push(`${new URL(endpoint).host}: ${parsed.elements.length} elements, expected ≥ ${minElements}`);
+        } else {
+          json = parsed;
+          preferredEndpoint = idx;
+          break;
+        }
+      } else if (resp.status < 500 && resp.status !== 429) {
         throw new Error(`Overpass ${endpoint} returned HTTP ${resp.status}: ${await resp.text().catch(() => "")}`);
+      } else {
+        errors.push(`${new URL(endpoint).host}: HTTP ${resp.status}`);
       }
-      errors.push(`${new URL(endpoint).host}: HTTP ${resp.status}`);
     } catch (err) {
       if ((err as Error).message.startsWith("Overpass ")) throw err;
       errors.push(`${new URL(endpoint).host}: ${(err as Error).name === "TimeoutError" ? "timeout" : (err as Error).message}`);

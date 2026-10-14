@@ -133,5 +133,12 @@ never re-orders existing entries. Any new script that writes to
   regions took 3.5-7 min each), so a full scrape now runs as 4 parallel
   `--shard i/4` matrix jobs; regions write disjoint files, so shard
   commits only race on push, which the rebase loop handles.
+  The sharded run then showed overpass.private.coffee answering area
+  queries with HTTP 200 and zero elements (IT-BZ: 0 vs 105 on
+  overpass-api.de), which flagged 18 Südtirol and 55 Steiermark kiosks
+  `osm_removed`. Those flags were reverted, and `processRegion` now passes
+  `minElements` (half the region's live OSM-sourced features, once there
+  are ≥10) so a suspiciously small answer is retried on the next endpoint
+  instead of being merged.
 
 When adding a new entry: date it, name what changed, link the PR.

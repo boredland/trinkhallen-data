@@ -239,6 +239,9 @@ function isOsmOnly(f: Feature): boolean {
   return srcs.length > 0 && srcs.every((s) => s.type === "osm");
 }
 
+const MIN_LIVE_FOR_SHRINK_CHECK = 10;
+const MAX_SHRINK = 0.5;
+
 async function processRegion(region: Region, allRegions: Region[]): Promise<Stats> {
   const path = resolve(REPO_ROOT, region.path);
   let droppedMarket = 0;
@@ -251,7 +254,13 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
     }
     return true;
   });
-  const fresh = await fetchOsmForRegion(region);
+  // Mirrors with a half-built area index answer an area query with HTTP 200
+  // and zero elements (private.coffee did for IT-BZ), which the merge below
+  // would read as "every kiosk closed". A real week never loses half a
+  // region, so such an answer counts as a failed attempt on that endpoint.
+  const live = existing.filter((f) => osmIdsFromSources(f).length > 0 && !f.properties.osm_removed).length;
+  const minElements = live >= MIN_LIVE_FOR_SHRINK_CHECK ? Math.ceil(live * MAX_SHRINK) : 0;
+  const fresh = await fetchOsmForRegion(region, { minElements });
 
   let crossRegionDropped = 0;
 
