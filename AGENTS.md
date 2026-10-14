@@ -19,7 +19,7 @@ on top is replaceable, the dataset isn't.
 
 | Workflow | Cadence | What it does |
 |---|---|---|
-| `osm.yml` (mode `scrape`) | Weekly (Mon 04:17 UTC) + dispatch | Overpass-fetches kiosks per region, merges into the region file. Drops OSM-only features no longer in Overpass; appends genuinely new ones; cross-region dedup via `ownsFeature`. Runs with `--max-runtime-min 70` and fails over between `OVERPASS_ENDPOINT` hosts. Commits to main. |
+| `osm.yml` (mode `scrape`) | Weekly (Mon 04:17 UTC) + dispatch | Overpass-fetches kiosks per region, merges into the region file. Drops OSM-only features no longer in Overpass; appends genuinely new ones; cross-region dedup via `ownsFeature`. Full runs split into 4 parallel `--shard i/4` jobs, each with `--max-runtime-min 70`, failing over between `OVERPASS_ENDPOINT` hosts. Each shard commits to main; one `deploy` job rebuilds the app. |
 | `osm-enrich.yml` | Monthly + dispatch | Walks features without an OSM source, matches them to Overpass POIs by name+distance, backfills `hours`/`payment`/`address`/`tags`. Defaults to a `--since 40d` cutoff so each run only retries recently-added or recently-edited features; dispatch with `full=true` for a sweep. Opens a PR. |
 | `deploy-app.yml` | Push to main (paths: data, regions.yml, schema) | POSTs `$CF_DEPLOY_HOOK_URL` to redeploy trinkhallen.app. |
 
@@ -128,6 +128,10 @@ never re-orders existing entries. Any new script that writes to
   private.coffee, maps.mail.ru) and the next region starts on the last
   host that answered, 4 consecutive all-endpoint failures stop the run,
   and `osm.yml` passes `--max-runtime-min 70` so unfinished regions are
-  listed as "Not attempted" and the commit step always runs.
+  listed as "Not attempted" and the commit step always runs. The first
+  run with that still covered only 42 of 93 regions in 70 min (8 failed
+  regions took 3.5-7 min each), so a full scrape now runs as 4 parallel
+  `--shard i/4` matrix jobs; regions write disjoint files, so shard
+  commits only race on push, which the rebase loop handles.
 
 When adding a new entry: date it, name what changed, link the PR.

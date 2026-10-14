@@ -63,6 +63,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       mode: ${{ steps.choose.outputs.mode }}
+      shards: ${{ steps.choose.outputs.shards }}
     steps:
       - id: choose
         run: |
@@ -76,15 +77,28 @@ jobs:
               mode=enrich
             fi
           fi
+          # A full scrape runs as 4 parallel shards: serially, ~90 regions at
+          # 1-7 min each on a bad Overpass day don't fit one job's timeout.
+          # Each region writes only its own file, so shards can't conflict.
+          if [ "$mode" = "scrape" ] && [ -z "${{ inputs.region }}" ]; then
+            shards='[0,1,2,3]'
+          else
+            shards='[0]'
+          fi
           echo "mode=$mode" >> "$GITHUB_OUTPUT"
-          echo "Picked mode: $mode"
+          echo "shards=$shards" >> "$GITHUB_OUTPUT"
+          echo "Picked mode: $mode, shards: $shards"
 
   run:
     needs: pick
-    name: osm · ${{ needs.pick.outputs.mode }}
+    name: osm · ${{ needs.pick.outputs.mode }} · ${{ matrix.shard }}
     runs-on: ubuntu-latest
-    # Covers enrich's longer-running gosom-confirmation step. Scrape
-    # typically finishes well under 30 min.
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.pick.outputs.shards) }}
+    # Covers enrich's longer-running gosom-confirmation step. A scrape shard
+    # stops itself at --max-runtime-min 70.
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v6
@@ -106,11 +120,13 @@ jobs:
           if [ "$mode" = "scrape" ]; then
             # Budget leaves the 90 min job timeout room for the last region
             # (worst case ~11 min when every endpoint stalls) plus commit.
+            args=(--max-runtime-min 70)
             if [ -n "$region" ]; then
-              bun scripts/run-osm-scrape.ts "$region" --max-runtime-min 70 > stats.json
+              args+=("$region")
             else
-              bun scripts/run-osm-scrape.ts --max-runtime-min 70 > stats.json
+              args+=(--shard "${{ matrix.shard }}/${{ strategy.job-total }}")
             fi
+            bun scripts/run-osm-scrape.ts "${args[@]}" > stats.json
             title=$(jq -r '
               map("\(.region) +\(.added)/~\(.updated)/-\(.removed)") | join(", ")
             ' stats.json)
@@ -182,11 +198,11 @@ jobs:
             echo '```'
           } > /tmp/commit-msg.txt
           git commit -F /tmp/commit-msg.txt
-          # Concurrent enrich runs and the hourly enrich workflow may race
-          # us — 5-attempt push/rebase loop matches enrich.yml's pattern.
-          # `-X theirs` keeps the commit being replayed (our just-scraped
-          # data) when text conflicts arise; the OSM next sweep would
-          # recover anything the other side touched.
+          # Concurrent enrich runs, the hourly enrich workflow and sibling
+          # scrape shards may race us — 5-attempt push/rebase loop matches
+          # enrich.yml's pattern. `-X theirs` keeps the commit being replayed
+          # (our just-scraped data) when text conflicts arise; the OSM next
+          # sweep would recover anything the other side touched.
           for i in 1 2 3 4 5; do
             if git push; then
               echo "pushed on attempt $i"
@@ -202,8 +218,21 @@ jobs:
           echo "push failed after 5 attempts"
           exit 1
 
+  # One rebuild per workflow run instead of one per shard. Skipped when no
+  # shard pushed anything, i.e. main still points at the triggering commit.
+  deploy:
+    needs: run
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
       - name: Trigger app rebuild
-        if: steps.diff.outputs.changed == 'true'
-        run: curl -fsS -X POST "$CF_DEPLOY_HOOK_URL"
+        run: |
+          set -euo pipefail
+          head=$(git ls-remote "https://github.com/${{ github.repository }}" refs/heads/main | cut -f1)
+          if [ "$head" = "${{ github.sha }}" ]; then
+            echo "main unchanged, no rebuild"
+            exit 0
+          fi
+          curl -fsS -X POST "$CF_DEPLOY_HOOK_URL"
         env:
           CF_DEPLOY_HOOK_URL: ${{ secrets.CF_DEPLOY_HOOK_URL }}

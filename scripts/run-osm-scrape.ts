@@ -425,13 +425,25 @@ const MAX_CONSECUTIVE_FAILURES = 4;
 
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
-  const budgetIx = args.indexOf("--max-runtime-min");
-  const maxRuntimeMin = budgetIx >= 0 ? Number.parseFloat(args[budgetIx + 1] ?? "") : Number.NaN;
-  if (budgetIx >= 0) args.splice(budgetIx, 2);
+  const takeFlag = (flag: string): string | undefined => {
+    const ix = args.indexOf(flag);
+    if (ix < 0) return undefined;
+    return args.splice(ix, 2)[1];
+  };
+  const maxRuntimeMin = Number.parseFloat(takeFlag("--max-runtime-min") ?? "");
   const deadline = Number.isFinite(maxRuntimeMin) ? Date.now() + maxRuntimeMin * 60_000 : Infinity;
+  // --shard i/n: take every n-th region starting at i, so CI can split the
+  // run across parallel jobs. A serial run of all regions doesn't fit the job
+  // timeout on a bad Overpass day.
+  const [shardIx, shardCount] = (takeFlag("--shard") ?? "0/1").split("/").map(Number) as [number, number];
+  if (!(shardCount >= 1 && shardIx >= 0 && shardIx < shardCount)) {
+    console.error("--shard expects i/n with 0 <= i < n");
+    process.exit(2);
+  }
   const wantSlug = args[0];
   const regions = await loadRegions();
-  const targets = wantSlug ? regions.filter((r) => r.slug === wantSlug) : regions;
+  const targets = (wantSlug ? regions.filter((r) => r.slug === wantSlug) : regions)
+    .filter((_, i) => i % shardCount === shardIx);
   if (targets.length === 0) {
     console.error("No matching regions in regions.yml");
     process.exit(2);
