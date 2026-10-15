@@ -150,5 +150,23 @@ never re-orders existing entries. Any new script that writes to
   deleted, retagged or filtered out; unconfirmed absences stay as they
   are until a later run. All flags set since the first fixed run were
   re-checked that way and the false ones cleared.
+- **2026-10-15 — Spain: chinos and Chinese-run bars; terraces shown.**
+  Spanish regions run two extra Overpass requests next to the kiosk one:
+  named `shop=convenience` and named `amenity=bar|cafe|pub`. Each group is
+  fetched and checked on its own; only the kiosk group failing fails the
+  region, a failed extra group just leaves its existing features alone
+  (`failedGroups`). `isChino` keeps unbranded convenience shops whose name
+  reads like a corner shop (alimentación, bazar, chino, autoservicio,
+  super/market, 24h, …) or is Chinese, and isn't a chain or a specialty
+  shop: 652 in Madrid (unbranded alone was 1,012, a third of them pet-food,
+  nutrition and similar). `isChineseRunBar` goes by name only (Chinese
+  script, "chino/china", a common Chinese surname as a whole word, minus
+  known false hits such as sushi places): 20 of ~28k named bars across
+  MD/CT/VC/AN, so recall is low by design. Both set `kind` (`convenience`,
+  `bar`); the app labels and lists them. Bars are picked here, not with an
+  Overpass name regex: that ran ~160 s for Madrid and overpass-api.de
+  rejected a `[一-龥]` class with HTTP 400. Terraces are not a category:
+  they stay the `draussen` tag from `outdoor_seating=yes`, which the app
+  shows, filters on and lets users report.
 
 When adding a new entry: date it, name what changed, link the PR.

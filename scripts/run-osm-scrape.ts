@@ -17,7 +17,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { existsSync } from "node:fs";
-import { confirmRemoved, fetchOsmForRegion, isNonKioskBeverageMarket, loadRegions, ownsFeature, type OsmFeature, type Region } from "./osm-to-geojson.ts";
+import { confirmRemoved, fetchOsmForRegion, isNonKioskBeverageMarket, loadRegions, ownsFeature, queryGroupOf, type OsmFeature, type QueryGroup, type Region } from "./osm-to-geojson.ts";
 import { rankOf } from "./lib/sources.ts";
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), "../..");
@@ -251,12 +251,21 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
     }
     return true;
   });
-  // Ids this file holds as live; fetchOsmForRegion rejects an answer that
-  // drops a large share of them (a broken mirror, not a wave of closures).
-  const expectedIds = new Set(
-    existing.filter((f) => !f.properties.osm_removed).flatMap(osmIdsFromSources),
-  );
-  const fresh = await fetchOsmForRegion(region, { expectedIds });
+  // Ids this file holds as live, per query group; fetchOsmForRegion rejects
+  // an answer that drops a large share of them (a broken mirror, not a wave
+  // of closures).
+  const groupOf = (f: Feature) => queryGroupOf(f.properties["kind"] as string | undefined);
+  const expectedIds = new Map<QueryGroup, Set<string>>();
+  for (const f of existing) {
+    if (f.properties.osm_removed) continue;
+    const set = expectedIds.get(groupOf(f)) ?? new Set<string>();
+    for (const id of osmIdsFromSources(f)) set.add(id);
+    expectedIds.set(groupOf(f), set);
+  }
+  const { features: fresh, failedGroups } = await fetchOsmForRegion(region, { expectedIds });
+  for (const [group, msg] of failedGroups) {
+    console.error(`  ${group} group failed, its features left as they are: ${msg}`);
+  }
 
   let crossRegionDropped = 0;
 
@@ -274,9 +283,10 @@ async function processRegion(region: Region, allRegions: Region[]): Promise<Stat
 
   // Live OSM-only features the area answer didn't include. Mirrors drop
   // live kiosks from area answers, so only the ones an id lookup confirms
-  // as deleted/retagged get osm_removed below.
+  // as deleted/retagged get osm_removed below. Features of a group whose
+  // query failed this run aren't absent, just unknown.
   const absentIds = existing
-    .filter((f) => isOsmOnly(f) && !f.properties.osm_removed)
+    .filter((f) => isOsmOnly(f) && !f.properties.osm_removed && !failedGroups.has(groupOf(f)))
     .flatMap(osmIdsFromSources)
     .filter((id) => !freshById.has(id));
   const confirmedGone = await confirmRemoved(region, absentIds);

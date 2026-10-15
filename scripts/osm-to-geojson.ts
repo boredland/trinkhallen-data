@@ -49,7 +49,7 @@ export interface OsmFeature {
     sources: Array<{ type: "osm"; id: string; version: number }>;
     /** Set when OSM tags identify this as something other than a manned
      *  kiosk. Consumers can filter or render differently. */
-    kind?: "vending_machine";
+    kind?: "vending_machine" | "convenience" | "bar";
     created: string;
     updated: string;
     sources_by_field?: Record<string, string>;
@@ -143,35 +143,52 @@ interface OverpassResponse {
   elements: OverpassElement[];
 }
 
-function overpassQuery(region: Region): string {
+/** Which Overpass request a feature comes from. Each group is fetched and
+ *  checked on its own, so a slow bar query can't sink the kiosk refresh. */
+export type QueryGroup = "kiosk" | "convenience" | "bar";
+
+export function queryGroupOf(kind: string | undefined): QueryGroup {
+  return kind === "convenience" || kind === "bar" ? kind : "kiosk";
+}
+
+/** Overpass selectors per group. Spain also gets chinos (`shop=convenience`)
+ *  and bars, from which `isChineseRunBar` picks Chinese-run ones by name
+ *  here rather than with an Overpass name regex: that variant took ~160 s
+ *  for Madrid and overpass-api.de rejected parts of it as invalid. */
+function groupSelectors(region: Region): Array<[QueryGroup, string[]]> {
+  const groups: Array<[QueryGroup, string[]]> = [
+    ["kiosk", ['node["shop"="kiosk"]', 'node["shop"="beverages"]', 'way["shop"="kiosk"]', 'way["shop"="beverages"]']],
+  ];
+  if (region.iso3166_2.startsWith("ES")) {
+    groups.push(["convenience", ['node["shop"="convenience"]["name"]', 'way["shop"="convenience"]["name"]']]);
+    groups.push(["bar", ["bar", "cafe", "pub"].flatMap((v) => [`node["amenity"="${v}"]["name"]`, `way["amenity"="${v}"]["name"]`])]);
+  }
+  return groups;
+}
+
+function overpassQuery(region: Region, selectors: string[]): string {
   // Rest regions query by ISO area so the Bundesland envelope doesn't bleed
   // into neighbours. Cities stay on bbox: faster, well-tested, and the bbox
   // is already drawn tight around the urban area. iso3166_2 holds either a
   // subdivision code (DE-NW, AT-7) or a country code (CH) — dash presence
   // picks the Overpass area key.
+  const [w, s, e, n] = region.bbox;
   if (region.role === "rest") {
     const iso = region.iso3166_2;
     const key = iso.includes("-") ? "ISO3166-2" : "ISO3166-1";
     // Optional bbox clip for territories with no ISO area of their own.
-    const [w, s, e, n] = region.bbox;
     const clip = region.bbox_clip ? `(${s},${w},${n},${e})` : "";
     return `[out:json][timeout:${QUERY_TIMEOUT_S}];
 area["${key}"="${iso}"]->.a;
 (
-  node["shop"="kiosk"](area.a)${clip};
-  node["shop"="beverages"](area.a)${clip};
-  way["shop"="kiosk"](area.a)${clip};
-  way["shop"="beverages"](area.a)${clip};
+${selectors.map((sel) => `  ${sel}(area.a)${clip};`).join("\n")}
 );
 out center tags;`;
   }
-  const [w, s, e, n] = region.bbox;
+  const box = `(${s},${w},${n},${e})`;
   return `[out:json][timeout:${QUERY_TIMEOUT_S}];
 (
-  node["shop"="kiosk"](${s},${w},${n},${e});
-  node["shop"="beverages"](${s},${w},${n},${e});
-  way["shop"="kiosk"](${s},${w},${n},${e});
-  way["shop"="beverages"](${s},${w},${n},${e});
+${selectors.map((sel) => `  ${sel}${box};`).join("\n")}
 );
 out center tags;`;
 }
@@ -240,37 +257,55 @@ async function overpass(
 /** Would `fetchOsmForRegion` import this element (coordinates aside)? */
 function isWanted(region: Region, el: OverpassElement): boolean {
   const tags = el.tags ?? {};
-  if (tags["shop"] !== "kiosk" && tags["shop"] !== "beverages") return false;
   if (!tags["name"]) return false;
+  const spain = region.iso3166_2.startsWith("ES");
+  if (spain && tags["shop"] === "convenience") return isChino(tags);
+  if (spain && /^(bar|cafe|pub)$/.test(tags["amenity"] ?? "")) return isChineseRunBar(tags);
+  if (tags["shop"] !== "kiosk" && tags["shop"] !== "beverages") return false;
   // Beverage-market chains (REWE/Edeka/Fristo/Trinkgut…) and obvious
   // Getränkemärkte arrive via the shop=beverages branch but aren't
   // Trinkhallen. Skip them at the source: existing OSM-only copies then
   // fall out as osm_removed on the next scrape.
   if (isNonKioskBeverageMarket(tags)) return false;
-  if (region.iso3166_2.startsWith("ES") && isSpanishNonDrinkKiosk(tags)) return false;
+  if (spain && isSpanishNonDrinkKiosk(tags)) return false;
   return true;
 }
 
-/** `expectedIds`: OSM ids (`node/123`) the region file holds as live.
- *  Mirrors with a stale or half-built area index answer with HTTP 200 and a
- *  partial list (private.coffee: 0 of 105 for IT-BZ), so an answer missing
- *  most of them is retried on the next endpoint. Smaller gaps still slip
- *  through (a run lost 28 of ~1070 live Köln kiosks); `confirmRemoved`
- *  is what decides closures. */
+/** `expectedIds`: OSM ids (`node/123`) the region file holds as live, per
+ *  group. Mirrors with a stale or half-built area index answer with HTTP 200
+ *  and a partial list (private.coffee: 0 of 105 for IT-BZ), so an answer
+ *  missing most of them is retried on the next endpoint. Smaller gaps still
+ *  slip through (a run lost 28 of ~1070 live Köln kiosks); `confirmRemoved`
+ *  is what decides closures.
+ *
+ *  Only the kiosk group is required: it throws like a whole-region failure.
+ *  A failed Spanish extra group is reported in `failedGroups` so the caller
+ *  leaves that group's existing features untouched. */
 export async function fetchOsmForRegion(
   region: Region,
-  { expectedIds = new Set<string>() }: { expectedIds?: Set<string> } = {},
-): Promise<OsmFeature[]> {
-  const json = await overpass(overpassQuery(region), (r) => {
-    const missing = missingShare(r.elements, expectedIds);
-    return missing > MAX_MISSING_SHARE
-      ? `${Math.round(missing * 100)}% of ${expectedIds.size} known elements missing`
-      : null;
-  });
+  { expectedIds = new Map<QueryGroup, Set<string>>() }: { expectedIds?: Map<QueryGroup, Set<string>> } = {},
+): Promise<{ features: OsmFeature[]; failedGroups: Map<QueryGroup, string> }> {
+  const elements: OverpassElement[] = [];
+  const failedGroups = new Map<QueryGroup, string>();
+  for (const [group, selectors] of groupSelectors(region)) {
+    const expected = expectedIds.get(group) ?? new Set<string>();
+    try {
+      const json = await overpass(overpassQuery(region, selectors), (r) => {
+        const missing = missingShare(r.elements, expected);
+        return missing > MAX_MISSING_SHARE
+          ? `${Math.round(missing * 100)}% of ${expected.size} known elements missing`
+          : null;
+      });
+      elements.push(...json.elements);
+    } catch (err) {
+      if (group === "kiosk") throw err;
+      failedGroups.set(group, (err as Error).message);
+    }
+  }
   const today = new Date().toISOString().slice(0, 10);
   const out: OsmFeature[] = [];
 
-  for (const el of json.elements) {
+  for (const el of elements) {
     const lat = el.lat ?? el.center?.lat;
     const lon = el.lon ?? el.center?.lon;
     if (lat === undefined || lon === undefined) continue;
@@ -334,7 +369,7 @@ export async function fetchOsmForRegion(
 
     out.push(feature);
   }
-  return out;
+  return { features: out, failedGroups };
 }
 
 /**
@@ -362,19 +397,80 @@ out tags;`;
 /**
  * Decide whether an OSM-tagged kiosk is actually something more specific
  * than a manned Späti. Conservative: only flag when the tags leave no
- * ambiguity. The downstream consumer (trinkhallen-app) filters these out
- * of map/list views while keeping the underlying data accessible to third
- * parties.
+ * ambiguity. The downstream consumer (trinkhallen-app) filters vending
+ * machines out of map/list views while keeping the underlying data
+ * accessible to third parties, and labels the Spanish kinds.
  *
- * Currently catches automaten (vending machines) — JIMA, Sielaff, etc.
- * Gas-station-attached shops aren't flagged here because OSM tagging is
- * inconsistent across regions; the app does that one by operator/name.
+ * Catches automaten (vending machines) — JIMA, Sielaff, etc. — and the two
+ * Spain-only categories pulled in by `spanishExtras`. Gas-station-attached
+ * shops aren't flagged here because OSM tagging is inconsistent across
+ * regions; the app does that one by operator/name.
  */
-function detectKind(tags: Record<string, string>): "vending_machine" | undefined {
+function detectKind(tags: Record<string, string>): OsmFeature["properties"]["kind"] {
   if (tags["amenity"] === "vending_machine") return "vending_machine";
   if (tags["self_service"] === "only") return "vending_machine";
   if (tags["automated"] === "yes") return "vending_machine";
+  if (tags["shop"] === "convenience") return "convenience";
+  if (/^(bar|cafe|pub)$/.test(tags["amenity"] ?? "")) return "bar";
   return undefined;
+}
+
+function normaliseEs(s: string): string {
+  return s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+}
+
+/**
+ * A "chino": the independent, late-open corner shop that sells cold beer.
+ * In OSM it's an unbranded `shop=convenience`, but so are pet-food stores,
+ * nutrition shops, Latin grocers and the like (a third of Madrid's unbranded
+ * ones on the first scrape: "Piensos de la Vega", "Sport Nutrition", …).
+ * So the name has to read like a corner shop (alimentación, bazar, chino,
+ * autoservicio, mini/super market, 24h, …) or be a Chinese name, and must not
+ * be a chain or a specialty grocer.
+ */
+const ES_CONVENIENCE_CHAIN =
+  /\b(carrefour|supercor|dia|simply|sprint|repsol|shell|bp|cepsa|galp|circle k|avia|coviran|spar|alcampo|eroski|lidl|aldi|mercadona|corte ingles|opencor|open cor|udaco|suma|condis|bonarea|claudio|tangerina|sqrups|eneryeti|4eco|martin martin|hiper buenamente|trady)\b/;
+const ES_CONVENIENCE_SPECIALTY =
+  /\b(frutas|fruteria|verduras|verduleria|carniceria|panaderia|pescaderia|herbolario|latinos?|productos|gourmet|ecologic[ao]|organic|bio|halal|farmacia|estanco|nutrition|piensos|casqueria|embutidos)\b/;
+const ES_CORNER_SHOP =
+  /(\b(alimentacion|aliment|chin[oa]s?|autoservicio|tienda|ultramarinos|comestibles|colmado|super|supermercado|mercadito|asia|24 ?h|24 horas|open ?2[45]|express)\b|bazar\b|market\b)/;
+
+export function isChino(tags: Record<string, string>): boolean {
+  if (tags["brand"] || tags["brand:wikidata"]) return false;
+  const name = tags["name"];
+  if (!name) return false;
+  for (const raw of [name, tags["operator"]]) {
+    if (!raw) continue;
+    const v = normaliseEs(raw);
+    if (ES_CONVENIENCE_CHAIN.test(v) || ES_CONVENIENCE_SPECIALTY.test(v)) return false;
+  }
+  return ES_CORNER_SHOP.test(normaliseEs(name)) || isChineseName(name);
+}
+
+/**
+ * Does a name point to Chinese owners? Chinese script, "chino/china" as a
+ * word, or a common Chinese surname as a whole word. OSM has no "who runs
+ * it" tag, so the name is all there is. `name:zh` is no signal (tourist
+ * spots carry translations), and "Pan"/"Ma"/"Sun" are left out (bread,
+ * Catalan "Ma", English names). Misses are expected; the app's report flow
+ * fixes individual places.
+ */
+const CHINESE_SURNAMES = "wang|zhang|chen|liu|huang|zhou|zhao|wu|xu|lin|yang|zheng|zhu|guo|luo|gao|xie|cai|dong|jiang|xin|li|jin|hong|ming|wen|xia|peng";
+const CHINESE_NAME = new RegExp(`(^|[^a-z])(chin[oa]s?|${CHINESE_SURNAMES})([^a-z]|$)`);
+/** Non-Chinese names that contain a surname as a word. */
+const CHINESE_NAME_FALSE = /\b(ye ?ye|jin ?tonic|wu ?tang|martel ?li|china ?town|porcelana china|sushi|bocai)\b|·/;
+
+function isChineseName(name: string): boolean {
+  if (/[\u3400-\u9fff]/.test(name)) return true;
+  const v = normaliseEs(name);
+  if (CHINESE_NAME_FALSE.test(v)) return false;
+  return CHINESE_NAME.test(v);
+}
+
+/** A "bar de chinos": a bar run by Chinese owners, judged by its name. */
+export function isChineseRunBar(tags: Record<string, string>): boolean {
+  const name = tags["name"];
+  return !!name && isChineseName(name);
 }
 
 /**
@@ -507,7 +603,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     console.error(`Region ${slug} not in regions.yml`);
     process.exit(2);
   }
-  const features = await fetchOsmForRegion(region);
+  const { features, failedGroups } = await fetchOsmForRegion(region);
+  for (const [group, msg] of failedGroups) console.error(`${group} group failed: ${msg}`);
   process.stdout.write(
     JSON.stringify({ type: "FeatureCollection", features }, null, 2) + "\n",
   );
