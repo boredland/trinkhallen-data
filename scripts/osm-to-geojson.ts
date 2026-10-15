@@ -451,14 +451,18 @@ export function isChino(tags: Record<string, string>): boolean {
  * Does a name point to Chinese owners? Chinese script, "chino/china" as a
  * word, or a common Chinese surname as a whole word. OSM has no "who runs
  * it" tag, so the name is all there is. `name:zh` is no signal (tourist
- * spots carry translations), and "Pan"/"Ma"/"Sun" are left out (bread,
- * Catalan "Ma", English names). Misses are expected; the app's report flow
- * fixes individual places.
+ * spots carry translations). Surnames that collide with Spanish, Catalan,
+ * French or English words in real bar names are left out: pan, ma, sun,
+ * song, cao, du, lu, fu, mao, tian ("Pan y Sal", "Your Song", "Café du
+ * Parc", "Kung Fu"…). Misses are expected; the app's report flow fixes
+ * individual places.
  */
-const CHINESE_SURNAMES = "wang|zhang|chen|liu|huang|zhou|zhao|wu|xu|lin|yang|zheng|zhu|guo|luo|gao|xie|cai|dong|jiang|xin|li|jin|hong|ming|wen|xia|peng";
+const CHINESE_SURNAMES =
+  "wang|zhang|chen|liu|huang|zhou|zhao|wu|xu|lin|yang|zheng|zhu|guo|luo|gao|xie|cai|dong|jiang|xin|li|jin|hong|ming|wen|xia|peng|" +
+  "feng|deng|tang|han|shen|qian|fang|xiao|zeng|kong|bai|yan|wei|qiu|hu|ren|yu|ye";
 const CHINESE_NAME = new RegExp(`(^|[^a-z])(chin[oa]s?|${CHINESE_SURNAMES})([^a-z]|$)`);
 /** Non-Chinese names that contain a surname as a word. */
-const CHINESE_NAME_FALSE = /\b(ye ?ye|jin ?tonic|wu ?tang|martel ?li|china ?town|porcelana china|sushi|bocai)\b|·/;
+const CHINESE_NAME_FALSE = /\b(ye[ -]?ye|jin ?tonic|wu ?tang|martel ?li|china ?town|porcelana china|sushi|bocai)\b|·/;
 
 function isChineseName(name: string): boolean {
   if (/[\u3400-\u9fff]/.test(name)) return true;
