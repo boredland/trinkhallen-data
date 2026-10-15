@@ -114,7 +114,8 @@ never re-orders existing entries. Any new script that writes to
   booths and estancos, so `isSpanishNonDrinkKiosk` in
   `scripts/osm-to-geojson.ts` drops those by `lottery=*`, an `ONCE`
   name/brand/operator, or a name containing prensa/revistas/estanco/tabacos
-  (about a third of named Madrid entries). Bare "Kiosco"/"Quiosco" is kept:
+  or papelería/librería/libros/cómics (stationery and book stalls) (about
+  a third of named Madrid entries). Bare "Kiosco"/"Quiosco" is kept:
   that is also the name of park drinks kiosks. The app has no Spanish UI or
   Spanish holiday calendar; `PH` rules there resolve against its default
   Baden-Württemberg calendar.

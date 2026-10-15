@@ -423,12 +423,14 @@ export function isNonKioskBeverageMarket(tags: Record<string, string>): boolean 
 }
 
 /**
- * In Spain shop=kiosk mostly means a newspaper stand, an ONCE lottery booth
- * or an estanco, none of which sell a cold beer. Drop the ones whose tags or
- * name say so outright; a bare "Kiosco"/"Quiosco" stays, since that is also
- * what a drinks kiosk in a park is called.
+ * In Spain shop=kiosk mostly means a newspaper stand, an ONCE lottery booth,
+ * an estanco or a papelería/librería (stationery, books, comics), none of
+ * which sell a cold beer. Drop the ones whose tags or name say so outright;
+ * a bare "Kiosco"/"Quiosco" stays, since that is also what a drinks kiosk in
+ * a park is called.
  */
-const ES_NON_DRINK_NAME = /\b(prensa|premsa|revistas?|periodicos?|loterias?|apuestas|estanco|tabacs?|tabacos?)\b/;
+const ES_NON_DRINK_NAME =
+  /\b(prensa|premsa|revistas?|periodicos?|loterias?|apuestas|estanco|tabacs?|tabacos?|papeleria|papereria|libreria|llibreria|libros|llibres|comics?|cromos)\b/;
 
 export function isSpanishNonDrinkKiosk(tags: Record<string, string>): boolean {
   if (tags["lottery"] && tags["lottery"] !== "no") return true;
