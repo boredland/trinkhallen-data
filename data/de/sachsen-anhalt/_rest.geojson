@@ -3242,17 +3242,27 @@
             "type": "osm",
             "id": "node/14268676301",
             "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJX79J1G9lr0cROemUlcP_nUU"
           }
         ],
         "created": "2026-10-12",
-        "updated": "2026-10-14",
+        "updated": "2026-10-20",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
           "address.number": "osm",
-          "address.postalcode": "osm"
+          "address.postalcode": "osm",
+          "hours": "google"
         },
-        "payment": {}
+        "payment": {},
+        "apple_id_attempted": "2026-10-20",
+        "hours": {
+          "raw": "Tu 08:00-22:00; Th 08:00-22:00; Fr 08:00-22:00; We 08:00-22:00; Mo 08:00-22:00; Sa 08:00-21:45"
+        },
+        "google_attempted": "2026-10-20"
       }
     },
     {
@@ -5230,12 +5240,16 @@
             "type": "osm",
             "id": "way/1560013325",
             "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "8123236472153328433"
           }
         ],
         "created": "2026-10-12",
-        "updated": "2026-10-14",
+        "updated": "2026-10-20",
         "hours": {
-          "raw": "Mo-Su 05:00-22:00"
+          "raw": "Su 07:00-22:00; Mo-Sa 05:00-22:00"
         },
         "sources_by_field": {
           "name": "osm",
@@ -5244,9 +5258,15 @@
           "address.postalcode": "osm",
           "address.city": "osm",
           "address.district": "osm",
-          "hours": "osm"
+          "hours": "apple",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
         },
-        "payment": {}
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        },
+        "apple_attempted": "2026-10-20"
       }
     },
     {
