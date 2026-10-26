@@ -26,17 +26,17 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-25",
+        "updated": "2026-10-26",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
         },
-        "payment": {},
         "apple_id_attempted": "2026-10-25",
+        "google_attempted": "2026-10-25",
         "hours": {
           "raw": "Tu 09:00-14:00,18:00-20:00; Th 09:00-14:00,18:00-20:00; Fr 09:00-14:00; We 09:00-14:00,18:00-20:00; Mo 09:00-14:00,18:00-20:00; Sa 10:00-13:00; Su 10:00-13:00"
         },
-        "google_attempted": "2026-10-25"
+        "payment": {}
       }
     },
     {
@@ -64,51 +64,21 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-25",
+        "updated": "2026-10-26",
         "sources_by_field": {
           "name": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-25",
+        "hours": {
+          "raw": "Mo-Fr 08:00-14:00,16:00-20:00"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Fr 08:00-14:00,16:00-20:00"
-        },
-        "apple_attempted": "2026-10-25"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3036687,
-          40.9208531
-        ]
-      },
-      "properties": {
-        "id": "tk_esarr_osm_n12065071369",
-        "name": "Peña Xurria",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/12065071369",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-10-25",
-        "google_attempted": "2026-10-25"
+        }
       }
     },
     {
@@ -174,133 +144,13 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-14",
+        "updated": "2026-10-26",
         "sources_by_field": {
           "name": "osm"
         },
-        "payment": {},
         "apple_id_attempted": "2026-10-25",
-        "google_attempted": "2026-10-25"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.8815738,
-          41.6447056
-        ]
-      },
-      "properties": {
-        "id": "tk_esarr_osm_n1814118944",
-        "name": "El Baúl",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1814118944",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-10-25",
-        "google_attempted": "2026-10-25"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.8886629,
-          41.6461092
-        ]
-      },
-      "properties": {
-        "id": "tk_esarr_osm_n4334646793",
-        "name": "Helados Italianos",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4334646793",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-10-25",
-        "google_attempted": "2026-10-25"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.9559413,
-          41.6792448
-        ]
-      },
-      "properties": {
-        "id": "tk_esarr_osm_n4350073074",
-        "name": "Helados Gesán",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4350073074",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-10-25",
-        "google_attempted": "2026-10-25"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.9028216,
-          41.6557053
-        ]
-      },
-      "properties": {
-        "id": "tk_esarr_osm_n4365285118",
-        "name": "Líquidos",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4365285118",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-10-25",
-        "google_attempted": "2026-10-25"
+        "google_attempted": "2026-10-25",
+        "payment": {}
       }
     },
     {
@@ -328,13 +178,13 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-14",
+        "updated": "2026-10-26",
         "sources_by_field": {
           "name": "osm"
         },
-        "payment": {},
         "apple_id_attempted": "2026-10-25",
-        "google_attempted": "2026-10-25"
+        "google_attempted": "2026-10-25",
+        "payment": {}
       }
     },
     {
@@ -366,22 +216,22 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-25",
+        "updated": "2026-10-26",
         "sources_by_field": {
           "name": "osm",
+          "hours": "google",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "google"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-25",
+        "google_attempted": "2026-10-25",
+        "hours": {
+          "raw": "Fr 19:30-23:30; Sa 12:00-16:00,19:30-23:30; Su 12:00-16:00"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "apple_attempted": "2026-10-25",
-        "hours": {
-          "raw": "Fr 19:30-23:30; Sa 12:00-16:00,19:30-23:30; Su 12:00-16:00"
-        },
-        "google_attempted": "2026-10-25"
+        }
       }
     },
     {
@@ -413,7 +263,7 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-25",
+        "updated": "2026-10-26",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -421,49 +271,12 @@
           "address.city": "osm",
           "hours": "google"
         },
-        "payment": {},
         "apple_id_attempted": "2026-10-25",
+        "google_attempted": "2026-10-25",
         "hours": {
           "raw": "Tu 07:00-17:00; Th 07:00-19:00; Fr 07:00-17:00; We 07:00-17:00; Mo 07:00-17:00"
         },
-        "google_attempted": "2026-10-25"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.3581263,
-          42.5217377
-        ]
-      },
-      "properties": {
-        "id": "tk_esarr_osm_w448687727",
-        "name": "Distribuciones José María Gallego Escolano S.L.",
-        "address": {
-          "street": "Calle José Lastiesas",
-          "postalcode": "22600",
-          "city": "Sabiñánigo"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/448687727",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.postalcode": "osm",
-          "address.city": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-10-25",
-        "google_attempted": "2026-10-25"
+        "payment": {}
       }
     },
     {
@@ -491,13 +304,1521 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-14",
+        "updated": "2026-10-26",
         "sources_by_field": {
           "name": "osm"
         },
-        "payment": {},
         "apple_id_attempted": "2026-10-25",
-        "google_attempted": "2026-10-25"
+        "google_attempted": "2026-10-25",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.039723,
+          40.7568853
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n10290972693",
+        "name": "Comestibles Laura",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/10290972693",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8803121,
+          41.6540855
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n10887011109",
+        "name": "Bazar 100",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/10887011109",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0741718,
+          40.9279712
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n11170350414",
+        "name": "Alimentacion Sole Querol",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/11170350414",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "hours": {
+          "raw": "Mo 09:00-13:00; Tu-Sa 09:00-13:00, 17:30-19:00"
+        },
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8855191,
+          41.641712
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n11492724113",
+        "name": "Supermercado 365 Días",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/11492724113",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3036687,
+          40.9208531
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n12065071369",
+        "name": "Peña Xurria",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12065071369",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-10-25",
+        "google_attempted": "2026-10-25",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9017503,
+          41.6394383
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n12389970902",
+        "name": "Mini Supermercado Romareda",
+        "address": {
+          "street": "Calle Violante de Hungría",
+          "number": "10",
+          "postalcode": "50009"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12389970902",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "hours": {
+          "raw": "Mo-Fr 09:00-13:00, 17:00-20:00"
+        },
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "hours": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8890017,
+          41.6481743
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n13019635271",
+        "name": "Alimentación Aragües",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13019635271",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4028371,
+          42.1402324
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n13153323392",
+        "name": "Alimentación Desmond y Hnas.",
+        "address": {
+          "street": "Calle Tenerias",
+          "number": "14",
+          "postalcode": "22001"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13153323392",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8915656,
+          41.6452467
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n13200951802",
+        "name": "Supermercado Xinhua",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13200951802",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1272683,
+          42.0022358
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n1328160834",
+        "name": "Bar- Tienda Alcanadre",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1328160834",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6254286,
+          42.3143802
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n1329539226",
+        "name": "Alimentación",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1329539226",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6741774,
+          42.5232038
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n1330677222",
+        "name": "Tienda - Bar Casa Anaya",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1330677222",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4268404,
+          40.8568675
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n13433169443",
+        "name": "Ultramarinos Rosa Llave",
+        "address": {
+          "street": "Plaza de la Iglesia",
+          "number": "4",
+          "city": "Berge"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13433169443",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.city": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9039311,
+          41.6503496
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n13972961743",
+        "name": "Alimentación y Cosmética",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13972961743",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9040746,
+          41.6485394
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n13972961747",
+        "name": "Alimentación JYZ",
+        "address": {
+          "street": "Calle de las Delicias",
+          "number": "83"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13972961747",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7946347,
+          40.5890907
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n1666054398",
+        "name": "Tienda de Ultramarinos",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1666054398",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5304205,
+          42.7880299
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n1670697942",
+        "name": "Supermercado El Bozo",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1670697942",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8815738,
+          41.6447056
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n1814118944",
+        "name": "El Baúl",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1814118944",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-10-25",
+        "google_attempted": "2026-10-25",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6161197,
+          41.28748
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n1871182711",
+        "name": "Alimentación María",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1871182711",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6161572,
+          41.2871898
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n1871182712",
+        "name": "Alimentación Dueñas",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1871182712",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4077205,
+          42.1381062
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n2538194516",
+        "name": "Ultramarinos La Confianza",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2538194516",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "hours": {
+          "raw": "Mo-Sa 10:00-14:00,17:00-21:00; Su 11:00-14:00"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8747393,
+          41.6452525
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n3049218502",
+        "name": "Alimentación Internacional",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3049218502",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "hours": {
+          "raw": "Mo-Fr 10:30-14:30,17:00-21:30; Sa,Su 10:30-21:30"
+        },
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4021667,
+          42.1307067
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n3391478593",
+        "name": "Alimentación Monegros",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3391478593",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1404144,
+          42.6515124
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n3687866297",
+        "name": "Supermercado Camping Pineta",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3687866297",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "hours": {
+          "raw": "08:00-21:00; Tu,We 08:00-14:00,17:00-20:00"
+        },
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5257781,
+          42.7168268
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n3893071701",
+        "name": "Casa Rural Alimentacion Bodega",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/3893071701",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2706117,
+          40.9923377
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n4041480514",
+        "name": "Alimentación MªJosé",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4041480514",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5520731,
+          42.5677104
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n4041997397",
+        "name": "Alimentación La Alforja",
+        "address": {
+          "street": "Calle de Domingo Miral",
+          "number": "23",
+          "postalcode": "22700",
+          "city": "Jaca"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4041997397",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8886629,
+          41.6461092
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n4334646793",
+        "name": "Helados Italianos",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4334646793",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-10-25",
+        "google_attempted": "2026-10-25",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9559413,
+          41.6792448
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n4350073074",
+        "name": "Helados Gesán",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4350073074",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-10-25",
+        "google_attempted": "2026-10-25",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9028216,
+          41.6557053
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n4365285118",
+        "name": "Líquidos",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4365285118",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-10-25",
+        "google_attempted": "2026-10-25",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8961727,
+          41.6455258
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n4401524356",
+        "name": "Alimentación Paz",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4401524356",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8893394,
+          41.6458259
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n4827305802",
+        "name": "Tienda alimentares",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4827305802",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "tags": [
+          "barrierefrei"
+        ],
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0633444,
+          41.5033428
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n4902781913",
+        "name": "Alimentacion",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4902781913",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0650056,
+          41.7581837
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n4911491447",
+        "name": "Co Aliment",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4911491447",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8961312,
+          41.6611377
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n5222141323",
+        "name": "Pica Pica 24h",
+        "address": {
+          "street": "Calle de las Cortes",
+          "number": "1"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5222141323",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8833878,
+          41.6555198
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n5614985623",
+        "name": "Cai Cai",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5614985623",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9187451,
+          41.6232143
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n5779649459",
+        "name": "Chollo Aragón WJ Bazar",
+        "address": {
+          "street": "Calle de Todo Sobre Mi Madre",
+          "number": "8"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5779649459",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8879721,
+          41.6711127
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n5790141154",
+        "name": "Gran Bazar",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5790141154",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8865532,
+          41.6711067
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n5790141163",
+        "name": "Galería China",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5790141163",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9246956,
+          41.6515471
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n5796084066",
+        "name": "Bazar Leyva",
+        "address": {
+          "street": "Calle de Antonio de Leyva",
+          "number": "39",
+          "postalcode": "50011"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5796084066",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.897596,
+          41.6383912
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n5799508035",
+        "name": "Bazar Romareda",
+        "address": {
+          "street": "Paseo de Fernando el Católico",
+          "number": "66"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5799508035",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4018712,
+          42.1397806
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n6342906955",
+        "name": "Supermarket",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/6342906955",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4140675,
+          42.1434388
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n7059858934",
+        "name": "Cafetería Wei",
+        "address": {
+          "street": "Avenida del Doctor Artero",
+          "number": "15",
+          "postalcode": "22004",
+          "city": "Huesca"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/7059858934",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "tags": [
+          "draussen"
+        ],
+        "kind": "bar",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0450959,
+          41.2355906
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n7766421185",
+        "name": "Tienda Tres Reyes Caspe S.L.",
+        "address": {
+          "street": "Calle Diputación",
+          "number": "6",
+          "postalcode": "50700",
+          "city": "Caspe"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/7766421185",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4056197,
+          40.5275393
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n8912316652",
+        "name": "Comestibles Villarroya",
+        "address": {
+          "street": "Calle Mayor",
+          "number": "3",
+          "postalcode": "44140",
+          "city": "Cantavieja"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/8912316652",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1942781,
+          42.5430131
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n9730043968",
+        "name": "Colmado Lafortuna",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/9730043968",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8868267,
+          41.6326139
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_n9900081630",
+        "name": "M&E Market",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/9900081630",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3581263,
+          42.5217377
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_w448687727",
+        "name": "Distribuciones José María Gallego Escolano S.L.",
+        "address": {
+          "street": "Calle José Lastiesas",
+          "postalcode": "22600",
+          "city": "Sabiñánigo"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/448687727",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm"
+        },
+        "apple_id_attempted": "2026-10-25",
+        "google_attempted": "2026-10-25",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1620417,
+          41.7946726
+        ]
+      },
+      "properties": {
+        "id": "tk_esarr_osm_w585741686",
+        "name": "Ultramarinos",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/585741686",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-10-26",
+        "hours": {
+          "raw": "Mo-Sa 08:30-13:30, 18:00-20:00"
+        },
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        }
       }
     },
     {
@@ -521,13 +1842,13 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-14",
+        "updated": "2026-10-26",
         "sources_by_field": {
           "name": "osm"
         },
-        "payment": {},
         "apple_id_attempted": "2026-10-25",
-        "google_attempted": "2026-10-25"
+        "google_attempted": "2026-10-25",
+        "payment": {}
       }
     }
   ]
