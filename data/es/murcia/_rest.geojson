@@ -6,66 +6,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.1275258,
-          37.9850934
-        ]
-      },
-      "properties": {
-        "id": "tk_esmcr_osm_n1216273466",
-        "name": "Cetina",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1216273466",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-10-26",
-        "google_attempted": "2026-10-26"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.1269418,
-          37.9835823
-        ]
-      },
-      "properties": {
-        "id": "tk_esmcr_osm_n1216273669",
-        "name": "La verdad",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1216273669",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-10-26",
-        "google_attempted": "2026-10-26"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -1.1252382,
           37.9886574
         ]
@@ -92,78 +32,18 @@
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-26",
+        "hours": {
+          "raw": "Mo-Su 10:00-24:00"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Su 10:00-24:00"
-        },
-        "apple_attempted": "2026-10-26"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.8493704,
-          37.7389261
-        ]
-      },
-      "properties": {
-        "id": "tk_esmcr_osm_n12469019976",
-        "name": "El Quiosco de la Feria",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/12469019976",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-10-26",
-        "google_attempted": "2026-10-26"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3577972,
-          37.8858123
-        ]
-      },
-      "properties": {
-        "id": "tk_esmcr_osm_n13093060543",
-        "name": "El Pote",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/13093060543",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-10-26",
-        "google_attempted": "2026-10-26"
+        }
       }
     },
     {
@@ -204,11 +84,288 @@
           "payment.cards": "apple",
           "payment.contactless": "apple"
         },
+        "apple_attempted": "2026-10-26",
         "payment": {
           "cards": "yes",
           "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1303059,
+          37.993053
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n2322810881",
+        "name": "Quiosco Antonio",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2322810881",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJabcDZriDYw0RQgh7Y9AqoOg"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "sources_by_field": {
+          "name": "osm"
         },
-        "apple_attempted": "2026-10-26"
+        "apple_id_attempted": "2026-10-26",
+        "google_attempted": "2026-10-26",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2717581,
+          38.1184131
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n4830747629",
+        "name": "Espumosos Martinez",
+        "address": {
+          "street": "Calle Comunidad de Valencia",
+          "postalcode": "30600"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4830747629",
+            "version": 0
+          },
+          {
+            "type": "apple",
+            "id": "5863035052690194528"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "hours": {
+          "raw": "Mo-Fr 08:30-14:00, 16:00-20:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.postalcode": "osm",
+          "hours": "osm",
+          "payment.cards": "apple",
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-10-26",
+        "payment": {
+          "cards": "yes",
+          "contactless": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5026897,
+          37.7702071
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n5372899395",
+        "name": "Kiosko Fraypa",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5372899395",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ4yGBYMKSZA0RGQ_byNsh5Zo"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-10-26",
+        "google_attempted": "2026-10-26",
+        "hours": {
+          "raw": "Tu 07:30-14:30,17:00-21:00; Th 07:30-14:30,17:00-21:00; Fr 07:30-14:30,17:00-21:00; We 07:30-14:30,17:00-21:00; Mo 07:30-14:30,17:00-21:00; Sa 07:30-14:30; Su 07:30-14:30"
+        },
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9940703,
+          37.6039851
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_w1351590917",
+        "name": "Kiosco Bar Paco",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/1351590917",
+            "version": 0
+          },
+          {
+            "type": "gmaps",
+            "id": "ChIJ2cSocgdDYw0RwY3Ef0E7MeQ"
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "google"
+        },
+        "apple_id_attempted": "2026-10-26",
+        "google_attempted": "2026-10-26",
+        "hours": {
+          "raw": "Tu 06:00-16:00; Th 06:00-16:00; Fr 06:00-16:00; We 06:00-16:00; Mo 06:00-16:00; Sa 06:00-14:00"
+        },
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1275258,
+          37.9850934
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n1216273466",
+        "name": "Cetina",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1216273466",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-10-26",
+        "google_attempted": "2026-10-26",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1269418,
+          37.9835823
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n1216273669",
+        "name": "La verdad",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1216273669",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-10-26",
+        "google_attempted": "2026-10-26",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8493704,
+          37.7389261
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n12469019976",
+        "name": "El Quiosco de la Feria",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12469019976",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-10-26",
+        "google_attempted": "2026-10-26",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3577972,
+          37.8858123
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n13093060543",
+        "name": "El Pote",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13093060543",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-10-26",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-10-26",
+        "google_attempted": "2026-10-26",
+        "payment": {}
       }
     },
     {
@@ -268,41 +425,8 @@
         },
         "payment": {},
         "apple_id_attempted": "2026-10-26",
-        "google_attempted": "2026-10-26"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.1303059,
-          37.993053
-        ]
-      },
-      "properties": {
-        "id": "tk_esmcr_osm_n2322810881",
-        "name": "Quiosco Antonio",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/2322810881",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJabcDZriDYw0RQgh7Y9AqoOg"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-14",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-10-26",
-        "google_attempted": "2026-10-26"
+        "google_attempted": "2026-10-26",
+        "osm_removed": true
       }
     },
     {
@@ -331,7 +455,7 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-14",
+        "updated": "2026-10-26",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -339,132 +463,9 @@
           "address.postalcode": "osm",
           "address.city": "osm"
         },
-        "payment": {},
         "apple_id_attempted": "2026-10-26",
-        "google_attempted": "2026-10-26"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.2717581,
-          38.1184131
-        ]
-      },
-      "properties": {
-        "id": "tk_esmcr_osm_n4830747629",
-        "name": "Espumosos Martinez",
-        "address": {
-          "street": "Calle Comunidad de Valencia",
-          "postalcode": "30600"
-        },
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/4830747629",
-            "version": 0
-          },
-          {
-            "type": "apple",
-            "id": "5863035052690194528"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-26",
-        "hours": {
-          "raw": "Mo-Fr 08:30-14:00, 16:00-20:00"
-        },
-        "sources_by_field": {
-          "name": "osm",
-          "address.street": "osm",
-          "address.postalcode": "osm",
-          "hours": "osm",
-          "payment.cards": "apple",
-          "payment.contactless": "apple"
-        },
-        "payment": {
-          "cards": "yes",
-          "contactless": "yes"
-        },
-        "apple_attempted": "2026-10-26"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5026897,
-          37.7702071
-        ]
-      },
-      "properties": {
-        "id": "tk_esmcr_osm_n5372899395",
-        "name": "Kiosko Fraypa",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/5372899395",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJ4yGBYMKSZA0RGQ_byNsh5Zo"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-26",
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "google"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-10-26",
-        "hours": {
-          "raw": "Tu 07:30-14:30,17:00-21:00; Th 07:30-14:30,17:00-21:00; Fr 07:30-14:30,17:00-21:00; We 07:30-14:30,17:00-21:00; Mo 07:30-14:30,17:00-21:00; Sa 07:30-14:30; Su 07:30-14:30"
-        },
-        "google_attempted": "2026-10-26"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.9940703,
-          37.6039851
-        ]
-      },
-      "properties": {
-        "id": "tk_esmcr_osm_w1351590917",
-        "name": "Kiosco Bar Paco",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "way/1351590917",
-            "version": 0
-          },
-          {
-            "type": "gmaps",
-            "id": "ChIJ2cSocgdDYw0RwY3Ef0E7MeQ"
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-10-26",
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "google"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-10-26",
-        "hours": {
-          "raw": "Tu 06:00-16:00; Th 06:00-16:00; Fr 06:00-16:00; We 06:00-16:00; Mo 06:00-16:00; Sa 06:00-14:00"
-        },
-        "google_attempted": "2026-10-26"
+        "google_attempted": "2026-10-26",
+        "payment": {}
       }
     }
   ]
