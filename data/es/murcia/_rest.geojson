@@ -28,7 +28,7 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-26",
+        "updated": "2026-11-02",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -73,7 +73,7 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-26",
+        "updated": "2026-11-02",
         "hours": {
           "raw": "Mo-Su 00:00-24:00"
         },
@@ -116,7 +116,7 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-26",
+        "updated": "2026-11-02",
         "sources_by_field": {
           "name": "osm"
         },
@@ -153,7 +153,7 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-26",
+        "updated": "2026-11-02",
         "hours": {
           "raw": "Mo-Fr 08:30-14:00, 16:00-20:00"
         },
@@ -197,7 +197,7 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-26",
+        "updated": "2026-11-02",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
@@ -235,7 +235,7 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-26",
+        "updated": "2026-11-02",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
@@ -246,6 +246,172 @@
           "raw": "Tu 06:00-16:00; Th 06:00-16:00; Fr 06:00-16:00; We 06:00-16:00; Mo 06:00-16:00; Sa 06:00-14:00"
         },
         "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.7972064,
+          38.0915397
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n10102175460",
+        "name": "Alimentación",
+        "address": {
+          "street": "Carretera de Murcia",
+          "number": "49",
+          "postalcode": "30430",
+          "city": "Cehegín"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/10102175460",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7796553,
+          37.8198787
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n11220935638",
+        "name": "88 Mini Super",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/11220935638",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8044644,
+          37.7974607
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n11307388569",
+        "name": "Sandhu Market",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/11307388569",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8520102,
+          37.7398078
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n11473508875",
+        "name": "Supermercado Davi",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/11473508875",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.988601,
+          37.6099761
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n11982611119",
+        "name": "Hong Da Shang Chang",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/11982611119",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "hours": {
+          "raw": "Mo-Sa 09:00-21:00"
+        },
+        "payment": {
+          "cash": "yes",
+          "cards": "yes",
+          "contactless": "unknown",
+          "girocard": "unknown"
+        },
+        "tags": [
+          "barrierefrei"
+        ],
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm",
+          "payment.cash": "osm",
+          "payment.cards": "osm",
+          "payment.contactless": "osm",
+          "payment.girocard": "osm"
+        }
       }
     },
     {
@@ -269,7 +435,7 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-26",
+        "updated": "2026-11-02",
         "sources_by_field": {
           "name": "osm"
         },
@@ -299,13 +465,69 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-26",
+        "updated": "2026-11-02",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-26",
         "google_attempted": "2026-10-26",
         "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7864687,
+          37.8201056
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n12361865501",
+        "name": "Supermercado Pinatar II",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12361865501",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.786223,
+          37.8197751
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n12361865502",
+        "name": "Express",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12361865502",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
       }
     },
     {
@@ -329,13 +551,69 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-26",
+        "updated": "2026-11-02",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-26",
         "google_attempted": "2026-10-26",
         "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1100829,
+          38.6106969
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n12739555066",
+        "name": "Alimentación Cheng",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12739555066",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1290684,
+          37.9760675
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n12994267243",
+        "name": "Alimentación",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/12994267243",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
       }
     },
     {
@@ -359,13 +637,167 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-26",
+        "updated": "2026-11-02",
         "sources_by_field": {
           "name": "osm"
         },
         "apple_id_attempted": "2026-10-26",
         "google_attempted": "2026-10-26",
         "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9849786,
+          37.6097465
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n13164636582",
+        "name": "Tienda de la amistad",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13164636582",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.851182,
+          37.7412286
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n13423944320",
+        "name": "Supermercado Abhi",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13423944320",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9205768,
+          37.717717
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n13465177761",
+        "name": "El Chino",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13465177761",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "hours": {
+          "raw": "Mo-Su,PH 09:00-21:00"
+        },
+        "payment": {
+          "cash": "unknown",
+          "cards": "yes",
+          "contactless": "unknown",
+          "girocard": "unknown"
+        },
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm",
+          "payment.cash": "osm",
+          "payment.cards": "osm",
+          "payment.contactless": "osm",
+          "payment.girocard": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1157202,
+          38.005603
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n13910604313",
+        "name": "Tienda alimentación",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13910604313",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1155442,
+          38.0051209
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n13910604314",
+        "name": "Alimentación de Xu",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/13910604314",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
       }
     },
     {
@@ -396,6 +828,101 @@
         "osm_removed": true,
         "apple_id_attempted": "2026-10-26",
         "google_attempted": "2026-10-26"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1539732,
+          37.9567091
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n14060113801",
+        "name": "Alimentación Maike",
+        "address": {
+          "street": "Calle de la Iglesia",
+          "number": "4",
+          "postalcode": "30152"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/14060113801",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "hours": {
+          "raw": "Mo-Su 10:00-23:00"
+        },
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "hours": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0831502,
+          37.9615504
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n2161181870",
+        "name": "24h",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2161181870",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1165553,
+          38.0069468
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n2241989461",
+        "name": "Comestibles Adela",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2241989461",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
       }
     },
     {
@@ -434,6 +961,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.7913306,
+          38.0908301
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n2408965425",
+        "name": "Autoservicio Conchi",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/2408965425",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.0641939,
           37.6898115
         ]
@@ -455,7 +1010,7 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-10-26",
+        "updated": "2026-11-02",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -466,6 +1021,277 @@
         "apple_id_attempted": "2026-10-26",
         "google_attempted": "2026-10-26",
         "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0355461,
+          38.0146465
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n4352476815",
+        "name": "Bazar Chino",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4352476815",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1315488,
+          37.9866146
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n4779806043",
+        "name": "Alimentacion Alegre",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4779806043",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1060391,
+          37.9791447
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n4947482727",
+        "name": "Minimark Huang",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4947482727",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1051539,
+          37.9778477
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n4947482728",
+        "name": "Alimentación Multiprecio",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/4947482728",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2088273,
+          37.9318133
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n675748461",
+        "name": "Comestibles Remedios",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/675748461",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2194606,
+          37.9842996
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n6773156088",
+        "name": "Bazar chino",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/6773156088",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.7901781,
+          38.091228
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n7861235471",
+        "name": "Tienda Nueva",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/7861235471",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1358734,
+          38.0217574
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_n8059512462",
+        "name": "One Supermarket",
+        "address": {
+          "street": "Avenida Alicante",
+          "number": "30",
+          "postalcode": "30110",
+          "city": "Murcia"
+        },
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/8059512462",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "payment": {
+          "cash": "yes",
+          "cards": "yes",
+          "contactless": "unknown",
+          "girocard": "unknown"
+        },
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "address.street": "osm",
+          "address.number": "osm",
+          "address.postalcode": "osm",
+          "address.city": "osm",
+          "payment.cash": "osm",
+          "payment.cards": "osm",
+          "payment.contactless": "osm",
+          "payment.girocard": "osm"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1316871,
+          38.0241385
+        ]
+      },
+      "properties": {
+        "id": "tk_esmcr_osm_w730330365",
+        "name": "Merca Chino",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "way/730330365",
+            "version": 0
+          }
+        ],
+        "created": "2026-11-02",
+        "updated": "2026-11-02",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        }
       }
     }
   ]
