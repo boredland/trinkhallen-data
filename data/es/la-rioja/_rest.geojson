@@ -6,76 +6,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.0937458,
-          42.06589
-        ]
-      },
-      "properties": {
-        "id": "tk_esrir_osm_n10282463509",
-        "name": "El Supermercado",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/10282463509",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-26",
-        "updated": "2026-11-02",
-        "hours": {
-          "raw": "Mo-Sa 09:30-15:45; Su 10:00-11:00"
-        },
-        "kind": "convenience",
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-11-07",
-        "google_attempted": "2026-11-07"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.1203501,
-          42.4049997
-        ]
-      },
-      "properties": {
-        "id": "tk_esrir_osm_n1100850424",
-        "name": "La Tienda de Luis",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1100850424",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-26",
-        "updated": "2026-11-02",
-        "hours": {
-          "raw": "Mo-Sa 08:00-14:00,17:30-19:00; Su 08:00-14:00"
-        },
-        "kind": "convenience",
-        "sources_by_field": {
-          "name": "osm",
-          "hours": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-11-07",
-        "google_attempted": "2026-11-07"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -2.4743214,
           42.3576025
         ]
@@ -96,113 +26,21 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-11-07",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-11-07",
+        "hours": {
+          "raw": "Mo-Th,Su 09:00-14:30,17:30-20:30; Fr-Sa 09:00-14:30,17:30-21:30"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Th,Su 09:00-14:30,17:30-20:30; Fr-Sa 09:00-14:30,17:30-21:30"
-        },
-        "apple_attempted": "2026-11-07"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.4770209,
-          42.3576768
-        ]
-      },
-      "properties": {
-        "id": "tk_esrir_osm_n11697121058",
-        "name": "Café & snacks",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/11697121058",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-11-02",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-11-07",
-        "google_attempted": "2026-11-07"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.8012064,
-          42.4235137
-        ]
-      },
-      "properties": {
-        "id": "tk_esrir_osm_n1340449404",
-        "name": "Tienda Maria Rosa",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1340449404",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-26",
-        "updated": "2026-11-02",
-        "kind": "convenience",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-11-07",
-        "google_attempted": "2026-11-07"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.0268687,
-          42.4506812
-        ]
-      },
-      "properties": {
-        "id": "tk_esrir_osm_n1340584522",
-        "name": "Tienda Casa Piedad",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/1340584522",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-26",
-        "updated": "2026-11-02",
-        "kind": "convenience",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-11-07",
-        "google_attempted": "2026-11-07"
+        }
       }
     },
     {
@@ -233,7 +71,7 @@
           }
         ],
         "created": "2026-10-19",
-        "updated": "2026-11-07",
+        "updated": "2026-11-09",
         "kind": "bar",
         "sources_by_field": {
           "name": "osm",
@@ -241,43 +79,12 @@
           "address.number": "osm",
           "hours": "google"
         },
-        "payment": {},
         "apple_id_attempted": "2026-11-07",
+        "google_attempted": "2026-11-07",
         "hours": {
           "raw": "Tu 00:00-17:00; Th 13:00-16:00,19:00-23:00; Fr 13:00-16:00,19:00-00:00; We 13:00-14:00,19:00-23:00; Mo 13:30-16:00,23:00-00:00; Sa 13:00-16:00,19:00-00:00; Su 13:30-16:00,19:30-23:30"
         },
-        "google_attempted": "2026-11-07"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6322275,
-          42.2558386
-        ]
-      },
-      "properties": {
-        "id": "tk_esrir_osm_n5015021916",
-        "name": "supermercado",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/5015021916",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-26",
-        "updated": "2026-11-02",
-        "kind": "convenience",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-11-07",
-        "google_attempted": "2026-11-07"
+        "payment": {}
       }
     },
     {
@@ -305,7 +112,7 @@
           }
         ],
         "created": "2026-10-26",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "hours": {
           "raw": "Mo-Sa 10:00-14:00, 17:00-19:00"
         },
@@ -314,39 +121,9 @@
           "name": "osm",
           "hours": "osm"
         },
-        "payment": {},
         "apple_id_attempted": "2026-11-07",
-        "google_attempted": "2026-11-07"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.7606693,
-          42.5663154
-        ]
-      },
-      "properties": {
-        "id": "tk_esrir_osm_n6497859395",
-        "name": "Bodegas Sonsierra",
-        "address": {},
-        "sources": [
-          {
-            "type": "osm",
-            "id": "node/6497859395",
-            "version": 0
-          }
-        ],
-        "created": "2026-10-14",
-        "updated": "2026-11-02",
-        "sources_by_field": {
-          "name": "osm"
-        },
-        "payment": {},
-        "apple_id_attempted": "2026-11-07",
-        "google_attempted": "2026-11-07"
+        "google_attempted": "2026-11-07",
+        "payment": {}
       }
     },
     {
@@ -374,22 +151,22 @@
           }
         ],
         "created": "2026-10-26",
-        "updated": "2026-11-07",
+        "updated": "2026-11-09",
         "kind": "convenience",
         "sources_by_field": {
           "name": "osm",
+          "hours": "apple",
           "payment.cards": "apple",
-          "payment.contactless": "apple",
-          "hours": "apple"
+          "payment.contactless": "apple"
+        },
+        "apple_attempted": "2026-11-07",
+        "hours": {
+          "raw": "Mo-Sa 09:00-14:00"
         },
         "payment": {
           "cards": "yes",
           "contactless": "yes"
-        },
-        "hours": {
-          "raw": "Mo-Sa 09:00-14:00"
-        },
-        "apple_attempted": "2026-11-07"
+        }
       }
     },
     {
@@ -417,17 +194,17 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-11-07",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
         },
-        "payment": {},
         "apple_id_attempted": "2026-11-07",
+        "google_attempted": "2026-11-07",
         "hours": {
           "raw": "Tu 11:00-13:30,18:30-20:30; Th 11:00-13:30,18:30-20:30; Fr 11:00-13:30,18:30-20:30; We 11:00-13:30,18:30-20:30; Mo 11:00-13:30,18:30-20:30; Sa 11:30-14:00,18:30-20:30; Su 11:30-14:00,18:30-20:30"
         },
-        "google_attempted": "2026-11-07"
+        "payment": {}
       }
     },
     {
@@ -459,7 +236,7 @@
           }
         ],
         "created": "2026-10-14",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "hours": {
           "raw": "sunrise-sunset"
         },
@@ -470,9 +247,232 @@
           "address.postalcode": "osm",
           "hours": "osm"
         },
-        "payment": {},
         "apple_id_attempted": "2026-11-07",
-        "google_attempted": "2026-11-07"
+        "google_attempted": "2026-11-07",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.0937458,
+          42.06589
+        ]
+      },
+      "properties": {
+        "id": "tk_esrir_osm_n10282463509",
+        "name": "El Supermercado",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/10282463509",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-11-09",
+        "hours": {
+          "raw": "Mo-Sa 09:30-15:45; Su 10:00-11:00"
+        },
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-11-07",
+        "google_attempted": "2026-11-07",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1203501,
+          42.4049997
+        ]
+      },
+      "properties": {
+        "id": "tk_esrir_osm_n1100850424",
+        "name": "La Tienda de Luis",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1100850424",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-11-09",
+        "hours": {
+          "raw": "Mo-Sa 08:00-14:00,17:30-19:00; Su 08:00-14:00"
+        },
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
+        },
+        "apple_id_attempted": "2026-11-07",
+        "google_attempted": "2026-11-07",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.4770209,
+          42.3576768
+        ]
+      },
+      "properties": {
+        "id": "tk_esrir_osm_n11697121058",
+        "name": "Café & snacks",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/11697121058",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-11-09",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-11-07",
+        "google_attempted": "2026-11-07",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.8012064,
+          42.4235137
+        ]
+      },
+      "properties": {
+        "id": "tk_esrir_osm_n1340449404",
+        "name": "Tienda Maria Rosa",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1340449404",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-11-09",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-11-07",
+        "google_attempted": "2026-11-07",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.0268687,
+          42.4506812
+        ]
+      },
+      "properties": {
+        "id": "tk_esrir_osm_n1340584522",
+        "name": "Tienda Casa Piedad",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/1340584522",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-11-09",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-11-07",
+        "google_attempted": "2026-11-07",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6322275,
+          42.2558386
+        ]
+      },
+      "properties": {
+        "id": "tk_esrir_osm_n5015021916",
+        "name": "supermercado",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/5015021916",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-26",
+        "updated": "2026-11-09",
+        "kind": "convenience",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-11-07",
+        "google_attempted": "2026-11-07",
+        "payment": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.7606693,
+          42.5663154
+        ]
+      },
+      "properties": {
+        "id": "tk_esrir_osm_n6497859395",
+        "name": "Bodegas Sonsierra",
+        "address": {},
+        "sources": [
+          {
+            "type": "osm",
+            "id": "node/6497859395",
+            "version": 0
+          }
+        ],
+        "created": "2026-10-14",
+        "updated": "2026-11-09",
+        "sources_by_field": {
+          "name": "osm"
+        },
+        "apple_id_attempted": "2026-11-07",
+        "google_attempted": "2026-11-07",
+        "payment": {}
       }
     }
   ]
