@@ -32,7 +32,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
@@ -80,7 +80,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
@@ -128,7 +128,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "hours": "google",
@@ -181,7 +181,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm"
         },
@@ -230,7 +230,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm"
         },
@@ -274,7 +274,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "tags": [
           "barrierefrei"
         ],
@@ -329,7 +329,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm"
         },
@@ -369,7 +369,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
@@ -417,7 +417,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
@@ -469,12 +469,13 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
-        "sources_by_field": {
-          "name": "osm"
-        },
+        "updated": "2026-11-09",
         "hours": {
-          "raw": "Mo-Fr 08:00-17:45; Sa 08:00-12:45"
+          "raw": "Mo-Fr 08:00-17:00; Sa 08:00-13:00; Su,PH 10:00-15:00"
+        },
+        "sources_by_field": {
+          "name": "osm",
+          "hours": "osm"
         },
         "payment": {
           "cards": "yes",
@@ -514,7 +515,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
@@ -562,7 +563,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "hours": "google",
@@ -605,7 +606,7 @@
           }
         ],
         "created": "2026-07-20",
-        "updated": "2026-10-19",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "hours": "apple",
@@ -653,7 +654,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "address.city": "osm",
@@ -702,7 +703,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "hours": {
           "raw": "Mo-Fr 06:00-20:00; Sa,Su,PH 08:00-20:00"
         },
@@ -756,7 +757,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "hours": {
           "raw": "Mo-Fr 06:00-21:00, Sa 07:00-21:00, Su,PH 08:00-21:00"
         },
@@ -809,7 +810,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "hours": {
           "raw": "Mo-Sa 08:30-18:45"
         },
@@ -860,7 +861,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "hours": {
           "raw": "Mo-Sa 07:00-18:00; Su,PH off"
         },
@@ -912,7 +913,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "tags": [
           "raucherbereich",
           "sitzgelegenheiten"
@@ -966,7 +967,10 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
+        "hours": {
+          "raw": "Tu 07:00-18:00; Th 07:00-18:00; Fr 07:00-18:00; We 07:00-18:00; Mo 07:00-18:00; Sa 08:00-14:00"
+        },
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -977,9 +981,6 @@
         },
         "apple_id_attempted": "2026-10-13",
         "google_attempted": "2026-10-13",
-        "hours": {
-          "raw": "Tu 07:00-18:00; Th 07:00-18:00; Fr 07:00-18:00; We 07:00-18:00; Mo 07:00-18:00; Sa 08:00-14:00"
-        },
         "payment": {}
       }
     },
@@ -1014,7 +1015,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "tags": [
           "barrierefrei"
         ],
@@ -1115,7 +1116,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm"
         },
@@ -1159,7 +1160,10 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
+        "hours": {
+          "raw": "Tu 07:30-21:00; Th 07:30-21:00; Fr 07:30-21:00; We 07:30-21:00; Mo 07:30-21:00; Sa 07:30-21:00; Su 09:00-20:00"
+        },
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -1170,9 +1174,6 @@
         },
         "apple_id_attempted": "2026-10-13",
         "google_attempted": "2026-06-21",
-        "hours": {
-          "raw": "Tu 07:30-21:00; Th 07:30-21:00; Fr 07:30-21:00; We 07:30-21:00; Mo 07:30-21:00; Sa 07:30-21:00; Su 09:00-20:00"
-        },
         "payment": {
           "cards": "yes"
         }
@@ -1203,7 +1204,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
@@ -1251,7 +1252,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "hours": {
           "raw": "We-Fr 15:00-19:00"
         },
@@ -1296,7 +1297,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "hours": {
           "raw": "Mo-Fr 06:00-21:00; Sa 07:00-21:00; Su 08:00-21:00; PH 08:00-21:00"
         },
@@ -1347,7 +1348,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "hours": "google"
@@ -1365,8 +1366,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.5858052,
-          53.5609487
+          8.5858126,
+          53.5609212
         ]
       },
       "properties": {
@@ -1389,7 +1390,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "hours": {
           "raw": "Mo-Sa 06:30-21:00; Su 08:00-21:00"
         },
@@ -1480,9 +1481,9 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "hours": {
-          "raw": "Mo-Fr 05:00-20:00; Sa 06:00-20:00; PH,Su 08:00-20:00"
+          "raw": "Mo-Fr 06:00-20:00; Sa 06:30-20:00; Su,PH 08:00-20:00"
         },
         "tags": [
           "barrierefrei"
@@ -1538,7 +1539,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm"
         },
@@ -1583,7 +1584,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "hours": {
           "raw": "Mo-Sa 09:00-15:30,16:00-21:00; Su,PH 09:00-21:00"
         },
@@ -1622,7 +1623,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "hours": "apple",
@@ -1667,7 +1668,10 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
+        "hours": {
+          "raw": "Tu 08:00-19:00; Th 08:00-19:00; Fr 08:00-19:00; We 08:00-19:00; Mo 08:00-19:00; Sa 08:00-19:00; Su 08:00-19:00"
+        },
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -1676,9 +1680,6 @@
         },
         "apple_id_attempted": "2026-10-13",
         "google_attempted": "2026-06-21",
-        "hours": {
-          "raw": "Tu 08:00-19:00; Th 08:00-19:00; Fr 08:00-19:00; We 08:00-19:00; Mo 08:00-19:00; Sa 08:00-19:00; Su 08:00-19:00"
-        },
         "payment": {
           "cards": "yes",
           "contactless": "yes",
@@ -1717,7 +1718,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "tags": [
           "barrierefrei"
         ],
@@ -1771,7 +1772,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "tags": [
           "barrierefrei"
         ],
@@ -1819,7 +1820,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -1868,7 +1869,8 @@
         },
         "apple_id_attempted": "2026-10-13",
         "google_attempted": "2026-10-13",
-        "payment": {}
+        "payment": {},
+        "osm_removed": true
       }
     },
     {
@@ -1892,7 +1894,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm"
         },
@@ -1922,7 +1924,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm"
         },
@@ -1955,7 +1957,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
@@ -1992,7 +1994,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "hours": {
           "raw": "Mo-Sa 10:00-19:00"
         },
@@ -2030,7 +2032,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "hours": {
           "raw": "\"Wetterabhängig, ab 11 Uhr meistens wird geöffnet\""
         },
@@ -2088,7 +2090,8 @@
           "payment.contactless": "osm",
           "payment.girocard": "osm"
         },
-        "apple_id_attempted": "2026-10-13"
+        "apple_id_attempted": "2026-10-13",
+        "osm_removed": true
       }
     },
     {
@@ -2115,7 +2118,7 @@
           }
         ],
         "created": "2026-05-21",
-        "updated": "2026-11-02",
+        "updated": "2026-11-09",
         "sources_by_field": {
           "name": "osm",
           "address.street": "osm",
